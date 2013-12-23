@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es" xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Título</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="css/estilos.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script> 
+		$(function(){
+			$("body>header").load("header.html");
+			$("body>footer.pie").load("footer-con-sociales.html");
+		});
+	</script>
+</head>
+<body>
+	<header></header>
+	<main>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Breadcrumb -->
+		<div class="container-breadcrumb">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<ul class="breadcrumb">
+							<li><a href="/"><span class="sr-only">Home</span></a></li>
+							<li><a href="#">Ciudad</a></li>
+							<li><a href="#">Búsqueda Restaurantes</a></li>
+							<li><a href="#">Zona</a></li>
+							<li><a href="#">Nombre del restaurante</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Búsqueda -->
+		<div class="ficha-busqueda">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<form role="form" action="">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="¿Dónde quieres cenar hoy?">
+								<span class="input-group-btn">
+									<input type="submit" value="Buscar" />
+								</span>
+							</div>
+						</form>
+						<div class="abrir">Nueva Búsqueda</div>
+						<div class="cerrar">X</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="volver-busqueda">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<a class="volver" href="#">Volver a resultado de busqueda</a>
+						<a class="nueva" href="#">Nueva Busqueda</a>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Ficha del restaurante -->
+		<div class="container">
+			<article class="restaurante">
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Encabezado -->
+				<header>
+					<h1>Nombre del restaurante</h1>
+					<address><span class="glyphicon glyphicon-map-marker"></span> <a href="#" target="_blank">Ver mapa</a> Dirección</address>
+				</header>
+				<div class="row">
+					<div class="col-md-5 col-sm-6">
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Slideshow -->
+			<!-- Una vez definido el plugin a utilizar, se define exactamente la maqueta. La estructura planteada es la tradicional -->
+			<!-- En el diseño creo que se dejó un espacio para siguiente y atras, no lo sé ya que esta vacio. Por ahora los thumbs van centrados -->
+						<div class="slideshow">
+							<ul class="imagen-principal">
+								<li></li>
+								<li></li>
+							</ul>
+							<ul class="paginado">
+								<li class="activo"></li>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-7 col-sm-6">
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Resumen -->
+						<dl class="calificacion resumen">
+							<dt class="sr-only">Puntaje:</dt>
+							<dd class="puntaje"><strong>4.75</strong></dd>
+							<dt class="sr-only">Calificación:</dt>
+							<dd class="calificacion"><em>Muy bueno</em></dd>
+							<dt class="sr-only">Opiniones:</dt>
+							<dd class="opiniones">57 Opiniones</dd>
+						</dl>
+						<blockquote>
+							<footer>
+								<!-- El link debe llevar al comentario, o sino al usuario -->
+								<cite><a href="link-U1" target="_blank">Nombre de usuario</a></cite>
+								<!-- YYYY/MM/DD en atributo "datetime" -->
+								<time datetime="2013-12-03">03/12/2013</time>
+							</footer>
+							<p>To lead the World Wide Web to its full potential by developing protocols and guidelines that ensure long-term growth for the Web</p>
+						</blockquote>
+						<dl class="tipo-precio">
+							<dt class="sr-only">Cocina:</dt>
+							<dd class="tipo-comida">Japonesa, Sushi</dd>
+							<dt class="sr-only">Precio:</dt>
+							<dd class="precio">Más de $185 ARS</dd>
+						</dl>
+						<a class="btn descuento" href="#">-40% OFF</a>
+						<a class="btn btn-primary btn-lg reservar" href="#">Reservar grátis</a>
+					</div>
+					<div class="col-md-12 col-sm-12">
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Tabs -->
+						<ul class="nav nav-tabs principales">
+							<!-- Aca se definen los tabs principales. El atributo "href" debe de hacer referencia al ID del tab -->
+							<li><a href="#restaurante" data-toggle="tab">Sobre el restaurante</a></li>
+							<li class="active"><a href="#reservar" data-toggle="tab">Reservar</a></li>
+						</ul>
+						<div class="tab-content borde">
+							<!-- Solapa "Sobre el restaurante" y su ID correspondiente -->
+							<div class="tab-pane fade" id="restaurante">
+								None
+							</div>
+							<!-- Solapa "Reservar" y su ID correspondiente -->
+							<!-- La clase "in" + "active" lo marcan como activo -->
+							<div class="tab-pane fade in active" id="reservar">
+								<div class="row no-margin">
+									<div class="col-md-9 .col-sm-12">
+										<h2>Reserva tu mesa en Nombre del Restaurant</h2>
+										<p class="elegir-fecha">Elegir la fecha para tu reserva <span class="glyphicon glyphicon-calendar"></span></p>
+										<!-- Empiezan los paneles. El ID esta relacionado con el atributo "data-parent" de los .panel-heading -->
+										<div class="panel-group" id="accordion">
+											<!-- Panel 01 -->
+											<div class="panel panel-default">
+												<!-- Encabezado del panel. El atributo "href" esta relacionado con el ID de .panel-collapse -->
+												<div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#dia-01">
+													<h3 class="panel-title">
+														<time datetime="2013-12-04"><span>Día (hoy)</span> 04 de diciembre</time>
+													</h3>
+												</div>
+												<!-- Contenido del panel. La clase "in" lo activa. ID relacionado a "href" de .panel-heading -->
+												<div id="dia-01" class="panel-collapse in">
+													<div class="panel-body">
+														<!-- Solapas. El href del <a> esta relacionado con el ID del Sub-Panel-->
+														<ul class="nav nav-tabs">
+															<li class="active"><a href="#dia-01-desayuno" data-toggle="tab">Desayuno</a></li>
+															<li><a href="#dia-01-almuerzo" data-toggle="tab">Almuerzo</a></li>
+															<li><a href="#dia-01-merienda" data-toggle="tab">Merienda</a></li>
+															<li><a href="#dia-01-cena" data-toggle="tab">Cena</a></li>
+														</ul>
+														<!-- Contenido de las solapas -->
+														<div class="tab-content">
+															<!-- Sub-Panel 01. La clase "in" + "active" lo marcan como activo.
+															ID relacionado con <a> de .nav-tabs -->
+															<div class="tab-pane fade in active" id="dia-01-desayuno">
+																<table class="table-hover">
+																	<thead>
+																		<!-- Respetar las clases de cada columna -->
+																		<tr>
+																			<th class="horario">Horario</th>
+																			<th class="descuento">Dto.</th>
+																			<th class="salon">Salón</th>
+																			<th class="personas">Personas</th>
+																			<th class="reservar"></th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<!-- Respetar las clases de cada columna -->
+																		<tr>
+																			<td class="horario">
+																				<!-- Poner fecha completa + hora + Z -->
+																				<time datetime="2013-12-11 16:00Z">16:00</time>
+																			</td>
+																			<td class="descuento">
+																				<div>20%</div>
+																			</td>
+																			<td class="salon">
+																				<!-- Si no es correcto un select, indicar que van a utilizar -->
+																				<select class="form-control input-sm">
+																					<option value="1">Mesa al aire libre</option>
+																					<option value="2">2</option>
+																					<option value="3">3</option>
+																				</select>
+																			</td>
+																			<td class="personas">
+																				<div class="btn-group btn-group-xs cantidad-personas">
+																					<button type="button" class="btn btn-default">-</button>
+																					<input type="text" class="btn btn-default numero" value="2" />
+																					<button type="button" class="btn btn-default">+</button>
+																				</div>
+																			</td>
+																			<td class="reservar">
+																				<a class="btn" href="#">Reservar grátis</a>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="horario">
+																				<time datetime="2013-12-11 07:30Z">07:30</time>
+																			</td>
+																			<td class="descuento">
+																				<div>20%</div>
+																			</td>
+																			<td class="salon">
+																				<select class="form-control input-sm">
+																					<option value="1">Mesa al aire libre</option>
+																					<option value="2">2</option>
+																					<option value="3">3</option>
+																				</select>
+																			</td>
+																			<td class="personas">
+																				<div class="btn-group btn-group-xs cantidad-personas">
+																					<button type="button" class="btn btn-default">-</button>
+																					<input type="text" class="btn btn-default numero" value="2" />
+																					<button type="button" class="btn btn-default">+</button>
+																				</div>
+																			</td>
+																			<td class="reservar">
+																				<a class="btn" href="#">Reservar grátis</a>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+															<!-- El ID de c/u depende del href del las Solapas -->
+															<div class="tab-pane fade" id="dia-01-almuerzo">
+																Repetir estructura de desayuno
+															</div>
+															<div class="tab-pane fade" id="dia-01-merienda">
+																Repetir estructura de desayuno
+															</div>
+															<div class="tab-pane fade" id="dia-01-cena">
+																Repetir estructura de desayuno
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- Panel 02 -->
+											<div class="panel panel-default">
+												<!-- La clase collapsed lo cierra -->
+												<div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" href="#dia-02">
+													<h3 class="panel-title">
+														<time datetime="2013-12-05"><span>Día (mañana)</span> 05 de diciembre</time>
+													</h3>
+												</div>
+												<!-- La clase collapse lo cierra -->
+												<div id="dia-02" class="panel-collapse collapse">
+													Copiar estructura
+												</div>
+											</div>
+											<!-- Panel 03. La clase "deshabilitado", lo inutiliza. -->
+											<div class="panel panel-default deshabilitado">
+												<div class="panel-heading collapsed" data-parent="#accordion">
+													<h3 class="panel-title">
+														<time datetime="2013-12-04"><span>Viernes</span> 06 de diciembre</time>
+														<small>Sin disponibilidad</small>
+													</h3>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Calificaciónes principales -->
+					<div class="col-md-12 col-sm-12 calificacion principal">
+						<div>
+							<div class="row">
+								<div class="col-md-4">
+									<dl class="resumen">
+										<dt class="sr-only">Calificación:</dt>
+										<dd class="calificacion"><em>Muy bueno</em></dd>
+										<dt class="sr-only">Puntaje:</dt>
+										<dd class="puntaje">
+											<div class="estrellas">
+												<!-- El width llena las estrellas -->
+												<div class="barra" style="width: 73%;"></div>
+												<div class="estrellas-img"></div>
+											</div>
+											<strong>4.75</strong>
+										</dd>
+										<dt class="sr-only">Opiniones:</dt>
+										<dd class="opiniones">Basado en 57 opiniones</dd>
+									</dl>
+								</div>
+								<div class="col-md-8">
+									<dl class="detalle">
+										<dt>Servicio</dt>
+										<dd>
+											<div class="estrellas">
+												<div class="barra" style="width: 20%;"></div>
+												<div class="estrellas-img">4.25 estrellas de 5</div>
+											</div>
+										</dd>
+										<dt>Comida</dt>
+										<dd>
+											<div class="estrellas">
+												<div class="barra" style="width: 40%;"></div>
+												<div class="estrellas-img">4.25 estrellas de 5</div>
+											</div>
+										</dd>
+										<dt>Ambiente</dt>
+										<dd>
+											<div class="estrellas">
+												<div class="barra" style="width: 70%;"></div>
+												<div class="estrellas-img">4.25 estrellas de 5</div>
+											</div>
+										</dd>
+									</dl>
+									<p class="garantia"><span class="glyphicon glyphicon-thumbs-up"></span> <span class="w800">OPINIONES VERIFICADAS</span> El 100% de los comensales han reservado en este restaurante.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Opiniones -->
+				<section class="opiniones">
+					<header>
+						<div class="row">
+							<div class="col-md-12">
+								<h1 class="sr-only">Opiniones</h1>
+								<div class="row">
+									<div class="col-md-8 col-sm-12">
+										<dl>
+											<dt>Ordenar por:</dt>
+											<dd><a href="#">La más reciente</a></dd>
+											<dd class="activo">La más antigua</dd>
+											<dd><a href="#">La mejor valoración</a></dd>
+											<dd><a href="#">La peor valoración</a></dd>
+										</dl>
+									</div>
+									<div class="col-md-4 col-sm-12">
+										<a class="btn" href="#">Comparte tu opinion</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+					<!-- Cada comentario va en el tag <article>, respetar estructura -->
+					<article>
+						<div class="row">
+							<div class="col-md-2 col-sm-3">
+								<footer>
+									<a class="usuario-imagen" href="#"><img src="img/usuario-BORRAR.png" alt="Nombre del usuario" /></a>
+									<a class="usuario-nombre" href="#">Nombre del usuario</a>
+								</footer>
+							</div>
+							<div class="col-md-10 col-sm-9">
+								<div class="opinion">
+									<p>El lugar, la comida, la atención todo excelente, cuando llegue ya sabían mi nombre, no necesite siquiera decirles el código, todo de 10, pero en el comentario yo había solicitado un sector del lugar en particular, y ellos no lo sabían. Luego por buena voluntad nos cambiaron donde yo había solicitado, pero me hubiese gustado que tengan en cuenta los comentarios al momento de hacer la reserva. Pasamos una noche genial gracias!</p>
+									<div class="row">
+										<div class="col-md-4 col-sm-12"><time datetime="2013-10-04">04 Octubre de 2013</time></div>
+										<div class="col-md-8 col-sm-12">
+											<dl>
+												<dt>Servicio</dt>
+												<!--
+													La clase "e#-#" debe ser la cantidad de estrellas: 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5
+													Si se necesita más presición, hablar.
+												-->
+												<dd><div class="estrellas e3">3 Estrellas</div></dd>
+												<dt>Comida</dt>
+												<dd><div class="estrellas e2-5">2.5 Estrellas</div></dd>
+												<dt>Ambiente</dt>
+												<dd><div class="estrellas e4">4 Estrellas</div></dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article>
+						<div class="row">
+							<div class="col-md-2 col-sm-3">
+								<footer>
+									<a class="usuario-imagen"><img src="img/usuario-BORRAR.png" /></a>
+									<a class="usuario-nombre" href="#">Nombre del usuario</a>
+								</footer>
+							</div>
+							<div class="col-md-10 col-sm-9">
+								<div class="opinion">
+									<p>El lugar, la comida, la atención todo excelente</p>
+									<div class="row">
+										<div class="col-md-4 col-sm-12"><time datetime="2013-10-03">03 Octubre de 2013</time></div>
+										<div class="col-md-8 col-sm-12">
+											<dl>
+												<dt>Servicio</dt>
+												<dd><div class="estrellas e1">1 Estrellas</div></dd>
+												<dt>Comida</dt>
+												<dd><div class="estrellas e4-5">4.5 Estrellas</div></dd>
+												<dt>Ambiente</dt>
+												<dd><div class="estrellas e5">5 Estrellas</div></dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<div class="paginado">
+						<ul class="pagination">
+							<li><a href="#">&larr;</a></li>
+							<li><a href="#">1..</a></li>
+							<li><a href="#">6</a></li>
+							<li><a href="#">7</a></li>
+							<li class="active"><a href="#">8</a></li>
+							<li><a href="#">9</a></li>
+							<li><a href="#">10</a></li>
+							<li><a href="#">..23</a></li>
+							<li><a href="#">&rarr;</a></li>
+						</ul>
+					</div>
+				</section>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Restaurantes relacionados -->
+				<aside>
+					<h1 class="sr-only">Restaurantes relacionados</h1>
+					<ul class="nav nav-tabs principales">
+						<!-- Aca se definen los tabs principales. El atributo "href" debe de hacer referencia al ID del tab -->
+						<li class="active"><a href="#restaurantes-similares" data-toggle="tab">Restaurantes similares</a></li>
+						<li><a href="#restaurantes-cercanos" data-toggle="tab">Restaurantes cercano</a></li>
+					</ul>
+					<div class="tab-content borde">
+						<!-- Solapa "Restaurantes similares" y su ID correspondiente -->
+						<!-- La clase "in" + "active" lo marcan como activo -->
+						<div class="tab-pane fade in active" id="restaurantes-similares">
+							<div class="row no-margin">
+								<div class="col-md-12">
+									<ul>
+										<li>
+											<a href="#">
+												<div class="imagen"><img src="img/usuario-BORRAR.png" alt="Nombre del restaurante" /></div>
+												<h2>Nombre del restaurante</h2>
+												<address>Costa Rica 5644, Puerto Hollywood</address>
+												<dl>
+													<dt>Cocina:</dt>
+													<dd class="cocina">Japonesa, Sushi</dd>
+													<dt class="sr-only">Precio</dt>
+													<dd class="precio">$3243</dd>
+												</dl>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="imagen"><img src="img/usuario-BORRAR.png" alt="Nombre del restaurante" /></div>
+												<h2>Nombre del restaurante</h2>
+												<address>Costa Rica 5644, Puerto Hollywood</address>
+												<dl>
+													<dt>Cocina:</dt>
+													<dd class="cocina">Japonesa, Sushi</dd>
+													<dt class="sr-only">Precio</dt>
+													<dd class="precio">$3243</dd>
+												</dl>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="imagen"><img src="img/usuario-BORRAR.png" alt="Nombre del restaurante" /></div>
+												<h2>Nombre del restaurante</h2>
+												<address>Costa Rica 5644, Puerto Hollywood</address>
+												<dl>
+													<dt>Cocina:</dt>
+													<dd class="cocina">Japonesa, Sushi</dd>
+													<dt class="sr-only">Precio</dt>
+													<dd class="precio">$3243</dd>
+												</dl>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="imagen"><img src="img/usuario-BORRAR.png" alt="Nombre del restaurante" /></div>
+												<h2>Nombre del restaurante</h2>
+												<address>Costa Rica 5644, Puerto Hollywood</address>
+												<dl>
+													<dt>Cocina:</dt>
+													<dd class="cocina">Japonesa, Sushi</dd>
+													<dt class="sr-only">Precio</dt>
+													<dd class="precio">$3243</dd>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- Solapa "Restaurantes cercano" y su ID correspondiente -->
+						<div class="tab-pane fade" id="restaurantes-cercanos">
+							Duplicar estructura de similares
+						</div>
+					</div>
+				</aside>
+			</article>
+		</div>
+	</main>
+	<footer class="pie"></footer>
+</body>
+</html>

@@ -10,12 +10,6 @@
 	}
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-	.solapas .linea {
-		top: 34px;
-	}
-}
-
 .nav-tabs {
 	border-bottom: 1px solid $color-t4;
 	&.principales {
@@ -30,6 +24,7 @@
 				border-radius: 0;
 				color: $color-t1;
 				font-size: 18px;
+				line-height: 26px;
 				margin: 0;
 				padding-bottom: 4px;
 				padding-top: 4px;

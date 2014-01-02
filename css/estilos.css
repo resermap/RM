@@ -191,9 +191,6 @@ ol {
     top: 35px;
     width: 8000px; }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  .solapas .linea {
-    top: 34px; } }
 .nav-tabs {
   border-bottom: 1px solid #999999; }
   .nav-tabs.principales {
@@ -208,6 +205,7 @@ ol {
         border-radius: 0;
         color: black;
         font-size: 18px;
+        line-height: 26px;
         margin: 0;
         padding-bottom: 4px;
         padding-top: 4px; }
@@ -624,12 +622,14 @@ body.pre-home header {
     background: url("../img/home.png") 0 -115px no-repeat;
     height: 55px;
     width: 204px; }
-  body.pre-home header nav.navbar-default.ciudades .navbar-nav, body.pre-home header nav.navbar-default.ciudades .navbar-nav:last-child {
-    margin-right: 0; }
-  body.pre-home header nav.navbar-default.ciudades .navbar-nav li {
-    padding-top: 57px; }
-    body.pre-home header nav.navbar-default.ciudades .navbar-nav li a {
-      font-weight: 700; }
+  body.pre-home header nav.navbar-default.ciudades {
+    margin-top: 0; }
+    body.pre-home header nav.navbar-default.ciudades .navbar-nav, body.pre-home header nav.navbar-default.ciudades .navbar-nav:last-child {
+      margin-right: 0; }
+    body.pre-home header nav.navbar-default.ciudades .navbar-nav li {
+      padding-top: 57px; }
+      body.pre-home header nav.navbar-default.ciudades .navbar-nav li a {
+        font-weight: 700; }
 body.pre-home main {
   background: #eaeaea;
   /* Old browsers */
@@ -2629,10 +2629,10 @@ article.restaurante aside {
     height: 1px;
     left: -400%;
     position: absolute;
-    top: 34px;
+    top: 28px;
     width: 8000px; }
   article.restaurante aside .nav-tabs a {
-    padding-bottom: 2px;
+    padding-bottom: 1px;
     padding-top: 0; }
   article.restaurante aside .tab-content {
     padding-top: 20px; }

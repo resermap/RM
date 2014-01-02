@@ -2014,8 +2014,7 @@ article.restaurante .tab-content {
   article.restaurante .tab-content p.elegir-fecha {
     color: #333333; }
     article.restaurante .tab-content p.elegir-fecha span {
-      color: #0098db;
-      cursor: pointer; }
+      color: #0098db; }
   article.restaurante .tab-content div.panel.panel-default {
     border: none;
     border-radius: 0; }

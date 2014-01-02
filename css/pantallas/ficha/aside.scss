@@ -1,0 +1,159 @@
+article.restaurante {
+	aside {
+		position: relative;
+		.linea {
+			background: $color-t4;
+			height: 1px;
+			left: -400%;
+			position: absolute;
+			top: 34px;
+			width: 8000px;
+		}
+		.nav-tabs {
+			a {
+				padding-bottom: 2px;
+				padding-top: 0;
+			}
+		}
+		.tab-content {
+			padding-top: 20px;
+			li {
+				float: left;
+				a {
+					display: block;
+					height: 100%;
+					&:hover {
+						text-decoration: none;
+						h2,
+						address,
+						dt,
+						dd.cocina {
+							color: $color-t6;
+						}
+					}
+				}
+				address,
+				dl {
+					margin-left: 100px;
+				}
+				address,
+				dt,
+				dd {
+					color: $color-t3;
+					font-size: 12px;
+					font-weight: 600;
+					line-height: 13px;
+				}
+				h2 {
+					font-size: 15px;
+					font-weight: 600;
+					line-height: 15px;
+					margin-bottom: 10px;
+					margin-top: 0;
+				}
+				address,
+				dd {
+					position: relative;
+					padding-left: 20px;
+					&:before {
+						color: $color-t3;
+						font-family: "Glyphicons Halflings";
+						left: 0;
+						position: absolute;
+						top: 0;
+					}
+				}
+				address {
+					margin-bottom: 10px;
+					&:before {
+						content: "\e062";
+					}
+				}
+				dl {
+					margin-bottom: 0;
+				}
+				dd {
+					display: block;
+					&.cocina {
+						margin-bottom: 9px;
+						&:before {
+							content: "\e179";
+						}
+					}
+					&.precio {
+						color: #ff0000;
+						&:before {
+							content: "\e148";
+						}
+					}
+				}
+				.imagen {
+					float: left;
+					height: 68px;
+					overflow: hidden;
+					width: 94px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 599px) {
+	article.restaurante {
+		aside {
+			.tab-content {
+				li {
+					float: none;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 600px) and (max-width: 991px) {
+	article.restaurante {
+		aside {
+			.tab-content {
+				ul {
+					margin-left: -3%;
+				}
+				li {
+					padding-left: 3%;
+					width: 50%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	article.restaurante {
+		aside {
+			.tab-content {
+				ul {
+					margin-top: -20px;
+				}
+				li {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	article.restaurante {
+		aside {
+			.tab-content {
+				ul {
+					margin-left: -2%;
+				}
+				li {
+					width: 25%;
+					padding-left: 2%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,323 @@
+section.destacados {
+	h1 {
+		color: $color-t2;
+		font-size: 22px;
+		font-weight: 600;
+		margin: 5px 0 20px 0;
+	}
+	.restaurantes {
+		background: #000;
+		li {
+			float: left;
+			height: 100%;
+			&:hover {
+				h2,
+				.estrellas,
+				dl {
+					display: block;
+				}
+			}
+			a {
+				color: #FFFFFF;
+				display: block;
+				height: inherit;
+				overflow: hidden;
+				position: relative;
+				&:hover {
+					text-decoration: none;
+					&:before {
+						background: $color-t1;
+						content: "";
+						height: 100%;
+						left: 0;
+						opacity: 0.6;
+						filter: alpha(opacity=60);
+						position: absolute;
+						top: 0;
+						width: 100%;
+						z-index: 11;
+					}
+				}
+			}
+			h2,
+			.estrellas,
+			dl {
+				display: none;
+			}
+			h2 {
+				font-size: 28px;
+				letter-spacing: -0.5px;
+				text-shadow: 0 2px 2px #333333;
+			}
+			h2,
+			.estrellas {
+				text-align: center;
+				position: relative;
+				z-index: 22;
+			}
+			.estrellas {
+				height: 32px;
+				margin: 0 auto;
+				overflow: hidden;
+				position: relative;
+				width: 168px;
+				&:before,
+				&:after {
+					background-image: url("#{$img-constante}");
+					background-repeat: no-repeat;
+					content: "";
+					height: 100%;
+				}
+				&:before {
+					background-position: -2px -269px;
+					float: left;
+				}
+				&:after {
+					float: right;
+				}
+				&.e-0-5 {
+					&:before {
+						width: 18px;
+					}
+					&:after {
+						background-position: -20px -307px;
+						width: 150px;
+					}
+				}
+				&.e-1 {
+					&:before {
+						width: 32px;
+					}
+					&:after {
+						background-position: -34px -307px;
+						width: 136px;
+					}
+				}
+				&.e-1-5 {
+					&:before {
+						width: 52px;
+					}
+					&:after {
+						background-position: -54px -307px;
+						width: 116px;
+					}
+				}
+				&.e-2 {
+					&:before {
+						width: 66px;
+					}
+					&:after {
+						background-position: -68px -307px;
+						width: 102px;
+					}
+				}
+				&.e-2-5 {
+					&:before {
+						width: 86px;
+					}
+					&:after {
+						background-position: -88px -307px;
+						width: 82px;
+					}
+				}
+				&.e-3 {
+					&:before {
+						width: 101px;
+					}
+					&:after {
+						background-position: -103px -307px;
+						width: 67px;
+					}
+				}
+				&.e-3-5 {
+					&:before {
+						width: 120px;
+					}
+					&:after {
+						background-position: -122px -307px;
+						width: 48px;
+					}
+				}
+				&.e-4 {
+					&:before {
+						width: 134px;
+					}
+					&:after {
+						background-position: -136px -307px;
+						width: 34px;
+					}
+				}
+				&.e-4-5 {
+					&:before {
+						width: 154px;
+					}
+					&:after {
+						background-position: -156px -307px;
+						width: 14px;
+					}
+				}
+				&.e-5 {
+					&:before {
+						width: 168px;
+					}
+					&:after {
+						content: none;
+					}
+				}
+			}
+			dl {
+				bottom: 0;
+				position: absolute;
+				width: 100%;
+				z-index: 22;
+				dd {
+					border-top: 1px solid #FFFFFF;
+					padding-top: 5px;
+					margin-top: 5px;
+					&:before {
+						color: $color-t5;
+						font-family: "Glyphicons Halflings";
+						margin-right: 4px;
+						position: relative;
+						top: 3px;
+					}
+					&.ubicacion {
+						border-top: none;
+						&:before {
+							content: "\e062";
+						}
+					}
+					&.comida {
+						&:before {
+							content: "\e179";
+						}
+					}
+					&.precio {
+						&:before {
+							content: "\e148";
+						}
+					}
+				}
+			}
+			img {
+				left: 0;
+				position: absolute;
+				top: 0;
+				z-index: 1;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	section.destacados {
+		.restaurantes {
+			li {
+				height: 260px;
+				width: 50%;
+				h2 {
+					margin: 0 0 10px 0;
+				}
+				dd {
+					text-overflow: ellipsis;
+					overflow: hidden;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	section.destacados {
+		.restaurantes {
+			li {
+				h2 {
+					margin: 0 0 28px 0;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	section.destacados {
+		.restaurantes {
+			height: 364px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	section.destacados {
+		.restaurantes {
+			li {
+				h2 {
+					padding: 20px 15px 0 15px;
+				}
+				dl {
+					padding: 0 15px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	section.destacados {
+		.restaurantes {
+			height: 364px;
+			li {
+				h2 {
+					padding: 30px 15px 0 15px;
+				}
+				dl {
+					padding: 0 30px;
+				}
+			}
+		}
+	}
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1280px) {
+	section.destacados {
+		.restaurantes {
+			li {
+				width: 25%;
+			}
+		}
+	}
+}
+
+@media (min-width: 1281px) and (max-width: 1680px) {
+	section.destacados {
+		.restaurantes {
+			li {
+				width: 20%;
+			}
+		}
+	}
+}
+
+@media (min-width: 1681px) and (max-width: 1920px) {
+	section.destacados {
+		.restaurantes {
+			li {
+				width: 16,66666666666667%;
+			}
+		}
+	}
+}
+
+@media (min-width: 1921px) {
+	section.destacados {
+		text-align: center;
+		h1 {
+			text-align: left;
+		}
+		.restaurantes {
+		}
+	}
+}

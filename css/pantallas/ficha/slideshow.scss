@@ -1,0 +1,20 @@
+article.restaurante {
+	div.slideshow {
+		.imagen-principal {
+			border: 1px solid $color-t5;
+			height: 264px;
+			margin-bottom: 12px;
+			max-width: 381px;
+		}
+		.paginado {
+			li {
+				margin-right: 8px;
+				&.activo {
+					border: 1px solid $color-v1;
+					height: 44px;
+					width: 44px;
+				}
+			}
+		}
+	}
+}

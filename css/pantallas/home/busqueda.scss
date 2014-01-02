@@ -1,0 +1,310 @@
+section.busqueda {
+	background: #000000 url("#{$img-url}home.jpg") center top no-repeat;
+	box-shadow: 0 3px 6px #777777;
+	height: 236px;
+	position: relative;
+	&>div>div {
+		&>div {
+			position: relative;
+		}
+	}
+	header {
+		h1 {
+			color: #FFFFFF;
+			font-size: 36px;
+			margin: 46px 0 2px 0;
+		}
+	}
+	form {
+		position: relative;
+		.form-group {
+			float: left;
+			position: relative;
+		}
+		.form-control {
+			background: #FFFFFF;
+			border: none;
+			color: $color-t4;
+			height: 36px;
+			font-size: 14px;
+			letter-spacing: -0.5px;
+			position: relative;
+			width: 100%;
+			&:focus {
+				color: $color-t2;
+			}
+		}
+		.nombre,
+		.fecha {
+			&:after {
+				color: $color-t4;
+				font-family: "Glyphicons Halflings";
+				position: absolute;
+				z-index: 11;
+			}
+		}
+		.nombre {
+			input {
+				padding-right: 25px;
+			}
+			&:after {
+				content: "\e003";
+				right: 6px;
+				top: 8px;
+			}
+		}
+		.fecha {
+			width: 106px;
+			&:after {
+				content: "\e109";
+				right: 4px;
+				top: 7px;
+			}
+		}
+		.cantidad {
+			width: 58px;
+			&:after {
+
+			}
+		}
+		.turno {
+			width: 102px;
+			&:after {
+
+			}
+		}
+		.btn {
+			height: 36px;
+			font-size: 14px;
+			font-weight: 700;
+		}
+	}
+	aside {
+		color: #dddddd;
+		height: 66px;
+		margin-top: 12px;
+		padding-right: 94px;
+		position: relative;
+		&:after {
+			background: #000000;
+			border-radius: 4px;
+			box-shadow: 0 2px 4px #333333;
+			content: "";
+			height: 100%;
+			left: 0;
+			opacity: 0.5;
+			position: absolute;
+			filter: alpha(opacity=50);
+			top: 0;
+			width: 100%;
+			z-index: 1;
+		}
+		h1,
+		blockquote {
+			position: relative;
+			z-index: 11;
+		}
+		h1 {
+			font-size: 13px;
+			font-style: italic;
+			font-weight: 400;
+			left: 10px;
+			margin: 0;
+			position: absolute;
+			top: 10px;
+		}
+		blockquote {
+			border: 0;
+			height: 100%;
+			margin: 0;
+			padding: 0 0 0 60px;
+			text-align: right;
+			header {
+				padding: 7px 0 3px 0;
+			}
+			h2,
+			cite {
+				display: inline-block;
+				font-size: 14px;
+				font-weight: 600;
+				line-height: 14px;
+			}
+			h2 {
+				margin: 0;
+			}
+			cite {
+				&:before {
+					content: "- ";
+				}
+			}
+			p {
+				font-size: 13px;
+				font-weight: 400;
+				letter-spacing: -0.5px;
+				line-height: 13px;
+				margin: 0;
+			}
+			.imagen {
+				border: 2px solid #FFFFFF;
+				border-radius: 100%;
+				height: 49px;
+				margin-top: -24px;
+				overflow: hidden;
+				position: absolute;
+				right: -56px;
+				top: 50%;
+				width: 49px;
+			}
+		}
+		.ver-otro {
+			background: url("#{$img-constante}") -212px -135px no-repeat;
+			cursor: pointer;
+			height: 33px;
+			margin-top: -16px;
+			position: absolute;
+			right: 9px;
+			top: 50%;
+			width: 20px;
+			z-index: 11;
+			&:hover {
+				background-position: -212px -169px;
+			}
+		}
+	}
+}
+
+@media (max-width: 639px) {
+	section.busqueda {
+		form {
+			.form-group {
+				margin-right: 5px;
+				&:after {
+					content: none;
+				}
+			}
+			.nombre {
+				width: 159px;
+			}
+			.fecha {
+				width: 94px;
+			}
+			.cantidad {
+				width: 34px;
+			}
+			.turno {
+				width: 84px;
+			}
+		}
+	}
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+	section.busqueda {
+		form {
+			.form-group {
+				margin-right: 5px;
+				&:after {
+					content: none;
+				}
+			}
+			.nombre {
+				width: 199px;
+			}
+			.fecha {
+				width: 94px;
+			}
+			.cantidad {
+				width: 34px;
+			}
+			.turno {
+				width: 84px;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	section.busqueda {
+		form {
+			.form-group {
+				margin-right: 9px;
+			}
+			.nombre {
+				width: 222px;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	section.busqueda {
+		form {
+			position: relative;
+			&:after {
+				background: #000000;
+				content: "";
+				height: 100%;
+				left: 0;
+				opacity: 0.5;
+				position: absolute;
+				filter: alpha(opacity=50);
+				top: 0;
+				width: 100%;
+				z-index: 1;
+			}
+		}
+		form {
+			padding: 9px 0px 9px 9px;
+			&:after {
+				border-radius: 10px;
+			}
+			.form-control,
+			input[type="submit"] {
+				position: relative;
+				z-index: 11;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	section.busqueda {
+		form {
+			padding-left: 20px;
+			.form-group {
+				margin-right: 12px;
+			}
+			.nombre {
+				width: 344px;
+			}
+		}
+		aside {
+			width: 540px;
+		}
+	}
+}
+
+@media (min-width: 1281px) {
+	section.busqueda {
+		&>div {
+			position: relative;
+			&:after,
+			&:before {
+				background: url("#{$img-url}home-degrade-1280.png") 0 0 no-repeat;
+				content: "";
+				height: 236px;
+				position: absolute;
+				top: 0;
+				width: 100px;
+				z-index: 1;
+			}
+			&:after {
+				background-position: 0 -236px;
+				right: -145px;
+			}
+			&:before {
+				left: -145px;
+			}
+		}
+	}
+}

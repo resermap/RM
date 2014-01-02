@@ -1,0 +1,288 @@
+section.dashboard {
+	overflow: hidden;
+	h1,
+	h2 {
+		font-size: 20px;
+		font-weight: 400;
+	}
+	h1 {
+		margin: 20px 0;
+	}
+	table {
+		td {
+			border-top-color: #8c8c8c;
+			color: $color-t3;
+			padding: 9px;
+			&.ordenar {
+				color: $color-v1;
+				cursor: pointer;
+			}
+			a {
+				color: $color-t3;
+			}
+		}
+	}
+	.comentarios {
+		thead {
+			td {
+				white-space: nowrap;
+			}
+		}
+		tbody {
+			td {
+				padding-bottom: 0;
+			}
+			td[colspan] {
+				border-top: none;
+				padding-bottom: 9px;
+			}
+		}
+		dl {
+			margin: 0;
+		}
+		dt,
+		dd {
+			display: inline-block;
+		}
+		dt {
+			font-weight: 400;
+		}
+		dd {
+			.estrellas {
+				display: inline-block;
+				line-height: 80px;
+				margin-right: 6px;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+		}
+	}
+	.puntos {
+		h2 {
+			margin-bottom: 0;
+		}
+		a.como {
+			color: $color-t3;
+			font-size: 13px;
+			margin-bottom: 10px;
+			&:hover {
+				color: $color-v1;
+				text-decoration: none;
+			}
+		}
+		.tabla {
+			position: relative;
+			small {
+				color: $color-t3;
+				font-size: 12px;
+				position: absolute;
+				right: 0;
+				top: -18px;
+			}
+		}
+		.detalles {
+			div {
+				background: #f1f0f0;
+				border: 1px solid $color-t5;
+				border-radius: 2px;
+				margin: 0 auto 15px auto;
+				padding: 15px 20px;
+				text-align: center;
+				p {
+					color: $color-t3;
+					strong {
+						span {
+							font-size: 18px;
+						}
+					}
+					&>span {
+						display: block;
+						font-style: italic;
+					}
+				}
+				small {
+					color: $color-t3;
+					display: block;
+					font-size: 12px;
+					line-height: 15px;
+					a {
+						font-weight: 700;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+		a.btn {
+			font-size: 15px;
+			font-weight: 700;
+			height: 27px;
+			line-height: 27px;
+			padding: 0 18px;
+			text-transform: uppercase;
+		}
+	}
+	.datos {
+		h2 {
+			margin-bottom: 0;
+		}
+		small {
+			color: $color-t3;
+			font-size: 13px;
+		}
+		.form-group {
+			margin-bottom: 0;
+		}
+		legend,
+		label {
+			text-align: left;
+		}
+		legend {
+			border: none;
+			color: #666666;
+			font-size: 13px;
+			font-weight: 400;
+			padding-top: 27px;
+			margin: 0;
+		}
+		.telefono,
+		.nacimiento {
+			margin: 0 -5px;
+			&>div {
+				padding: 0 5px;
+			}
+		}
+		.sexo {
+			label {
+				padding-left: 15px;
+				&:first-child {
+					padding-left: 0;
+				}
+			}
+			input[type="radio"] {
+				margin: 0;
+				position: relative;
+				top: 6px;
+			}
+		}
+		.btn {
+			margin-left: 0;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	section.dashboard {
+		.datos {
+			.form-group {
+				margin-top: 15px;
+				&>label:first-child,
+				&>label:first-child+div {
+					margin-bottom: 15px;
+				}
+			}
+			.btn {
+				margin-top: 15px;
+				float: right;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	section.dashboard {
+		.datos {
+			.form-group,
+			.btn {
+				margin-top: 25px;
+			}
+			.l-tel,
+			.d-tel {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	section.dashboard {
+		.datos {
+			label,
+			label+div {
+				padding-right: 0;
+			}
+			legend,
+			label {
+				letter-spacing: -0.75px;
+				white-space: nowrap;
+			}
+			fieldset {
+				&>div {
+					padding-right: 0;
+				}
+			}
+			.btn {
+				margin-left: 125px;
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	section.dashboard {
+		.comentarios {
+			dt {
+				margin-left: 15px;
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+			dd {
+				span {
+					display: none;
+				}
+			}
+		}
+		.puntos {
+			.detalles {
+				text-align: center;
+				a.catalogo {
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	section.dashboard {
+		.comentarios {
+			dt {
+				margin-left: 60px;
+				margin-right: 13px;
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+			dd {
+
+			}
+		}
+		.puntos {
+			.detalles {
+				div {
+					width: 78%;
+				}
+			}
+			a.btn {
+				&.catalogo {
+					float: right;
+				}
+			}
+		}
+		.datos {
+			.btn {
+				margin-left: 165px;
+			}
+		}
+	}
+}

@@ -1,0 +1,214 @@
+section.login,
+section.registrarse {
+	padding-top: 38px;
+	header {
+		border-bottom: 1px solid $color-t5;
+		h1 {
+			font-size: 19px;
+			font-weight: 600;
+		}
+	}
+	form {
+		margin-top: 10px;
+		.form-group {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+section.login {
+	form {
+		input[type="submit"] {
+			width: 100%;
+		}
+	}
+	a {
+		display: block;
+		font-size: 13px;
+		margin-top: 6px;
+		text-align: center;
+	}
+	.alternativa {
+		margin-top: 12px;
+		text-align: center;
+		p {
+			color: #42586f;
+			font-weight: 600;
+			margin: 0;
+		}
+		// Este código esta en "pie.scss", tiene mínimos cambios y agregados.
+		a {
+			background: #d6d6d6; /* Old browsers */
+			background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZDZkNmQ2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+			background: -moz-linear-gradient(-45deg,  #d6d6d6 0%, #ffffff 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#d6d6d6), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(-45deg,  #d6d6d6 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(-45deg,  #d6d6d6 0%,#ffffff 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(-45deg,  #d6d6d6 0%,#ffffff 100%); /* IE10+ */
+			background: linear-gradient(135deg,  #d6d6d6 0%,#ffffff 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#ffffff',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+			box-shadow: 0 1px 2px $color-t4;
+			display: inline-block;
+			height: 25px;
+			font-weight: 700;
+			line-height: 25px;
+			padding-left: 25px;
+			position: relative;
+			text-align: center;
+			width: 104px;
+			&:hover {
+				text-decoration: none;
+			}
+			span {
+				border-radius: 3px;
+				display: inline-block;
+				height: inherit;
+				left: 0;
+				line-height: 100px;
+				overflow: hidden;
+				position: absolute;
+				top: 0;
+				width: 25px;
+			}
+			&.fb {
+				color: #32558b;
+				span {
+					background: #32558b url("#{$img-constante}") -150px 5px no-repeat;
+				}
+			}
+			&.gp {
+				color: #da4b38;
+				margin-left: 6px;
+				span {
+					background: #da4b38 url("#{$img-constante}") -180px 6px no-repeat;
+				}
+				sup {
+					font-size: 100%;
+					top: -5px;
+				}
+			}
+		}
+	}
+}
+
+section.registrarse {
+	header {
+		p {
+			color: $color-t3;
+			font-size: 15px;
+		}
+	}
+	.row {
+		&>div {
+			&.ultimo {
+				margin-bottom: 15px;
+			}
+		}
+	}
+	small {
+		color: $color-t3;
+		display: block;
+		margin-bottom: 15px;
+		span {
+			font-weight: 700;
+		}
+		a {
+			text-decoration: underline;
+		}
+	}
+}
+
+div.login-separacion {
+	.linea {
+		overflow: hidden;
+		&:after {
+			box-shadow: 0 0 12px $color-t2;
+			content: "";
+			display: block;
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+	section.login,
+	section.registrarse {
+		.form-group {
+			float: left;
+			width: 49%;
+			&+.form-group {
+				margin-left: 2%;
+			}
+		}
+	}
+	section.registrarse {
+		padding-top: 10px;
+		.row {
+			margin-left: 0;
+			margin-right: 0;
+			&>div {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+	div.login-separacion {
+		margin-top: 40px;
+		.linea {
+			height: 20px;
+			width: 100%;
+			&:after {
+				border-radius: 125px 125px 125px 125px / 12px 12px 12px 12px;
+				margin-top: -20px;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	section.registrarse {
+		.row {
+			margin-left: -4px;
+			margin-right: -4px;
+			&>div {
+				padding-left: 4px;
+				padding-right: 4px;
+			}
+		}
+	}
+	div.login-separacion {
+		margin-top: 40px;
+		.linea {
+			height: 400px;
+			margin-left: 46%;
+			width: 20px;
+			&:after {
+				border-radius: 12px 12px 12px 12px / 125px 125px 125px 125px;
+				margin-left: -20px;
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	section.registrarse {
+		input[type="submit"] {
+			width: 100%;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	section.registrarse {
+		input[type="submit"] {
+			padding-left: 76px;
+			padding-right: 75px;
+		}
+	}
+	div.login-separacion {
+		.linea {
+			height: 360px;
+		}
+	}
+}

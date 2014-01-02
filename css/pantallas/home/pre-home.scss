@@ -1,0 +1,432 @@
+body.pre-home {
+	header {
+		background: #eaeaea;
+		padding-top: 20px;
+		h1 {
+			background: url("#{$img-url}home.png") 0 -115px no-repeat;
+			height: 55px;
+			width: 204px;
+		}
+		nav.navbar-default.ciudades {
+			.navbar-nav {
+				&,
+				&:last-child {
+					margin-right: 0;
+				}
+				li {
+					padding-top: 57px;
+					a {
+						font-weight: 700;
+					}
+				}
+			}
+		}
+	}
+	main {
+		background: #eaeaea; /* Old browsers */
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VhZWFlYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjYwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+		background: -moz-linear-gradient(top,  #eaeaea 0%, #ffffff 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eaeaea), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #eaeaea 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #eaeaea 0%,#ffffff 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #eaeaea 0%,#ffffff 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #eaeaea 0%,#ffffff 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
+		padding-top: 40px;
+		nav {
+			div {
+				background-color: #c9d3dd;
+				&:hover {
+					ul {
+						display: block;
+					}
+				}
+				h2 {
+					font-weight: 700;
+					margin: 0;
+				}
+				p {
+					color: #58636e;
+					font-size: 12px;
+					line-height: 16px;
+					margin-top: 2px;
+				}
+				ul {
+					display: none;
+				}
+				li {
+					padding-bottom: 6px;
+					a {
+						color: #FFFFFF;
+						font-weight: 700;
+						letter-spacing: -1px;
+						text-shadow: 0 2px 1px $color-t3;
+						&:hover {
+							color: $color-v1;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+		ol {
+			background: #ffffff; /* Old browsers */
+			background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlYWVhZWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+			background: -moz-linear-gradient(top,  #ffffff 0%, #eaeaea 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eaeaea)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  #ffffff 0%,#eaeaea 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  #ffffff 0%,#eaeaea 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  #ffffff 0%,#eaeaea 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  #ffffff 0%,#eaeaea 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 ); /* IE6-8 */
+			border: 1px solid  $color-t5;
+			border-radius: 10px;
+			margin-bottom: 20px;
+			margin-top: 25px;
+			li {
+				color: $color-v1;
+				counter-increment: pasos;
+				font-size: 16px;
+				font-weight: 600;
+				line-height: 16px;
+				position: relative;
+				text-transform: uppercase;
+				&:before {
+					content: counter(pasos);
+					font-size: 27px;
+					font-weight: 700;
+					position: absolute;
+				}
+			}
+		}
+		p {
+			color: $color-t3;
+			font-size: 13px;
+			span,
+			a {
+				font-weight: 600;
+				text-decoration: underline;
+			}
+			a {
+				color: $color-t3;
+				&:hover {
+					color: $color-v1;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	body.pre-home {
+		main {
+			nav {
+				div {
+					overflow: hidden;
+					&.argentina {
+						border-top-left-radius: 10px;
+						border-top-right-radius: 10px;
+					}
+					&.chile {
+						border-top: 2px solid #1E3247;
+						border-bottom-left-radius: 10px;
+						border-bottom-right-radius: 10px;
+					}
+					h2,
+					p {
+						background-color: #3893c7;
+					}
+					h2,
+					p,
+					ul {
+						padding-left: 20px;
+						padding-right: 20px;
+					}
+					h2 {
+						color: #FFFFFF;
+						font-size: 21px;
+						line-height: 16px;
+						padding-bottom: 6px;
+						padding-top: 15px;
+						text-shadow: 1px 1px 2px $color-t3;
+					}
+					p {
+						color: #b7dcf1;
+						margin: 0;
+						padding-bottom: 10px;
+					}
+					ul {
+						padding-top: 10px;
+					}
+					li {
+						a {
+							font-size: 18px;
+							line-height: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	body.pre-home {
+		main {
+			nav {
+				border-bottom-right-radius: 10px;
+				border-top-right-radius: 10px;
+				overflow: hidden;
+				div {
+					border: 2px solid #C9D3DD;
+					height: 150px;
+					padding: 45px 20px 0 20px;
+					position: relative;
+					width: 300px;
+					&:before,
+					&:after {
+						background-image: url("#{$img-url}home.png");
+						background-repeat: no-repeat;
+						content: "";
+						position: absolute;
+					}
+					&:before {
+						background-position: -65px 0;
+						height: 86px;
+						left: 29px;
+						top: 32px;
+						width: 65px;
+					}
+					&:after {
+						background-position: -130px 0;
+						display: none;
+						height: 38px;
+						left: 100%;
+						top: 50%;
+						margin-top: -20px;
+						width: 18px;
+					}
+					&:hover {
+						border-color: #1e6b98;
+						background-color: #3893c7;
+						&:before {
+							background-position: 0 0;
+							left: 30px;
+						}
+						&:after {
+							display: block;
+						}
+						h2 {
+							color: #FFFFFF;
+							text-shadow: 1px 1px 2px $color-t3;
+						}
+						p {
+							color: #b7dcf1;
+						}
+					}
+					&.argentina {
+						border-top-left-radius: 10px;
+						ul {
+							top: 0;
+						}
+						&:hover {
+							&+div {
+								border-top-color: #C9D3DD;
+							}
+						}
+					}
+					&.chile {
+						border-bottom-left-radius: 10px;
+						border-top-color: #1E3247;
+						&:hover {
+							border-top-color: #1e6b98;
+						}
+						ul {
+							top: -100%;
+						}
+					}
+					h2,
+					p {
+						padding-left: 98px;
+					}
+					h2 {
+						color: #1e3247;
+						font-size: 15px;
+						line-height: 16px;
+					}
+					ul {
+						height: 200%;
+						left: 100%;
+						padding: 33px 40px 0 20px;
+						position: absolute;
+						li {
+							float: left;
+							padding-left: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	body.pre-home {
+		main {
+			nav {
+				background: url("#{$img-url}pre-home-768px.jpg") 300px 0 no-repeat;
+				div {
+					ul {
+						width: 420px;
+						li {
+							width: 180px;
+							a {
+								font-size: 24px;
+								line-height: 26px;
+								letter-spacing: -2px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	body.pre-home {
+		main {
+			ol {
+				li {
+					padding: 15px 50px 15px 40px;
+					position: relative;
+					&:before {
+						left: 12px;
+						margin-top: -10px;
+						top: 50%;
+					}
+					&:after {
+						background-image: url("#{$img-url}home.png");
+						background-repeat: no-repeat;
+						content: "";
+						position: absolute;
+					}
+					&+li {
+						border-top: 1px solid $color-t5;
+					}
+					&:first-child {
+						&:after {
+							background-position: -226px 0;
+							height: 29px;
+							right: 18px;
+							top: 10px;
+							width: 33px;
+						}
+					}
+					&:first-child+li {
+						&:after {
+							background-position: -224px -43px;
+							height: 40px;
+							right: 14px;
+							top: 4px;
+							width: 38px;
+						}
+					}
+					&:first-child+li+li {
+						&:after {
+							background-position: -225px -87px;
+							height: 46px;
+							right: 0;
+							top: 0;
+							width: 74px;
+						}
+					}
+					&:first-child+li+li+li {
+						&:after {
+							background-position: -226px -141px;
+							height: 35px;
+							right: 13px;
+							top: 8px;
+							width: 41px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	body.pre-home {
+		main {
+			nav {
+				background: url("#{$img-url}pre-home-992px.jpg") 300px 0 no-repeat;
+				div {
+					ul {
+						width: 640px;
+						li {
+							width: 184px;
+							a {
+								font-size: 24px;
+								line-height: 26px;
+								letter-spacing: -2px;
+							}
+						}
+					}
+				}
+			}
+			ol {
+				height: 92px;
+				li {
+					background-image: url("#{$img-url}home.png");
+					background-repeat: no-repeat;
+					float: left;
+					height: 90px;
+					position: relative;
+					text-align: right;
+					width: 25%;
+					&:before {
+						left: 10px;
+						top: 31px;
+					}
+					&:first-child,
+					&:first-child+li,
+					&:first-child+li+li {
+						&:after {
+							background: url("#{$img-url}home.png") -164px -10px no-repeat;
+							height: 100%;
+							content: "";
+							position: absolute;
+							right: 0;
+							top: 0;
+							width: 38px;
+						}
+					}
+					&:first-child {
+						background-position: 150px -184px;
+						padding-right: 100px;
+						padding-top: 30px;
+					}
+					&:first-child+li {
+						background-position: 136px -276px;
+						padding-right: 108px;
+						padding-top: 22px;
+					}
+					&:first-child+li+li {
+						background-position: 96px -489px;
+						padding-top: 22px;
+						padding-right: 130px;
+					}
+					&:first-child+li+li+li {
+						background-position: 120px -374px;
+						padding-top: 30px;
+						padding-right: 136px;
+					}
+					span {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}

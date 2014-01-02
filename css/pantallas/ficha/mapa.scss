@@ -1,0 +1,23 @@
+article.restaurante {
+	div.mapa {
+		text-align: center;
+		address {
+			border-top: 1px solid $color-t5;
+			color: $color-t2;
+			font-size: 20px;
+			margin: 0;
+			padding: 15px 0;
+			&:before {
+				content: "\e062";
+				font-family: 'Glyphicons Halflings';
+				padding-right: 2px;
+				position: relative;
+				top: 2px;
+			}
+		}
+		&>div {
+			border: 1px solid $color-t4;
+			height: 288px;
+		}
+	}
+}

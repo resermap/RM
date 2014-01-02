@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es" xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Título</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="css/estilos.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script> 
+		$(function(){
+			$("body>header").load("inc/header-ayuda.html");
+			$("body>footer.pie").load("inc/footer-sin-suscripcion.html");
+		});
+	</script>
+</head>
+<body>
+	<header></header>
+	<main class="distancia">
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Reserva - Paso 2 -->
+		<div class="container">
+			<section class="reserva-paso-2">
+				<header>
+					<div class="row">
+						<div class="col-md-12">
+							<h1>Estás a un paso de realizar tu reserva!</h1>
+							<h2>Restaurante To Restaurant</h2>
+							<p>Para el <time datetime="2013-11-23 16:15Z">Lunes <span>23/11/2013</span>, a las <span>16:15 PM</span></time>, para <span>2</span> personas con <strong>20% de descuento</strong> <a href="#">(Cambiar reserva)</a></p>
+						</div>
+					</div>
+				</header>
+				<div class="row">
+					<div class="col-md-7 col-sm-8">
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Formulario de reserva -->
+						<form class="form-inline" role="form">
+							<div class="form-group">
+								<label>Nombre</label>
+								<input type="text" class="form-control" placeholder="Nombre" />
+							</div>
+							<div class="form-group">
+								<label>Apellido</label>
+								<input type="text" class="form-control" placeholder="Apellido" />
+							</div>
+							<div class="form-group">
+								<label>Email</label>
+								<input type="email" class="form-control" placeholder="Confirmación de la reserva" />
+							</div>
+							<div class="form-group">
+								<label>Teléfono</label>
+								<div class="row select">
+									<div class="col-md-5 col-sm-6 col-xs-12">
+										<select class="form-control">
+											<option>+54 (ARG)</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+									<div class="col-md-6 col-sm-6 col-xs-12 numero">
+										<input type="text" class="form-control" placeholder="Contacto telefónico" />
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<!-- Cuando se chequeé el checkbox, agregar clase "inactivo" para su invisibilidad -->
+								<div class="checkbox inactivo">
+									<!-- El ID del checkbox debe ser el mismo que el FOR del label -->
+									<input class="sr-only" type="checkbox" id="comentario">
+									<label for="comentario">¿Deseas agregar un comentario?</label>
+								</div>
+								<!-- Cuando se chequeé el checkbox, agregar clase "activo" para su visibilidad -->
+								<div class="form-group activo">
+									<label>Comentarios</label>
+									<textarea class="form-control" rows="2" placeholder="El restaurante hará lo que sea para satisfacer 
+tus comentarios, aunque no puede garazantizarlos."></textarea>
+								</div>
+							</div>
+						<!-- Empieza el código de reserva, el cual no se ve para el usuario anónimo -->
+							<div class="form-group">
+								<!-- Cuando se chequeé el checkbox, agregar clase "inactivo" para su invisibilidad -->
+								<div class="checkbox">
+									<!-- El ID del checkbox debe ser el mismo que el FOR del label -->
+									<input class="sr-only" type="checkbox" id="codigo">
+									<label for="codigo">Ingresar código Resermap Box</label>
+								</div>
+								<!-- Cuando se chequeé el checkbox, agregar clase "activo" para su visibilidad -->
+								<div class="form-group activo">
+									<label>Código Resermap Box</label>
+									<input type="email" class="form-control" placeholder="Código Resermap Box" />
+								</div>
+							</div>
+						<!-- Termina código de reserva -->
+							<p class="extras">Haciendo click en <span>“Confirmar Reserva”</span> estás aceptando los  <a href="#">Terminos y Condiciones</a> de Resermap.</p>
+							<input class="btn btn-primary btn-lg v2" type="submit" value="Confirmar reserva" />
+						</form>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<!-- Bloque para el usuario registrado -->
+						<aside class="registrado">
+							<p><strong>Ganá ### puntos</strong> Sólo por realizar esta reserva</p>
+							<p><strong class="chico">Tenés 500 puntos acumulados</strong> Acumula puntos y canjealos por interesantes premios</p>
+						</aside>
+						<!-- Bloque para el usuario anónimo -->
+						<aside class="anonimo">
+							<p>Reservá con tu cuenta de <a class="fb" href="#">Facebook</a> <a class="gp" href="#">Google Plus</a></p>
+							<p>¿Tenés cuenta Resermap? <a href="#">INGRESA AQUÍ</a></p>
+							<div>
+								<p><strong>Ganá ### puntos</strong> Sólo por realizar esta reserva</p>
+								<p>Acumula puntos y canjealos por interesantes premios</p>
+							</div>
+						</aside>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+	<footer class="pie"></footer>
+</body>
+</html>

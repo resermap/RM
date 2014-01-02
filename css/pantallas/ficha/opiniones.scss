@@ -1,0 +1,180 @@
+article.restaurante {
+	section.opiniones {
+		border-top: 1px solid $color-t4;
+		header {
+			margin-bottom: 5px;
+			padding-top: 4px;
+			form {
+				label {
+					color: $color-t3;
+					font-size: 15px;
+					line-height: 15px;
+					margin-bottom: 0;
+					margin-right: 4px;
+				}
+				select {
+					background: $color-t5 url("#{$img-constante}") -112px -242px no-repeat;
+					border: none;
+					border-radius: 4px;
+					font-size: 11px;
+					padding-left: 9px;
+					min-width: 140px;
+				}
+				option {
+					border: none;
+					padding-left: 12px;
+				}
+			}
+		}
+		article {
+			&+article {
+				border-top: 1px solid $color-t5;
+				margin-top: 10px;
+				padding-top: 15px;
+			}
+			footer {
+				.usuario-imagen {
+					border-radius: 100%;
+					border: 1px solid #FFFFFF;
+					box-shadow: 0 0 0 2px #eaeaea;
+					display: block;
+					height: 70px;
+					margin: 0 auto;
+					overflow: hidden;
+					width: 70px;
+				}
+				.usuario-nombre {
+					display: block;
+					line-height: 14px;
+					margin-left: 10px;
+					margin-top: 4px;
+					margin-right: 10px;
+					text-align: center;
+				}
+			}
+			div.opinion {
+				p {
+					color: $color-t2;
+					font-size: 15px;
+					line-height: 20px;
+				}
+				time {
+					color: $color-t3;
+					font-size: 15px;
+				}
+				dl {
+					margin: 0;
+				}
+				dt,
+				dd {
+					display: inline-block;
+				}
+				dt {
+					color: $color-t3;
+					font-size: 13px;
+					font-weight: 400;
+					padding-left: 6px;
+					&:first-child {
+						padding-left: 0;
+					}
+				}
+			}
+		}
+		.paginado {
+			text-align: center;
+		}
+		.pagination {
+			background: #ececec;
+			border: 1px solid $color-t5;
+			border-radius: 3px;
+			margin-bottom: 0;
+			overflow: hidden;
+			li {
+				background: url("#{$img-url}constante.png") 0 -63px no-repeat;
+				float: left;
+				height: 32px;
+				&:hover,
+				&.active {
+					a {
+						background-color: $color-v1;
+						color: white;
+					}
+				}
+				a {
+					background: transparent;
+					border: none;
+					border-radius: 3px;
+					color: $color-t3;
+					line-height: 32px;
+					padding: 0 10px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	article.restaurante {
+		section.opiniones {
+			header {
+				margin-bottom: 15px;
+				text-align: center;
+			}
+			article {
+				div.opinion {
+					margin-top: 6px;
+					margin-left: 15px;
+					&:before {
+						content: none;
+					}
+					p,
+					time,
+					dl {
+						text-align: center;
+					}
+					time {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	article.restaurante {
+		section.opiniones {
+			padding-bottom: 15px;
+			header {
+				a.reservar {
+					float: right;
+					margin-top: 2px;
+				}
+			}
+			article {
+				.opinion {
+					p {
+						display: table-cell;
+						height: 83px;
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	article.restaurante {
+		section.opiniones {
+			padding-bottom: 25px;
+			article {
+				div.opinion {
+					dl {
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+}

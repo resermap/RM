@@ -1,0 +1,55 @@
+.solapas {
+	position: relative;
+	.linea {
+		background: $color-t4;
+		height: 1px;
+		left: -400%;
+		position: absolute;
+		top: 35px;
+		width: 8000px;
+	}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.solapas .linea {
+		top: 34px;
+	}
+}
+
+.nav-tabs {
+	border-bottom: 1px solid $color-t4;
+	&.principales {
+		border-left: 1px solid $color-t4;
+		li {
+			background: #ececec;
+			a {
+				background: transparent;
+				border: 1px solid $color-t4;
+				border-bottom: none;
+				border-left: none;
+				border-radius: 0;
+				color: $color-t1;
+				font-size: 18px;
+				margin: 0;
+				padding-bottom: 4px;
+				padding-top: 4px;
+			}
+			&:hover,
+			&.active {
+				background: #FFFFFF;
+				a {
+					border-bottom: 1px solid #FFFFFF;
+					color: $color-t3;
+					outline: 0;
+					&:hover,
+					&:focus {
+						border-left: none;
+						border-right: 1px solid $color-t4;
+						border-top: 1px solid $color-t4;
+						outline: 0;
+					}
+				}
+			}
+		}
+	}
+}

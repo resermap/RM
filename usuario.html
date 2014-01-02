@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es" xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Título</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="css/estilos.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script> 
+		$(function(){
+			$("body>header").load("inc/header-usuario.html");
+			$("body>footer.pie").load("inc/footer-sin-suscripcion.html");
+		});
+	</script>
+</head>
+<body>
+	<header></header>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Dashboard de usuario -->
+	<main>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Breadcrumb -->
+		<div class="container-breadcrumb">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<ol class="breadcrumb">
+							<li><a href="/"><span class="sr-only">Home</span></a></li>
+							<li><a href="#">Reservas</a></li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Búsqueda -->
+		<section class="busqueda">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-11 col-sm-12 col-xs-12">
+						<header>
+							<h1>Buscar Restaurante</h1>
+						</header>
+						<form class="form-inline" role="form">
+							<div class="form-group nombre">
+								<label class="sr-only">Nombre de restaurante</label>
+								<input type="text" class="form-control" placeholder="Nombre de restaurante" />
+							</div>
+							<div class="form-group fecha">
+								<label class="sr-only">Fecha</label>
+								<input type="text" class="form-control" placeholder="11/10/2013" />
+							</div>
+							<div class="form-group cantidad">
+								<label class="sr-only">Cantidad de personas</label>
+								<select class="form-control">
+									<option>1</option>
+									<option selected="selected">2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+							</div>
+							<div class="form-group turno">
+								<label class="sr-only">Turno</label>
+								<select class="form-control">
+									<option selected="selected">Almuerzo</option>
+									<option>Merienda</option>
+									<option>Cena</option>
+								</select>
+							</div>
+							<input type="submit" class="btn btn-terciario btn-sm" value="Buscar Restaurante" />
+						</form>
+					</div>
+					<div class="col-md-7 col-md-offset-5 col-sm-10 col-sm-offset-2 col-xs-12">
+						<aside>
+							<h1 class="sr-only-no">Últimos comentarios</h1>
+							<blockquote>
+								<header>
+									<h2>Piegari Ristorante</h2>
+									<cite>Nombre de usuario</cite>
+								</header>
+									<p>To lead the World Wide Web to its full potential by developing protocols and guidelines that ensure long-term growth for the Web</p>
+									<div class="imagen"><img src="img/usuario-BORRAR.png" alt="Nombre de usuario" /></div>
+							</blockquote>
+							<!-- Por la semántica y por no haber flecha de retroceder, refrescaría los campos con un fade y listo. -->
+							<div class="ver-otro"></div>
+						</aside>
+					</div>
+				</div>
+			</div>
+		</section>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Dashboard -->
+		<section class="dashboard">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<header>
+							<h1>Tu cuenta en Resermap</h1>
+							<nav class="solapas">
+								<div class="linea"></div>
+								<ul class="nav nav-tabs principales">
+								<!-- Aca se definen los tabs principales. El atributo "href" debe de hacer referencia al ID del tab -->
+									<li class="active"><a href="#reservas" data-toggle="tab">Reservas</a></li>
+									<li><a href="#comentarios" data-toggle="tab">Comentarios</a></li>
+									<li><a href="#puntos" data-toggle="tab">Puntos</a></li>
+									<li><a href="#compartir" data-toggle="tab">Compartir con tus amigos</a></li>
+									<li><a href="#datos" data-toggle="tab">Tus datos</a></li>
+								</ul>
+							</nav>
+						</header>
+						<div class="tab-content">
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Dashboard > Reservas -->
+							<!-- Solapa "Reservas" y su ID correspondiente -->
+							<!-- La clase "in" + "active" lo marcan como activo -->
+							<div class="reservas tab-pane fade in active" id="reservas">
+								<h2>Reservas</h2>
+								<table class="table">
+									<thead>
+										<tr>
+											<td class="ordenar">Fecha</td>
+											<td>Personas</td>
+											<td>Restaurante</td>
+											<td class="ordenar">N° de reserva</td>
+											<td>Descuento</td>
+											<td class="ordenar">Estado</td>
+											<td>Comentarios</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>14/10/2013</td>
+											<td>4</td>
+											<td>Bruni</td>
+											<td>#1007</td>
+											<td></td>
+											<td>No asistido</td>
+											<td><a href="#">Ver</a></td>
+										</tr>
+										<tr>
+											<td>16/11/2013</td>
+											<td>2</td>
+											<td>Sucre</td>
+											<td>#312159574</td>
+											<td>-20% OFF</td>
+											<td>Asistido</td>
+											<td><a href="#">Agregar comentario</a></td>
+										</tr>
+										<tr>
+											<td>27/12/2013</td>
+											<td>2</td>
+											<td>To Restaurante</td>
+											<td>#1564</td>
+											<td>-20% OFF</td>
+											<td>Asistido</td>
+											<td><a href="#">Ver</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Dashboard > Comentarios -->
+							<div class="comentarios tab-pane fade" id="comentarios">
+								<h2>Comentarios</h2>
+								<table class="table">
+									<thead>
+										<tr>
+											<td class="ordenar">Fecha</td>
+											<td>Restaurante</td>
+											<td class="ordenar">N° de reserva</td>
+											<td>Comentario</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>14/10/2013</td>
+											<td>Bruni</td>
+											<td>#1007</td>
+											<td>El lugar, la comida, la atención todo excelente, cuando llegue ya sabían mi nombre, no necesite siquiera decirles el código, todo de 10, pero en el comentario yo había solicitado un sector del lugar en particular, y ellos no lo sabían. Luego por buena voluntad nos cambiaron donde yo había solicitado, pero me hubiese gustado que tengan en cuenta los comentarios al momento de hacer la reserva. Pasamos una noche genial gracias!</td>
+										</tr>
+										<tr>
+											<td colspan="4">
+												<dl>
+													<dt>Servicio</dt>
+													<!--
+														La clase "e#-#" debe ser la cantidad de estrellas: 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5
+														Si se necesita más presición, hablar.
+													-->
+													<dd><div class="estrellas e5">5 de 5 estrellas</div> <span>Excelente</span></dd>
+													<dt>Comida</dt>
+													<dd><div class="estrellas e4">4 de 5 estrellas</div> <span>Excelente</span></dd>
+													<dt>Ambiente</dt>
+													<dd><div class="estrellas e2-5">2.5 de 5 estrellas</div> <span>Excelente</span></dd>
+												</dl>
+											</td>
+										</tr>
+										<tr>
+											<td>16/11/2013</td>
+											<td>Sucre</td>
+											<td>#312159574</td>
+											<td>Excelente el lugar, el servicio, la comida que en nuestro caso fue sushi, muy buena onda los camareros!!
+Volveremos a ir!</td>
+										</tr>
+										<tr>
+											<td colspan="4">
+												<dl>
+													<dt>Servicio</dt>
+													<dd><div class="estrellas e5">5 de 5 estrellas</div> <span>Excelente</span></dd>
+													<dt>Comida</dt>
+													<dd><div class="estrellas e4">4 de 5 estrellas</div> <span>Excelente</span></dd>
+													<dt>Ambiente</dt>
+													<dd><div class="estrellas e2-5">2.5 de 5 estrellas</div> <span>Excelente</span></dd>
+												</dl>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Dashboard > Puntos -->
+							<div class="puntos tab-pane fade" id="puntos">
+								<h2>Puntos Resermap</h2>
+								<a class="como" href="#">¿Cómo funciona?</a>
+								<div class="row">
+									<div class="tabla col-md-8">
+										<small>Mostrando 1-5 de 15 resultado(s)</small>
+										<table class="table">
+											<thead>
+												<tr>
+													<td>Origen</td>
+													<td class="ordenar">Fecha</td>
+													<td class="ordenar">N° de reserva</td>
+													<td>Restaurante</td>
+													<td>Puntos</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Registro</td>
+													<td>10/12/2012</td>
+													<td></td>
+													<td></td>
+													<td>100</td>
+												</tr>
+												<tr>
+													<td>Reserva</td>
+													<td>14/10/2013</td>
+													<td>#1007</td>
+													<td>Bruni</td>
+													<td>100</td>
+												</tr>
+												<tr>
+													<td>Comentario</td>
+													<td>16/11/2013</td>
+													<td>#312159574</td>
+													<td>Sucre</td>
+													<td>200</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="detalles col-md-4">
+										<div>
+											<p><strong>Tenés <span>700</span></strong> puntos <span>(250$ ARS)</span></p>
+											<small>Si queres sumar más puntos Resermap y ganar cenas gratis, <a href="#">RECOMENDÁ A TUS AMIGOS</a></small>
+										</div>
+										<a class="btn btn-terciario premios" href="#">Mis premios</a>
+										<a class="btn btn-terciario catalogo" href="#">Ver catálogo</a>
+									</div>
+								</div>
+							</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Dashboard > Compartir -->
+							<div class="tab-pane fade" id="compartir">
+								-
+							</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Dashboard > Datos -->
+							<div class="datos tab-pane fade" id="datos">
+								<h2>Tus datos personales</h2>
+								<small>Los datos indicados con asterisco (*) son obligatorios</small>
+								<form class="form-horizontal">
+									<div class="form-group">
+										<label class="col-md-2 col-sm-2 col-xs-4 control-label">Nombre de Usuario *</label>
+										<div class="col-md-4 col-sm-4 col-xs-8">
+											<input type="text" class="form-control" />
+										</div>
+										<label class="col-md-2 col-sm-2 col-xs-4 control-label">Email</label>
+										<div class="col-md-4 col-sm-4 col-xs-8">
+											<input type="email" class="form-control" />
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-2 col-sm-2 col-xs-4 control-label">Nombres</label>
+										<div class="col-md-4 col-sm-4 col-xs-8">
+											<input type="text" class="form-control" />
+										</div>
+										<label class="col-md-2 col-sm-2 col-xs-4 control-label">Apellidos *</label>
+										<div class="col-md-4 col-sm-4 col-xs-8">
+											<input type="text" class="form-control" />
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="l-tel col-md-2 col-sm-2 col-xs-4 control-label">Teléfono</label>
+										<div class="d-tel col-md-4 col-sm-4 col-xs-8">
+											<div class="row telefono">
+												<div class="col-md-5 col-sm-5 col-xs-5">
+													<select class="form-control">
+														<option selected="selected">+54 (ARG)</option>
+														<option>+5455 (ARG)</option>
+														<option>+5455 (ARG)</option>
+														<option>+5455 (ARG)</option>
+														<option>+5455 (ARG)</option>
+													</select>
+												</div>
+												<div class="col-md-7 col-sm-7 col-xs-7">
+													<input type="text" class="form-control" />
+												</div>
+											</div>
+										</div>
+										<fieldset>
+											<legend class="col-md-4 col-sm-4 col-xs-4">Fecha de nacimiento</legend>
+											<div class="col-md-8 col-sm-8 col-xs-8">
+												<div class="row nacimiento">
+													<div class="col-md-4 col-sm-4 col-xs-4">
+														<label>Día</label>
+														<select class="form-control">
+															<option value="01" selected="selected">01</option>
+															<option value="02">02</option>
+															<option value="03">03</option>
+															<option value="04">04</option>
+															<option value="05">05</option>
+															<option value="06">06</option>
+															<option value="07">07</option>
+															<option value="08">08</option>
+															<option value="09">09</option>
+															<option value="10">10</option>
+															<option value="11">11</option>
+															<option value="12">12</option>
+															<option value="13">13</option>
+															<option value="14">14</option>
+															<option value="15">...</option>
+														</select>
+													</div>
+													<div class="col-md-4 col-sm-4 col-xs-4">
+														<label>Mes</label>
+														<select class="form-control">
+															<option value="01" selected="selected">01</option>
+															<option value="02">02</option>
+															<option value="03">03</option>
+															<option value="04">04</option>
+															<option value="05">05</option>
+															<option value="06">06</option>
+															<option value="07">07</option>
+															<option value="08">08</option>
+															<option value="09">09</option>
+															<option value="10">10</option>
+															<option value="11">11</option>
+															<option value="12">12</option>
+														</select>
+													</div>
+													<div class="col-md-4 col-sm-4 col-xs-4">
+														<label>Año</label>
+														<select class="form-control">
+															<option value="" selected="selected">1970</option>
+															<option value="">1971</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+									<div class="form-group">
+										<label class="col-md-2 col-sm-2 col-xs-4 control-label">Ubicación</label>
+										<div class="col-md-4 col-sm-4 col-xs-8">
+											<input type="text" class="form-control" />
+										</div>
+										<label class="col-md-2 col-sm-2 col-xs-4 control-label">Sexo</label>
+										<div class="col-md-4 col-sm-4 col-xs-8 sexo">
+											<label for="masculino" class="radio-inline">Masculino</label>
+											<input id="masculino" name="sexo" type="radio" value="Masculino" />
+											<label for="femenino" class="radio-inline">Femenino</label>
+											<input id="femenino" name="sexo" type="radio" value="Femenino" />
+										</div>
+									</div>
+									<input class="btn btn-terciario v4" type="submit" value="Actualizar">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="pie"></footer>
+</body>
+</html>

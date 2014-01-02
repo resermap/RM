@@ -1,0 +1,110 @@
+section.donde-que {
+	section {
+		margin-top: 15px;
+		h1 {
+			font-size: 22px;
+			font-weight: 400;
+			margin: 0 0 25px 0;
+		}
+		a {
+			border-radius: 4px;
+			color: $color-t1;
+			display: inline-block;
+			padding: 0 4px;
+			// overflow: hidden;
+			// text-overflow: ellipsis;
+			// white-space: nowrap;
+			// width: 100%;
+			&:hover {
+				background: #000000;
+				color: #FFFFFF;
+				text-decoration: none;
+			}
+		}
+		ul {
+			margin-left: -20px;
+		}
+		li {
+			float: left;
+			padding-left: 20px;
+			margin-top: 2px;
+			width: 50%;
+		}
+	}
+	aside {
+		border-radius: 4px;
+		box-shadow: 0 0 3px $color-t2;
+		padding: 164px 20px 10px 20px;
+		position: relative;
+		text-align: center;
+		h1 {
+			color: $color-v1;
+			font-size: 16px;
+			font-weight: 400;
+			margin: 26px 0 9px 0;
+			text-transform: uppercase;
+			span {
+				display: block;
+				font-weight: 800;
+			}
+		}
+		p {
+			color: $color-t2;
+			font-size: 13px;
+			line-height: 14px;
+			letter-spacing: -0.5px;
+		}
+		a {
+			display: inline-block;
+			background: #ff6600;
+			border: 3px solid #FFFFFF;
+			border-radius: 100%;
+			box-shadow: -2px 2px 3px #999999;
+			color: #FFFFFF;
+			height: 38px;
+			font-size: 12px;
+			font-weight: 700;
+			left: 50%;
+			line-height: 32px;
+			margin-left: -19px;
+			position: absolute;
+			text-transform: uppercase;
+			top: 143px;
+			width: 38px;
+			z-index: 1;
+			&:hover {
+				background: $color-v1;
+				text-decoration: none;
+			}
+		}
+		.imagen {
+			height: 164px;
+			left: 0;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	section.donde-que {
+		aside {
+			margin-top: 15px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	section.donde-que {
+		.row>div:first-child {
+			section {
+				h1 {
+					letter-spacing: -1px;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+}

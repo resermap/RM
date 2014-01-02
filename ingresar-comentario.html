@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es" xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Título</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="css/estilos.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script> 
+		$(function(){
+			$("body>header").load("inc/header.html");
+			$("body>footer.pie").load("inc/footer-sin-suscripcion.html");
+		});
+	</script>
+</head>
+<body>
+	<header></header>
+	<main>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Ingresar comentario -->
+		<div class="container">
+			<section class="ingresar-comentario">
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Encabezado -->
+				<header>
+					<h1>Ayudanos a calificar a nuestros restaurantes!</h1>
+				</header>
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Detalles de tu reserva</h2>
+					</div>
+					<div class="col-md-2 col-sm-3 col-xs-3">
+						<div class="imagen">
+							<img src="img/usuario-BORRAR.png">
+						</div>
+					</div>
+					<div class="col-md-10 col-sm-9 col-xs-9">
+						<h3>To Restaurant</h3>
+						<ul>
+							<li class="ubicacion"><address>Costa Rica 6000, Palermo Hollywood, Capital Federal</address></li>
+							<li class="personas">2 Personas</li>
+							<li class="fecha"><time datetime="2013-12-04">Día 04-12-2013</time></li>
+							<li class="hora">07:30 AM</li>
+						</ul>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<form action="">
+							<fieldset class="concurrencia">
+								<legend>¿Concurrió a su reserva?</legend>
+								<label class="radio-inline">
+									Sí <input type="radio" value="Si" name="concurrencia" />
+								</label>
+								<label class="radio-inline">
+									No <input type="radio" value="No" name="concurrencia" />
+								</label>
+							</fieldset>
+							<fieldset class="calificaciones">
+								<legend>Calificar</legend>
+								<!-- IE8 nos obliga a ponerle una clase -->
+								<!-- La clase debe ser "calificacion-#-5" -->
+								<div class="calificacion-3-5">
+									<p>Comida:</p>
+									<div>
+										<input type="radio" id="comida-5-5" name="comida" />
+										<input type="radio" id="comida-4-5" name="comida" />
+										<input type="radio" id="comida-3-5" name="comida" />
+										<input type="radio" id="comida-2-5" name="comida" />
+										<input type="radio" id="comida-1-5" name="comida" />
+										<!-- El FOR y el ID deben de estar relacionados -->
+										<label class="c-5-5" for="comida-5-5">5 de 5</label>
+										<label class="c-4-5" for="comida-4-5">4 de 5</label>
+										<label class="c-3-5" for="comida-3-5">3 de 5</label>
+										<label class="c-2-5" for="comida-2-5">2 de 5</label>
+										<label class="c-1-5" for="comida-1-5">1 de 5</label>
+									</div>
+									<small>BUENO</small>
+								</div>
+								<div class="calificacion-1-5">
+									<p>Servicio:</p>
+									<div>
+										<input type="radio" id="servicio-5-5" name="servicio" />
+										<input type="radio" id="servicio-4-5" name="servicio" />
+										<input type="radio" id="servicio-3-5" name="servicio" />
+										<input type="radio" id="servicio-2-5" name="servicio" />
+										<input type="radio" id="servicio-1-5" name="servicio" />
+										<label class="c-5-5" for="servicio-5-5">5 de 5</label>
+										<label class="c-4-5" for="servicio-4-5">4 de 5</label>
+										<label class="c-3-5" for="servicio-3-5">3 de 5</label>
+										<label class="c-2-5" for="servicio-2-5">2 de 5</label>
+										<label class="c-1-5" for="servicio-1-5">1 de 5</label>
+									</div>
+									<small>BUENO</small>
+								</div>
+								<div class="calificacion-4-5">
+									<p>Ambiente:</p>
+									<div>
+										<input type="radio" id="ambiente-5-5" name="ambiente" />
+										<input type="radio" id="ambiente-4-5" name="ambiente" />
+										<input type="radio" id="ambiente-3-5" name="ambiente" />
+										<input type="radio" id="ambiente-2-5" name="ambiente" />
+										<input type="radio" id="ambiente-1-5" name="ambiente" />
+										<label class="c-5-5" for="ambiente-5-5">5 de 5</label>
+										<label class="c-4-5" for="ambiente-4-5">4 de 5</label>
+										<label class="c-3-5" for="ambiente-3-5">3 de 5</label>
+										<label class="c-2-5" for="ambiente-2-5">2 de 5</label>
+										<label class="c-1-5" for="ambiente-1-5">1 de 5</label>
+									</div>
+									<small>BUENO</small>
+								</div>
+							</fieldset>
+							<div class="form-group">
+								<label for="inputEmail3" class="control-label">Comentario</label>
+								<textarea class="form-control" rows="5"></textarea>
+							</div>
+							<!-- Éste <small> solo debe ser visible para el usuario anónimo -->
+							<small>Haciendo click en <span>“Comentar”</span> estás aceptando los <a href="#">Terminos y Condiciones</a> de Resermap y creando tu cuenta.</small>
+							<input type="submit" class="btn btn-secundario btn-lg v3" value="Comentar" />
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+	<footer class="pie"></footer>
+</body>
+</html>

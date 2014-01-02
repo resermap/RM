@@ -1,0 +1,38 @@
+dd {
+	.estrellas {
+		background: url("#{$img-url}constante.png") 0 -42px no-repeat;
+		height: 19px;
+		line-height: 60px;
+		overflow: hidden;
+		position: relative;
+		top: 5px;
+		white-space: nowrap;
+		&.e1 {
+			width: 21px;
+		}
+		&.e1-5 {
+			width: 36px;
+		}
+		&.e2 {
+			width: 47px;
+		}
+		&.e2-5 {
+			width: 62px;
+		}
+		&.e3 {
+			width: 73px;
+		}
+		&.e3-5 {
+			width: 88px;
+		}
+		&.e4 {
+			width: 99px;
+		}
+		&.e4-5 {
+			width: 114px;
+		}
+		&.e5 {
+			width: 125px;
+		}
+	}
+}

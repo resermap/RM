@@ -1,0 +1,229 @@
+article.restaurante {
+	dl {
+		&.calificacion.resumen {
+			padding-left: 66px;
+			margin-bottom: 8px;
+			position: relative;
+			dd {
+				&.puntaje,
+				&.calificacion {
+					font-weight: 600;
+				}
+				&.puntaje {
+					background: #ececec;
+					border: 1px solid $color-t4;
+					border-radius: 3px;
+					color: $color-v1;
+					font-size: 18px;
+					font-weight: 600;
+					height: 40px;
+					line-height: 38px;
+					left: 0;
+					letter-spacing: -1px;
+					position: absolute;
+					text-align: center;
+					top: 0;
+					white-space: nowrap;
+					width: 44px;
+					&:after {
+						background: url("#{$img-constante}") -224px -60px no-repeat;
+						content: "";
+						height: 15px;
+						margin-top: -7px;
+						position: absolute;
+						right: -13px;
+						top: 50%;
+						width: 13px;
+					}
+				}
+				&.calificacion {
+					em {
+						color: $color-t1;
+						font-size: 18px;
+						font-style: normal;
+						font-weight: 600;
+						text-transform: uppercase;
+					}
+				}
+				&.opiniones {
+					color: $color-t3;
+					font-size: 14px;
+					margin-top: -4px;
+					a {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+		&.tipo-precio {
+			margin-bottom: 9px;
+			dd {
+				&.tipo-comida,
+				&.precio {
+					font-size: 14px;
+					&:before {
+						color: #777777;
+						font-family: "Glyphicons Halflings";
+						font-size: 14px;
+						padding-right: 6px;
+						position: relative;
+					}
+				}
+				&.tipo-comida {
+					color: $color-t2;
+					font-weight: 600;
+					&:before {
+						content: "\e179";
+						top: 1px;
+					}
+				}
+				&.precio {
+					color: $color-t3;
+					margin-top: 4px;
+					&:before {
+						content: "\e148";
+						top: 2px;
+					}
+				}
+			}
+		}
+	}
+	blockquote {
+		border-left: none;
+		border-bottom: 1px solid $color-t5;
+		margin: 0 0 14px 0;
+		padding: 0 0 14px 0;
+		p {
+			color: $color-t3;
+			font-size: 15px;
+			font-style: italic;
+			font-weight: 400;
+			line-height: 20px;
+			margin-top: 14px;
+			margin-bottom: 0;
+			&:before {
+				content: "\201c";
+			}
+			&:after {
+				content: "\201d";
+			}
+		}
+		footer {
+			text-align: right;
+		}
+		cite,
+		time {
+			display: inline-block;
+			font-size: 14px;
+			font-weight: 400;
+		}
+		cite {
+			a {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		time {
+			color: $color-t3;
+			&:before {
+				content: "|";
+				padding: 0 3px 0 0;
+			}
+		}
+	}
+	.btn {
+		&.descuento,
+		&.reservar {
+			width: 226px - (6 * 2);
+		}
+		&.descuento {
+			background: $color-v2;
+			color: white;
+			display: block;
+			font-size: 16px;
+			line-height: 22px;
+			margin-bottom: 10px;
+			margin-top: -5px;
+			padding-bottom: 0;
+			padding-top: 0;
+			&:hover {
+				background: #FF6600;
+			}
+		}
+		&.reservar {
+			&:hover {
+				background: #ff9000;
+			}
+		}
+	}
+	.redes-sociales {
+		ul {
+			display: inline-block;
+			li {
+				float: left;
+				&+li {
+					margin-left: 7px;
+				}
+			}
+			a {
+				display: block;
+				height: 32px;
+				line-height: 160px;
+				overflow: hidden;
+				width: 32px;
+				white-space: nowrap;
+				&.fb {
+					background: #5d82d1 url("#{$img-constante}") -216px -100px no-repeat;
+					&:hover {
+						background-color: #3B5998;
+					}
+				}
+				&.tt {
+					background: #40bff5 url("#{$img-constante}") -180px -98px no-repeat;
+					&:hover {
+						background-color: #00CCFC;
+					}
+				}
+				&.gp {
+					background: #eb5e4c url("#{$img-constante}") -138px -97px no-repeat;
+					&:hover {
+						background-color: #DD4B39;
+					}
+				}
+				&.email {
+					background: #9eb5b6 url("#{$img-constante}") -98px -99px no-repeat;
+					&:hover {
+						background-color: #8a9fa0;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	article.restaurante {
+		.redes-sociales {
+			margin-top: 7px;
+		}
+		.btn {
+			&.reservar {
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	article.restaurante {
+		.redes-sociales {
+			text-align: center;
+		}
+		.btn {
+			&.reservar {
+				margin-top: 18px;
+			}
+		}
+	}
+}

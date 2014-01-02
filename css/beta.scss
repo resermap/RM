@@ -1,0 +1,172 @@
+$color-t1: #000000;
+$color-t2: #333333;
+$color-t3: #666666;
+$color-t4: #999999;
+$color-t5: #CCCCCC;
+$color-t6: #ff6600;
+$color-v1: #0098db;
+$color-v2: #990000;
+$color-v3: #ffdf1c;
+$color-v4: #339933;
+
+$img-url: "../img/";
+$img-constante: $img-url + "constante.png";
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800);
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: "Open Sans", Arial, sans-serif;
+}
+
+body {
+	background: #f1f0f0;
+	color: $color-t1;
+	font-weight: 400;
+}
+
+a {
+	color: $color-v1;
+	&:hover {
+		color: #3366cc;
+	}
+}
+
+input[type="submit"] {
+	border: none;
+}
+
+label {
+	color: $color-t3;
+	font-size: 13px;
+	font-weight: 400;
+	margin-bottom: -1px;
+}
+
+.form-control {
+	background: #f0f0f0;
+	box-shadow: none;
+	color: $color-t3;
+	font-size: 13px;
+	padding: 6px 8px;
+	&:focus {
+		box-shadow: none;
+		border-color: $color-t4;
+	}
+}
+
+option {
+	color: $color-t3;
+}
+
+::-webkit-input-placeholder {
+	color: $color-t3;
+}
+
+:-moz-placeholder {
+	color: $color-t3;
+	opacity: 1;
+}
+
+::-moz-placeholder {
+	color: $color-t3;
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	color: $color-t3;
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 990px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 990px;
+  }
+}
+
+.w800 {
+	font-weight: 800;
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Overrides
+
+
+@import "pantallas/constantes.scss";
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Overrides
+
+
+@import "pantallas/override/botones.scss";
+@import "pantallas/override/breadcrumb.scss";
+@import "pantallas/override/listas.scss";
+@import "pantallas/override/nav-tabs.scss";
+@import "pantallas/override/paneles.scss";
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Maqueta
+
+
+@import "pantallas/maqueta/encabezado.scss";
+@import "pantallas/maqueta/main.scss";
+@import "pantallas/maqueta/pie.scss";
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Homes
+
+
+@import "pantallas/home/pre-home.scss";
+@import "pantallas/home/busqueda.scss";
+@import "pantallas/home/categorizacion.scss";
+@import "pantallas/home/destacados.scss";
+@import "pantallas/home/palabaras-claves.scss";
+@import "pantallas/home/donde-que.scss";
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Ficha del restaurant
+
+
+@import "pantallas/ficha/busqueda.scss";
+@import "pantallas/ficha/header.scss";
+@import "pantallas/ficha/slideshow.scss";
+@import "pantallas/ficha/resumen.scss";
+@import "pantallas/ficha/solapas.scss";
+@import "pantallas/ficha/mapa.scss";
+@import "pantallas/ficha/calificacion.scss";
+@import "pantallas/ficha/opiniones.scss";
+@import "pantallas/ficha/aside.scss";
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Pasos de reserva
+
+
+@import "pantallas/reserva/paso-2.scss";
+@import "pantallas/reserva/paso-3.scss";
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Comentarios
+
+
+@import "pantallas/comentario/ingresar.scss";
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Usuarios
+
+@import "pantallas/usuarios/login.scss";
+@import "pantallas/usuarios/dashboard.scss";

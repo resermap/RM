@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es" xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Título</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="css/estilos.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script> 
+		$(function(){
+			$("body>header").load("inc/header.html");
+			$("body>footer.pie").load("inc/footer.html");
+		});
+	</script>
+</head>
+<body class="home">
+	<header></header>
+	<main>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Búsqueda -->
+		<section class="busqueda">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-11 col-sm-12 col-xs-12">
+						<header>
+							<h1>Buscar Restaurante</h1>
+						</header>
+						<form class="form-inline" role="form">
+							<div class="form-group nombre">
+								<label class="sr-only">Nombre de restaurante</label>
+								<input type="text" class="form-control" placeholder="Nombre de restaurante" />
+							</div>
+							<div class="form-group fecha">
+								<label class="sr-only">Fecha</label>
+								<input type="text" class="form-control" placeholder="11/10/2013" />
+							</div>
+							<div class="form-group cantidad">
+								<label class="sr-only">Cantidad de personas</label>
+								<select class="form-control">
+									<option>1</option>
+									<option selected="selected">2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+							</div>
+							<div class="form-group turno">
+								<label class="sr-only">Turno</label>
+								<select class="form-control">
+									<option selected="selected">Almuerzo</option>
+									<option>Merienda</option>
+									<option>Cena</option>
+								</select>
+							</div>
+							<input type="submit" class="btn btn-terciario btn-sm" value="Buscar Restaurante" />
+						</form>
+					</div>
+					<div class="col-md-7 col-md-offset-5 col-sm-10 col-sm-offset-2 col-xs-12">
+						<aside>
+							<h1 class="sr-only-no">Últimos comentarios</h1>
+							<blockquote>
+								<header>
+									<h2>Piegari Ristorante</h2>
+									<cite>Nombre de usuario</cite>
+								</header>
+									<p>To lead the World Wide Web to its full potential by developing protocols and guidelines that ensure long-term growth for the Web</p>
+									<div class="imagen"><img src="img/usuario-BORRAR.png" alt="Nombre de usuario" /></div>
+							</blockquote>
+							<!-- Por la semántica y por no haber flecha de retroceder, refrescaría los campos con un fade y listo. -->
+							<div class="ver-otro"></div>
+						</aside>
+					</div>
+				</div>
+			</div>
+		</section>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Categorización de restaurantes -->
+		<section class="categorizacion">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 col-sm-12 col-xs-12">
+						<header>
+							<h1>Una mesa para cada ocasión</h1>
+						</header>
+						<ul>
+							<li class="principal">
+								<a href="#">
+									<h2>Más reservado</h2>
+									<small>42 restaurantes</small>
+									<img src="img/pre-home-768px.jpg" alt="Nombre del <h2>">
+								</a>
+							</li>
+							<li class="secundario">
+								<a href="#">
+									<h2>Mejores comentarios</h2>
+									<small>4869 restaurantes</small>
+									<img src="img/pre-home-768px.jpg" alt="Nombre del <h2>">
+								</a>
+							</li>
+							<li class="principal">
+								<a href="#">
+									<h2>Cena en pareja</h2>
+									<small>42596 restaurantes</small>
+									<img src="img/pre-home-768px.jpg" alt="Nombre del <h2>">
+								</a>
+							</li>
+							<li class="secundario">
+								<a href="#">
+									<h2>Con amigos</h2>
+									<small>99 restaurantes</small>
+									<img src="img/pre-home-768px.jpg" alt="Nombre del <h2>">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-5 col-sm-12 col-xs-12">
+						<aside>
+							<h2>Lo más buscado:</h2>
+							<ol>
+								<li><a href="#">Restaurantes peruanos</a></li>
+								<li><a href="#">Restaurantes chinos</a></li>
+								<li><a href="#">Parrillas argentinas</a></li>
+								<li><a href="#">Nombre del restaurante muy extenso para que quede en una línea</a></li>
+								<li><a href="#">Restaurantes románticos</a></li>
+								<li><a href="#">Asadores</a></li>
+								<li><a href="#">Marisquería</a></li>
+								<li><a href="#">Restaurantes vegetarianos</a></li>
+								<li><a href="#">Arrocerías</a></li>
+								<li><a href="#">Restaurantes griegos</a></li>
+								<li><a href="#">Restaurantes peruanos</a></li>
+								<li><a href="#">Restaurantes chinos</a></li>
+								<li><a href="#">Parrillas argentinas</a></li>
+								<li><a href="#">Nombre del restaurante muy extenso para que quede en una línea</a></li>
+								<li><a href="#">Restaurantes románticos</a></li>
+								<li><a href="#">Asadores</a></li>
+								<li><a href="#">Marisquería</a></li>
+								<li><a href="#">Restaurantes vegetarianos</a></li>
+								<li><a href="#">Arrocerías</a></li>
+								<li><a href="#">Restaurantes griegos</a></li>
+							</ol>
+						</aside>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<p>Encuentre <strong class="s400">los mejores restaurantes de Buenos Aires</strong> junto a Resermap® Si estás buscando una guía completa con variedad de comidas infinitas, restaurantes específicos para <strong class="s400">veladas en pareja en Buenos Aires</strong>, salir a comer con amigos, cenas familiares. Si deseas salir al mejor precio o solo disfrutar de las comidas típicas de Buenos Aires, si eres de los que se guía en base a los comentarios de los comensales... Estas en el sitio correcto!</p>
+					</div>
+				</div>
+			</div>
+		</section>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Destacados -->
+		<section class="destacados">
+			<div class="container">
+				<h1>Destacados</h1>
+			</div>
+			<!--
+				Basado en las resoluciones de monitores:
+				- Hasta 1280px son 4 <li>
+				- De 1281px a 1680px son 5 <li>
+				- De 1681px a 1920px son 6 <li>
+				- De 1921px en adelante se centra.
+			-->
+			<ul class="restaurantes">
+				<li>
+					<a href="#">
+						<h2>Nombre del restaurante</h2>
+						<!--
+							Las variables de e-#-# son:
+							e-0-5 / e-1 / e-1-5 / e-2 / e-2-5 / e-3 / e-3-5 / e-4 / e-4-5 / e-5
+						-->
+						<div class="estrellas e-4">
+							<span class="sr-only">4 de 5 estrellas</span>
+						</div>
+						<dl>
+							<dt class="sr-only">Ubicación:</dt>
+							<dd class="ubicacion">Buenos Aires, Argentina</dd>
+							<dt class="sr-only">Comida:</dt>
+							<dd class="comida">Internacional, Italiana</dd>
+							<dt class="sr-only">Precio:</dt>
+							<dd class="precio">$56000</dd>
+						</dl>
+						<img src="img/pre-home-768px.jpg" alt="Nombre del restaurante" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h2>Nombre del restaurante</h2>
+						<div class="estrellas e-3">
+							<span class="sr-only">3 de 5 estrellas</span>
+						</div>
+						<dl>
+							<dt class="sr-only">Ubicación:</dt>
+							<dd class="ubicacion">Buenos Aires, Argentina</dd>
+							<dt class="sr-only">Comida:</dt>
+							<dd class="comida">Internacional, Italiana</dd>
+							<dt class="sr-only">Precio:</dt>
+							<dd class="precio">$56000</dd>
+						</dl>
+						<img src="img/pre-home-768px.jpg" alt="Nombre del restaurante" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h2>Nombre del restaurante</h2>
+						<div class="estrellas e-1-5">
+							<span class="sr-only">1.5 de 5 estrellas</span>
+						</div>
+						<dl>
+							<dt class="sr-only">Ubicación:</dt>
+							<dd class="ubicacion">Buenos Aires, Argentina</dd>
+							<dt class="sr-only">Comida:</dt>
+							<dd class="comida">Internacional, Italiana</dd>
+							<dt class="sr-only">Precio:</dt>
+							<dd class="precio">$56000</dd>
+						</dl>
+						<img src="img/pre-home-768px.jpg" alt="Nombre del restaurante" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<h2>Nombre del restaurante</h2>
+						<div class="estrellas e-3">
+							<span class="sr-only">3 de 5 estrellas</span>
+						</div>
+						<dl>
+							<dt class="sr-only">Ubicación:</dt>
+							<dd class="ubicacion">Buenos Aires, Argentina</dd>
+							<dt class="sr-only">Comida:</dt>
+							<dd class="comida">Internacional, Italiana</dd>
+							<dt class="sr-only">Precio:</dt>
+							<dd class="precio">$56000</dd>
+						</dl>
+						<img src="img/pre-home-768px.jpg" alt="Nombre del restaurante" />
+					</a>
+				</li>
+			</ul>
+		</section>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Palabras claves -->
+		<section class="palabaras-claves">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<h1>Buscar <span>palabras claves</span> en los comentarios</h1>
+						<form class="form-inline">
+							<div class="form-group">
+								<label class="sr-only">Buscar palabras claves</label>
+								<input type="text" class="form-control" placeholder="atención, ambiente, comida, velas">
+							</div>
+							<input class="btn btn-terciario btn-sm" type="submit" value="Buscar">
+						</form>
+						<blockquote>
+							<header>
+								<cite>Nombre de usuario</cite>
+							</header>
+							<!-- El <span> colorea las palabaras claves buscadas -->
+							<p>“Ha sido un lugar paradisiaco, excelente <span>ambientación</span>. Muy buena <span>comida</span>, la <span>atención</span> fue 10 puntos. Es para recomendar! Volvemeremos.”</p>
+							<footer>
+								<time datetime="2013-11-27">27 de noviembre de 2013</time>
+							</footer>
+						</blockquote>
+						<div class="navegacion">
+							<p>1 de 47</p>
+							<div class="avanzar"></div>
+							<div class="retroceder"></div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<!-- Todo el <aside> sería el slideshow. Dentro del <ul> deberían ir los <li>, cada uno con su restaurante -->
+						<!-- Nunca probé la versión 2, pero la 1 es excelente. http://jquery.malsup.com/cycle2/ -->
+						<aside>
+							<ul>
+								<li>
+									<a href="#">
+										<div>
+											<h2>Restaurante Felix Clásico</h2>
+											<dl>
+												<dt class="sr-only">Ubicación:</dt>
+												<dd class="ubicacion">Dirección del restaurante</dd>
+												<dt class="sr-only">Comida:</dt>
+												<dd class="comida">Mediterranea, Pescados y mariscos</dd>
+											</dl>
+										</div>
+										<img src="img/pre-home-768px.jpg" alt="Nombre del restaurante" />
+									</a>
+								</li>
+							</ul>
+							<div class="avanzar"></div>
+							<div class="retroceder"></div>
+						</aside>
+					</div>
+				</div>
+			</div>
+		</section>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Dónde, Qué -->
+		<section class="donde-que">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-4 col-xs-6">
+						<section>
+							<h1>¿Dónde comemos hoy?</h1>
+							<ul>
+								<li><a href="#">Palermo</a></li>
+								<li><a href="#">San Isidro</a></li>
+								<li><a href="#">Belgrano</a></li>
+								<li><a href="#">Colegiales</a></li>
+								<li><a href="#">Centro</a></li>
+								<li><a href="#">Costanera</a></li>
+								<li><a href="#">Puerto Madero</a></li>
+								<li><a href="#">Villa Crespo</a></li>
+								<li><a href="#">Barrio Norte</a></li>
+								<li><a href="#">La Plata</a></li>
+								<li><a href="#">San Telmo</a></li>
+								<li><a href="#">Tigre</a></li>
+								<li><a href="#">Caballito</a></li>
+								<li><a href="#">Almagro</a></li>
+								<li><a href="#">Rosario</a></li>
+								<li><a href="#">Villa Urquiza</a></li>
+								<li><a href="#">Pilar</a></li>
+								<li><a href="#">Avellaneda</a></li>
+								<li><a href="#">Boedo</a></li>
+								<li><a href="#">Lomas de Zamora</a></li>
+							</ul>
+						</section>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-6">
+						<section>
+							<h1>Qué preferis comer?</h1>
+							<ul>
+								<li><a href="#">Irlandesa</a></li>
+								<li><a href="#">Mediterranea</a></li>
+								<li><a href="#">Parrilla</a></li>
+								<li><a href="#">Casera</a></li>
+								<li><a href="#">Variada</a></li>
+								<li><a href="#">Autóctona</a></li>
+								<li><a href="#">Porteña</a></li>
+								<li><a href="#">Sushi</a></li>
+								<li><a href="#">De Autor</a></li>
+								<li><a href="#">Tapas</a></li>
+								<li><a href="#">Pastas</a></li>
+								<li><a href="#">Gourmet</a></li>
+								<li><a href="#">Argentina</a></li>
+								<li><a href="#">Japonesa</a></li>
+								<li><a href="#">Pizza</a></li>
+								<li><a href="#">Española</a></li>
+								<li><a href="#">Italiana</a></li>
+								<li><a href="#">Peruana</a></li>
+								<li><a href="#">Picadas</a></li>
+								<li><a href="#">Inglesa</a></li>
+							</ul>
+						</section>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<aside>
+							<h1>¿Ya probaste la <span>comida irlandesa?</span></h1>
+							<p>El ingrediente principal de la cocina irlandesa es la patata. Los pescados más conocidos son el salmón y el Bacalao. En el terreno de los cereales es muy conocido  internacionalmente la industria de elaboración de pan.</p>
+							<div class="imagen"><img src="img/pre-home-768px.jpg" alt="¿Ya probaste la comida irlandesa?" /></div>
+							<a href="#">Ver</a>
+						</aside>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="pie"></footer>
+</body>
+</html>

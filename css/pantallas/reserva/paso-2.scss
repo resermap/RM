@@ -1,0 +1,264 @@
+section.reserva-paso-2 {
+	header {
+		border-bottom: 1px solid  $color-t5;
+		h1,
+		h2 {
+			color: $color-t1;
+			font-weight: 600;
+			margin: 0;
+		}
+		h1 {
+			font-size: 19px;
+			margin-bottom: 2px;
+		}
+		h2,
+		p {
+			font-size: 15px;
+		}
+		p {
+			color: $color-t3;
+			margin: 4px 0 12px 0;
+			span {
+				font-weight: 700;
+			}
+			a {
+				color: $color-v1;
+				font-weight: 600;
+			}
+		}
+	}
+
+	form.form-inline {
+		margin-left: -4px;
+		.form-group {
+			padding-top: 20px;
+			padding-left: 4px;
+			vertical-align: top;
+			.checkbox {
+				label {
+					color: $color-v1;
+					font-size: 13px;
+					font-weight: 700;
+				}
+				&.inactivo {
+					display: none;
+				}
+			}
+			.form-group {
+				display: none;
+				padding-top: 0;
+				padding-left: 0;
+				width: 100%;
+				&.activo {
+					display: block;
+				}
+				textarea {
+					&::-webkit-textarea-placeholder {
+						color: $color-t4;
+						font-size: 11px;
+						font-style: italic;
+					}
+
+					&:-moz-placeholder {
+						color: $color-t4;
+						font-size: 11px;
+						font-style: italic;
+						opacity: 1;
+					}
+
+					&::-moz-placeholder {
+						color: $color-t4;
+						font-size: 11px;
+						font-style: italic;
+						opacity: 1;
+					}
+
+					&:-ms-textarea-placeholder {
+						color: $color-t4;
+						font-size: 11px;
+						font-style: italic;
+					}
+				}
+			}
+		}
+		.row {
+			&.select {
+				&>div {
+					select {
+						width: 100%;
+					}
+				}
+			}
+		}
+		.extras {
+			color: $color-t3;
+			font-size: 12px;
+			margin-bottom: 14px;
+			padding-top: 40px;
+			a {
+				font-size: 12px;
+				font-weight: 400;
+				text-decoration: underline;
+			}
+			span {
+				font-weight: 700;
+			}
+		}
+		.extras,
+		input[type="submit"] {
+			margin-left: 4px;
+		}
+	}
+
+	aside {
+		background: #f0f0f0;
+		border: 1px solid $color-t5;
+		margin-top: 20px;
+		padding: 14px 0 20px 0;
+		text-align: center;
+		p {
+			font-size: 12px
+		}
+		&.registrado {
+			p {
+				color: $color-t3;
+				font-size: 12px;
+				font-weight: 600;
+				margin: 0;
+				strong {
+					display: block;
+					font-size: 17px;
+					font-weight: 600;
+					&.chico {
+						font-size: 13px;
+						font-weight: 700;
+					}
+				}
+				&+p {
+					margin-top: 20px;
+				}
+			}
+		}
+		&.anonimo {
+			p {
+				color: #42586f;
+				margin-bottom: 6px;
+				a {
+					color: #42586f;
+					&.fb,
+					&.gp {
+						border-radius: 3px;
+						display: inline-block;
+						height: 25px;
+						line-height: 100px;
+						overflow: hidden;
+						position: relative;
+						top: 7px;
+						width: 25px;
+					}
+					&.fb {
+						background: #335890 url(#{$img-constante}) -149px 5px no-repeat;
+						margin-left: 2px;
+					}
+					&.gp {
+						background: #db4b39 url(#{$img-constante}) -180px 7px no-repeat;
+						margin-left: 6px;
+					}
+				}
+			}
+			div {
+				border: 1px solid $color-t5;
+				background: #FFFFFF;
+				margin: 0 20px;
+				padding: 5px 0 12px 0;
+				p {
+					color: $color-t3;
+					font-size: 12px;
+					font-weight: 600;
+					margin: 0;
+					strong {
+						display: block;
+						font-size: 17px;
+						font-weight: 600;
+					}
+					&+p {
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	section.reserva-paso-2 {
+		form.form-inline {
+			.form-group {
+				margin: 0;
+				.row {
+					&.select {
+						&>div {
+							&.numero {
+								padding-top: 10px;
+							}
+						}
+					}
+				}
+				.checkbox {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	section.reserva-paso-2 {
+		form.form-inline {
+			.form-group {
+				width: 49%;
+				.row {
+					&.select {
+						&>div {
+							padding: 0;
+							&:first-child {
+								padding-left: 15px;
+								padding-right: 8px;
+							}
+							&.numero {
+								width: 44.5%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	section.reserva-paso-2 {
+		form.form-inline {
+			.form-group {
+				width: 49%;
+				.row {
+					&.select {
+						&>div {
+							&.numero {
+								width: 53.5%;
+							}
+						}
+					}
+				}
+			}
+		}
+		aside {
+			&.registrado {
+				p {
+					margin: 0 auto;
+					width: 200px;
+				}
+			}
+		}
+	}
+}

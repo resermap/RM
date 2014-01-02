@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es" xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Título</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="css/estilos.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script> 
+		$(function(){
+			$("body>header").load("inc/header-pre-home.html");
+			$("body>footer.pie").load("inc/footer-sin-suscripcion.html");
+		});
+	</script>
+</head>
+<body class="pre-home">
+	<header></header>
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<nav>
+						<h1 class="sr-only">Elige tu país</h1>
+						<div class="argentina">
+							<h2>Argentina</h2>
+							<p>Encuentre los mejores restaurantes de Argentina</p>
+							<ul>
+								<li><a href="#">Capital Federal</a></li>
+								<li><a href="#">Buenos Aires</a></li>
+								<li><a href="#">Rosario</a></li>
+								<li><a href="#">La Plata</a></li>
+								<li><a href="#">Bariloche</a></li>
+							</ul>
+						</div>
+						<div class="chile">
+							<h2>Chile</h2>
+							<p>Encuentre los mejores restaurantes de Chile</p>
+							<ul>
+								<li><a href="#">Santiago</a></li>
+								<li><a href="#">Talca</a></li>
+								<li><a href="#">Temuco</a></li>
+							</ul>
+						</div>
+					</nav>
+					<ol class="gradient">
+						<li>ELEGÍ UN RESTAURANTE</li>
+						<li>APROVECHÁ NUESTROS DESCUENTOS</li>
+						<li>HACÉ TU RESERVA GRATIS</li>
+						<li>LISTO, <span>A COMER!</span></li>
+					</ol>
+					<p><span>Resermap®</span> es la guía más completa de Restaurantes con Reserva Online totalmente gratis, te ofrece los mejores restaurantes para reservar en cualquier momento y con los mejores descuentos. ¡Con opiniones fiables que te ayudarán a encontrar el restaurante ideal!</p>
+					<p>Conoce también <a href="#">Resermap Box</a> es una elegante caja de regalos que contiene un catálogo con los más prestigiosos restaurantes, y una Tarjeta de regalo para canjear por una cena completa para 2 personas.</p>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="pie"></footer>
+</body>
+</html>

@@ -1,0 +1,250 @@
+section.reserva-paso-3 {
+	header {
+		background: #edfbcb;
+		border: 1px solid #bdd57f;
+		padding: 0 15px 8px 15px;
+		text-align: center;
+		h1,
+		p {
+			color: #2b6003;
+		}
+		h1 {
+			font-size: 17px;
+			font-weight: 700;
+		}
+		p {
+			font-size: 14px;
+			strong {
+				color: $color-t1;
+				display: block;
+				font-weight: 400;
+				span {
+					font-size: 17px;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+	h2 {
+		color: $color-t1;
+		font-size: 18px;
+		font-weight: 700;
+	}
+	h3 {
+		color: $color-t1;
+		font-size: 16px;
+		font-weight: 600;
+		margin-top: 0;
+	}
+	.reserva-detalle {
+		.puntos {
+			h3 {
+				margin-bottom: 5px;
+			}
+		}
+		div.imagen {
+			border: 1px solid #999999;
+			overflow: hidden;
+			height: 106px;
+			width: 133px;
+		}
+		ul {
+			li {
+				color: $color-t3;
+				font-size: 15px;
+				padding-bottom: 4px;
+				&:before {
+					color: $color-t4;
+					font-family: "Glyphicons Halflings";
+					padding-right: 6px;
+					position: relative;
+					top: 2px;
+				}
+				&.personas {
+					&:before {
+						content: "\e008";
+					}
+				}
+				&.fecha {
+					&:before {
+						content: "\e109";
+					}
+				}
+				&.hora {
+					&:before {
+						content: "\e023";
+					}
+				}
+			}
+		}
+		p {
+			color: $color-t3;
+		}
+		strong {
+			span {
+				font-size: 17px;
+			}
+		}
+	}
+	.otros-detalles {
+		border-top: 1px solid #c2c6ca;
+		margin-top: 19px;
+		padding-bottom: 19px;
+		padding-top: 19px;
+		.mapa {
+			border: 1px solid #999999;
+			height: 155px;
+			overflow: hidden;
+		}
+		address {
+			color: $color-t3;
+			font-size: 12px;
+			padding-left: 16px;
+			position: relative;
+			&:before {
+				color: $color-t4;
+				content: "\e062";
+				font-family: "Glyphicons Halflings";
+				left: 0;
+				position: absolute;
+			}
+		}
+		.puntos {
+			&>div {
+				border: 1px solid $color-t5;
+				background: #f1f0f0;
+				padding: 10px 15px 4px 15px;
+			}
+			p {
+				color: $color-t3;
+				strong {
+					span {
+						font-size: 18px;
+					}
+				}
+				&.small {
+					color: $color-t1;
+					font-size: 10px;
+					line-height: 10px;
+					margin-bottom: 15px;
+				}
+				&.participar {
+					&,
+					a {
+						font-size: 12px;
+						line-height: 16px;
+					}
+					a {
+						font-weight: 700;
+					}
+				}
+			}
+		}
+	}
+	.detalles-finales {
+		padding-top: 10px;
+		text-align: center;
+		p {
+			color: $color-t3;
+			font-size: 12px;
+			margin-bottom: 0;
+			&.sociales {
+				font-weight: 700;
+				margin-top: 10px;
+				a {
+					line-height: 100px;
+					margin-left: 20px;
+					overflow: hidden;
+					white-space: nowrap;
+					&.fb,
+					&.gp,
+					&.tt,
+					&.email {
+						border-radius: 3px;
+						display: inline-block;
+						height: 25px;
+						line-height: 100px;
+						overflow: hidden;
+						position: relative;
+						top: 7px;
+						width: 25px;
+					}
+					&.fb {
+						background: #335890 url(#{$img-constante}) -149px 5px no-repeat;
+					}
+					&.gp {
+						background: #db4b39 url(#{$img-constante}) -180px 7px no-repeat;
+					}
+					&.tt {
+						background: #3aaec0 url(#{$img-constante}) -205px 5px no-repeat;
+					}
+					&.email {
+						background: #e9e9e9 url(#{$img-constante}) -152px -21px no-repeat;;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	section.reserva-paso-3 {
+		.reserva-detalle {
+			&>div {
+				margin-top: 20px;
+				div.imagen {
+					display: none;
+				}
+			}
+		}
+		.otros-detalles {
+			.puntos {
+				margin-top: 20px;
+			}
+			.info {
+				margin-top: 10px;
+			}
+		}
+		a.volver {
+			margin-top: 20px;
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	section.reserva-paso-3 {
+		.btn {
+			margin-top: 45px;
+		}
+		.otros-detalles {
+			.puntos {
+				margin-top: 20px;
+				text-align: center;
+			}
+		}
+		a.volver {
+			margin-top: 20px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	section.reserva-paso-3 {
+		.otros-detalles {
+			address {
+				text-align: left;
+			}
+			.btn {
+				margin-top: 30px;
+			}
+			.info {
+				text-align: center;
+			}
+		}
+		a.volver {
+			position: absolute;
+			right: 15px;
+			top: 40%;
+		}
+	}
+}

@@ -1,0 +1,64 @@
+.btn {
+	border: none;
+	text-transform: uppercase;
+}
+
+.btn-primary {
+	background: $color-t6;
+	color: white;
+}
+
+.btn-secundario {
+	background: $color-v1;
+	color: white;
+}
+
+.btn-terciario {
+	background: $color-v1;
+	color: white;
+}
+
+
+.btn-xs,
+.btn-sm,
+.btn-lg {
+	border-radius: 3px;
+}
+
+.btn-xs  {
+	padding: 4px 8px 3px 8px;
+	&.ancho {
+		padding: 3px 15px;
+	}
+}
+
+.btn-lg {
+	line-height: auto;
+	padding: 9px 16px 11px 16px;
+}
+
+.btn.v1 {
+	height: 39px;
+	font-size: 16px;
+}
+
+.btn.v2 {
+	height: 39px;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 8px 36px 12px 36px;
+}
+
+.btn.v3 {
+	height: 39px;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 8px 80px 12px 80px;
+}
+
+.btn.v4 {
+	height: 36px;
+	font-size: 14px;
+	font-weight: 700;
+	padding: 8px 45px 12px 45px;
+}

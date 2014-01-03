@@ -228,6 +228,7 @@ body.pre-home {
 					&.argentina {
 						border-top-left-radius: 10px;
 						ul {
+							margin-top: -2px;
 							top: 0;
 						}
 						&:hover {
@@ -243,6 +244,7 @@ body.pre-home {
 							border-top-color: #1e6b98;
 						}
 						ul {
+							margin-top: -6px;
 							top: -100%;
 						}
 					}
@@ -258,11 +260,14 @@ body.pre-home {
 					ul {
 						height: 200%;
 						left: 100%;
-						padding: 33px 40px 0 20px;
+						margin-left: 2px;
+						overflow: hidden;
+						// padding: 33px 40px 0 20px;
+						padding: 33px 40px 0 40px;
 						position: absolute;
 						li {
-							float: left;
-							padding-left: 20px;
+							// float: left;
+							// padding-left: 20px;
 						}
 					}
 				}
@@ -280,7 +285,7 @@ body.pre-home {
 					ul {
 						width: 420px;
 						li {
-							width: 180px;
+							// width: 180px;
 							a {
 								font-size: 24px;
 								line-height: 26px;
@@ -364,9 +369,9 @@ body.pre-home {
 				background: url("#{$img-url}pre-home-992px.jpg") 300px 0 no-repeat;
 				div {
 					ul {
-						width: 640px;
+						width: 660px;
 						li {
-							width: 184px;
+							// width: 184px;
 							a {
 								font-size: 24px;
 								line-height: 26px;

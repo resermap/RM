@@ -800,6 +800,7 @@ body.pre-home main {
       body.pre-home main nav div.argentina {
         border-top-left-radius: 10px; }
         body.pre-home main nav div.argentina ul {
+          margin-top: -2px;
           top: 0; }
         body.pre-home main nav div.argentina:hover + div {
           border-top-color: #C9D3DD; }
@@ -809,6 +810,7 @@ body.pre-home main {
         body.pre-home main nav div.chile:hover {
           border-top-color: #1e6b98; }
         body.pre-home main nav div.chile ul {
+          margin-top: -6px;
           top: -100%; }
       body.pre-home main nav div h2,
       body.pre-home main nav div p {
@@ -820,22 +822,19 @@ body.pre-home main {
       body.pre-home main nav div ul {
         height: 200%;
         left: 100%;
-        padding: 33px 40px 0 20px;
-        position: absolute; }
-        body.pre-home main nav div ul li {
-          float: left;
-          padding-left: 20px; } }
+        margin-left: 2px;
+        overflow: hidden;
+        padding: 33px 40px 0 40px;
+        position: absolute; } }
 @media (min-width: 768px) and (max-width: 991px) {
   body.pre-home main nav {
     background: url("../img/pre-home-768px.jpg") 300px 0 no-repeat; }
     body.pre-home main nav div ul {
       width: 420px; }
-      body.pre-home main nav div ul li {
-        width: 180px; }
-        body.pre-home main nav div ul li a {
-          font-size: 24px;
-          line-height: 26px;
-          letter-spacing: -2px; } }
+      body.pre-home main nav div ul li a {
+        font-size: 24px;
+        line-height: 26px;
+        letter-spacing: -2px; } }
 @media (max-width: 991px) {
   body.pre-home main ol li {
     padding: 15px 50px 15px 40px;
@@ -879,13 +878,11 @@ body.pre-home main {
   body.pre-home main nav {
     background: url("../img/pre-home-992px.jpg") 300px 0 no-repeat; }
     body.pre-home main nav div ul {
-      width: 640px; }
-      body.pre-home main nav div ul li {
-        width: 184px; }
-        body.pre-home main nav div ul li a {
-          font-size: 24px;
-          line-height: 26px;
-          letter-spacing: -2px; }
+      width: 660px; }
+      body.pre-home main nav div ul li a {
+        font-size: 24px;
+        line-height: 26px;
+        letter-spacing: -2px; }
   body.pre-home main ol {
     height: 92px; }
     body.pre-home main ol li {

@@ -20,13 +20,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+h6 {
 	font-family: "Open Sans", Arial, sans-serif;
 }
 
@@ -39,7 +33,7 @@ body {
 a {
 	color: $color-v1;
 	&:hover {
-		color: #3366cc;
+		color: #425479;
 	}
 }
 
@@ -113,10 +107,12 @@ option {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Overrides
 
 
+@import "pantallas/override/blockquote.scss";
 @import "pantallas/override/botones.scss";
 @import "pantallas/override/breadcrumb.scss";
 @import "pantallas/override/listas.scss";
 @import "pantallas/override/nav-tabs.scss";
+@import "pantallas/override/paginado.scss";
 @import "pantallas/override/paneles.scss";
 
 
@@ -164,6 +160,14 @@ option {
 
 
 @import "pantallas/comentario/ingresar.scss";
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Ficha del restaurant
+
+
+@import "pantallas/busqueda/destacado.scss";
+@import "pantallas/busqueda/aside.scss";
+@import "pantallas/busqueda/resultados.scss";
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Usuarios

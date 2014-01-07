@@ -6,6 +6,10 @@
 .btn-primary {
 	background: $color-t6;
 	color: white;
+	&:focus,
+	&:hover {
+		background: #ff9933;
+	}
 }
 
 .btn-secundario {

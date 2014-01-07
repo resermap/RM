@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es" xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Título</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="css/estilos.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script> 
+		$(function(){
+			$("body>header").load("inc/header.html");
+			$("body>footer.pie").load("inc/footer-sin-suscripcion.html");
+		});
+	</script>
+</head>
+<body class="resultados">
+	<header></header>
+	<main>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Breadcrumb -->
+		<div class="container-breadcrumb">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<ol class="breadcrumb">
+							<li><a href="/"><span class="sr-only">Home</span></a></li>
+							<li><a href="#">Ciudad</a></li>
+							<li><a href="#">Búsqueda Restaurantes</a></li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Búsqueda -->
+		<div class="container">
+			<div class="row">
+				<div class="destacado col-md-12">
+				</div>
+				<div class="resultados col-md-9 col-md-push-3">
+					<h1 class="sr-only">Resultados de búsqueda</h1>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Visualización -->
+					<div class="visualizacion">
+						<ul class="orden">
+							<!-- Clase activo para el orden elegido -->
+							<li><a class="activo" href="#">Popularidad</a></li>
+							<li><a href="#">Nombre</a></li>
+							<li><a href="#">Precio</a></li>
+							<li><a href="#">Descuento</a></li>
+							<li><a href="#">Comentarios</a></li>
+						</ul>
+						<ul class="modos">
+							<li><a class="lista" href="#">Lista</a></li>
+							<li><a class="x" href="#">X</a></li>
+							<li><a class="mapa" href="#">Mapa</a></li>
+						</ul>
+					</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Filtros activos -->
+					<div class="filtros-activos">
+						<ul>
+							<li>Palermo <a href="#">x</a></li>
+							<li>Japonesa <a href="#">x</a></li>
+							<li>Mayor a $185 ARS <a href="#">x</a></li>
+						</ul>
+						<div class="eliminar-todos">Eliminar todos</div>
+					</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Resultados -->
+					<article>
+						<header>
+							<h2><a href="#">Nombre del restaurante</a></h2>
+							<dl>
+								<dt class="sr-only">Puntaje:</dt>
+								<dd class="puntaje"><strong>4.75</strong></dd>
+								<dt class="sr-only">Calificación:</dt>
+								<dd class="calificacion"><em>Muy bueno</em></dd>
+								<dt class="sr-only">Opiniones:</dt>
+								<dd class="opiniones">Basado en 57 Opiniones</dd>
+							</dl>
+						</header>
+						<dl class="tipo-precio">
+							<dt class="sr-only">Dirección:</dt>
+							<dd class="ubicacion">Maure 1643, Las Cañitas, Maure 1643, Las</dd>
+							<dt class="sr-only">Cocina:</dt>
+							<dd class="tipo-comida">Japonesa, Sushi, Internacional</dd>
+							<dt class="sr-only">Precio:</dt>
+							<dd class="precio">$$$$</dd>
+						</dl>
+						<a class="imagen" href="#"><img src="img/usuario-BORRAR.png" alt="Título del restaurante" /></a>
+						<blockquote>
+							<p>To lead the World Wide Web to its full potential by developing protocols.</p>
+							<footer>
+								<!-- El link debe llevar al comentario, o sino al usuario -->
+								<cite><a target="_blank" href="link-U1">Nombre de usuario</a></cite>
+							</footer>
+						</blockquote>
+						<a class="btn btn-primary" href="#">Reservas gratis</a>
+					</article>
+					<article>
+						<header>
+							<h2><a href="#">Nombre del restaurante</a></h2>
+							<!-- Para los que son nuevos -->
+							<p class="nuevo"><strong>NUEVO</strong></p>
+							<dl>
+								<dt class="sr-only">Puntaje:</dt>
+								<dd class="puntaje"><strong>4.75</strong></dd>
+								<dt class="sr-only">Calificación:</dt>
+								<dd class="calificacion"><em>Muy bueno</em></dd>
+								<dt class="sr-only">Opiniones:</dt>
+								<dd class="opiniones">Basado en 57 Opiniones</dd>
+							</dl>
+						</header>
+						<dl class="tipo-precio">
+							<dt class="sr-only">Dirección:</dt>
+							<dd class="ubicacion">Maure 1643, Las Cañitas, Maure 1643, Las</dd>
+							<dt class="sr-only">Cocina:</dt>
+							<dd class="tipo-comida">Japonesa, Sushi, Internacional</dd>
+							<dt class="sr-only">Precio:</dt>
+							<dd class="precio">$$$$</dd>
+							<dt class="sr-only">Descuento:</dt>
+							<dd class="descuento"><strong>-50%</strong> OFF</dd>
+						</dl>
+						<a class="imagen" href="#"><img src="img/usuario-BORRAR.png" alt="Título del restaurante" /></a>
+						<blockquote>
+							<p>To lead the World Wide Web to its full potential by developing protocols and guidelines that ensure long-term growth for the Web</p>
+							<footer>
+								<!-- El link debe llevar al comentario, o sino al usuario -->
+								<cite><a target="_blank" href="link-U1">Nombre de usuario</a></cite>
+							</footer>
+						</blockquote>
+						<a class="btn btn-primary" href="#">Reservas gratis</a>
+					</article>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Paginado -->
+					<div class="paginado">
+						<ul class="pagination">
+							<li><a href="#">&larr;</a></li>
+							<li><a href="#">1..</a></li>
+							<li><a href="#">6</a></li>
+							<li><a href="#">7</a></li>
+							<li class="active"><a href="#">8</a></li>
+							<li><a href="#">9</a></li>
+							<li><a href="#">10</a></li>
+							<li><a href="#">..23</a></li>
+							<li><a href="#">&rarr;</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="aside col-md-3 col-md-pull-9">
+					<aside>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Buscar -->
+						<div class="buscar">
+							<h2>Buscar Restaurante</h2>
+							<form>
+								<div class="restaurante">
+									<input type="text" placeholder="¿Dónde queres comer hoy?" />
+								</div>
+								<div class="fecha">
+									<input type="text" placeholder="26/11/2013" /> <span class="glyphicon glyphicon-calendar"></span>
+								</div>
+								<div class="horario">
+									<select>
+										<option value="0700">07:00</option>
+										<option value="0730">07:30</option>
+										<option value="0800">08:00</option>
+									</select>
+									<span class="glyphicon glyphicon-time"></span>
+								</div>
+								<div class="cantidad">
+									<select>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select>
+									<span class="glyphicon glyphicon-user"></span>
+								</div>
+								<div>
+									<input type="checkbox" id="av" />
+									<label for="av">Aún no he decidido la fecha</label>
+								</div>
+								<div>
+									<input type="checkbox" id="ac" />
+									<label for="ac">Traer todos los descuentos</label>
+								</div>
+								<input class="btn btn-terciario" type="submit" value="Buscar Restaurante" />
+							</form>
+						</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Filtros -->
+						<div class="filtros">
+							<h2>Filtrar resultados</h2>
+							<form>
+								<!-- Las clases disponibles son: "abierto", "cerrado" -->
+								<!-- Habría que animarlo con jquery -->
+								<fieldset class="abierto">
+									<legend>Precios</legend>
+									<div>
+										<!-- El ID del input y el FOR del label, deben de ser el mismo -->
+										<input type="radio" name="precios" id="a">
+										<label for="a"><span>$</span> Hasta $65 ARS</label>
+									</div>
+									<div>
+										<input type="radio" name="precios" id="b">
+										<!-- Al hacer click en el label, debe ponerse la clase activo. Demos gracias al IE -->
+										<label class="activo" for="b"><span>$$</span> De $65 a $125 ARS</label>
+									</div>
+									<div>
+										<input type="radio" name="precios" id="c">
+										<label for="c"><span>$$$</span> De $125 a $185 ARS</label>
+									</div>
+									<div>
+										<input type="radio" name="precios" id="d">
+										<label for="d"><span>$$$$</span> Más de $185 ARS</label>
+									</div>
+								</fieldset>
+								<fieldset class="abierto">
+									<legend>Tipos de Comidas</legend>
+									<div>
+										<input type="checkbox" name="precios" id="aa">
+										<label for="aa">Internacional</label>
+									</div>
+									<div>
+										<input type="checkbox" name="precios" id="bb">
+										<label for="bb">Parrilla</label>
+									</div>
+									<div>
+										<input type="checkbox" name="precios" id="cc">
+										<label class="activo" for="cc">Sushi</label>
+									</div>
+									<div>
+										<input type="checkbox" name="precios" id="dd">
+										<label for="dd">Variada</label>
+									</div>
+									<div>
+										<input type="checkbox" name="precios" id="ee">
+										<label for="ee">Porteña</label>
+									</div>
+									<div class="ver-mas">Ver más</div>
+								</fieldset>
+								<fieldset class="abierto">
+									<legend>Zonas</legend>
+									<div>
+										<input type="checkbox" name="precios" id="aaa">
+										<label for="aaa">Palermo</label>
+									</div>
+									<div>
+										<input type="checkbox" name="precios" id="bbb">
+										<label for="bbb">Centro</label>
+									</div>
+									<div class="ver-mas">Ver más</div>
+								</fieldset>
+								<fieldset class="abierto">
+									<legend>Resermap Box</legend>
+									<div>
+										<input type="radio" name="precios" id="an">
+										<label for="an">Experiencia Gourmet</label>
+									</div>
+									<div>
+										<input type="radio" name="precios" id="bn">
+										<label class="activo" for="bn">Experiencia Gastronómca</label>
+									</div>
+									<div>
+										<input type="radio" name="precios" id="cn">
+										<label for="cn">Experiencia Royale</label>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Vistos -->
+						<div class="vistos">
+							<h2>Vistos</h2>
+							<article>
+								<h3><a href="#">Nombre del restaurante</a></h3>
+								<dl>
+									<dt class="sr-only">Dirección:</dt>
+									<dd>Maure 1643, Las Cañitas</dd>
+									<dt class="sr-only">Cocina:</dt>
+									<dd>Japonesa</dd>
+									<dt class="sr-only">Puntaje:</dt>
+									<dd class="puntaje"><strong>4.75</strong></dd>
+									<dt class="sr-only">Calificación</dt>
+									<dd class="calificacion"><em>Excelente</em></dd>
+								</dl>
+								<a class="imagen" href="#"><img src="img/usuario-BORRAR.png" alt="Nombre del restaurante" /></a>
+							</article>
+							<article>
+								<h3><a href="#">Nombre del restaurante</a></h3>
+								<dl>
+									<dt class="sr-only">Dirección:</dt>
+									<dd>Maure 1643, Las Cañitas</dd>
+									<dt class="sr-only">Cocina:</dt>
+									<dd>Japonesa</dd>
+									<dt class="sr-only">Puntaje:</dt>
+									<dd class="puntaje"><strong>4.75</strong></dd>
+									<dt class="sr-only">Calificación</dt>
+									<dd class="calificacion"><em>Excelente</em></dd>
+								</dl>
+								<a class="imagen" href="#"><img src="img/usuario-BORRAR.png" alt="Nombre del restaurante" /></a>
+							</article>
+							<article>
+								<h3><a href="#">Nombre del restaurante</a></h3>
+								<dl>
+									<dt class="sr-only">Dirección:</dt>
+									<dd>Maure 1643, Las Cañitas</dd>
+									<dt class="sr-only">Cocina:</dt>
+									<dd>Japonesa</dd>
+									<dt class="sr-only">Puntaje:</dt>
+									<dd class="puntaje"><strong>4.75</strong></dd>
+									<dt class="sr-only">Calificación</dt>
+									<dd class="calificacion"><em>Excelente</em></dd>
+								</dl>
+								<a class="imagen" href="#"><img src="img/usuario-BORRAR.png" alt="Nombre del restaurante" /></a>
+							</article>
+						</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Top Búsquedas -->
+						<div class="top-busquedas">
+							<h2>Top Búsquedas</h2>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="pie"></footer>
+</body>
+</html>

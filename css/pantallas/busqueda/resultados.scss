@@ -1,0 +1,296 @@
+body.resultados {
+	div.resultados {
+		div.visualizacion {
+			background: #ececec;
+			border: 1px solid $color-t4;
+			padding: 0 10px;
+			overflow: hidden;
+			li {
+				float: left;
+			}
+			.orden {
+				li {
+					margin-right: 16px;
+				}
+				a {
+					color: $color-t2;
+					font-size: 15px;
+					line-height: 26px;
+					&:hover {
+						color: $color-v1;
+						text-decoration: none;
+					}
+					&.activo {
+						color: $color-v1;
+					}
+				}
+			}
+			.modos {
+				padding-top: 5px;
+				li {
+					margin-left: 6px;
+					.lista {
+						background-position: -238px -60px;
+						height: 17px;
+						width: 16px;
+					}
+					.x {
+						background-position: -238px -60px;
+						height: 17px;
+						width: 16px;
+					}
+					.mapa {
+						background-position: -238px -60px;
+						height: 17px;
+						width: 16px;
+					}
+				}
+				a {
+					background-image: url(#{$img-constante});
+					background-repeat: no-repeat;
+					display: block;
+					height: 17px;
+					line-height: 160px;
+					overflow: hidden;
+					width: 16px;
+				}
+			}
+		}
+		div.filtros-activos {
+			margin: 6px 0 0 0;
+			overflow: hidden;
+			width: 100%;
+			li {
+				background: $color-t4;
+				border-radius: 4px;
+				color: $color-t1;
+				line-height: 24px;
+				float: left;
+				margin-right: 6px;
+				overflow: hidden;
+				padding: 0 0 0 8px;
+				a {
+					color: $color-t1;
+					cursor: pointer;
+					display: inline-block;
+					margin-left: 16px;
+					padding-left: 8px;
+					padding-right: 8px;
+					&:hover {
+						background: $color-v1;
+						color: #FFFFFF;
+						text-decoration: none;
+					}
+				}
+			}
+			div.eliminar-todos {
+				color: $color-v1;
+				cursor: pointer;
+				float: left;
+				text-decoration: underline;
+			}
+		}
+		article {
+			margin-top: 6px;
+			min-height: 168px + 8 + 8 + 2;
+			position: relative;
+			&:hover {
+				border-color: $color-v1;
+			}
+			h2 {
+				line-height: 20px;
+				margin: 0 0 12px 0;
+				a {
+					font-size: 24px;
+					font-weight: 700;
+					letter-spacing: -0.5px;
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+			dl {
+				margin: 0;
+				dd {
+					&.puntaje,
+					&.calificacion,
+					&.opiniones {
+						display: inline-block;
+					}
+					&.puntaje {
+						background: #ececec;
+						border: 1px solid $color-t4;
+						border-radius: 2px;
+						color: $color-v1;
+						line-height: 28px;
+						margin-right: 10px;
+						padding: 0 4px;
+						position: relative;
+						&:after {
+							background: url("#{$img-constante}") -224px -77px no-repeat;
+							content: "";
+							height: 11px;
+							margin-top: -5px;
+							position: absolute;
+							right: -10px;
+							top: 50%;
+							width: 10px;
+						}
+					}
+					&.calificacion {
+						em {
+							color: $color-t1;
+							font-style: normal;
+							font-weight: 700;
+							text-transform: uppercase;
+						}
+					}
+					&.opiniones {
+						color: $color-t3;
+					}
+					&.ubicacion {
+						display: block;
+						margin-top: 4px;
+						&:before {
+							content: "\e062";
+						}
+					}
+					&.ubicacion,
+					&.tipo-comida {
+						&:before {
+							font-family: "Glyphicons Halflings";
+							font-size: 11px;
+							margin-right: 4px;
+						}
+					}
+					&.tipo-comida,
+					&.precio {
+						display: inline-block;
+					}
+					&.tipo-comida {
+						&:before {
+							content: "\e179";
+						}
+					}
+					&.precio {
+						color: $color-t6;
+						&:before {
+							color: $color-t2;
+							content: "|";
+							margin-right: 3px;
+							position: relative;
+							top: -1px;
+						}
+					}
+					&.descuento {
+						box-shadow: 0 0 10px $color-t3;
+						font-size: 30px;
+						line-height: 48px;
+						padding: 0 10px;
+						position: absolute;
+						right: 18px;
+						top: 18px;
+						&:before,
+						&:after {
+							background-image: url("#{$img-constante}");
+							background-repeat: no-repeat;
+							content: "";
+							height: 48px;
+							position: absolute;
+							top: 0;
+							width: 4px;
+						}
+						&:before {
+							background-position: -181px -293px;
+							left: -4px;
+						}
+						&:after {
+							background-position: -186px -293px;
+							right: -4px;
+						}
+					}
+				}
+			}
+			.imagen {
+				border: 1px solid $color-t4;
+				display: block;
+				height: 168px;
+				left: 8px;
+				overflow: hidden;
+				position: absolute;
+				top: 8px;
+				width: 200px;
+			}
+			.btn {
+				font-weight: 700;
+				padding: 8px 28px;
+				position: absolute;
+				right: 8px;
+				top: 81px;
+			}
+			blockquote {
+				margin: 9px 0 0 0;
+				padding: 0;
+				p {
+					font-size: 14px;
+					line-height: 16px;
+					margin: 0;
+				}
+				footer {
+					margin-top: -2px;
+					text-align: right;
+					a {
+						font-size: 13px;
+					}
+				}
+			}
+			p.nuevo {
+				background: url("#{$img-constante}") -191px -271px no-repeat;
+				left: 0;
+				overflow: hidden;
+				line-height: 180px;
+				position: absolute;
+				height: 69px;
+				top: 0;
+				width: 69px;
+				z-index: 11;
+			}
+		}
+		.paginado {
+			margin-top: 15px;
+			text-align: right;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	body.resultados {
+		div.resultados {
+			padding-left: 3px;
+			article {
+				border: 1px solid #d9d9d9;
+				padding: 8px 8px 8px 216px;
+				position: relative;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	body.resultados {
+		div.resultados {
+			.modos {
+				float: right;
+			}
+			article {
+				h2,
+				dd.ubicacion {
+					max-width: 313px;
+				}
+				dd.tipo-comida {
+					max-width: 256px;
+				}
+			}
+		}
+	}
+}

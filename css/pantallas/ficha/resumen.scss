@@ -89,24 +89,14 @@ article.restaurante {
 		}
 	}
 	blockquote {
-		border-left: none;
 		border-bottom: 1px solid $color-t5;
 		margin: 0 0 14px 0;
 		padding: 0 0 14px 0;
 		p {
-			color: $color-t3;
 			font-size: 15px;
-			font-style: italic;
-			font-weight: 400;
 			line-height: 20px;
 			margin-top: 14px;
 			margin-bottom: 0;
-			&:before {
-				content: "\201c";
-			}
-			&:after {
-				content: "\201d";
-			}
 		}
 		footer {
 			text-align: right;

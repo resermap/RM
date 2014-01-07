@@ -5,13 +5,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+h6 {
   font-family: "Open Sans", Arial, sans-serif; }
 
 body {
@@ -22,7 +16,7 @@ body {
 a {
   color: #0098db; }
   a:hover {
-    color: #3366cc; }
+    color: #425479; }
 
 input[type="submit"] {
   border: none; }
@@ -96,6 +90,17 @@ dd .estrellas {
   dd .estrellas.e5 {
     width: 125px; }
 
+blockquote {
+  border-left: none; }
+  blockquote p {
+    color: #666666;
+    font-style: italic;
+    font-weight: 400; }
+    blockquote p:before {
+      content: "\201c"; }
+    blockquote p:after {
+      content: "\201d"; }
+
 .btn {
   border: none;
   text-transform: uppercase; }
@@ -103,6 +108,8 @@ dd .estrellas {
 .btn-primary {
   background: #ff6600;
   color: white; }
+  .btn-primary:focus, .btn-primary:hover {
+    background: #ff9933; }
 
 .btn-secundario {
   background: #0098db;
@@ -220,6 +227,29 @@ ol {
             border-right: 1px solid #999999;
             border-top: 1px solid #999999;
             outline: 0; }
+
+.pagination {
+  background: #ececec;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  margin: 0;
+  overflow: hidden; }
+  .pagination li {
+    background: url("../img/constante.png") 0 -63px no-repeat;
+    float: left;
+    height: 32px; }
+    .pagination li:hover a, .pagination li.active a {
+      background-color: #0098db;
+      color: white; }
+    .pagination li:first-child {
+      background: transparent; }
+    .pagination li a {
+      background: transparent;
+      border: none;
+      border-radius: 3px;
+      color: #666666;
+      line-height: 32px;
+      padding: 0 10px; }
 
 .panel-group .panel + .panel {
   margin-top: 2px; }
@@ -1910,22 +1940,14 @@ article.restaurante dl.tipo-precio {
       content: "\e148";
       top: 2px; }
 article.restaurante blockquote {
-  border-left: none;
   border-bottom: 1px solid #cccccc;
   margin: 0 0 14px 0;
   padding: 0 0 14px 0; }
   article.restaurante blockquote p {
-    color: #666666;
     font-size: 15px;
-    font-style: italic;
-    font-weight: 400;
     line-height: 20px;
     margin-top: 14px;
     margin-bottom: 0; }
-    article.restaurante blockquote p:before {
-      content: "\201c"; }
-    article.restaurante blockquote p:after {
-      content: "\201d"; }
   article.restaurante blockquote footer {
     text-align: right; }
   article.restaurante blockquote cite,
@@ -2567,27 +2589,8 @@ article.restaurante section.opiniones {
     article.restaurante section.opiniones article div.opinion dt:first-child {
       padding-left: 0; }
   article.restaurante section.opiniones .paginado {
+    margin-top: 23px;
     text-align: center; }
-  article.restaurante section.opiniones .pagination {
-    background: #ececec;
-    border: 1px solid #cccccc;
-    border-radius: 3px;
-    margin-bottom: 0;
-    overflow: hidden; }
-    article.restaurante section.opiniones .pagination li {
-      background: url("../img/constante.png") 0 -63px no-repeat;
-      float: left;
-      height: 32px; }
-      article.restaurante section.opiniones .pagination li:hover a, article.restaurante section.opiniones .pagination li.active a {
-        background-color: #0098db;
-        color: white; }
-      article.restaurante section.opiniones .pagination li a {
-        background: transparent;
-        border: none;
-        border-radius: 3px;
-        color: #666666;
-        line-height: 32px;
-        padding: 0 10px; }
 
 @media (max-width: 767px) {
   article.restaurante section.opiniones header {
@@ -3175,6 +3178,405 @@ section.ingresar-comentario form {
 @media (min-width: 992px) {
   section.ingresar-comentario form .form-group textarea {
     width: 55%; } }
+body.resultados .destacado {
+  height: 234px;
+  margin: 15px 0; }
+
+body.resultados div.aside {
+  padding-right: 3px; }
+body.resultados aside h2 {
+  border-bottom: 3px solid #666666;
+  color: #666666;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 12px;
+  padding-bottom: 10px; }
+body.resultados aside form label {
+  color: #666666;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 0; }
+  body.resultados aside form label span {
+    color: #ff6600; }
+  body.resultados aside form label:before {
+    background-color: #FFFFFF;
+    border: 1px solid #999999;
+    content: "";
+    display: inline-block;
+    height: 15px;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+    width: 15px; }
+  body.resultados aside form label:hover:before {
+    border: 2px solid #666666; }
+  body.resultados aside form label.activo {
+    font-weight: 700; }
+    body.resultados aside form label.activo:before {
+      background-color: #666666;
+      border: none; }
+body.resultados .buscar {
+  background: #ececec;
+  border: 1px solid #999999;
+  padding: 8px 15px 10px 15px; }
+  body.resultados .buscar h2 {
+    border-bottom: 1px solid #b9b9b9;
+    font-weight: 400;
+    margin: 0 0 18px 0;
+    padding-bottom: 11px; }
+  body.resultados .buscar div {
+    overflow: hidden;
+    position: relative; }
+    body.resultados .buscar div + div {
+      margin-top: 10px; }
+    body.resultados .buscar div input[type="checkbox"] {
+      left: 0;
+      position: absolute;
+      top: -200%; }
+    body.resultados .buscar div label {
+      letter-spacing: -1px; }
+    body.resultados .buscar div.fecha input {
+      width: 80px; }
+    body.resultados .buscar div.fecha span {
+      top: 4px; }
+    body.resultados .buscar div.horario, body.resultados .buscar div.cantidad {
+      display: inline-block; }
+      body.resultados .buscar div.horario span, body.resultados .buscar div.cantidad span {
+        top: 8px; }
+    body.resultados .buscar div span.glyphicon {
+      color: #999999;
+      margin-left: 2px;
+      font-size: 18px;
+      position: relative; }
+  body.resultados .buscar div > input,
+  body.resultados .buscar select {
+    background: #FFFFFF;
+    border: 1px solid #c2c2c2;
+    font-size: 11px;
+    height: 28px; }
+  body.resultados .buscar div > input {
+    padding: 0 8px;
+    width: 100%; }
+  body.resultados .buscar label {
+    cursor: pointer; }
+  body.resultados .buscar .btn {
+    height: 36px;
+    font-weight: 700;
+    margin-top: 7px;
+    width: 100%; }
+body.resultados .filtros h2 {
+  border-bottom-color: black;
+  margin-top: 12px; }
+body.resultados .filtros fieldset > div {
+  margin-top: 6px;
+  overflow: hidden;
+  position: relative; }
+body.resultados .filtros fieldset + fieldset {
+  margin-top: 25px; }
+body.resultados .filtros fieldset.abierto legend:after {
+  content: "\e114"; }
+body.resultados .filtros fieldset.abierto legend:hover:after {
+  content: "\e113"; }
+body.resultados .filtros fieldset.cerrado {
+  overflow: -moz-hidden-unscrollable; }
+  body.resultados .filtros fieldset.cerrado legend:after {
+    content: "\e113"; }
+  body.resultados .filtros fieldset.cerrado legend:hover:after {
+    content: "\e114"; }
+body.resultados .filtros legend {
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 14px;
+  margin-bottom: 0; }
+  body.resultados .filtros legend:after {
+    font-family: "Glyphicons Halflings";
+    color: #666666;
+    float: right;
+    font-size: 12px; }
+  body.resultados .filtros legend:hover {
+    color: #0098db; }
+    body.resultados .filtros legend:hover:after {
+      color: #0098db; }
+body.resultados .filtros input[type="radio"] + label:before {
+  border-radius: 100%; }
+body.resultados .filtros input[type="checkbox"],
+body.resultados .filtros input[type="radio"] {
+  left: 0;
+  position: absolute;
+  top: -100%; }
+body.resultados .filtros div.ver-mas {
+  color: #666666;
+  cursor: pointer;
+  margin-left: 25px;
+  font-weight: 700; }
+  body.resultados .filtros div.ver-mas:after {
+    font-family: "Glyphicons Halflings";
+    content: "\e072";
+    font-size: 8px;
+    margin-left: 4px; }
+  body.resultados .filtros div.ver-mas:hover {
+    color: #0098db; }
+body.resultados .vistos {
+  margin-bottom: 30px;
+  margin-top: 30px; }
+  body.resultados .vistos article {
+    background: #ececec;
+    min-height: 91px;
+    padding: 3px 3px 3px 116px;
+    position: relative; }
+    body.resultados .vistos article + article {
+      margin-top: 2px; }
+    body.resultados .vistos article h3 {
+      margin: 0;
+      line-height: 10px;
+      margin-bottom: 4px; }
+      body.resultados .vistos article h3 a {
+        font-size: 15px;
+        font-weight: 600; }
+        body.resultados .vistos article h3 a:hover {
+          text-decoration: none; }
+    body.resultados .vistos article dl {
+      margin: 0; }
+    body.resultados .vistos article dd {
+      color: #666666;
+      font-size: 12px;
+      line-height: 14px; }
+      body.resultados .vistos article dd em {
+        font-style: normal;
+        font-weight: 700;
+        text-transform: uppercase; }
+      body.resultados .vistos article dd.calificacion, body.resultados .vistos article dd.puntaje {
+        display: inline-block;
+        letter-spacing: -0.5px; }
+    body.resultados .vistos article .imagen {
+      display: block;
+      height: 91px;
+      left: 3px;
+      overflow: hidden;
+      position: absolute;
+      top: 3px;
+      width: 108px; }
+
+@media (min-width: 992px) {
+  body.resultados aside form .cantidad {
+    margin-left: 15px; } }
+body.resultados div.resultados div.visualizacion {
+  background: #ececec;
+  border: 1px solid #999999;
+  padding: 0 10px;
+  overflow: hidden; }
+  body.resultados div.resultados div.visualizacion li {
+    float: left; }
+  body.resultados div.resultados div.visualizacion .orden li {
+    margin-right: 16px; }
+  body.resultados div.resultados div.visualizacion .orden a {
+    color: #333333;
+    font-size: 15px;
+    line-height: 26px; }
+    body.resultados div.resultados div.visualizacion .orden a:hover {
+      color: #0098db;
+      text-decoration: none; }
+    body.resultados div.resultados div.visualizacion .orden a.activo {
+      color: #0098db; }
+  body.resultados div.resultados div.visualizacion .modos {
+    padding-top: 5px; }
+    body.resultados div.resultados div.visualizacion .modos li {
+      margin-left: 6px; }
+      body.resultados div.resultados div.visualizacion .modos li .lista {
+        background-position: -238px -60px;
+        height: 17px;
+        width: 16px; }
+      body.resultados div.resultados div.visualizacion .modos li .x {
+        background-position: -238px -60px;
+        height: 17px;
+        width: 16px; }
+      body.resultados div.resultados div.visualizacion .modos li .mapa {
+        background-position: -238px -60px;
+        height: 17px;
+        width: 16px; }
+    body.resultados div.resultados div.visualizacion .modos a {
+      background-image: url(../img/constante.png);
+      background-repeat: no-repeat;
+      display: block;
+      height: 17px;
+      line-height: 160px;
+      overflow: hidden;
+      width: 16px; }
+body.resultados div.resultados div.filtros-activos {
+  margin: 6px 0 0 0;
+  overflow: hidden;
+  width: 100%; }
+  body.resultados div.resultados div.filtros-activos li {
+    background: #999999;
+    border-radius: 4px;
+    color: black;
+    line-height: 24px;
+    float: left;
+    margin-right: 6px;
+    overflow: hidden;
+    padding: 0 0 0 8px; }
+    body.resultados div.resultados div.filtros-activos li a {
+      color: black;
+      cursor: pointer;
+      display: inline-block;
+      margin-left: 16px;
+      padding-left: 8px;
+      padding-right: 8px; }
+      body.resultados div.resultados div.filtros-activos li a:hover {
+        background: #0098db;
+        color: #FFFFFF;
+        text-decoration: none; }
+  body.resultados div.resultados div.filtros-activos div.eliminar-todos {
+    color: #0098db;
+    cursor: pointer;
+    float: left;
+    text-decoration: underline; }
+body.resultados div.resultados article {
+  margin-top: 6px;
+  min-height: 186px;
+  position: relative; }
+  body.resultados div.resultados article:hover {
+    border-color: #0098db; }
+  body.resultados div.resultados article h2 {
+    line-height: 20px;
+    margin: 0 0 12px 0; }
+    body.resultados div.resultados article h2 a {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.5px; }
+      body.resultados div.resultados article h2 a:hover {
+        text-decoration: none; }
+  body.resultados div.resultados article dl {
+    margin: 0; }
+    body.resultados div.resultados article dl dd.puntaje, body.resultados div.resultados article dl dd.calificacion, body.resultados div.resultados article dl dd.opiniones {
+      display: inline-block; }
+    body.resultados div.resultados article dl dd.puntaje {
+      background: #ececec;
+      border: 1px solid #999999;
+      border-radius: 2px;
+      color: #0098db;
+      line-height: 28px;
+      margin-right: 10px;
+      padding: 0 4px;
+      position: relative; }
+      body.resultados div.resultados article dl dd.puntaje:after {
+        background: url("../img/constante.png") -224px -77px no-repeat;
+        content: "";
+        height: 11px;
+        margin-top: -5px;
+        position: absolute;
+        right: -10px;
+        top: 50%;
+        width: 10px; }
+    body.resultados div.resultados article dl dd.calificacion em {
+      color: black;
+      font-style: normal;
+      font-weight: 700;
+      text-transform: uppercase; }
+    body.resultados div.resultados article dl dd.opiniones {
+      color: #666666; }
+    body.resultados div.resultados article dl dd.ubicacion {
+      display: block;
+      margin-top: 4px; }
+      body.resultados div.resultados article dl dd.ubicacion:before {
+        content: "\e062"; }
+    body.resultados div.resultados article dl dd.ubicacion:before, body.resultados div.resultados article dl dd.tipo-comida:before {
+      font-family: "Glyphicons Halflings";
+      font-size: 11px;
+      margin-right: 4px; }
+    body.resultados div.resultados article dl dd.tipo-comida, body.resultados div.resultados article dl dd.precio {
+      display: inline-block; }
+    body.resultados div.resultados article dl dd.tipo-comida:before {
+      content: "\e179"; }
+    body.resultados div.resultados article dl dd.precio {
+      color: #ff6600; }
+      body.resultados div.resultados article dl dd.precio:before {
+        color: #333333;
+        content: "|";
+        margin-right: 3px;
+        position: relative;
+        top: -1px; }
+    body.resultados div.resultados article dl dd.descuento {
+      box-shadow: 0 0 10px #666666;
+      font-size: 30px;
+      line-height: 48px;
+      padding: 0 10px;
+      position: absolute;
+      right: 18px;
+      top: 18px; }
+      body.resultados div.resultados article dl dd.descuento:before, body.resultados div.resultados article dl dd.descuento:after {
+        background-image: url("../img/constante.png");
+        background-repeat: no-repeat;
+        content: "";
+        height: 48px;
+        position: absolute;
+        top: 0;
+        width: 4px; }
+      body.resultados div.resultados article dl dd.descuento:before {
+        background-position: -181px -293px;
+        left: -4px; }
+      body.resultados div.resultados article dl dd.descuento:after {
+        background-position: -186px -293px;
+        right: -4px; }
+  body.resultados div.resultados article .imagen {
+    border: 1px solid #999999;
+    display: block;
+    height: 168px;
+    left: 8px;
+    overflow: hidden;
+    position: absolute;
+    top: 8px;
+    width: 200px; }
+  body.resultados div.resultados article .btn {
+    font-weight: 700;
+    padding: 8px 28px;
+    position: absolute;
+    right: 8px;
+    top: 81px; }
+  body.resultados div.resultados article blockquote {
+    margin: 9px 0 0 0;
+    padding: 0; }
+    body.resultados div.resultados article blockquote p {
+      font-size: 14px;
+      line-height: 16px;
+      margin: 0; }
+    body.resultados div.resultados article blockquote footer {
+      margin-top: -2px;
+      text-align: right; }
+      body.resultados div.resultados article blockquote footer a {
+        font-size: 13px; }
+  body.resultados div.resultados article p.nuevo {
+    background: url("../img/constante.png") -191px -271px no-repeat;
+    left: 0;
+    overflow: hidden;
+    line-height: 180px;
+    position: absolute;
+    height: 69px;
+    top: 0;
+    width: 69px;
+    z-index: 11; }
+body.resultados div.resultados .paginado {
+  margin-top: 15px;
+  text-align: right; }
+
+@media (min-width: 768px) {
+  body.resultados div.resultados {
+    padding-left: 3px; }
+    body.resultados div.resultados article {
+      border: 1px solid #d9d9d9;
+      padding: 8px 8px 8px 216px;
+      position: relative; } }
+@media (min-width: 992px) {
+  body.resultados div.resultados .modos {
+    float: right; }
+  body.resultados div.resultados article h2,
+  body.resultados div.resultados article dd.ubicacion {
+    max-width: 313px; }
+  body.resultados div.resultados article dd.tipo-comida {
+    max-width: 256px; } }
 section.login,
 section.registrarse {
   padding-top: 38px; }

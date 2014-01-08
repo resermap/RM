@@ -181,22 +181,6 @@ section.destacados {
 						position: relative;
 						top: 3px;
 					}
-					&.ubicacion {
-						border-top: none;
-						&:before {
-							content: "\e062";
-						}
-					}
-					&.comida {
-						&:before {
-							content: "\e179";
-						}
-					}
-					&.precio {
-						&:before {
-							content: "\e148";
-						}
-					}
 				}
 			}
 			img {

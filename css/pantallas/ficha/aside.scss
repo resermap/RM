@@ -76,15 +76,9 @@ article.restaurante {
 					display: block;
 					&.cocina {
 						margin-bottom: 9px;
-						&:before {
-							content: "\e179";
-						}
 					}
 					&.precio {
 						color: #ff0000;
-						&:before {
-							content: "\e148";
-						}
 					}
 				}
 				.imagen {

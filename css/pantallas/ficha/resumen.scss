@@ -58,22 +58,20 @@ article.restaurante {
 		&.tipo-precio {
 			margin-bottom: 9px;
 			dd {
-				&.tipo-comida,
+				&.cocina,
 				&.precio {
 					font-size: 14px;
 					&:before {
 						color: #777777;
-						font-family: "Glyphicons Halflings";
 						font-size: 14px;
 						padding-right: 6px;
 						position: relative;
 					}
 				}
-				&.tipo-comida {
+				&.cocina {
 					color: $color-t2;
 					font-weight: 600;
 					&:before {
-						content: "\e179";
 						top: 1px;
 					}
 				}
@@ -81,7 +79,6 @@ article.restaurante {
 					color: $color-t3;
 					margin-top: 4px;
 					&:before {
-						content: "\e148";
 						top: 2px;
 					}
 				}

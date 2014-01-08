@@ -1,6 +1,86 @@
 body.resultados {
 	.destacado {
-		height: 234px;
 		margin: 15px 0;
+		aside {
+			height: 100%;
+		}
+		article {
+			height: 100%;
+			overflow: hidden;
+			position: relative;
+			h1,
+			dl {
+				margin: 0;
+				text-align: center;
+			}
+			h1,
+			dd {
+				color: #FFFFFF;
+				text-shadow: 0 0 6px $color-t1;
+				position: relative;
+				z-index: 11;
+			}
+			h1 {
+				font-style: italic;
+				margin-bottom: 10px;
+				margin-top: 72px;
+			}
+			dd {
+				font-size: 15px;
+				line-height: 16px;
+				&.direccion,
+				&.cocina {
+					display: inline-block;
+					&:before {
+						margin-right: 4px;
+						position: relative;
+						top: 1px;
+					}
+				}
+				&.direccion {
+					margin-right: 8px;
+				}
+				&.estrellas {
+					height: 22px;
+					font-size: 22px;
+					left: 50%;
+					letter-spacing: 6px;
+					margin-left: -68px;
+					position: absolute;
+					top: 50px;
+					width: 135px;
+					&:after,
+					&:before {
+						height: 30px;
+					}
+					&:before {
+						text-shadow: none;
+					}
+				}
+			}
+			a.btn,
+			img {
+				position: absolute;
+			}
+			a.btn {
+				bottom: 15px;
+				margin-left: 0 - round(211px / 2);
+				left: 50%;
+				z-index: 11;
+			}
+			img {
+				left: 0;
+				top: 0;
+				z-index: 1;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	body.resultados {
+		.destacado {
+			height: 234px;
+		}
 	}
 }

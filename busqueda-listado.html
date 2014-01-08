@@ -41,7 +41,31 @@
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Búsqueda -->
 		<div class="container">
 			<div class="row">
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Destacado -->
 				<div class="destacado col-md-12">
+					<aside>
+						<article>
+							<h1>Nombre del restaurante</h1>
+							<dl>
+								<dt class="sr-only">Dirección:</dt>
+								<dd class="direccion">Posadas 1089, Recoleta</dd>
+								<dt class="sr-only">Cocina:</dt>
+								<dd class="cocina">Italiana, Pescados y Mariscos, Parrilla</dd>
+								<dt class="sr-only">Estrellas:</dt>
+								<!--
+									+ Replantie el tema estrellas en cuanto al css.
+									+ La clase "estrellas" indica que son estrellas.
+									+ La clase "azul" indica que las llenas son azules
+									+ La clase "gris" indica que las vacias son grises
+									+ La clase e-#-# indica la cantidad. Con este método se pueden hacer muchas variables sin necesidad de imágenes.
+									  Las variables actuales son: e-0-5 / e-1 / e-1-5 / e-2 / e-2-5 / e-3 / e-3-5 / e-4 / e-4-5 / e-5
+								-->
+								<dd class="estrellas azul gris e-4-5"><strong class="sr-only">4.5 de 5</strong></dd>
+							</dl>
+							<img src="img/busqueda-destacados.jpg" alt="Nombre del restaurante" />
+							<a class="btn btn-primary v2" href="#">RESERVAR GRATIS</a>
+						</article>
+					</aside>
 				</div>
 				<div class="resultados col-md-9 col-md-push-3">
 					<h1 class="sr-only">Resultados de búsqueda</h1>
@@ -85,9 +109,9 @@
 						</header>
 						<dl class="tipo-precio">
 							<dt class="sr-only">Dirección:</dt>
-							<dd class="ubicacion">Maure 1643, Las Cañitas, Maure 1643, Las</dd>
+							<dd class="direccion">Maure 1643, Las Cañitas, Maure 1643, Las</dd>
 							<dt class="sr-only">Cocina:</dt>
-							<dd class="tipo-comida">Japonesa, Sushi, Internacional</dd>
+							<dd class="cocina">Japonesa, Sushi, Internacional</dd>
 							<dt class="sr-only">Precio:</dt>
 							<dd class="precio">$$$$</dd>
 						</dl>
@@ -117,9 +141,9 @@
 						</header>
 						<dl class="tipo-precio">
 							<dt class="sr-only">Dirección:</dt>
-							<dd class="ubicacion">Maure 1643, Las Cañitas, Maure 1643, Las</dd>
+							<dd class="direccion">Maure 1643, Las Cañitas, Maure 1643, Las</dd>
 							<dt class="sr-only">Cocina:</dt>
-							<dd class="tipo-comida">Japonesa, Sushi, Internacional</dd>
+							<dd class="cocina">Japonesa, Sushi, Internacional</dd>
 							<dt class="sr-only">Precio:</dt>
 							<dd class="precio">$$$$</dd>
 							<dt class="sr-only">Descuento:</dt>
@@ -137,6 +161,7 @@
 					</article>
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Paginado -->
 					<div class="paginado">
+						<small>1 - 10 de 57 Restaurantes</small>
 						<ul class="pagination">
 							<li><a href="#">&larr;</a></li>
 							<li><a href="#">1..</a></li>
@@ -178,11 +203,11 @@
 									</select>
 									<span class="glyphicon glyphicon-user"></span>
 								</div>
-								<div>
+								<div class="check">
 									<input type="checkbox" id="av" />
 									<label for="av">Aún no he decidido la fecha</label>
 								</div>
-								<div>
+								<div class="check">
 									<input type="checkbox" id="ac" />
 									<label for="ac">Traer todos los descuentos</label>
 								</div>
@@ -318,6 +343,15 @@
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Top Búsquedas -->
 						<div class="top-busquedas">
 							<h2>Top Búsquedas</h2>
+							<!-- Imagino que puede llegar a haber hasta 6 niveles. Si no te sirve asi, vemos como lo hacemos funcionar -->
+							<ul>
+								<li><a class="nivel-01" href="#">Nivel 01</a></li>
+								<li><a class="nivel-02" href="#">Nivel 02</a></li>
+								<li><a class="nivel-03" href="#">Nivel 03</a></li>
+								<li><a class="nivel-04" href="#">Nivel 04</a></li>
+								<li><a class="nivel-05" href="#">Nivel 05</a></li>
+								<li><a class="nivel-06" href="#">Nivel 06</a></li>
+							</ul>
 						</div>
 					</aside>
 				</div>

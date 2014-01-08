@@ -1,4 +1,107 @@
 dd {
+	&.direccion,
+	&.ubicacion,
+	&.cocina,
+	&.precio {
+		&:before {
+			font-family: "Glyphicons Halflings";
+		}
+	}
+	&.direccion,
+	&.ubicacion {
+		&:before {
+			content: "\e062";
+		}
+	}
+	&.cocina {
+		&:before {
+			content: "\e179";
+		}
+	}
+	&.precio {
+		&:before {
+			content: "\e148";
+		}
+	}
+	&.estrellas {
+		position: relative;
+		&:after,
+		&:before {
+			content: "\e006 \e006 \e006 \e006 \e006";
+			font-family: "Glyphicons Halflings";
+			left: 0;
+			position: absolute;
+			top: 0;
+			white-space: nowrap;
+		}
+		&:before {
+			overflow: hidden;
+			z-index: 11;
+		}
+		&:after {
+			z-index: 1;
+		}
+		&.azul {
+			&:before {
+				color: $color-v1;
+			}
+		}
+		&.gris {
+			&:after {
+				color: $color-t4;
+			}
+		}
+		&.e-0-5 {
+			&:before {
+				width: 8%;
+			}
+		}
+		&.e-1 {
+			&:before {
+				width: 20%;
+			}
+		}
+		&.e-1-5 {
+			&:before {
+				width: 29%;
+			}
+		}
+		&.e-2 {
+			&:before {
+				width: 40%;
+			}
+		}
+		&.e-2-5 {
+			&:before {
+				width: 50%;
+			}
+		}
+		&.e-3 {
+			&:before {
+				width: 60%;
+			}
+		}
+		&.e-3-5 {
+			&:before {
+				width: 71%;
+			}
+		}
+		&.e-4 {
+			&:before {
+				width: 80%;
+			}
+		}
+		&.e-4-5 {
+			&:before {
+				width: 91.5%;
+			}
+		}
+		&.e-5 {
+			&:before {
+				width: 100%;
+			}
+		}
+	}
 	.estrellas {
 		background: url("#{$img-url}constante.png") 0 -42px no-repeat;
 		height: 19px;

@@ -57,15 +57,18 @@ body.resultados {
 			}
 		}
 		div.filtros-activos {
-			margin: 6px 0 0 0;
 			overflow: hidden;
 			width: 100%;
+			li,
+			div.eliminar-todos {
+				line-height: 24px;
+				float: left;
+				margin-top: 6px;
+			}
 			li {
 				background: $color-t4;
 				border-radius: 4px;
 				color: $color-t1;
-				line-height: 24px;
-				float: left;
 				margin-right: 6px;
 				overflow: hidden;
 				padding: 0 0 0 8px;
@@ -86,7 +89,6 @@ body.resultados {
 			div.eliminar-todos {
 				color: $color-v1;
 				cursor: pointer;
-				float: left;
 				text-decoration: underline;
 			}
 		}
@@ -148,35 +150,27 @@ body.resultados {
 					&.opiniones {
 						color: $color-t3;
 					}
-					&.ubicacion {
+					&.direccion {
 						display: block;
 						margin-top: 4px;
-						&:before {
-							content: "\e062";
-						}
 					}
-					&.ubicacion,
-					&.tipo-comida {
+					&.direccion,
+					&.cocina {
 						&:before {
-							font-family: "Glyphicons Halflings";
 							font-size: 11px;
 							margin-right: 4px;
 						}
 					}
-					&.tipo-comida,
+					&.cocina,
 					&.precio {
-						display: inline-block;
-					}
-					&.tipo-comida {
-						&:before {
-							content: "\e179";
-						}
+						display: inline;
 					}
 					&.precio {
 						color: $color-t6;
 						&:before {
 							color: $color-t2;
 							content: "|";
+							font-family: "Open Sans";
 							margin-right: 3px;
 							position: relative;
 							top: -1px;
@@ -186,10 +180,11 @@ body.resultados {
 						box-shadow: 0 0 10px $color-t3;
 						font-size: 30px;
 						line-height: 48px;
-						padding: 0 10px;
 						position: absolute;
 						right: 18px;
+						text-align: center;
 						top: 18px;
+						width: 153px;
 						&:before,
 						&:after {
 							background-image: url("#{$img-constante}");
@@ -241,6 +236,9 @@ body.resultados {
 					text-align: right;
 					a {
 						font-size: 13px;
+						&:hover {
+							text-decoration: none;
+						}
 					}
 				}
 			}
@@ -259,6 +257,24 @@ body.resultados {
 		.paginado {
 			margin-top: 15px;
 			text-align: right;
+			small {
+				float: left;
+				font-size: 12px;
+				padding-top: 9px;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	body.resultados {
+		div.resultados {
+			article {
+				h2,
+				dl {
+					max-width: 308px;
+				}
+			}
 		}
 	}
 }
@@ -266,7 +282,9 @@ body.resultados {
 @media (min-width: 768px) {
 	body.resultados {
 		div.resultados {
-			padding-left: 3px;
+			.modos {
+				float: right;
+			}
 			article {
 				border: 1px solid #d9d9d9;
 				padding: 8px 8px 8px 216px;
@@ -279,16 +297,11 @@ body.resultados {
 @media (min-width: 992px) {
 	body.resultados {
 		div.resultados {
-			.modos {
-				float: right;
-			}
+			padding-left: 3px;
 			article {
 				h2,
-				dd.ubicacion {
+				dl {
 					max-width: 313px;
-				}
-				dd.tipo-comida {
-					max-width: 256px;
 				}
 			}
 		}

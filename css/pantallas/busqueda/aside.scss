@@ -1,7 +1,16 @@
-body.resultados {
-	div.aside {
-		padding-right: 3px;
+@-moz-document url-prefix() {
+	body.resultados {
+		aside {
+			.buscar {
+				select {
+					padding: 4px 4px 4px 8px;
+				}
+			}
+		}
 	}
+}
+
+body.resultados {
 	aside {
 		h2 {
 			border-bottom: 3px solid $color-t3;
@@ -12,6 +21,15 @@ body.resultados {
 			padding-bottom: 10px;
 		}
 		form {
+			input[type="checkbox"] {
+				&+label.activo {
+					&:before {
+						background-image: url("#{$img-constante}");
+						background-position: -177px -277px;
+						background-repeat: no-repeat;
+					}
+				}
+			}
 			label {
 				color: $color-t3;
 				cursor: pointer;
@@ -58,9 +76,6 @@ body.resultados {
 			padding-bottom: 11px;
 		}
 		div {
-			&+div {
-				margin-top: 10px;
-			}
 			overflow: hidden;
 			position: relative;
 			input[type="checkbox"] {
@@ -86,7 +101,17 @@ body.resultados {
 			&.cantidad {
 				display: inline-block;
 				span {
-					top: 8px;
+					top: 5px;
+				}
+			}
+			&.horario {
+				select {
+					width: 70px;
+				}
+			}
+			&.cantidad {
+				select {
+					width: 48px;
 				}
 			}
 			span.glyphicon {
@@ -100,12 +125,21 @@ body.resultados {
 		select {
 			background: #FFFFFF;
 			border: 1px solid #c2c2c2;
+			color: $color-t4;
 			font-size: 11px;
+			font-style: italic;
 			height: 28px;
+			&:focus {
+				color: $color-t1;
+				font-style: normal;
+			}
 		}
 		div>input {
 			padding: 0 8px;
 			width: 100%;
+		}
+		select {
+			padding-left: 8px;
 		}
 		label {
 			cursor: pointer;
@@ -115,6 +149,27 @@ body.resultados {
 			font-weight: 700;
 			margin-top: 7px;
 			width: 100%;
+		}
+		::-webkit-input-placeholder {
+			color: $color-t4;
+			font-style: italic;
+		}
+
+		:-moz-placeholder {
+			color: $color-t4;
+			font-style: italic;
+			opacity: 1;
+		}
+
+		::-moz-placeholder {
+			color: $color-t4;
+			font-style: italic;
+			opacity: 1;
+		}
+
+		:-ms-input-placeholder {
+			color: $color-t4;
+			font-style: italic;
 		}
 	}
 	.filtros {
@@ -257,16 +312,102 @@ body.resultados {
 			}
 		}
 	}
+	.top-busquedas {
+		li {
+			display: inline-block;
+		}
+		a {
+			color: $color-t3;
+			line-height: 20px;
+			&:hover {
+				color: $color-v1;
+				text-decoration: none;
+			}
+			&.nivel-01,
+			&.nivel-02,
+			&.nivel-03 {
+				font-weight: 600;
+			}
+			&.nivel-04,
+			&.nivel-05,
+			&.nivel-06 {
+				font-weight: 700;
+			}
+			&.nivel-01 {
+				font-size: 14px;
+			}
+			&.nivel-02 {
+				font-size: 16px;
+			}
+			&.nivel-03 {
+				font-size: 18px;
+			}
+			&.nivel-04 {
+				font-size: 20px;
+			}
+			&.nivel-05 {
+				font-size: 22px;
+			}
+			&.nivel-06 {
+				font-size: 24px;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	body.resultados {
+		aside {
+			form {
+				.restaurante,
+				.fecha,
+				.horario,
+				.cantidad {
+					float: left;
+				}
+				.check {
+					clear: left;
+					width: 49%;
+				}
+				.fecha,
+				.horario,
+				.cantidad {
+					margin-left: 2%;
+				}
+				.restaurante {
+					width: 40%;
+				}
+				.fecha {
+					width: 20%;
+				}
+				.horario {
+					width: 16%;
+				}
+				.cantidad {
+					width: 16%;
+				}
+			}
+		}
+	}
 }
 
 @media (min-width: 992px) {
 	body.resultados {
+		div.aside {
+			padding-right: 3px;
+		}
 		aside {
 			form {
 				.cantidad {
 					margin-left: 15px;
 				}
-
+			}
+			.buscar {
+				div {
+					&+div {
+						margin-top: 10px;
+					}
+				}
 			}
 		}
 	}

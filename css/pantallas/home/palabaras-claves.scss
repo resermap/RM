@@ -203,20 +203,9 @@ section.palabaras-claves {
 				display: inline-block;
 				padding-right: 15px;
 				&:before {
-					font-family: "Glyphicons Halflings";
 					margin-right: 4px;
 					position: relative;
 					top: 2px;
-				}
-				&.ubicacion{
-					&:before {
-						content: "\e062";
-					}
-				}
-				&.comida {
-					&:before {
-						content: "\e179";
-					}
 				}
 			}
 			img {

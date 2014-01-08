@@ -63,6 +63,52 @@ option {
 .w800 {
   font-weight: 800; }
 
+dd.direccion:before, dd.ubicacion:before, dd.cocina:before, dd.precio:before {
+  font-family: "Glyphicons Halflings"; }
+dd.direccion:before, dd.ubicacion:before {
+  content: "\e062"; }
+dd.cocina:before {
+  content: "\e179"; }
+dd.precio:before {
+  content: "\e148"; }
+dd.estrellas {
+  position: relative; }
+  dd.estrellas:after, dd.estrellas:before {
+    content: "\e006 \e006 \e006 \e006 \e006";
+    font-family: "Glyphicons Halflings";
+    left: 0;
+    position: absolute;
+    top: 0;
+    white-space: nowrap; }
+  dd.estrellas:before {
+    overflow: hidden;
+    z-index: 11; }
+  dd.estrellas:after {
+    z-index: 1; }
+  dd.estrellas.azul:before {
+    color: #0098db; }
+  dd.estrellas.gris:after {
+    color: #999999; }
+  dd.estrellas.e-0-5:before {
+    width: 8%; }
+  dd.estrellas.e-1:before {
+    width: 20%; }
+  dd.estrellas.e-1-5:before {
+    width: 29%; }
+  dd.estrellas.e-2:before {
+    width: 40%; }
+  dd.estrellas.e-2-5:before {
+    width: 50%; }
+  dd.estrellas.e-3:before {
+    width: 60%; }
+  dd.estrellas.e-3-5:before {
+    width: 71%; }
+  dd.estrellas.e-4:before {
+    width: 80%; }
+  dd.estrellas.e-4-5:before {
+    width: 91.5%; }
+  dd.estrellas.e-5:before {
+    width: 100%; }
 dd .estrellas {
   background: url("../img/constante.png") 0 -42px no-repeat;
   height: 19px;
@@ -1432,14 +1478,6 @@ section.destacados .restaurantes {
           margin-right: 4px;
           position: relative;
           top: 3px; }
-        section.destacados .restaurantes li dl dd.ubicacion {
-          border-top: none; }
-          section.destacados .restaurantes li dl dd.ubicacion:before {
-            content: "\e062"; }
-        section.destacados .restaurantes li dl dd.comida:before {
-          content: "\e179"; }
-        section.destacados .restaurantes li dl dd.precio:before {
-          content: "\e148"; }
     section.destacados .restaurantes li img {
       left: 0;
       position: absolute;
@@ -1650,14 +1688,9 @@ section.palabaras-claves {
         display: inline-block;
         padding-right: 15px; }
         section.palabaras-claves aside li dd:before {
-          font-family: "Glyphicons Halflings";
           margin-right: 4px;
           position: relative;
           top: 2px; }
-        section.palabaras-claves aside li dd.ubicacion:before {
-          content: "\e062"; }
-        section.palabaras-claves aside li dd.comida:before {
-          content: "\e179"; }
       section.palabaras-claves aside li img {
         left: 0;
         position: absolute;
@@ -1919,25 +1952,22 @@ article.restaurante dl.calificacion.resumen {
       text-decoration: underline; }
 article.restaurante dl.tipo-precio {
   margin-bottom: 9px; }
-  article.restaurante dl.tipo-precio dd.tipo-comida, article.restaurante dl.tipo-precio dd.precio {
+  article.restaurante dl.tipo-precio dd.cocina, article.restaurante dl.tipo-precio dd.precio {
     font-size: 14px; }
-    article.restaurante dl.tipo-precio dd.tipo-comida:before, article.restaurante dl.tipo-precio dd.precio:before {
+    article.restaurante dl.tipo-precio dd.cocina:before, article.restaurante dl.tipo-precio dd.precio:before {
       color: #777777;
-      font-family: "Glyphicons Halflings";
       font-size: 14px;
       padding-right: 6px;
       position: relative; }
-  article.restaurante dl.tipo-precio dd.tipo-comida {
+  article.restaurante dl.tipo-precio dd.cocina {
     color: #333333;
     font-weight: 600; }
-    article.restaurante dl.tipo-precio dd.tipo-comida:before {
-      content: "\e179";
+    article.restaurante dl.tipo-precio dd.cocina:before {
       top: 1px; }
   article.restaurante dl.tipo-precio dd.precio {
     color: #666666;
     margin-top: 4px; }
     article.restaurante dl.tipo-precio dd.precio:before {
-      content: "\e148";
       top: 2px; }
 article.restaurante blockquote {
   border-bottom: 1px solid #cccccc;
@@ -2345,7 +2375,7 @@ article.restaurante div.mapa {
     padding: 15px 0; }
     article.restaurante div.mapa address:before {
       content: "\e062";
-      font-family: 'Glyphicons Halflings';
+      font-family: "Glyphicons Halflings";
       padding-right: 2px;
       position: relative;
       top: 2px; }
@@ -2685,12 +2715,8 @@ article.restaurante aside {
         display: block; }
         article.restaurante aside .tab-content li dd.cocina {
           margin-bottom: 9px; }
-          article.restaurante aside .tab-content li dd.cocina:before {
-            content: "\e179"; }
         article.restaurante aside .tab-content li dd.precio {
           color: #ff0000; }
-          article.restaurante aside .tab-content li dd.precio:before {
-            content: "\e148"; }
       article.restaurante aside .tab-content li .imagen {
         float: left;
         height: 68px;
@@ -3067,8 +3093,6 @@ section.ingresar-comentario ul li {
     top: 2px; }
   section.ingresar-comentario ul li.ubicacion address {
     margin: 0; }
-    section.ingresar-comentario ul li.ubicacion address:before {
-      content: "\e062"; }
   section.ingresar-comentario ul li.personas:before {
     content: "\e008"; }
   section.ingresar-comentario ul li.fecha:before {
@@ -3179,11 +3203,71 @@ section.ingresar-comentario form {
   section.ingresar-comentario form .form-group textarea {
     width: 55%; } }
 body.resultados .destacado {
-  height: 234px;
   margin: 15px 0; }
+  body.resultados .destacado aside {
+    height: 100%; }
+  body.resultados .destacado article {
+    height: 100%;
+    overflow: hidden;
+    position: relative; }
+    body.resultados .destacado article h1,
+    body.resultados .destacado article dl {
+      margin: 0;
+      text-align: center; }
+    body.resultados .destacado article h1,
+    body.resultados .destacado article dd {
+      color: #FFFFFF;
+      text-shadow: 0 0 6px black;
+      position: relative;
+      z-index: 11; }
+    body.resultados .destacado article h1 {
+      font-style: italic;
+      margin-bottom: 10px;
+      margin-top: 72px; }
+    body.resultados .destacado article dd {
+      font-size: 15px;
+      line-height: 16px; }
+      body.resultados .destacado article dd.direccion, body.resultados .destacado article dd.cocina {
+        display: inline-block; }
+        body.resultados .destacado article dd.direccion:before, body.resultados .destacado article dd.cocina:before {
+          margin-right: 4px;
+          position: relative;
+          top: 1px; }
+      body.resultados .destacado article dd.direccion {
+        margin-right: 8px; }
+      body.resultados .destacado article dd.estrellas {
+        height: 22px;
+        font-size: 22px;
+        left: 50%;
+        letter-spacing: 6px;
+        margin-left: -68px;
+        position: absolute;
+        top: 50px;
+        width: 135px; }
+        body.resultados .destacado article dd.estrellas:after, body.resultados .destacado article dd.estrellas:before {
+          height: 30px; }
+        body.resultados .destacado article dd.estrellas:before {
+          text-shadow: none; }
+    body.resultados .destacado article a.btn,
+    body.resultados .destacado article img {
+      position: absolute; }
+    body.resultados .destacado article a.btn {
+      bottom: 15px;
+      margin-left: -106px;
+      left: 50%;
+      z-index: 11; }
+    body.resultados .destacado article img {
+      left: 0;
+      top: 0;
+      z-index: 1; }
 
-body.resultados div.aside {
-  padding-right: 3px; }
+@media (min-width: 768px) {
+  body.resultados .destacado {
+    height: 234px; } }
+@-moz-document url-prefix() {
+  body.resultados aside .buscar select {
+    padding: 4px 4px 4px 8px; } }
+
 body.resultados aside h2 {
   border-bottom: 3px solid #666666;
   color: #666666;
@@ -3191,6 +3275,10 @@ body.resultados aside h2 {
   font-weight: 700;
   margin-top: 12px;
   padding-bottom: 10px; }
+body.resultados aside form input[type="checkbox"] + label.activo:before {
+  background-image: url("../img/constante.png");
+  background-position: -177px -277px;
+  background-repeat: no-repeat; }
 body.resultados aside form label {
   color: #666666;
   cursor: pointer;
@@ -3228,8 +3316,6 @@ body.resultados .buscar {
   body.resultados .buscar div {
     overflow: hidden;
     position: relative; }
-    body.resultados .buscar div + div {
-      margin-top: 10px; }
     body.resultados .buscar div input[type="checkbox"] {
       left: 0;
       position: absolute;
@@ -3243,7 +3329,11 @@ body.resultados .buscar {
     body.resultados .buscar div.horario, body.resultados .buscar div.cantidad {
       display: inline-block; }
       body.resultados .buscar div.horario span, body.resultados .buscar div.cantidad span {
-        top: 8px; }
+        top: 5px; }
+    body.resultados .buscar div.horario select {
+      width: 70px; }
+    body.resultados .buscar div.cantidad select {
+      width: 48px; }
     body.resultados .buscar div span.glyphicon {
       color: #999999;
       margin-left: 2px;
@@ -3253,11 +3343,19 @@ body.resultados .buscar {
   body.resultados .buscar select {
     background: #FFFFFF;
     border: 1px solid #c2c2c2;
+    color: #999999;
     font-size: 11px;
+    font-style: italic;
     height: 28px; }
+    body.resultados .buscar div > input:focus,
+    body.resultados .buscar select:focus {
+      color: black;
+      font-style: normal; }
   body.resultados .buscar div > input {
     padding: 0 8px;
     width: 100%; }
+  body.resultados .buscar select {
+    padding-left: 8px; }
   body.resultados .buscar label {
     cursor: pointer; }
   body.resultados .buscar .btn {
@@ -3265,6 +3363,20 @@ body.resultados .buscar {
     font-weight: 700;
     margin-top: 7px;
     width: 100%; }
+  body.resultados .buscar ::-webkit-input-placeholder {
+    color: #999999;
+    font-style: italic; }
+  body.resultados .buscar :-moz-placeholder {
+    color: #999999;
+    font-style: italic;
+    opacity: 1; }
+  body.resultados .buscar ::-moz-placeholder {
+    color: #999999;
+    font-style: italic;
+    opacity: 1; }
+  body.resultados .buscar :-ms-input-placeholder {
+    color: #999999;
+    font-style: italic; }
 body.resultados .filtros h2 {
   border-bottom-color: black;
   margin-top: 12px; }
@@ -3359,10 +3471,59 @@ body.resultados .vistos {
       position: absolute;
       top: 3px;
       width: 108px; }
+body.resultados .top-busquedas li {
+  display: inline-block; }
+body.resultados .top-busquedas a {
+  color: #666666;
+  line-height: 20px; }
+  body.resultados .top-busquedas a:hover {
+    color: #0098db;
+    text-decoration: none; }
+  body.resultados .top-busquedas a.nivel-01, body.resultados .top-busquedas a.nivel-02, body.resultados .top-busquedas a.nivel-03 {
+    font-weight: 600; }
+  body.resultados .top-busquedas a.nivel-04, body.resultados .top-busquedas a.nivel-05, body.resultados .top-busquedas a.nivel-06 {
+    font-weight: 700; }
+  body.resultados .top-busquedas a.nivel-01 {
+    font-size: 14px; }
+  body.resultados .top-busquedas a.nivel-02 {
+    font-size: 16px; }
+  body.resultados .top-busquedas a.nivel-03 {
+    font-size: 18px; }
+  body.resultados .top-busquedas a.nivel-04 {
+    font-size: 20px; }
+  body.resultados .top-busquedas a.nivel-05 {
+    font-size: 22px; }
+  body.resultados .top-busquedas a.nivel-06 {
+    font-size: 24px; }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) and (max-width: 991px) {
+  body.resultados aside form .restaurante,
+  body.resultados aside form .fecha,
+  body.resultados aside form .horario,
   body.resultados aside form .cantidad {
-    margin-left: 15px; } }
+    float: left; }
+  body.resultados aside form .check {
+    clear: left;
+    width: 49%; }
+  body.resultados aside form .fecha,
+  body.resultados aside form .horario,
+  body.resultados aside form .cantidad {
+    margin-left: 2%; }
+  body.resultados aside form .restaurante {
+    width: 40%; }
+  body.resultados aside form .fecha {
+    width: 20%; }
+  body.resultados aside form .horario {
+    width: 16%; }
+  body.resultados aside form .cantidad {
+    width: 16%; } }
+@media (min-width: 992px) {
+  body.resultados div.aside {
+    padding-right: 3px; }
+  body.resultados aside form .cantidad {
+    margin-left: 15px; }
+  body.resultados aside .buscar div + div {
+    margin-top: 10px; } }
 body.resultados div.resultados div.visualizacion {
   background: #ececec;
   border: 1px solid #999999;
@@ -3406,15 +3567,17 @@ body.resultados div.resultados div.visualizacion {
       overflow: hidden;
       width: 16px; }
 body.resultados div.resultados div.filtros-activos {
-  margin: 6px 0 0 0;
   overflow: hidden;
   width: 100%; }
+  body.resultados div.resultados div.filtros-activos li,
+  body.resultados div.resultados div.filtros-activos div.eliminar-todos {
+    line-height: 24px;
+    float: left;
+    margin-top: 6px; }
   body.resultados div.resultados div.filtros-activos li {
     background: #999999;
     border-radius: 4px;
     color: black;
-    line-height: 24px;
-    float: left;
     margin-right: 6px;
     overflow: hidden;
     padding: 0 0 0 8px; }
@@ -3432,7 +3595,6 @@ body.resultados div.resultados div.filtros-activos {
   body.resultados div.resultados div.filtros-activos div.eliminar-todos {
     color: #0098db;
     cursor: pointer;
-    float: left;
     text-decoration: underline; }
 body.resultados div.resultados article {
   margin-top: 6px;
@@ -3478,24 +3640,20 @@ body.resultados div.resultados article {
       text-transform: uppercase; }
     body.resultados div.resultados article dl dd.opiniones {
       color: #666666; }
-    body.resultados div.resultados article dl dd.ubicacion {
+    body.resultados div.resultados article dl dd.direccion {
       display: block;
       margin-top: 4px; }
-      body.resultados div.resultados article dl dd.ubicacion:before {
-        content: "\e062"; }
-    body.resultados div.resultados article dl dd.ubicacion:before, body.resultados div.resultados article dl dd.tipo-comida:before {
-      font-family: "Glyphicons Halflings";
+    body.resultados div.resultados article dl dd.direccion:before, body.resultados div.resultados article dl dd.cocina:before {
       font-size: 11px;
       margin-right: 4px; }
-    body.resultados div.resultados article dl dd.tipo-comida, body.resultados div.resultados article dl dd.precio {
-      display: inline-block; }
-    body.resultados div.resultados article dl dd.tipo-comida:before {
-      content: "\e179"; }
+    body.resultados div.resultados article dl dd.cocina, body.resultados div.resultados article dl dd.precio {
+      display: inline; }
     body.resultados div.resultados article dl dd.precio {
       color: #ff6600; }
       body.resultados div.resultados article dl dd.precio:before {
         color: #333333;
         content: "|";
+        font-family: "Open Sans";
         margin-right: 3px;
         position: relative;
         top: -1px; }
@@ -3503,10 +3661,11 @@ body.resultados div.resultados article {
       box-shadow: 0 0 10px #666666;
       font-size: 30px;
       line-height: 48px;
-      padding: 0 10px;
       position: absolute;
       right: 18px;
-      top: 18px; }
+      text-align: center;
+      top: 18px;
+      width: 153px; }
       body.resultados div.resultados article dl dd.descuento:before, body.resultados div.resultados article dl dd.descuento:after {
         background-image: url("../img/constante.png");
         background-repeat: no-repeat;
@@ -3548,6 +3707,8 @@ body.resultados div.resultados article {
       text-align: right; }
       body.resultados div.resultados article blockquote footer a {
         font-size: 13px; }
+        body.resultados div.resultados article blockquote footer a:hover {
+          text-decoration: none; }
   body.resultados div.resultados article p.nuevo {
     background: url("../img/constante.png") -191px -271px no-repeat;
     left: 0;
@@ -3561,22 +3722,28 @@ body.resultados div.resultados article {
 body.resultados div.resultados .paginado {
   margin-top: 15px;
   text-align: right; }
+  body.resultados div.resultados .paginado small {
+    float: left;
+    font-size: 12px;
+    padding-top: 9px; }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  body.resultados div.resultados article h2,
+  body.resultados div.resultados article dl {
+    max-width: 308px; } }
 @media (min-width: 768px) {
-  body.resultados div.resultados {
-    padding-left: 3px; }
-    body.resultados div.resultados article {
-      border: 1px solid #d9d9d9;
-      padding: 8px 8px 8px 216px;
-      position: relative; } }
-@media (min-width: 992px) {
   body.resultados div.resultados .modos {
     float: right; }
-  body.resultados div.resultados article h2,
-  body.resultados div.resultados article dd.ubicacion {
-    max-width: 313px; }
-  body.resultados div.resultados article dd.tipo-comida {
-    max-width: 256px; } }
+  body.resultados div.resultados article {
+    border: 1px solid #d9d9d9;
+    padding: 8px 8px 8px 216px;
+    position: relative; } }
+@media (min-width: 992px) {
+  body.resultados div.resultados {
+    padding-left: 3px; }
+    body.resultados div.resultados article h2,
+    body.resultados div.resultados article dl {
+      max-width: 313px; } }
 section.login,
 section.registrarse {
   padding-top: 38px; }

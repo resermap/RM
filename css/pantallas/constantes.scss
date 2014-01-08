@@ -30,6 +30,7 @@ dd {
 			content: "\e006 \e006 \e006 \e006 \e006";
 			font-family: "Glyphicons Halflings";
 			left: 0;
+			padding: 0 4px;
 			position: absolute;
 			top: 0;
 			white-space: nowrap;
@@ -53,7 +54,7 @@ dd {
 		}
 		&.e-0-5 {
 			&:before {
-				width: 8%;
+				width: 10%;
 			}
 		}
 		&.e-1 {
@@ -63,7 +64,7 @@ dd {
 		}
 		&.e-1-5 {
 			&:before {
-				width: 29%;
+				width: 31%;
 			}
 		}
 		&.e-2 {
@@ -73,7 +74,7 @@ dd {
 		}
 		&.e-2-5 {
 			&:before {
-				width: 50%;
+				width: 51%;
 			}
 		}
 		&.e-3 {
@@ -93,7 +94,7 @@ dd {
 		}
 		&.e-4-5 {
 			&:before {
-				width: 91.5%;
+				width: 91%;
 			}
 		}
 		&.e-5 {
@@ -137,5 +138,32 @@ dd {
 		&.e5 {
 			width: 125px;
 		}
+	}
+}
+
+.avanzar,
+.retroceder {
+	background-image: url("#{$img-constante}");
+	background-repeat: no-repeat;
+	cursor: pointer;
+	height: 33px;
+	margin-top: -16px;
+	position: absolute;
+	top: 50%;
+	width: 20px;
+	z-index: 11;
+}
+.avanzar {
+	background-position: -212px -135px;
+	right: 15px;
+	&:hover {
+		background-position: -212px -169px;
+	}
+}
+.retroceder {
+	background-position: -233px -135px;
+	left: 15px;
+	&:hover {
+		background-position: -233px -169px;
 	}
 }

@@ -215,32 +215,6 @@ section.palabaras-claves {
 				z-index: 1;
 			}
 		}
-		.avanzar,
-		.retroceder {
-			background-image: url("#{$img-constante}");
-			background-repeat: no-repeat;
-			cursor: pointer;
-			height: 33px;
-			margin-top: -16px;
-			position: absolute;
-			top: 50%;
-			width: 20px;
-			z-index: 11;
-		}
-		.avanzar {
-			background-position: -212px -135px;
-			right: 15px;
-			&:hover {
-				background-position: -212px -169px;
-			}
-		}
-		.retroceder {
-			background-position: -233px -135px;
-			left: 15px;
-			&:hover {
-				background-position: -233px -169px;
-			}
-		}
 	}
 }
 

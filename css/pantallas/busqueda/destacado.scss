@@ -41,14 +41,15 @@ body.resultados {
 					margin-right: 8px;
 				}
 				&.estrellas {
-					height: 22px;
-					font-size: 22px;
+					height: 28px;
+					font-size: 23px;
+					line-height: 28px;
 					left: 50%;
 					letter-spacing: 6px;
 					margin-left: -68px;
 					position: absolute;
 					top: 50px;
-					width: 135px;
+					width: 143px;
 					&:after,
 					&:before {
 						height: 30px;
@@ -73,6 +74,17 @@ body.resultados {
 				top: 0;
 				z-index: 1;
 			}
+		}
+		.avanzar,
+		.retroceder {
+			opacity: 0.75;
+			filter: alpha(opacity=75);
+		}
+		.avanzar {
+			right: 20px + 15;
+		}
+		.retroceder {
+			left: 20px + 15;
 		}
 	}
 }

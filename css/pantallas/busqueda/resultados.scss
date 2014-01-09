@@ -1,4 +1,4 @@
-body.resultados {
+main.resultados {
 	div.resultados {
 		div.visualizacion {
 			background: #ececec;
@@ -267,7 +267,7 @@ body.resultados {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-	body.resultados {
+	main.resultados {
 		div.resultados {
 			article {
 				h2,
@@ -280,7 +280,7 @@ body.resultados {
 }
 
 @media (min-width: 768px) {
-	body.resultados {
+	main.resultados {
 		div.resultados {
 			.modos {
 				float: right;
@@ -295,7 +295,7 @@ body.resultados {
 }
 
 @media (min-width: 992px) {
-	body.resultados {
+	main.resultados {
 		div.resultados {
 			padding-left: 3px;
 			article {

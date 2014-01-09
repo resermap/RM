@@ -140,12 +140,12 @@ section.palabaras-claves {
 				color: $color-v1;
 			}
 		}
-		.avanzar {
+		.avanzar-comentario {
 			&:before {
 				content: "\e114";
 			}
 		}
-		.retroceder {
+		.retroceder-comentario {
 			&:before {
 				content: "\e113";;
 			}

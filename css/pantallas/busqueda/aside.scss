@@ -1,5 +1,5 @@
 @-moz-document url-prefix() {
-	body.resultados {
+	main.resultados {
 		aside {
 			.buscar {
 				select {
@@ -10,7 +10,7 @@
 	}
 }
 
-body.resultados {
+main.resultados {
 	aside {
 		h2 {
 			border-bottom: 3px solid $color-t3;
@@ -356,7 +356,7 @@ body.resultados {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-	body.resultados {
+	main.resultados {
 		aside {
 			form {
 				.restaurante,
@@ -392,7 +392,7 @@ body.resultados {
 }
 
 @media (min-width: 992px) {
-	body.resultados {
+	main.resultados {
 		div.aside {
 			padding-right: 3px;
 		}

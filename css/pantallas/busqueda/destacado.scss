@@ -1,4 +1,4 @@
-body.resultados {
+main.resultados {
 	.destacado {
 		margin: 15px 0;
 		aside {
@@ -90,7 +90,7 @@ body.resultados {
 }
 
 @media (min-width: 768px) {
-	body.resultados {
+	main.resultados {
 		.destacado {
 			height: 234px;
 		}

@@ -716,22 +716,23 @@ body > footer.pie {
     width: 56%; }
   body > footer.pie .suscripcion input[type="submit"] {
     margin-left: 10px; } }
-body.pre-home header {
+header.pre-home {
   background: #eaeaea;
   padding-top: 20px; }
-  body.pre-home header h1 {
+  header.pre-home h1 {
     background: url("../img/home.png") 0 -115px no-repeat;
     height: 55px;
     width: 204px; }
-  body.pre-home header nav.navbar-default.ciudades {
+  header.pre-home nav.navbar-default.ciudades {
     margin-top: 0; }
-    body.pre-home header nav.navbar-default.ciudades .navbar-nav, body.pre-home header nav.navbar-default.ciudades .navbar-nav:last-child {
+    header.pre-home nav.navbar-default.ciudades .navbar-nav, header.pre-home nav.navbar-default.ciudades .navbar-nav:last-child {
       margin-right: 0; }
-    body.pre-home header nav.navbar-default.ciudades .navbar-nav li {
+    header.pre-home nav.navbar-default.ciudades .navbar-nav li {
       padding-top: 57px; }
-      body.pre-home header nav.navbar-default.ciudades .navbar-nav li a {
+      header.pre-home nav.navbar-default.ciudades .navbar-nav li a {
         font-weight: 700; }
-body.pre-home main {
+
+main.pre-home {
   background: #eaeaea;
   /* Old browsers */
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VhZWFlYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjYwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
@@ -750,31 +751,31 @@ body.pre-home main {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eaeaea', endColorstr='#ffffff',GradientType=0 );
   /* IE6-8 */
   padding-top: 40px; }
-  body.pre-home main nav div {
+  main.pre-home nav div {
     background-color: #c9d3dd; }
-    body.pre-home main nav div:hover ul {
+    main.pre-home nav div:hover ul {
       display: block; }
-    body.pre-home main nav div h2 {
+    main.pre-home nav div h2 {
       font-weight: 700;
       margin: 0; }
-    body.pre-home main nav div p {
+    main.pre-home nav div p {
       color: #58636e;
       font-size: 12px;
       line-height: 16px;
       margin-top: 2px; }
-    body.pre-home main nav div ul {
+    main.pre-home nav div ul {
       display: none; }
-    body.pre-home main nav div li {
+    main.pre-home nav div li {
       padding-bottom: 6px; }
-      body.pre-home main nav div li a {
+      main.pre-home nav div li a {
         color: #FFFFFF;
         font-weight: 700;
         letter-spacing: -1px;
         text-shadow: 0 2px 1px #666666; }
-        body.pre-home main nav div li a:hover {
+        main.pre-home nav div li a:hover {
           color: #0098db;
           text-decoration: none; }
-  body.pre-home main ol {
+  main.pre-home ol {
     background: #ffffff;
     /* Old browsers */
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlYWVhZWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -796,7 +797,7 @@ body.pre-home main {
     border-radius: 10px;
     margin-bottom: 20px;
     margin-top: 25px; }
-    body.pre-home main ol li {
+    main.pre-home ol li {
       color: #0098db;
       counter-increment: pasos;
       font-size: 16px;
@@ -804,80 +805,80 @@ body.pre-home main {
       line-height: 16px;
       position: relative;
       text-transform: uppercase; }
-      body.pre-home main ol li:before {
+      main.pre-home ol li:before {
         content: counter(pasos);
         font-size: 27px;
         font-weight: 700;
         position: absolute; }
-  body.pre-home main p {
+  main.pre-home p {
     color: #666666;
     font-size: 13px; }
-    body.pre-home main p span,
-    body.pre-home main p a {
+    main.pre-home p span,
+    main.pre-home p a {
       font-weight: 600;
       text-decoration: underline; }
-    body.pre-home main p a {
+    main.pre-home p a {
       color: #666666; }
-      body.pre-home main p a:hover {
+      main.pre-home p a:hover {
         color: #0098db; }
 
 @media (max-width: 767px) {
-  body.pre-home main nav div {
+  main.pre-home nav div {
     overflow: hidden; }
-    body.pre-home main nav div.argentina {
+    main.pre-home nav div.argentina {
       border-top-left-radius: 10px;
       border-top-right-radius: 10px; }
-    body.pre-home main nav div.chile {
+    main.pre-home nav div.chile {
       border-top: 2px solid #1E3247;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px; }
-    body.pre-home main nav div h2,
-    body.pre-home main nav div p {
+    main.pre-home nav div h2,
+    main.pre-home nav div p {
       background-color: #3893c7; }
-    body.pre-home main nav div h2,
-    body.pre-home main nav div p,
-    body.pre-home main nav div ul {
+    main.pre-home nav div h2,
+    main.pre-home nav div p,
+    main.pre-home nav div ul {
       padding-left: 20px;
       padding-right: 20px; }
-    body.pre-home main nav div h2 {
+    main.pre-home nav div h2 {
       color: #FFFFFF;
       font-size: 21px;
       line-height: 16px;
       padding-bottom: 6px;
       padding-top: 15px;
       text-shadow: 1px 1px 2px #666666; }
-    body.pre-home main nav div p {
+    main.pre-home nav div p {
       color: #b7dcf1;
       margin: 0;
       padding-bottom: 10px; }
-    body.pre-home main nav div ul {
+    main.pre-home nav div ul {
       padding-top: 10px; }
-    body.pre-home main nav div li a {
+    main.pre-home nav div li a {
       font-size: 18px;
       line-height: 20px; } }
 @media (min-width: 768px) {
-  body.pre-home main nav {
+  main.pre-home nav {
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     overflow: hidden; }
-    body.pre-home main nav div {
+    main.pre-home nav div {
       border: 2px solid #C9D3DD;
       height: 150px;
       padding: 45px 20px 0 20px;
       position: relative;
       width: 300px; }
-      body.pre-home main nav div:before, body.pre-home main nav div:after {
+      main.pre-home nav div:before, main.pre-home nav div:after {
         background-image: url("../img/home.png");
         background-repeat: no-repeat;
         content: "";
         position: absolute; }
-      body.pre-home main nav div:before {
+      main.pre-home nav div:before {
         background-position: -65px 0;
         height: 86px;
         left: 29px;
         top: 32px;
         width: 65px; }
-      body.pre-home main nav div:after {
+      main.pre-home nav div:after {
         background-position: -130px 0;
         display: none;
         height: 38px;
@@ -885,42 +886,42 @@ body.pre-home main {
         top: 50%;
         margin-top: -20px;
         width: 18px; }
-      body.pre-home main nav div:hover {
+      main.pre-home nav div:hover {
         border-color: #1e6b98;
         background-color: #3893c7; }
-        body.pre-home main nav div:hover:before {
+        main.pre-home nav div:hover:before {
           background-position: 0 0;
           left: 30px; }
-        body.pre-home main nav div:hover:after {
+        main.pre-home nav div:hover:after {
           display: block; }
-        body.pre-home main nav div:hover h2 {
+        main.pre-home nav div:hover h2 {
           color: #FFFFFF;
           text-shadow: 1px 1px 2px #666666; }
-        body.pre-home main nav div:hover p {
+        main.pre-home nav div:hover p {
           color: #b7dcf1; }
-      body.pre-home main nav div.argentina {
+      main.pre-home nav div.argentina {
         border-top-left-radius: 10px; }
-        body.pre-home main nav div.argentina ul {
+        main.pre-home nav div.argentina ul {
           margin-top: -2px;
           top: 0; }
-        body.pre-home main nav div.argentina:hover + div {
+        main.pre-home nav div.argentina:hover + div {
           border-top-color: #C9D3DD; }
-      body.pre-home main nav div.chile {
+      main.pre-home nav div.chile {
         border-bottom-left-radius: 10px;
         border-top-color: #1E3247; }
-        body.pre-home main nav div.chile:hover {
+        main.pre-home nav div.chile:hover {
           border-top-color: #1e6b98; }
-        body.pre-home main nav div.chile ul {
+        main.pre-home nav div.chile ul {
           margin-top: -6px;
           top: -100%; }
-      body.pre-home main nav div h2,
-      body.pre-home main nav div p {
+      main.pre-home nav div h2,
+      main.pre-home nav div p {
         padding-left: 98px; }
-      body.pre-home main nav div h2 {
+      main.pre-home nav div h2 {
         color: #1e3247;
         font-size: 15px;
         line-height: 16px; }
-      body.pre-home main nav div ul {
+      main.pre-home nav div ul {
         height: 200%;
         left: 100%;
         margin-left: 2px;
@@ -928,65 +929,65 @@ body.pre-home main {
         padding: 33px 40px 0 40px;
         position: absolute; } }
 @media (min-width: 768px) and (max-width: 991px) {
-  body.pre-home main nav {
+  main.pre-home nav {
     background: url("../img/pre-home-768px.jpg") 300px 0 no-repeat; }
-    body.pre-home main nav div ul {
+    main.pre-home nav div ul {
       width: 420px; }
-      body.pre-home main nav div ul li a {
+      main.pre-home nav div ul li a {
         font-size: 24px;
         line-height: 26px;
         letter-spacing: -2px; } }
 @media (max-width: 991px) {
-  body.pre-home main ol li {
+  main.pre-home ol li {
     padding: 15px 50px 15px 40px;
     position: relative; }
-    body.pre-home main ol li:before {
+    main.pre-home ol li:before {
       left: 12px;
       margin-top: -10px;
       top: 50%; }
-    body.pre-home main ol li:after {
+    main.pre-home ol li:after {
       background-image: url("../img/home.png");
       background-repeat: no-repeat;
       content: "";
       position: absolute; }
-    body.pre-home main ol li + li {
+    main.pre-home ol li + li {
       border-top: 1px solid #cccccc; }
-    body.pre-home main ol li:first-child:after {
+    main.pre-home ol li:first-child:after {
       background-position: -226px 0;
       height: 29px;
       right: 18px;
       top: 10px;
       width: 33px; }
-    body.pre-home main ol li:first-child + li:after {
+    main.pre-home ol li:first-child + li:after {
       background-position: -224px -43px;
       height: 40px;
       right: 14px;
       top: 4px;
       width: 38px; }
-    body.pre-home main ol li:first-child + li + li:after {
+    main.pre-home ol li:first-child + li + li:after {
       background-position: -225px -87px;
       height: 46px;
       right: 0;
       top: 0;
       width: 74px; }
-    body.pre-home main ol li:first-child + li + li + li:after {
+    main.pre-home ol li:first-child + li + li + li:after {
       background-position: -226px -141px;
       height: 35px;
       right: 13px;
       top: 8px;
       width: 41px; } }
 @media (min-width: 992px) {
-  body.pre-home main nav {
+  main.pre-home nav {
     background: url("../img/pre-home-992px.jpg") 300px 0 no-repeat; }
-    body.pre-home main nav div ul {
+    main.pre-home nav div ul {
       width: 660px; }
-      body.pre-home main nav div ul li a {
+      main.pre-home nav div ul li a {
         font-size: 24px;
         line-height: 26px;
         letter-spacing: -2px; }
-  body.pre-home main ol {
+  main.pre-home ol {
     height: 92px; }
-    body.pre-home main ol li {
+    main.pre-home ol li {
       background-image: url("../img/home.png");
       background-repeat: no-repeat;
       float: left;
@@ -994,10 +995,10 @@ body.pre-home main {
       position: relative;
       text-align: right;
       width: 25%; }
-      body.pre-home main ol li:before {
+      main.pre-home ol li:before {
         left: 10px;
         top: 31px; }
-      body.pre-home main ol li:first-child:after, body.pre-home main ol li:first-child + li:after, body.pre-home main ol li:first-child + li + li:after {
+      main.pre-home ol li:first-child:after, main.pre-home ol li:first-child + li:after, main.pre-home ol li:first-child + li + li:after {
         background: url("../img/home.png") -164px -10px no-repeat;
         height: 100%;
         content: "";
@@ -1005,26 +1006,26 @@ body.pre-home main {
         right: 0;
         top: 0;
         width: 38px; }
-      body.pre-home main ol li:first-child {
+      main.pre-home ol li:first-child {
         background-position: 150px -184px;
         padding-right: 100px;
         padding-top: 30px; }
-      body.pre-home main ol li:first-child + li {
+      main.pre-home ol li:first-child + li {
         background-position: 136px -276px;
         padding-right: 108px;
         padding-top: 22px; }
-      body.pre-home main ol li:first-child + li + li {
+      main.pre-home ol li:first-child + li + li {
         background-position: 96px -489px;
         padding-top: 22px;
         padding-right: 130px; }
-      body.pre-home main ol li:first-child + li + li + li {
+      main.pre-home ol li:first-child + li + li + li {
         background-position: 120px -374px;
         padding-top: 30px;
         padding-right: 136px; }
-      body.pre-home main ol li span {
+      main.pre-home ol li span {
         display: block; } }
 section.busqueda {
-  background: black url("../img/home.jpg") center top no-repeat;
+  background: #000000;
   box-shadow: 0 3px 6px #777777;
   height: 236px;
   position: relative; }
@@ -1076,6 +1077,11 @@ section.busqueda {
       height: 36px;
       font-size: 14px;
       font-weight: 700; }
+  section.busqueda img {
+    left: -145px;
+    position: absolute;
+    top: 0;
+    z-index: 1; }
   section.busqueda aside {
     color: #dddddd;
     height: 66px;
@@ -1126,10 +1132,12 @@ section.busqueda {
       section.busqueda aside blockquote cite:before {
         content: "- "; }
       section.busqueda aside blockquote p {
+        color: #cccccc;
         font-size: 13px;
+        font-style: normal;
         font-weight: 400;
         letter-spacing: -0.5px;
-        line-height: 13px;
+        line-height: 14px;
         margin: 0; }
       section.busqueda aside blockquote .imagen {
         border: 2px solid #FFFFFF;
@@ -1226,7 +1234,7 @@ section.busqueda {
       position: absolute;
       top: 0;
       width: 100px;
-      z-index: 1; }
+      z-index: 11; }
     section.busqueda > div:after {
       background-position: 0 -236px;
       right: -145px; }
@@ -1663,9 +1671,9 @@ section.palabaras-claves {
         font-family: "Glyphicons Halflings"; }
       section.palabaras-claves div.navegacion div:hover {
         color: #0098db; }
-    section.palabaras-claves div.navegacion .avanzar:before {
+    section.palabaras-claves div.navegacion .avanzar-comentario:before {
       content: "\e114"; }
-    section.palabaras-claves div.navegacion .retroceder:before {
+    section.palabaras-claves div.navegacion .retroceder-comentario:before {
       content: "\e113"; }
   section.palabaras-claves aside {
     border: 1px solid #cccccc;
@@ -3206,40 +3214,40 @@ section.ingresar-comentario form {
 @media (min-width: 992px) {
   section.ingresar-comentario form .form-group textarea {
     width: 55%; } }
-body.resultados .destacado {
+main.resultados .destacado {
   margin: 15px 0; }
-  body.resultados .destacado aside {
+  main.resultados .destacado aside {
     height: 100%; }
-  body.resultados .destacado article {
+  main.resultados .destacado article {
     height: 100%;
     overflow: hidden;
     position: relative; }
-    body.resultados .destacado article h1,
-    body.resultados .destacado article dl {
+    main.resultados .destacado article h1,
+    main.resultados .destacado article dl {
       margin: 0;
       text-align: center; }
-    body.resultados .destacado article h1,
-    body.resultados .destacado article dd {
+    main.resultados .destacado article h1,
+    main.resultados .destacado article dd {
       color: #FFFFFF;
       text-shadow: 0 0 6px black;
       position: relative;
       z-index: 11; }
-    body.resultados .destacado article h1 {
+    main.resultados .destacado article h1 {
       font-style: italic;
       margin-bottom: 10px;
       margin-top: 72px; }
-    body.resultados .destacado article dd {
+    main.resultados .destacado article dd {
       font-size: 15px;
       line-height: 16px; }
-      body.resultados .destacado article dd.direccion, body.resultados .destacado article dd.cocina {
+      main.resultados .destacado article dd.direccion, main.resultados .destacado article dd.cocina {
         display: inline-block; }
-        body.resultados .destacado article dd.direccion:before, body.resultados .destacado article dd.cocina:before {
+        main.resultados .destacado article dd.direccion:before, main.resultados .destacado article dd.cocina:before {
           margin-right: 4px;
           position: relative;
           top: 1px; }
-      body.resultados .destacado article dd.direccion {
+      main.resultados .destacado article dd.direccion {
         margin-right: 8px; }
-      body.resultados .destacado article dd.estrellas {
+      main.resultados .destacado article dd.estrellas {
         height: 28px;
         font-size: 23px;
         line-height: 28px;
@@ -3249,58 +3257,58 @@ body.resultados .destacado {
         position: absolute;
         top: 50px;
         width: 143px; }
-        body.resultados .destacado article dd.estrellas:after, body.resultados .destacado article dd.estrellas:before {
+        main.resultados .destacado article dd.estrellas:after, main.resultados .destacado article dd.estrellas:before {
           height: 30px; }
-        body.resultados .destacado article dd.estrellas:before {
+        main.resultados .destacado article dd.estrellas:before {
           text-shadow: none; }
-    body.resultados .destacado article a.btn,
-    body.resultados .destacado article img {
+    main.resultados .destacado article a.btn,
+    main.resultados .destacado article img {
       position: absolute; }
-    body.resultados .destacado article a.btn {
+    main.resultados .destacado article a.btn {
       bottom: 15px;
       margin-left: -106px;
       left: 50%;
       z-index: 11; }
-    body.resultados .destacado article img {
+    main.resultados .destacado article img {
       left: 0;
       top: 0;
       z-index: 1; }
-  body.resultados .destacado .avanzar,
-  body.resultados .destacado .retroceder {
+  main.resultados .destacado .avanzar,
+  main.resultados .destacado .retroceder {
     opacity: 0.75;
     filter: alpha(opacity=75); }
-  body.resultados .destacado .avanzar {
+  main.resultados .destacado .avanzar {
     right: 35px; }
-  body.resultados .destacado .retroceder {
+  main.resultados .destacado .retroceder {
     left: 35px; }
 
 @media (min-width: 768px) {
-  body.resultados .destacado {
+  main.resultados .destacado {
     height: 234px; } }
 @-moz-document url-prefix() {
-  body.resultados aside .buscar select {
+  main.resultados aside .buscar select {
     padding: 4px 4px 4px 8px; } }
 
-body.resultados aside h2 {
+main.resultados aside h2 {
   border-bottom: 3px solid #666666;
   color: #666666;
   font-size: 18px;
   font-weight: 700;
   margin-top: 12px;
   padding-bottom: 10px; }
-body.resultados aside form input[type="checkbox"] + label.activo:before {
+main.resultados aside form input[type="checkbox"] + label.activo:before {
   background-image: url("../img/constante.png");
   background-position: -177px -277px;
   background-repeat: no-repeat; }
-body.resultados aside form label {
+main.resultados aside form label {
   color: #666666;
   cursor: pointer;
   font-size: 14px;
   line-height: 14px;
   margin: 0; }
-  body.resultados aside form label span {
+  main.resultados aside form label span {
     color: #ff6600; }
-  body.resultados aside form label:before {
+  main.resultados aside form label:before {
     background-color: #FFFFFF;
     border: 1px solid #999999;
     content: "";
@@ -3310,173 +3318,173 @@ body.resultados aside form label {
     position: relative;
     top: 2px;
     width: 15px; }
-  body.resultados aside form label:hover:before {
+  main.resultados aside form label:hover:before {
     border: 2px solid #666666; }
-  body.resultados aside form label.activo {
+  main.resultados aside form label.activo {
     font-weight: 700; }
-    body.resultados aside form label.activo:before {
+    main.resultados aside form label.activo:before {
       background-color: #666666;
       border: none; }
-body.resultados .buscar {
+main.resultados .buscar {
   background: #ececec;
   border: 1px solid #999999;
   padding: 8px 15px 10px 15px; }
-  body.resultados .buscar h2 {
+  main.resultados .buscar h2 {
     border-bottom: 1px solid #b9b9b9;
     font-weight: 400;
     margin: 0 0 18px 0;
     padding-bottom: 11px; }
-  body.resultados .buscar div {
+  main.resultados .buscar div {
     overflow: hidden;
     position: relative; }
-    body.resultados .buscar div input[type="checkbox"] {
+    main.resultados .buscar div input[type="checkbox"] {
       left: 0;
       position: absolute;
       top: -200%; }
-    body.resultados .buscar div label {
+    main.resultados .buscar div label {
       letter-spacing: -1px; }
-    body.resultados .buscar div.fecha input {
+    main.resultados .buscar div.fecha input {
       width: 80px; }
-    body.resultados .buscar div.fecha span {
+    main.resultados .buscar div.fecha span {
       top: 4px; }
-    body.resultados .buscar div.horario, body.resultados .buscar div.cantidad {
+    main.resultados .buscar div.horario, main.resultados .buscar div.cantidad {
       display: inline-block; }
-      body.resultados .buscar div.horario span, body.resultados .buscar div.cantidad span {
+      main.resultados .buscar div.horario span, main.resultados .buscar div.cantidad span {
         top: 5px; }
-    body.resultados .buscar div.horario select {
+    main.resultados .buscar div.horario select {
       width: 70px; }
-    body.resultados .buscar div.cantidad select {
+    main.resultados .buscar div.cantidad select {
       width: 48px; }
-    body.resultados .buscar div span.glyphicon {
+    main.resultados .buscar div span.glyphicon {
       color: #999999;
       margin-left: 2px;
       font-size: 18px;
       position: relative; }
-  body.resultados .buscar div > input,
-  body.resultados .buscar select {
+  main.resultados .buscar div > input,
+  main.resultados .buscar select {
     background: #FFFFFF;
     border: 1px solid #c2c2c2;
     color: #999999;
     font-size: 11px;
     font-style: italic;
     height: 28px; }
-    body.resultados .buscar div > input:focus,
-    body.resultados .buscar select:focus {
+    main.resultados .buscar div > input:focus,
+    main.resultados .buscar select:focus {
       color: black;
       font-style: normal; }
-  body.resultados .buscar div > input {
+  main.resultados .buscar div > input {
     padding: 0 8px;
     width: 100%; }
-  body.resultados .buscar select {
+  main.resultados .buscar select {
     padding-left: 8px; }
-  body.resultados .buscar label {
+  main.resultados .buscar label {
     cursor: pointer; }
-  body.resultados .buscar .btn {
+  main.resultados .buscar .btn {
     height: 36px;
     font-weight: 700;
     margin-top: 7px;
     width: 100%; }
-  body.resultados .buscar ::-webkit-input-placeholder {
+  main.resultados .buscar ::-webkit-input-placeholder {
     color: #999999;
     font-style: italic; }
-  body.resultados .buscar :-moz-placeholder {
+  main.resultados .buscar :-moz-placeholder {
     color: #999999;
     font-style: italic;
     opacity: 1; }
-  body.resultados .buscar ::-moz-placeholder {
+  main.resultados .buscar ::-moz-placeholder {
     color: #999999;
     font-style: italic;
     opacity: 1; }
-  body.resultados .buscar :-ms-input-placeholder {
+  main.resultados .buscar :-ms-input-placeholder {
     color: #999999;
     font-style: italic; }
-body.resultados .filtros h2 {
+main.resultados .filtros h2 {
   border-bottom-color: black;
   margin-top: 12px; }
-body.resultados .filtros fieldset > div {
+main.resultados .filtros fieldset > div {
   margin-top: 6px;
   overflow: hidden;
   position: relative; }
-body.resultados .filtros fieldset + fieldset {
+main.resultados .filtros fieldset + fieldset {
   margin-top: 25px; }
-body.resultados .filtros fieldset.abierto legend:after {
+main.resultados .filtros fieldset.abierto legend:after {
   content: "\e114"; }
-body.resultados .filtros fieldset.abierto legend:hover:after {
+main.resultados .filtros fieldset.abierto legend:hover:after {
   content: "\e113"; }
-body.resultados .filtros fieldset.cerrado {
+main.resultados .filtros fieldset.cerrado {
   overflow: -moz-hidden-unscrollable; }
-  body.resultados .filtros fieldset.cerrado legend:after {
+  main.resultados .filtros fieldset.cerrado legend:after {
     content: "\e113"; }
-  body.resultados .filtros fieldset.cerrado legend:hover:after {
+  main.resultados .filtros fieldset.cerrado legend:hover:after {
     content: "\e114"; }
-body.resultados .filtros legend {
+main.resultados .filtros legend {
   border: none;
   color: black;
   cursor: pointer;
   font-size: 15px;
   line-height: 14px;
   margin-bottom: 0; }
-  body.resultados .filtros legend:after {
+  main.resultados .filtros legend:after {
     font-family: "Glyphicons Halflings";
     color: #666666;
     float: right;
     font-size: 12px; }
-  body.resultados .filtros legend:hover {
+  main.resultados .filtros legend:hover {
     color: #0098db; }
-    body.resultados .filtros legend:hover:after {
+    main.resultados .filtros legend:hover:after {
       color: #0098db; }
-body.resultados .filtros input[type="radio"] + label:before {
+main.resultados .filtros input[type="radio"] + label:before {
   border-radius: 100%; }
-body.resultados .filtros input[type="checkbox"],
-body.resultados .filtros input[type="radio"] {
+main.resultados .filtros input[type="checkbox"],
+main.resultados .filtros input[type="radio"] {
   left: 0;
   position: absolute;
   top: -100%; }
-body.resultados .filtros div.ver-mas {
+main.resultados .filtros div.ver-mas {
   color: #666666;
   cursor: pointer;
   margin-left: 25px;
   font-weight: 700; }
-  body.resultados .filtros div.ver-mas:after {
+  main.resultados .filtros div.ver-mas:after {
     font-family: "Glyphicons Halflings";
     content: "\e072";
     font-size: 8px;
     margin-left: 4px; }
-  body.resultados .filtros div.ver-mas:hover {
+  main.resultados .filtros div.ver-mas:hover {
     color: #0098db; }
-body.resultados .vistos {
+main.resultados .vistos {
   margin-bottom: 30px;
   margin-top: 30px; }
-  body.resultados .vistos article {
+  main.resultados .vistos article {
     background: #ececec;
     min-height: 91px;
     padding: 3px 3px 3px 116px;
     position: relative; }
-    body.resultados .vistos article + article {
+    main.resultados .vistos article + article {
       margin-top: 2px; }
-    body.resultados .vistos article h3 {
+    main.resultados .vistos article h3 {
       margin: 0;
       line-height: 10px;
       margin-bottom: 4px; }
-      body.resultados .vistos article h3 a {
+      main.resultados .vistos article h3 a {
         font-size: 15px;
         font-weight: 600; }
-        body.resultados .vistos article h3 a:hover {
+        main.resultados .vistos article h3 a:hover {
           text-decoration: none; }
-    body.resultados .vistos article dl {
+    main.resultados .vistos article dl {
       margin: 0; }
-    body.resultados .vistos article dd {
+    main.resultados .vistos article dd {
       color: #666666;
       font-size: 12px;
       line-height: 14px; }
-      body.resultados .vistos article dd em {
+      main.resultados .vistos article dd em {
         font-style: normal;
         font-weight: 700;
         text-transform: uppercase; }
-      body.resultados .vistos article dd.calificacion, body.resultados .vistos article dd.puntaje {
+      main.resultados .vistos article dd.calificacion, main.resultados .vistos article dd.puntaje {
         display: inline-block;
         letter-spacing: -0.5px; }
-    body.resultados .vistos article .imagen {
+    main.resultados .vistos article .imagen {
       display: block;
       height: 91px;
       left: 3px;
@@ -3484,94 +3492,94 @@ body.resultados .vistos {
       position: absolute;
       top: 3px;
       width: 108px; }
-body.resultados .top-busquedas li {
+main.resultados .top-busquedas li {
   display: inline-block; }
-body.resultados .top-busquedas a {
+main.resultados .top-busquedas a {
   color: #666666;
   line-height: 20px; }
-  body.resultados .top-busquedas a:hover {
+  main.resultados .top-busquedas a:hover {
     color: #0098db;
     text-decoration: none; }
-  body.resultados .top-busquedas a.nivel-01, body.resultados .top-busquedas a.nivel-02, body.resultados .top-busquedas a.nivel-03 {
+  main.resultados .top-busquedas a.nivel-01, main.resultados .top-busquedas a.nivel-02, main.resultados .top-busquedas a.nivel-03 {
     font-weight: 600; }
-  body.resultados .top-busquedas a.nivel-04, body.resultados .top-busquedas a.nivel-05, body.resultados .top-busquedas a.nivel-06 {
+  main.resultados .top-busquedas a.nivel-04, main.resultados .top-busquedas a.nivel-05, main.resultados .top-busquedas a.nivel-06 {
     font-weight: 700; }
-  body.resultados .top-busquedas a.nivel-01 {
+  main.resultados .top-busquedas a.nivel-01 {
     font-size: 14px; }
-  body.resultados .top-busquedas a.nivel-02 {
+  main.resultados .top-busquedas a.nivel-02 {
     font-size: 16px; }
-  body.resultados .top-busquedas a.nivel-03 {
+  main.resultados .top-busquedas a.nivel-03 {
     font-size: 18px; }
-  body.resultados .top-busquedas a.nivel-04 {
+  main.resultados .top-busquedas a.nivel-04 {
     font-size: 20px; }
-  body.resultados .top-busquedas a.nivel-05 {
+  main.resultados .top-busquedas a.nivel-05 {
     font-size: 22px; }
-  body.resultados .top-busquedas a.nivel-06 {
+  main.resultados .top-busquedas a.nivel-06 {
     font-size: 24px; }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  body.resultados aside form .restaurante,
-  body.resultados aside form .fecha,
-  body.resultados aside form .horario,
-  body.resultados aside form .cantidad {
+  main.resultados aside form .restaurante,
+  main.resultados aside form .fecha,
+  main.resultados aside form .horario,
+  main.resultados aside form .cantidad {
     float: left; }
-  body.resultados aside form .check {
+  main.resultados aside form .check {
     clear: left;
     width: 49%; }
-  body.resultados aside form .fecha,
-  body.resultados aside form .horario,
-  body.resultados aside form .cantidad {
+  main.resultados aside form .fecha,
+  main.resultados aside form .horario,
+  main.resultados aside form .cantidad {
     margin-left: 2%; }
-  body.resultados aside form .restaurante {
+  main.resultados aside form .restaurante {
     width: 40%; }
-  body.resultados aside form .fecha {
+  main.resultados aside form .fecha {
     width: 20%; }
-  body.resultados aside form .horario {
+  main.resultados aside form .horario {
     width: 16%; }
-  body.resultados aside form .cantidad {
+  main.resultados aside form .cantidad {
     width: 16%; } }
 @media (min-width: 992px) {
-  body.resultados div.aside {
+  main.resultados div.aside {
     padding-right: 3px; }
-  body.resultados aside form .cantidad {
+  main.resultados aside form .cantidad {
     margin-left: 15px; }
-  body.resultados aside .buscar div + div {
+  main.resultados aside .buscar div + div {
     margin-top: 10px; } }
-body.resultados div.resultados div.visualizacion {
+main.resultados div.resultados div.visualizacion {
   background: #ececec;
   border: 1px solid #999999;
   padding: 0 10px;
   overflow: hidden; }
-  body.resultados div.resultados div.visualizacion li {
+  main.resultados div.resultados div.visualizacion li {
     float: left; }
-  body.resultados div.resultados div.visualizacion .orden li {
+  main.resultados div.resultados div.visualizacion .orden li {
     margin-right: 16px; }
-  body.resultados div.resultados div.visualizacion .orden a {
+  main.resultados div.resultados div.visualizacion .orden a {
     color: #333333;
     font-size: 15px;
     line-height: 26px; }
-    body.resultados div.resultados div.visualizacion .orden a:hover {
+    main.resultados div.resultados div.visualizacion .orden a:hover {
       color: #0098db;
       text-decoration: none; }
-    body.resultados div.resultados div.visualizacion .orden a.activo {
+    main.resultados div.resultados div.visualizacion .orden a.activo {
       color: #0098db; }
-  body.resultados div.resultados div.visualizacion .modos {
+  main.resultados div.resultados div.visualizacion .modos {
     padding-top: 5px; }
-    body.resultados div.resultados div.visualizacion .modos li {
+    main.resultados div.resultados div.visualizacion .modos li {
       margin-left: 6px; }
-      body.resultados div.resultados div.visualizacion .modos li .lista {
+      main.resultados div.resultados div.visualizacion .modos li .lista {
         background-position: -238px -60px;
         height: 17px;
         width: 16px; }
-      body.resultados div.resultados div.visualizacion .modos li .x {
+      main.resultados div.resultados div.visualizacion .modos li .x {
         background-position: -238px -60px;
         height: 17px;
         width: 16px; }
-      body.resultados div.resultados div.visualizacion .modos li .mapa {
+      main.resultados div.resultados div.visualizacion .modos li .mapa {
         background-position: -238px -60px;
         height: 17px;
         width: 16px; }
-    body.resultados div.resultados div.visualizacion .modos a {
+    main.resultados div.resultados div.visualizacion .modos a {
       background-image: url(../img/constante.png);
       background-repeat: no-repeat;
       display: block;
@@ -3579,56 +3587,56 @@ body.resultados div.resultados div.visualizacion {
       line-height: 160px;
       overflow: hidden;
       width: 16px; }
-body.resultados div.resultados div.filtros-activos {
+main.resultados div.resultados div.filtros-activos {
   overflow: hidden;
   width: 100%; }
-  body.resultados div.resultados div.filtros-activos li,
-  body.resultados div.resultados div.filtros-activos div.eliminar-todos {
+  main.resultados div.resultados div.filtros-activos li,
+  main.resultados div.resultados div.filtros-activos div.eliminar-todos {
     line-height: 24px;
     float: left;
     margin-top: 6px; }
-  body.resultados div.resultados div.filtros-activos li {
+  main.resultados div.resultados div.filtros-activos li {
     background: #999999;
     border-radius: 4px;
     color: black;
     margin-right: 6px;
     overflow: hidden;
     padding: 0 0 0 8px; }
-    body.resultados div.resultados div.filtros-activos li a {
+    main.resultados div.resultados div.filtros-activos li a {
       color: black;
       cursor: pointer;
       display: inline-block;
       margin-left: 16px;
       padding-left: 8px;
       padding-right: 8px; }
-      body.resultados div.resultados div.filtros-activos li a:hover {
+      main.resultados div.resultados div.filtros-activos li a:hover {
         background: #0098db;
         color: #FFFFFF;
         text-decoration: none; }
-  body.resultados div.resultados div.filtros-activos div.eliminar-todos {
+  main.resultados div.resultados div.filtros-activos div.eliminar-todos {
     color: #0098db;
     cursor: pointer;
     text-decoration: underline; }
-body.resultados div.resultados article {
+main.resultados div.resultados article {
   margin-top: 6px;
   min-height: 186px;
   position: relative; }
-  body.resultados div.resultados article:hover {
+  main.resultados div.resultados article:hover {
     border-color: #0098db; }
-  body.resultados div.resultados article h2 {
+  main.resultados div.resultados article h2 {
     line-height: 20px;
     margin: 0 0 12px 0; }
-    body.resultados div.resultados article h2 a {
+    main.resultados div.resultados article h2 a {
       font-size: 24px;
       font-weight: 700;
       letter-spacing: -0.5px; }
-      body.resultados div.resultados article h2 a:hover {
+      main.resultados div.resultados article h2 a:hover {
         text-decoration: none; }
-  body.resultados div.resultados article dl {
+  main.resultados div.resultados article dl {
     margin: 0; }
-    body.resultados div.resultados article dl dd.puntaje, body.resultados div.resultados article dl dd.calificacion, body.resultados div.resultados article dl dd.opiniones {
+    main.resultados div.resultados article dl dd.puntaje, main.resultados div.resultados article dl dd.calificacion, main.resultados div.resultados article dl dd.opiniones {
       display: inline-block; }
-    body.resultados div.resultados article dl dd.puntaje {
+    main.resultados div.resultados article dl dd.puntaje {
       background: #ececec;
       border: 1px solid #999999;
       border-radius: 2px;
@@ -3637,7 +3645,7 @@ body.resultados div.resultados article {
       margin-right: 10px;
       padding: 0 4px;
       position: relative; }
-      body.resultados div.resultados article dl dd.puntaje:after {
+      main.resultados div.resultados article dl dd.puntaje:after {
         background: url("../img/constante.png") -224px -77px no-repeat;
         content: "";
         height: 11px;
@@ -3646,31 +3654,31 @@ body.resultados div.resultados article {
         right: -10px;
         top: 50%;
         width: 10px; }
-    body.resultados div.resultados article dl dd.calificacion em {
+    main.resultados div.resultados article dl dd.calificacion em {
       color: black;
       font-style: normal;
       font-weight: 700;
       text-transform: uppercase; }
-    body.resultados div.resultados article dl dd.opiniones {
+    main.resultados div.resultados article dl dd.opiniones {
       color: #666666; }
-    body.resultados div.resultados article dl dd.direccion {
+    main.resultados div.resultados article dl dd.direccion {
       display: block;
       margin-top: 4px; }
-    body.resultados div.resultados article dl dd.direccion:before, body.resultados div.resultados article dl dd.cocina:before {
+    main.resultados div.resultados article dl dd.direccion:before, main.resultados div.resultados article dl dd.cocina:before {
       font-size: 11px;
       margin-right: 4px; }
-    body.resultados div.resultados article dl dd.cocina, body.resultados div.resultados article dl dd.precio {
+    main.resultados div.resultados article dl dd.cocina, main.resultados div.resultados article dl dd.precio {
       display: inline; }
-    body.resultados div.resultados article dl dd.precio {
+    main.resultados div.resultados article dl dd.precio {
       color: #ff6600; }
-      body.resultados div.resultados article dl dd.precio:before {
+      main.resultados div.resultados article dl dd.precio:before {
         color: #333333;
         content: "|";
         font-family: "Open Sans";
         margin-right: 3px;
         position: relative;
         top: -1px; }
-    body.resultados div.resultados article dl dd.descuento {
+    main.resultados div.resultados article dl dd.descuento {
       box-shadow: 0 0 10px #666666;
       font-size: 30px;
       line-height: 48px;
@@ -3679,7 +3687,7 @@ body.resultados div.resultados article {
       text-align: center;
       top: 18px;
       width: 153px; }
-      body.resultados div.resultados article dl dd.descuento:before, body.resultados div.resultados article dl dd.descuento:after {
+      main.resultados div.resultados article dl dd.descuento:before, main.resultados div.resultados article dl dd.descuento:after {
         background-image: url("../img/constante.png");
         background-repeat: no-repeat;
         content: "";
@@ -3687,13 +3695,13 @@ body.resultados div.resultados article {
         position: absolute;
         top: 0;
         width: 4px; }
-      body.resultados div.resultados article dl dd.descuento:before {
+      main.resultados div.resultados article dl dd.descuento:before {
         background-position: -181px -293px;
         left: -4px; }
-      body.resultados div.resultados article dl dd.descuento:after {
+      main.resultados div.resultados article dl dd.descuento:after {
         background-position: -186px -293px;
         right: -4px; }
-  body.resultados div.resultados article .imagen {
+  main.resultados div.resultados article .imagen {
     border: 1px solid #999999;
     display: block;
     height: 168px;
@@ -3702,27 +3710,27 @@ body.resultados div.resultados article {
     position: absolute;
     top: 8px;
     width: 200px; }
-  body.resultados div.resultados article .btn {
+  main.resultados div.resultados article .btn {
     font-weight: 700;
     padding: 8px 28px;
     position: absolute;
     right: 8px;
     top: 81px; }
-  body.resultados div.resultados article blockquote {
+  main.resultados div.resultados article blockquote {
     margin: 9px 0 0 0;
     padding: 0; }
-    body.resultados div.resultados article blockquote p {
+    main.resultados div.resultados article blockquote p {
       font-size: 14px;
       line-height: 16px;
       margin: 0; }
-    body.resultados div.resultados article blockquote footer {
+    main.resultados div.resultados article blockquote footer {
       margin-top: -2px;
       text-align: right; }
-      body.resultados div.resultados article blockquote footer a {
+      main.resultados div.resultados article blockquote footer a {
         font-size: 13px; }
-        body.resultados div.resultados article blockquote footer a:hover {
+        main.resultados div.resultados article blockquote footer a:hover {
           text-decoration: none; }
-  body.resultados div.resultados article p.nuevo {
+  main.resultados div.resultados article p.nuevo {
     background: url("../img/constante.png") -191px -271px no-repeat;
     left: 0;
     overflow: hidden;
@@ -3732,30 +3740,30 @@ body.resultados div.resultados article {
     top: 0;
     width: 69px;
     z-index: 11; }
-body.resultados div.resultados .paginado {
+main.resultados div.resultados .paginado {
   margin-top: 15px;
   text-align: right; }
-  body.resultados div.resultados .paginado small {
+  main.resultados div.resultados .paginado small {
     float: left;
     font-size: 12px;
     padding-top: 9px; }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  body.resultados div.resultados article h2,
-  body.resultados div.resultados article dl {
+  main.resultados div.resultados article h2,
+  main.resultados div.resultados article dl {
     max-width: 308px; } }
 @media (min-width: 768px) {
-  body.resultados div.resultados .modos {
+  main.resultados div.resultados .modos {
     float: right; }
-  body.resultados div.resultados article {
+  main.resultados div.resultados article {
     border: 1px solid #d9d9d9;
     padding: 8px 8px 8px 216px;
     position: relative; } }
 @media (min-width: 992px) {
-  body.resultados div.resultados {
+  main.resultados div.resultados {
     padding-left: 3px; }
-    body.resultados div.resultados article h2,
-    body.resultados div.resultados article dl {
+    main.resultados div.resultados article h2,
+    main.resultados div.resultados article dl {
       max-width: 313px; } }
 section.login,
 section.registrarse {

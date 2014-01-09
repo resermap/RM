@@ -16,7 +16,7 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script> 
 		$(function(){
-			$("body>header").load("inc/header-usuario.html");
+			$("body>header").load("inc/header-usuario-partner.html");
 			$("body>footer.pie").load("inc/footer-sin-suscripcion.html");
 		});
 	</script>
@@ -32,7 +32,7 @@
 					<div class="col-md-12">
 						<ol class="breadcrumb">
 							<li><a href="/"><span class="sr-only">Home</span></a></li>
-							<li><a href="#">Reservas</a></li>
+							<li><a href="#">Partner</a></li>
 						</ol>
 					</div>
 				</div>
@@ -112,8 +112,6 @@
 								<!-- Aca se definen los tabs principales. El atributo "href" debe de hacer referencia al ID del tab -->
 									<li class="active"><a href="#reservas" data-toggle="tab">Reservas</a></li>
 									<li><a href="#comentarios" data-toggle="tab">Comentarios</a></li>
-									<li><a href="#puntos" data-toggle="tab">Puntos</a></li>
-									<li><a href="#compartir" data-toggle="tab">Compartir con tus amigos</a></li>
 									<li><a href="#datos" data-toggle="tab">Tus datos</a></li>
 								</ul>
 							</nav>
@@ -124,6 +122,17 @@
 							<!-- La clase "in" + "active" lo marcan como activo -->
 							<div class="reservas tab-pane fade in active" id="reservas">
 								<h2>Reservas</h2>
+								<form class="form-inline consulta-fechas">
+									<div class="form-group">
+										<label>Desde</label>
+										<input type="text" class="form-control" placeholder="12/03/2014" />
+									</div>
+									<div class="form-group">
+										<label>Hasta</label>
+										<input type="text" class="form-control" placeholder="12/04/2014" />
+									</div>
+									<input type="submit" class="btn btn-terciario" value="Consultar" />
+								</form>
 								<div class="table-responsive">
 									<table class="table">
 										<thead>
@@ -135,6 +144,7 @@
 												<td>Descuento</td>
 												<td class="ordenar">Estado</td>
 												<td>Comentarios</td>
+												<td>Usuario</td>
 											</tr>
 										</thead>
 										<tbody>
@@ -146,6 +156,10 @@
 												<td></td>
 												<td>No asistido</td>
 												<td><a href="#">Ver</a></td>
+												<td>
+													Juan Loopear<br/>
+													juan.loopear@gmail.com
+												</td>
 											</tr>
 											<tr>
 												<td>16/11/2013</td>
@@ -154,7 +168,11 @@
 												<td>#312159574</td>
 												<td>-20% OFF</td>
 												<td>Asistido</td>
-												<td><a href="#">Agregar comentario</a></td>
+												<td>Sin comentario</td>
+												<td>
+													Juan Loopear<br/>
+													juan.loopear@gmail.com
+												</td>
 											</tr>
 											<tr>
 												<td>27/12/2013</td>
@@ -164,6 +182,10 @@
 												<td>-20% OFF</td>
 												<td>Asistido</td>
 												<td><a href="#">Ver</a></td>
+												<td>
+													Juan Loopear<br/>
+													juan.loopear@gmail.com
+												</td>
 											</tr>
 										</tbody>
 									</table>
@@ -172,6 +194,17 @@
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Dashboard > Comentarios -->
 							<div class="comentarios tab-pane fade" id="comentarios">
 								<h2>Comentarios</h2>
+								<form class="form-inline consulta-fechas">
+									<div class="form-group">
+										<label>Desde</label>
+										<input type="text" class="form-control" placeholder="12/03/2014" />
+									</div>
+									<div class="form-group">
+										<label>Hasta</label>
+										<input type="text" class="form-control" placeholder="12/04/2014" />
+									</div>
+									<input type="submit" class="btn btn-terciario" value="Consultar" />
+								</form>
 								<div class="table-responsive">
 									<table class="table">
 										<thead>
@@ -197,11 +230,11 @@
 															La clase "e#-#" debe ser la cantidad de estrellas: 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5
 															Si se necesita más presición, hablar.
 														-->
-														<dd><div class="estrellas e5">5 de 5 estrellas</div> <span>Excelente</span></dd>
+														<dd><div class="estrellas e5">5 de 5 estrellas</div></dd>
 														<dt>Comida</dt>
-														<dd><div class="estrellas e4">4 de 5 estrellas</div> <span>Excelente</span></dd>
+														<dd><div class="estrellas e4">4 de 5 estrellas</div></dd>
 														<dt>Ambiente</dt>
-														<dd><div class="estrellas e2-5">2.5 de 5 estrellas</div> <span>Excelente</span></dd>
+														<dd><div class="estrellas e2-5">2.5 de 5 estrellas</div></dd>
 													</dl>
 												</td>
 											</tr>
@@ -216,73 +249,17 @@
 												<td colspan="4">
 													<dl>
 														<dt>Servicio</dt>
-														<dd><div class="estrellas e5">5 de 5 estrellas</div> <span>Excelente</span></dd>
+														<dd><div class="estrellas e5">5 de 5 estrellas</div></dd>
 														<dt>Comida</dt>
-														<dd><div class="estrellas e4">4 de 5 estrellas</div> <span>Excelente</span></dd>
+														<dd><div class="estrellas e4">4 de 5 estrellas</div></dd>
 														<dt>Ambiente</dt>
-														<dd><div class="estrellas e2-5">2.5 de 5 estrellas</div> <span>Excelente</span></dd>
+														<dd><div class="estrellas e2-5">2.5 de 5 estrellas</div></dd>
 													</dl>
 												</td>
 											</tr>
 										</tbody>
 									</table>
 								</div>
-							</div>
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Dashboard > Puntos -->
-							<div class="puntos tab-pane fade" id="puntos">
-								<h2>Puntos Resermap</h2>
-								<a class="como" href="#">¿Cómo funciona?</a>
-								<div class="row">
-									<div class="tabla col-md-8 table-responsive">
-										<small>Mostrando 1-5 de 15 resultado(s)</small>
-										<table class="table">
-											<thead>
-												<tr>
-													<td>Origen</td>
-													<td class="ordenar">Fecha</td>
-													<td class="ordenar">N° de reserva</td>
-													<td>Restaurante</td>
-													<td>Puntos</td>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Registro</td>
-													<td>10/12/2012</td>
-													<td></td>
-													<td></td>
-													<td>100</td>
-												</tr>
-												<tr>
-													<td>Reserva</td>
-													<td>14/10/2013</td>
-													<td>#1007</td>
-													<td>Bruni</td>
-													<td>100</td>
-												</tr>
-												<tr>
-													<td>Comentario</td>
-													<td>16/11/2013</td>
-													<td>#312159574</td>
-													<td>Sucre</td>
-													<td>200</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-									<div class="detalles col-md-4">
-										<div>
-											<p><strong>Tenés <span>700</span></strong> puntos <span>(250$ ARS)</span></p>
-											<small>Si queres sumar más puntos Resermap y ganar cenas gratis, <a href="#">RECOMENDÁ A TUS AMIGOS</a></small>
-										</div>
-										<a class="btn btn-terciario premios" href="#">Mis premios</a>
-										<a class="btn btn-terciario catalogo" href="#">Ver catálogo</a>
-									</div>
-								</div>
-							</div>
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Dashboard > Compartir -->
-							<div class="tab-pane fade" id="compartir">
-								-
 							</div>
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Dashboard > Datos -->
 							<div class="datos tab-pane fade" id="datos">
@@ -294,7 +271,7 @@
 										<div class="col-md-4 col-sm-4 col-xs-8">
 											<input type="text" class="form-control" />
 										</div>
-										<label class="col-md-2 col-sm-2 col-xs-4 control-label">Email</label>
+										<label class="col-md-2 col-sm-2 col-xs-4 control-label">Email *</label>
 										<div class="col-md-4 col-sm-4 col-xs-8">
 											<input type="email" class="form-control" />
 										</div>

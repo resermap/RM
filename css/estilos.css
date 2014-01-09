@@ -325,6 +325,12 @@ ol {
 .panel-group .panel + .panel {
   margin-top: 2px; }
 
+.table-responsive {
+  border: none; }
+
+.comentarios .table-responsive > .table td {
+  white-space: normal; }
+
 body > header {
   background: #FFFFFF; }
   body > header h1 {
@@ -445,31 +451,29 @@ body > header {
       border-top: 1px solid #666666; }
     body > header .login nav.navbar-default.ciudades {
       margin-top: 22px; }
-    body > header nav.navbar-default {
-      margin-left: -15px; }
-      body > header nav.navbar-default.ciudades {
-        margin-bottom: 5px;
-        margin-top: 10px; }
-        body > header nav.navbar-default.ciudades .navbar-nav li {
-          display: inline-block;
-          padding-top: 0;
-          vertical-align: top; }
-          body > header nav.navbar-default.ciudades .navbar-nav li .dropdown-menu li,
-          body > header nav.navbar-default.ciudades .navbar-nav li .dropdown-menu a {
-            padding: 0; }
-          body > header nav.navbar-default.ciudades .navbar-nav li .dropdown-menu li {
-            display: block; }
-          body > header nav.navbar-default.ciudades .navbar-nav li .dropdown-menu a {
-            padding: 0; }
-      body > header nav.navbar-default.secciones ul {
-        margin: 0; }
-      body > header nav.navbar-default.secciones li {
+    body > header nav.navbar-default.ciudades {
+      margin-bottom: 5px;
+      margin-top: 10px; }
+      body > header nav.navbar-default.ciudades .navbar-nav li {
         display: inline-block;
-        border-right: 1px solid #999999; }
-        body > header nav.navbar-default.secciones li:first-child {
-          margin-left: -20px; }
-        body > header nav.navbar-default.secciones li a {
-          padding: 0 20px; }
+        padding-top: 0;
+        vertical-align: top; }
+        body > header nav.navbar-default.ciudades .navbar-nav li .dropdown-menu li,
+        body > header nav.navbar-default.ciudades .navbar-nav li .dropdown-menu a {
+          padding: 0; }
+        body > header nav.navbar-default.ciudades .navbar-nav li .dropdown-menu li {
+          display: block; }
+        body > header nav.navbar-default.ciudades .navbar-nav li .dropdown-menu a {
+          padding: 0; }
+    body > header nav.navbar-default.secciones ul {
+      margin: 0; }
+    body > header nav.navbar-default.secciones li {
+      display: inline-block;
+      border-right: 1px solid #999999; }
+      body > header nav.navbar-default.secciones li:first-child {
+        margin-left: -20px; }
+      body > header nav.navbar-default.secciones li a {
+        padding: 0 20px; }
     body > header p.ayuda {
       margin-top: 8px; } }
 @media (min-width: 768px) {
@@ -1028,55 +1032,58 @@ section.busqueda {
   background: #000000;
   box-shadow: 0 3px 6px #777777;
   height: 236px;
+  overflow: hidden;
   position: relative; }
   section.busqueda > div > div > div {
     position: relative; }
+  section.busqueda header,
+  section.busqueda form {
+    position: relative;
+    z-index: 2; }
   section.busqueda header h1 {
     color: #FFFFFF;
     font-size: 36px;
     margin: 46px 0 2px 0; }
-  section.busqueda form {
+  section.busqueda form .form-group {
+    float: left;
     position: relative; }
-    section.busqueda form .form-group {
-      float: left;
-      position: relative; }
-    section.busqueda form .form-control {
-      background: #FFFFFF;
-      border: none;
-      color: #999999;
-      height: 36px;
-      font-size: 14px;
-      letter-spacing: -0.5px;
-      position: relative;
-      width: 100%; }
-      section.busqueda form .form-control:focus {
-        color: #333333; }
-    section.busqueda form .nombre:after,
+  section.busqueda form .form-control {
+    background: #FFFFFF;
+    border: none;
+    color: #999999;
+    height: 36px;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    position: relative;
+    width: 100%; }
+    section.busqueda form .form-control:focus {
+      color: #333333; }
+  section.busqueda form .nombre:after,
+  section.busqueda form .fecha:after {
+    color: #999999;
+    font-family: "Glyphicons Halflings";
+    position: absolute;
+    z-index: 11; }
+  section.busqueda form .nombre input {
+    padding-right: 25px; }
+  section.busqueda form .nombre:after {
+    content: "\e003";
+    right: 6px;
+    top: 8px; }
+  section.busqueda form .fecha {
+    width: 106px; }
     section.busqueda form .fecha:after {
-      color: #999999;
-      font-family: "Glyphicons Halflings";
-      position: absolute;
-      z-index: 11; }
-    section.busqueda form .nombre input {
-      padding-right: 25px; }
-    section.busqueda form .nombre:after {
-      content: "\e003";
-      right: 6px;
-      top: 8px; }
-    section.busqueda form .fecha {
-      width: 106px; }
-      section.busqueda form .fecha:after {
-        content: "\e109";
-        right: 4px;
-        top: 7px; }
-    section.busqueda form .cantidad {
-      width: 58px; }
-    section.busqueda form .turno {
-      width: 102px; }
-    section.busqueda form .btn {
-      height: 36px;
-      font-size: 14px;
-      font-weight: 700; }
+      content: "\e109";
+      right: 4px;
+      top: 7px; }
+  section.busqueda form .cantidad {
+    width: 58px; }
+  section.busqueda form .turno {
+    width: 102px; }
+  section.busqueda form .btn {
+    height: 36px;
+    font-size: 14px;
+    font-weight: 700; }
   section.busqueda img {
     left: -145px;
     position: absolute;
@@ -1223,7 +1230,7 @@ section.busqueda {
     section.busqueda form .nombre {
       width: 344px; }
   section.busqueda aside {
-    width: 540px; } }
+    width: 100%; } }
 @media (min-width: 1281px) {
   section.busqueda > div {
     position: relative; }
@@ -4040,6 +4047,21 @@ section.dashboard {
     top: 6px; }
   section.dashboard .datos .btn {
     margin-left: 0; }
+  section.dashboard form.consulta-fechas label {
+    font-size: 14px; }
+  section.dashboard form.consulta-fechas .form-control {
+    background: #FFFFFF;
+    border-color: #999999;
+    font-size: 14px;
+    height: 30px;
+    letter-spacing: -0.5px;
+    margin: 0 9px 0 9px;
+    width: 90px; }
+  section.dashboard form.consulta-fechas input[type="submit"] {
+    height: 30px;
+    font-weight: 700;
+    padding-left: 44px;
+    padding-right: 44px; }
 
 @media (max-width: 767px) {
   section.dashboard .datos .form-group {
@@ -4048,14 +4070,24 @@ section.dashboard {
       margin-bottom: 15px; }
   section.dashboard .datos .btn {
     margin-top: 15px;
-    float: right; } }
+    float: right; }
+  section.dashboard form.consulta-fechas .form-group,
+  section.dashboard form.consulta-fechas label,
+  section.dashboard form.consulta-fechas .form-control {
+    display: inline-block; }
+  section.dashboard form.consulta-fechas input[type="submit"] {
+    padding-left: 10px;
+    padding-right: 10px; } }
 @media (min-width: 768px) {
   section.dashboard .datos .form-group,
   section.dashboard .datos .btn {
     margin-top: 25px; }
   section.dashboard .datos .l-tel,
   section.dashboard .datos .d-tel {
-    margin-top: 20px; } }
+    margin-top: 20px; }
+  section.dashboard form.consulta-fechas {
+    position: absolute;
+    right: 15px; } }
 @media (min-width: 768px) and (max-width: 991px) {
   section.dashboard .datos label,
   section.dashboard .datos label + div {
@@ -4069,6 +4101,11 @@ section.dashboard {
   section.dashboard .datos .btn {
     margin-left: 125px; } }
 @media (max-width: 991px) {
+  section.dashboard .reservas .table-responsive {
+    margin-bottom: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%; }
   section.dashboard .comentarios dt {
     margin-left: 15px; }
     section.dashboard .comentarios dt:first-child {
@@ -4078,7 +4115,9 @@ section.dashboard {
   section.dashboard .puntos .detalles {
     text-align: center; }
     section.dashboard .puntos .detalles a.catalogo {
-      margin-left: 10px; } }
+      margin-left: 10px; }
+  section.dashboard form.consulta-fechas {
+    top: 98px; } }
 @media (min-width: 992px) {
   section.dashboard .comentarios dt {
     margin-left: 60px;
@@ -4090,4 +4129,6 @@ section.dashboard {
   section.dashboard .puntos a.btn.catalogo {
     float: right; }
   section.dashboard .datos .btn {
-    margin-left: 165px; } }
+    margin-left: 165px; }
+  section.dashboard form.consulta-fechas {
+    top: 61px; } }

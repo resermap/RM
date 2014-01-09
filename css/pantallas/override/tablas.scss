@@ -1,0 +1,13 @@
+.table-responsive {
+	border: none;
+}
+
+.comentarios {
+	.table-responsive {
+		&>.table {
+			td {
+				white-space: normal;
+			}
+		}
+	}
+}

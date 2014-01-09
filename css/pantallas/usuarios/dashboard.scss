@@ -168,6 +168,26 @@ section.dashboard {
 			margin-left: 0;
 		}
 	}
+	form.consulta-fechas {
+		label {
+			font-size: 14px;
+		}
+		.form-control {
+			background: #FFFFFF;
+			border-color: $color-t4;
+			font-size: 14px;
+			height: 30px;
+			letter-spacing: -0.5px;
+			margin: 0 9px 0 9px;
+			width: 90px;
+		}
+		input[type="submit"] {
+			height: 30px;
+			font-weight: 700;
+			padding-left: 44px;
+			padding-right: 44px;
+		}
+	}
 }
 
 @media (max-width: 767px) {
@@ -185,6 +205,17 @@ section.dashboard {
 				float: right;
 			}
 		}
+		form.consulta-fechas {
+			.form-group,
+			label,
+			.form-control {
+				display: inline-block;
+			}
+			input[type="submit"] {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
 	}
 }
 
@@ -199,6 +230,10 @@ section.dashboard {
 			.d-tel {
 				margin-top: 20px;
 			}
+		}
+		form.consulta-fechas {
+			position: absolute;
+			right: 15px;
 		}
 	}
 }
@@ -229,6 +264,14 @@ section.dashboard {
 
 @media (max-width: 991px) {
 	section.dashboard {
+		.reservas {
+			.table-responsive {
+				margin-bottom: 15px;
+				overflow-x: scroll;
+				overflow-y: hidden;
+				width: 100%;
+			}
+		}
 		.comentarios {
 			dt {
 				margin-left: 15px;
@@ -249,6 +292,9 @@ section.dashboard {
 					margin-left: 10px;
 				}
 			}
+		}
+		form.consulta-fechas {
+			top: 98px;
 		}
 	}
 }
@@ -283,6 +329,9 @@ section.dashboard {
 			.btn {
 				margin-left: 165px;
 			}
+		}
+		form.consulta-fechas {
+			top: 61px;
 		}
 	}
 }

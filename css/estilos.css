@@ -1245,7 +1245,7 @@ section.busqueda {
       position: absolute;
       top: 0;
       width: 100px;
-      z-index: 11; }
+      z-index: 2; }
     section.busqueda > div:after {
       background-position: 0 -236px;
       right: -145px; }

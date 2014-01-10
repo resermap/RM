@@ -926,21 +926,23 @@ main.pre-home {
         font-size: 15px;
         line-height: 16px; }
       main.pre-home nav div ul {
-        height: 200%;
+        height: 300px;
         left: 100%;
         margin-left: 2px;
         overflow: hidden;
         padding: 33px 40px 0 40px;
         position: absolute; } }
 @media (min-width: 768px) and (max-width: 991px) {
-  main.pre-home nav {
-    background: url("../img/pre-home-768px.jpg") 300px 0 no-repeat; }
-    main.pre-home nav div ul {
-      width: 420px; }
-      main.pre-home nav div ul li a {
-        font-size: 24px;
-        line-height: 26px;
-        letter-spacing: -2px; } }
+  main.pre-home nav div.argentina ul {
+    background: url("../img/pre-home-argentina-768px.jpg") 0 0 no-repeat; }
+  main.pre-home nav div.chile ul {
+    background: url("../img/pre-home-chile-768px.jpg") 0 0 no-repeat; }
+  main.pre-home nav div ul {
+    width: 420px; }
+    main.pre-home nav div ul li a {
+      font-size: 24px;
+      line-height: 26px;
+      letter-spacing: -2px; } }
 @media (max-width: 991px) {
   main.pre-home ol li {
     padding: 15px 50px 15px 40px;
@@ -981,14 +983,16 @@ main.pre-home {
       top: 8px;
       width: 41px; } }
 @media (min-width: 992px) {
-  main.pre-home nav {
-    background: url("../img/pre-home-992px.jpg") 300px 0 no-repeat; }
-    main.pre-home nav div ul {
-      width: 660px; }
-      main.pre-home nav div ul li a {
-        font-size: 24px;
-        line-height: 26px;
-        letter-spacing: -2px; }
+  main.pre-home nav div.argentina ul {
+    background: url("../img/pre-home-argentina-992px.jpg") 0 0 no-repeat; }
+  main.pre-home nav div.chile ul {
+    background: url("../img/pre-home-chile-992px.jpg") 0 0 no-repeat; }
+  main.pre-home nav div ul {
+    width: 660px; }
+    main.pre-home nav div ul li a {
+      font-size: 24px;
+      line-height: 26px;
+      letter-spacing: -2px; }
   main.pre-home ol {
     height: 92px; }
     main.pre-home ol li {

@@ -274,8 +274,17 @@ main.pre-home {
 @media (min-width: 768px) and (max-width: 991px) {
 	main.pre-home {
 		nav {
-			background: url("#{$img-url}pre-home-768px.jpg") 300px 0 no-repeat;
 			div {
+				&.argentina {
+					ul {
+						background: url("#{$img-url}pre-home-argentina-768px.jpg") 0 0 no-repeat;
+					}
+				}
+				&.chile {
+					ul {
+						background: url("#{$img-url}pre-home-chile-768px.jpg") 0 0 no-repeat;
+					}
+				}
 				ul {
 					width: 420px;
 					li {

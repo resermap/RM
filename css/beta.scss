@@ -98,7 +98,7 @@ option {
 	font-weight: 800;
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Overrides
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Constantes
 
 
 @import "pantallas/constantes.scss";
@@ -173,5 +173,12 @@ option {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Usuarios
 
+
 @import "pantallas/usuarios/login.scss";
 @import "pantallas/usuarios/dashboard.scss";
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Páginas Secundarias
+
+
+@import "pantallas/secundarias/legales.scss";

@@ -1,0 +1,20 @@
+article.legales {
+	h1 {
+		font-size: 30px;
+	}
+	h2,
+	p {
+		color: $color-t3;
+		font-size: 15px;
+	}
+	h2 {
+		color: $color-t3;
+		font-size: 15px;
+		font-weight: 700;
+		margin-bottom: 0;
+		margin-top: 20px;
+	}
+	p+p {
+		margin-top: 20px;
+	}
+}

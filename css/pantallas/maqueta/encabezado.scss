@@ -5,37 +5,37 @@ body>header {
 		height: 51px;
 		line-height: 200px;
 		float: left;
-		margin: 9px 0 0 0;
+		margin: 0;
 		overflow: hidden;
 		position: relative;
-		top: 8px;
+		top: 18px;
 		width: 192px;
 		z-index: 22;
 	}
 	.logo {
 		p {
-			color: $color-v1;
-			font-size: 13px;
-			margin-bottom: 0;
-			margin-top: 29px;
-			padding-left: 19px;
+			color: #00aec4;
+			font-size: 14px;
 			float: left;
+			margin: 28px 0 0 0;
+			padding-left: 16px;
 		}
 	}
 	p.ayuda {
 		font-size: 15px;
 		font-weight: 600;
+		margin: 0;
 	}
 	.negro {
-		background: #000000; /* Old browsers */
+		background: #000000;
 		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMzMzMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-		background: -moz-linear-gradient(top,  #000000 0%, #333333 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(100%,#333333)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  #000000 0%,#333333 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  #000000 0%,#333333 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  #000000 0%,#333333 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  #000000 0%,#333333 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#333333',GradientType=0 ); /* IE6-8 */
+		background: -moz-linear-gradient(top,  #000000 0%, #333333 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(100%,#333333));
+		background: -webkit-linear-gradient(top,  #000000 0%,#333333 100%);
+		background: -o-linear-gradient(top,  #000000 0%,#333333 100%);
+		background: -ms-linear-gradient(top,  #000000 0%,#333333 100%);
+		background: linear-gradient(to bottom,  #000000 0%,#333333 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#333333',GradientType=0 );
 		border-top: 1px solid $color-t1;
 		box-shadow: -1px 4px 7px $color-t2;
 		color: white;
@@ -43,7 +43,6 @@ body>header {
 		z-index: 11;
 		.reserva {
 			padding: 4px 0 5px 0;
-			text-indent: 60px;
 		}
 	}
 	nav.navbar-default {
@@ -54,10 +53,15 @@ body>header {
 		margin: 0;
 		min-height: 0;
 		height: auto;
-		text-shadow: 0;
+		text-shadow: none;
 		&.ciudades {
 			.navbar-nav {
 				margin: 0;
+				.caret {
+					border-top-width: 10px;
+					position: relative;
+					top: -1px;
+				}
 				li {
 					padding: 0 0 0 15px;
 					&.open {
@@ -79,11 +83,8 @@ body>header {
 			.navbar-nav>li>a,
 			a {
 				color: $color-t1;
-				font-size: 12px;
+				font-size: 14px;
 				padding: 0;
-				&:hover {
-					font-weight: 600;
-				}
 			}
 		}
 		&.secciones {
@@ -96,7 +97,7 @@ body>header {
 				display: block;
 				color: #FFFFFF;
 				line-height: 30px;
-				font-size: 12px;
+				font-size: 14px;
 				&:hover {
 					color: $color-v1;
 				}
@@ -104,39 +105,39 @@ body>header {
 		}
 	}
 	.usuario {
+		min-height: 36px;
 		padding-left: 55px;
 		position: relative;
+		vertical-align: top;
 		p {
 			margin-bottom: 0;
 		}
 		.nombre {
 			font-weight: 700;
-			margin-bottom: -4px;
+			line-height: 16px;
 		}
 		.imagen {
 			border: 2px solid #FFFFFF;
 			border-radius: 100%;
-			height: 49px;
+			box-shadow: 0 0 2px $color-t4;
+			height: 46px;
 			left: 0;
 			overflow: hidden;
 			position: absolute;
-			top: -14px;
-			width: 49px;
+			top: -10px;
+			width: 46px;
 		}
 	}
-	.login {
-		&>div+div {
-			&>div,
-			&>nav {
-				display: inline-block;
-			}
+	.logo+div {
+		&>div,
+		&>nav {
+			display: inline-block;
 		}
 	}
 }
 
 @media (max-width: 767px) {
 	body>header {
-		background: #FFFFFF;
 		.negro {
 			.reserva {
 				text-indent: 15px;
@@ -149,14 +150,13 @@ body>header {
 		.login {
 			nav.navbar-default {
 				&.ciudades {
-					margin-top: 22px;
+					margin-top: 28px;
 				}
 			}
 		}
 		nav.navbar-default {
 			&.ciudades {
-				margin-bottom: 5px;
-				margin-top: 10px;
+				margin: 18px 0 5px -15px;
 				.navbar-nav {
 					li {
 						display: inline-block;
@@ -194,23 +194,27 @@ body>header {
 			}
 		}
 		p.ayuda {
-			margin-top: 8px;
+			margin: 20px 0 9px 0;
 		}
 	}
 }
 
 @media (min-width: 768px) {
 	body>header {
-		background: #FFFFFF;
+		&>div.container {
+			min-height: 60px;
+		}
+		.logo+div {
+			text-align: right;
+		}
 		.negro {
 			.reserva {
-				text-indent: 60px;
 				white-space: nowrap;
 			}
 		}
 		nav.navbar-default {
 			&.ciudades {
-				margin-top: 22px;
+				margin-top: 28px;
 			}
 			&.secciones {
 				float: right;
@@ -230,13 +234,33 @@ body>header {
 
 @media (min-width: 768px) and (max-width: 991px) {
 	body>header {
+		.login {
+			.logo+div {
+				text-align: left;
+			}
+			nav.navbar-default {
+				margin-left: -15px;
+			}
+			&+.negro {
+				.reserva {
+					text-indent: 15px;
+				}
+			}
+		}
+		nav.navbar-default.secciones {
+			.navbar-nav>li>a,
+			a {
+				letter-spacing: -0.5px;
+			}
+		}
 		.negro {
 			.reserva {
 				text-indent: 54px;
 			}
 		}
 		p.ayuda {
-			margin-top: 8px;
+			line-height: 18px;
+			margin-top: 10px;
 			text-align: right;
 			strong {
 				display: block;
@@ -249,10 +273,14 @@ body>header {
 	body>header {
 		.usuario {
 			float: right;
-			height: 44px;
-			margin-top: 22px;
+			margin-bottom: 6px;
+			margin-top: 28px;
 			p {
 				display: inline-block;
+				line-height: 20px;
+			}
+			.imagen {
+				top: -12px;
 			}
 		}
 	}
@@ -260,28 +288,24 @@ body>header {
 
 @media (min-width: 992px) {
 	body>header {
-		nav.navbar-default {
-			&.ciudades {
-				li {
-					.dropdown-menu {
-						li {
-							text-align: right;
-						}
-					}
-				}
+		.negro {
+			.reserva {
+				text-indent: 60px;
 			}
 		}
 		p.ayuda {
-			margin-top: 20px;
+			margin-top: 26px;
 		}
 		.usuario {
-			margin-top: 20px;
 			text-align: center;
-		}
-		.login {
-			&>div+div {
-				text-align: right;
+			top: 18px;
+			.nombre {
+				margin-bottom: -2px;
 			}
+		}
+		.dropdown-menu {
+			left: auto;
+			right: 0;
 		}
 	}
 }

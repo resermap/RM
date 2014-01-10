@@ -8,13 +8,13 @@ header.pre-home {
 	}
 	nav.navbar-default.ciudades {
 		margin-top: 0;
+		padding-top: 58px;
 		.navbar-nav {
 			&,
 			&:last-child {
 				margin-right: 0;
 			}
 			li {
-				padding-top: 57px;
 				a {
 					font-weight: 700;
 				}

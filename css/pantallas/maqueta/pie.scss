@@ -8,8 +8,8 @@ body>footer.pie {
 		color: $color-t3;
 	}
 	h2 {
-		font-size: 18px;
-		font-weight: 700;
+		font-size: 16px;
+		font-weight: 600;
 		&:before {
 			color: $color-t4;
 			font-family: "Glyphicons Halflings";
@@ -18,15 +18,15 @@ body>footer.pie {
 			top: 2px;
 		}
 	}
+	a,
+	small {
+		font-size: 13px;
+	}
 	a {
-		font-size: 12px;
 		&:hover {
 			color: $color-v1;
 			text-decoration: none;
 		}
-	}
-	small {
-		font-size: 12px;
 	}
 	div.resermap-logo {
 		background: url("#{$img-constante}") 0 -108px no-repeat;
@@ -82,13 +82,12 @@ body>footer.pie {
 			box-shadow: 0 1px 2px $color-t4;
 			display: inline-block;
 			height: 25px;
-			font-size: 13px;
+			font-size: 14px;
 			font-weight: 600;
 			line-height: 25px;
 			padding-left: 25px;
 			position: relative;
 			text-align: center;
-			width: 110px - 25px;
 			span {
 				border-radius: 3px;
 				display: inline-block;
@@ -136,8 +135,15 @@ body>footer.pie {
 	.contacto+.legales+.terminos-condiciones {
 		margin-top: 60px;
 	}
+	.legales {
+		small {
+			font-size: 14px;
+			line-height: 16px;
+		}
+	}
 	.terminos-condiciones {
 		a {
+			font-size: 14px;
 			text-transform: uppercase;
 			&+a {
 				&:before {
@@ -163,13 +169,14 @@ body>footer.pie {
 			text-align: center;
 		}
 		form {
-			padding-bottom: 8px;
-			padding-top: 10px;
+			padding-bottom: 5px;
+			padding-top: 5px;
 		}
 		label {
 			color: $color-t1;
-			font-size: 14px;
-			font-weight: 600;
+			font-size: 15px;
+			font-weight: 400;
+			letter-spacing: -0.25px;
 			margin: 0;
 			position: relative;
 			text-align: left;
@@ -177,24 +184,22 @@ body>footer.pie {
 			span {
 				font-weight: 700;
 			}
-			width: 36%;
 		}
-		input[type="text"],
-		input[type="email"] {
+		.form-control {
+			background: #FFFFFF;
 			border-color: #999999;
 			border-radius: 0;
-			height: 29px;
+			font-size: 14px;
 			font-style: italic;
-			font-size: 14px;
-			width: 60%;
+			height: 29px;
+			width: 58%;
 		}
-		input[type="submit"] {
-			background: #ff6600;
-			color: white;
-			height: 27px;
+		.btn {
+			height: 36px;
 			font-size: 14px;
-			font-weight: 400;
-			padding: 4px 25px;
+			font-weight: 700;
+			padding-bottom: 4px;
+			padding-top: 4px;
 		}
 	}
 }
@@ -217,13 +222,14 @@ body>footer.pie {
 			}
 		}
 		.sociales {
-			margin-top: 10px;
+			margin-top: 20px;
 			a {
 				margin-right: 11px;
+				width: 102px;
 			}
 		}
 		.legales {
-			margin-top: 10px;
+			margin-top: 20px;
 		}
 		.terminos-condiciones {
 			padding-top: 10px;
@@ -253,18 +259,47 @@ body>footer.pie {
 			.form-group {
 				width: 80%;
 			}
+			label {
+				width: 34%;
+			}
+			.btn {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
+		.sociales {
+			a {
+				width: 102px;
+			}
+		}
+		.legales {
+			padding-top: 2px;
+		}
+		.terminos-condiciones {
+			a {
+				letter-spacing: -0.5px;
+			}
 		}
 	}
 }
 
 @media (min-width: 992px) {
 	body>footer.pie {
+		.sociales {
+			a {
+				width: 110px;
+			}
+		}
 		.suscripcion {
 			.form-group {
-				width: 56%;
+				width: 52%;
 			}
-			input[type="submit"] {
-				margin-left: 10px;
+			label {
+				width: 38%;
+			}
+			.btn {
+				padding-left: 45px;
+				padding-right: 45px;
 			}
 		}
 	}

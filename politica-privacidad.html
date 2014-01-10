@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es" xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Título</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="css/estilos.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script> 
+		$(function(){
+			$("body>header").load("inc/header-usuario.html");
+			$("body>footer.pie").load("inc/footer.html");
+		});
+	</script>
+</head>
+<body>
+	<header></header>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Dashboard de usuario -->
+	<main>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Breadcrumb -->
+		<div class="container-breadcrumb">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<ol class="breadcrumb">
+							<li><a href="/"><span class="sr-only">Home</span></a></li>
+							<li><a href="#">Reservas</a></li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Búsqueda -->
+		<section class="busqueda">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-11 col-sm-12 col-xs-12">
+						<header>
+							<h1>Buscar Restaurante</h1>
+						</header>
+						<form class="form-inline" role="form">
+							<div class="form-group nombre">
+								<label class="sr-only">Nombre de restaurante</label>
+								<input type="text" class="form-control" placeholder="Nombre de restaurante" />
+							</div>
+							<div class="form-group fecha">
+								<label class="sr-only">Fecha</label>
+								<input type="text" class="form-control" placeholder="11/10/2013" />
+							</div>
+							<div class="form-group cantidad">
+								<label class="sr-only">Cantidad de personas</label>
+								<select class="form-control">
+									<option>1</option>
+									<option selected="selected">2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+							</div>
+							<div class="form-group turno">
+								<label class="sr-only">Turno</label>
+								<select class="form-control">
+									<option selected="selected">Almuerzo</option>
+									<option>Merienda</option>
+									<option>Cena</option>
+								</select>
+							</div>
+							<input type="submit" class="btn btn-terciario btn-sm" value="Buscar Restaurante" />
+						</form>
+						<!--
+							En el CSS la imagen se centra porque sé que es de 1280px de ancho. (Es el máximo)
+							Si ponen de menor tamaño en base a las tablets o resoluciones, avisenme y agregamos unas clases.
+						-->
+						<img src="img/home.jpg" alt="Nombre del restaurante" />
+					</div>
+					<div class="col-md-7 col-md-offset-5 col-sm-10 col-sm-offset-2 col-xs-12">
+						<aside>
+							<h1 class="sr-only-no">Últimos comentarios</h1>
+							<blockquote>
+								<header>
+									<h2>Piegari Ristorante</h2>
+									<cite>Nombre de usuario</cite>
+								</header>
+									<p>To lead the World Wide Web to its full potential by developing protocols and guidelines that ensure long-term growth for the Web</p>
+									<div class="imagen"><img src="img/usuario-BORRAR.png" alt="Nombre de usuario" /></div>
+							</blockquote>
+							<!-- Por la semántica y por no haber flecha de retroceder, refrescaría los campos con un fade y listo. -->
+							<div class="ver-otro"></div>
+						</aside>
+					</div>
+				</div>
+			</div>
+		</section>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Términos y Condiciones -->
+		<article class="legales">
+			<div class="container">
+				<h1>Política de privacidad</h1>
+				<h2>Privacidad</h2>
+				<p>RESERVAS ONLINE SA garantiza la protección de los datos personales ingresados en el sitio y asimismo valora que el usuario otorgue información fehaciente. La misma es clave para poder otorgar un servicio eficaz al cliente.</p>
+				<p>Los datos ingresados por el usuario en www.resermap.cl sólo serán informados a efectos de la validación de la reserva con el restaurante que el usuario haya elegido. RESERVAS ONLINE SA sólo revelara los datos ingresados en el sitio a portales asociados que los necesiten respecto de alguna reserva efectuada a través de los mismos. Asimismo RESERVAS ONLINE SA deberá revelarla ante un pedido judicial y/o gubernamental de acuerdo a los dispuesto por la Ley de protección vigente en la República Argentina. (Habeasdata)</p>
+				<h2>Control de la información personal</h2>
+				<p>Los datos aportados por el usuario podrán ser modificados por el mismo todas las veces que considere necesarias. En caso de imposibilidad o cualquier tipo de impedimento electrónico y/o técnico y/o de cualquier tipo, a fines de la modificación o eliminación de los datos ingresados por el usuario, el mismo podrá solicitar a RESERVAS ONLINE SA la modificación de los mismos por cualquier medio, o través de un email a la casilla ayuda@resermap.com. RESERVAS ONLINE SA se compromete a modificarlos dentro de las 48 hs. hábiles de ser informado.</p>
+				<h2>Envío de correo electrónico</h2>
+				<p>Al confirmar una reserva a través de nuestro sistema recibirás automáticamente un email. Se sugiere imprimir el mismo a fines de evitar cualquier tipo de inconveniente con el servicio y/o tener por cualquier otro tipo de medio (celular, etc) los datos de la reserva. Luego de asistir a tu reserva, Resermap te enviará un e-mail invitándote a calificar al restaurante y a reclamar los puntos Resermap. También podrás recibir un e-mail a fines de confirmar tu asistencia al restaurante.</p>
+				<p>En el caso de que quieras recibir mas información de Resermap o promociones especiales de restaurantes y/o portales asociados te sugerimos que completes el proceso de registración y confirmes tus datos. A fines de discontinuar dicho servicio solo deberás hacer click en el link que encontrarás al pie del mismo.</p>
+				<p>Ante cualquier duda respecto de cualquier información contenida podrás enviar un e-mail a ayuda@rersermap.com y el mismo será contestado a la brevedad.</p>
+			</div>
+		</article>
+	</main>
+	<footer class="pie"></footer>
+</body>
+</html>

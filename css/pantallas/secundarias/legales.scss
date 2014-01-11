@@ -1,0 +1,30 @@
+article.legales,
+article.como-funciona,
+section.contacto,
+section.eventos {
+	h1 {
+		font-size: 30px;
+	}
+}
+
+article.legales,
+article.como-funciona,
+section.contacto {
+	p {
+		color: $color-t3;
+		font-size: 15px;
+		&+p {
+			margin-top: 20px;
+		}
+	}
+}
+
+article.legales {
+	h2 {
+		color: $color-t3;
+		font-size: 15px;
+		font-weight: 700;
+		margin-bottom: 0;
+		margin-top: 20px;
+	}
+}

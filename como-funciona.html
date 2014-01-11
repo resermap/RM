@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es" xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Título</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="css/estilos.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script> 
+		$(function(){
+			$("body>header").load("inc/header-usuario.html");
+			$("body>footer.pie").load("inc/footer.html");
+		});
+	</script>
+</head>
+<body>
+	<header></header>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Dashboard de usuario -->
+	<main>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Breadcrumb -->
+		<div class="container-breadcrumb">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<ol class="breadcrumb">
+							<li><a href="/"><span class="sr-only">Home</span></a></li>
+							<li><a href="#">Reservas</a></li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Búsqueda -->
+		<section class="busqueda">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-11 col-sm-12 col-xs-12">
+						<header>
+							<h1>Buscar Restaurante</h1>
+						</header>
+						<form class="form-inline" role="form">
+							<div class="form-group nombre">
+								<label class="sr-only">Nombre de restaurante</label>
+								<input type="text" class="form-control" placeholder="Nombre de restaurante" />
+							</div>
+							<div class="form-group fecha">
+								<label class="sr-only">Fecha</label>
+								<input type="text" class="form-control" placeholder="11/10/2013" />
+							</div>
+							<div class="form-group cantidad">
+								<label class="sr-only">Cantidad de personas</label>
+								<select class="form-control">
+									<option>1</option>
+									<option selected="selected">2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+							</div>
+							<div class="form-group turno">
+								<label class="sr-only">Turno</label>
+								<select class="form-control">
+									<option selected="selected">Almuerzo</option>
+									<option>Merienda</option>
+									<option>Cena</option>
+								</select>
+							</div>
+							<input type="submit" class="btn btn-terciario btn-sm" value="Buscar Restaurante" />
+						</form>
+						<!--
+							En el CSS la imagen se centra porque sé que es de 1280px de ancho. (Es el máximo)
+							Si ponen de menor tamaño en base a las tablets o resoluciones, avisenme y agregamos unas clases.
+						-->
+						<img src="img/home.jpg" alt="Nombre del restaurante" />
+					</div>
+					<div class="col-md-7 col-md-offset-5 col-sm-10 col-sm-offset-2 col-xs-12">
+						<aside>
+							<h1 class="sr-only-no">Últimos comentarios</h1>
+							<blockquote>
+								<header>
+									<h2>Piegari Ristorante</h2>
+									<cite>Nombre de usuario</cite>
+								</header>
+									<p>To lead the World Wide Web to its full potential by developing protocols and guidelines that ensure long-term growth for the Web</p>
+									<div class="imagen"><img src="img/usuario-BORRAR.png" alt="Nombre de usuario" /></div>
+							</blockquote>
+							<!-- Por la semántica y por no haber flecha de retroceder, refrescaría los campos con un fade y listo. -->
+							<div class="ver-otro"></div>
+						</aside>
+					</div>
+				</div>
+			</div>
+		</section>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Cómo funciona -->
+		<article class="como-funciona">
+			<div class="container">
+				<h1>¿Cómo funciona Resermap?</h1>
+				<p>Seguramente alguna vez reservaste un pasaje en avión, una habitación de un hotel, un lugar en el cine o teatro, pero ¿Alguna vez intentaste reservar mesa en un restaurante online?</p>
+				<p>En Resermap® podés reservar tu mesa online! Funciona igual que con los hoteles, los vuelos o las entradas! Es fácil, rápido y gratuito! Sumá puntos por cada reserva y canjealos por increíbles premios!</p>
+				<h2>Es muy simple:</h2>
+				<ol>
+					<li class="paso-01"><p>Elegí tu <span>Restaurante favorito</span></p></li>
+					<li class="paso-02"><p>Hacé tu Reserva Online</p></li>
+					<li class="paso-03"><p>Recibí la confirmación inmediata por Mail y SMS</p></li>
+					<li class="paso-04"><p>La mesa estará esperandote</p></li>
+					<li class="paso-05"><p>Disfrutá de tu comida en el restaurante</p></li>
+					<li class="paso-06"><p>Comentá sobre tu salida y suma puntos</p></li>
+					<li class="paso-07"><p>Canjeá tus puntos por premios</p></li>
+				</ol>
+			</div>
+		</article>
+	</main>
+	<footer class="pie"></footer>
+</body>
+</html>

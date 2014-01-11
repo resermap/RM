@@ -37,51 +37,6 @@ a {
 	}
 }
 
-input[type="submit"] {
-	border: none;
-}
-
-label {
-	color: $color-t3;
-	font-size: 13px;
-	font-weight: 400;
-	margin-bottom: -1px;
-}
-
-.form-control {
-	background: #f0f0f0;
-	box-shadow: none;
-	color: $color-t3;
-	font-size: 13px;
-	padding: 6px 8px;
-	&:focus {
-		box-shadow: none;
-		border-color: $color-t4;
-	}
-}
-
-option {
-	color: $color-t3;
-}
-
-::-webkit-input-placeholder {
-	color: $color-t3;
-}
-
-:-moz-placeholder {
-	color: $color-t3;
-	opacity: 1;
-}
-
-::-moz-placeholder {
-	color: $color-t3;
-	opacity: 1;
-}
-
-:-ms-input-placeholder {
-	color: $color-t3;
-}
-
 @media (min-width: 992px) {
   .container {
     width: 990px;
@@ -98,7 +53,7 @@ option {
 	font-weight: 800;
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Overrides
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Constantes
 
 
 @import "pantallas/constantes.scss";
@@ -110,6 +65,7 @@ option {
 @import "pantallas/override/blockquote.scss";
 @import "pantallas/override/botones.scss";
 @import "pantallas/override/breadcrumb.scss";
+@import "pantallas/override/formularios.scss";
 @import "pantallas/override/listas.scss";
 @import "pantallas/override/nav-tabs.scss";
 @import "pantallas/override/paginado.scss";
@@ -173,5 +129,14 @@ option {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Usuarios
 
+
 @import "pantallas/usuarios/login.scss";
 @import "pantallas/usuarios/dashboard.scss";
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Páginas Secundarias
+
+
+@import "pantallas/secundarias/como-funciona.scss";
+@import "pantallas/secundarias/contacto-eventos.scss";
+@import "pantallas/secundarias/legales.scss";

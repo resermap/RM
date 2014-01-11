@@ -1,0 +1,248 @@
+article.como-funciona {
+	h2 {
+		font-size: 20px;
+	}
+	ol {
+		li {
+			background-color: #00afc4;
+			border: 14px solid #a7d2d8;
+			border-radius: 100%;
+			height: 118px;
+			width: 118px;
+			&:before {
+				background-image: url("../img/como-funciona.png");
+				background-repeat: no-repeat;
+				content: "";
+				display: block;
+			}
+			&.paso-01 {
+				background-color: #ffd571;
+				border-color: #e3ab00;
+				&:before {
+					background-position: -219px 0;
+					margin: 8px 0 0 7px;
+					height: 77px;
+					width: 77px;
+				}
+			}
+			&.paso-02 {
+				&:before {
+					background-position: 0 0;
+					margin: 10px 0 0 9px;
+					height: 72px;
+					width: 72px;
+				}
+			}
+			&.paso-03 {
+				&:before {
+					background-position: -73px 0;
+					margin: 10px 0 0 10px;
+					height: 70px;
+					width: 70px;
+				}
+			}
+			&.paso-04 {
+				&:before {
+					background-position: 0 -73px;
+					margin: 13px 0 0 15px;
+					height: 62px;
+					width: 62px;
+				}
+			}
+			&.paso-05 {
+				&:before {
+					background-position: -63px -73px;
+					margin: 1px 0 0 4px;
+					height: 84px;
+					width: 84px;
+				}
+			}
+			&.paso-06 {
+				&:before {
+					background-position: -144px 0;
+					margin: 14px 0 0 8px;
+					height: 74px;
+					width: 74px;
+				}
+			}
+			&.paso-07 {
+				&:before {
+					background-position: -148px -75px;
+					margin: 9px 0 0 9px;
+					height: 73px;
+					width: 73px;
+				}
+			}
+			p {
+				line-height: 18px;
+				margin: 0;
+				text-align: center;
+				position: absolute;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	article.como-funciona {
+		ol {
+			li {
+				position: relative;
+				margin-top: 10px;
+			}
+			p {
+				left: 114px;
+				top: 36px;
+				white-space: nowrap;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	article.como-funciona {
+		ol {
+			height: 444px;
+			margin: 131px 0 106px 0;
+			position: relative;
+			width: 444px;
+			&:before,
+			&:after {
+				content: "";
+				position: absolute;
+			}
+			&:before {
+				background: #fef0c3;
+				height: 26px;
+				top: 1px;
+				z-index: 1;
+			}
+			&:after {
+				border: 26px solid #d7e5ff;
+				border-radius: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+				width: 100%;
+				z-index: 11;
+			}
+			li {
+				position: absolute;
+				z-index: 22;
+				&.paso-01,
+				&.paso-02 {
+					top: -45px;
+				}
+				&.paso-02,
+				&.paso-05 {
+					left: 50%;
+					margin-left: -59px;
+				}
+				&.paso-03,
+				&.paso-04 {
+					right: -20px;
+				}
+				&.paso-03,
+				&.paso-07 {
+					top: 70px;
+				}
+				&.paso-04,
+				&.paso-06 {
+					bottom: 70px;
+				}
+				&.paso-06,
+				&.paso-07 {
+					left: -20px;
+				}
+				&.paso-01 {
+					p {
+						left: -32px;
+						top: -68px;
+						width: 154px;
+					}
+					span {
+						display: block;
+					}
+				}
+				&.paso-02 {
+					p {
+						left: -36px;
+						top: -50px;
+						white-space: nowrap;
+					}
+				}
+				&.paso-03 {
+					p {
+						left: 110px;
+						top: 8px;
+						width: 106px;
+					}
+				}
+				&.paso-04 {
+					p {
+						left: 110px;
+						top: 26px;
+						width: 114px;
+					}
+				}
+				&.paso-05 {
+					bottom: -45px;
+					p {
+						bottom: -58px;
+						left: -30px;
+						width: 164px;
+					}
+				}
+				&.paso-06 {
+					p {
+						left: -132px;
+						top: 18px;
+						width: 110px;
+					}
+				}
+				&.paso-07 {
+					background-position: 0px 0px;
+					p {
+						left: -154px;
+						top: 28px;
+						width: 136px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	article.como-funciona {
+		ol {
+			margin-left: 146px;
+			&:before {
+				left: -30px;
+				width: 208px;
+			}
+			li {
+				&.paso-01 {
+					left: -133px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	article.como-funciona {
+		ol {
+			margin-left: 280px;
+			&:before {
+				left: -90px;
+				width: 258px;
+			}
+			li {
+				&.paso-01 {
+					left: -195px;
+				}
+			}
+		}
+	}
+}

@@ -37,6 +37,7 @@ main.pre-home {
 	nav {
 		div {
 			background-color: #c9d3dd;
+			&.activo,
 			&:hover {
 				ul {
 					display: block;
@@ -203,6 +204,7 @@ main.pre-home {
 					margin-top: -20px;
 					width: 18px;
 				}
+				&.activo,
 				&:hover {
 					border-color: #1e6b98;
 					background-color: #3893c7;
@@ -227,6 +229,7 @@ main.pre-home {
 						margin-top: -2px;
 						top: 0;
 					}
+					&.activo,
 					&:hover {
 						&+div {
 							border-top-color: #C9D3DD;
@@ -236,6 +239,7 @@ main.pre-home {
 				&.chile {
 					border-bottom-left-radius: 10px;
 					border-top-color: #1E3247;
+					&.activo,
 					&:hover {
 						border-top-color: #1e6b98;
 					}

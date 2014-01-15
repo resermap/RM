@@ -1,6 +1,7 @@
 main.resultados {
 	.destacado {
 		margin: 15px 0;
+		height: 234px;
 		aside {
 			height: 100%;
 		}
@@ -85,14 +86,6 @@ main.resultados {
 		}
 		.retroceder {
 			left: 20px + 15;
-		}
-	}
-}
-
-@media (min-width: 768px) {
-	main.resultados {
-		.destacado {
-			height: 234px;
 		}
 	}
 }

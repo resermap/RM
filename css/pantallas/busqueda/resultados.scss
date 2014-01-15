@@ -93,8 +93,10 @@ main.resultados {
 			}
 		}
 		article {
+			border: 1px solid #d9d9d9;
 			margin-top: 6px;
 			min-height: 168px + 8 + 8 + 2;
+			padding: 8px 8px 8px 216px;
 			position: relative;
 			&:hover {
 				border-color: $color-v1;
@@ -180,10 +182,7 @@ main.resultados {
 						box-shadow: 0 0 10px $color-t3;
 						font-size: 30px;
 						line-height: 48px;
-						position: absolute;
-						right: 18px;
 						text-align: center;
-						top: 18px;
 						width: 153px;
 						&:before,
 						&:after {
@@ -219,9 +218,6 @@ main.resultados {
 			.btn {
 				font-weight: 700;
 				padding: 8px 28px;
-				position: absolute;
-				right: 8px;
-				top: 81px;
 			}
 			blockquote {
 				margin: 9px 0 0 0;
@@ -247,6 +243,7 @@ main.resultados {
 				left: 0;
 				overflow: hidden;
 				line-height: 180px;
+				pointer-events: none;
 				position: absolute;
 				height: 69px;
 				top: 0;
@@ -261,6 +258,21 @@ main.resultados {
 				float: left;
 				font-size: 12px;
 				padding-top: 9px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	main.resultados {
+		div.resultados {
+			article {
+				dd {
+					&.descuento {
+						position: relative;
+						margin: 8px 0 4px 0;
+					}
+				}
 			}
 		}
 	}
@@ -286,9 +298,18 @@ main.resultados {
 				float: right;
 			}
 			article {
-				border: 1px solid #d9d9d9;
-				padding: 8px 8px 8px 216px;
-				position: relative;
+				dd {
+					&.descuento {
+						position: absolute;
+						right: 18px;
+						top: 18px;
+					}
+				}
+				.btn {
+					position: absolute;
+					right: 8px;
+					top: 81px;
+				}
 			}
 		}
 	}

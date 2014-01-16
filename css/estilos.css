@@ -196,6 +196,18 @@ section.contacto .sociales a {
       background: #da4b38;
       color: #FFFFFF; }
 
+.mensaje {
+  border-style: solid;
+  border-width: 1px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  padding: 15px 15px 6px 15px; }
+  .mensaje.satisfactorio {
+    background-color: #edfbcb;
+    border-color: #bdd57f;
+    color: #2b6003; }
+
 blockquote {
   border-left: none; }
   blockquote p {
@@ -767,14 +779,14 @@ body > footer.pie {
     padding-right: 45px; } }
 header.pre-home {
   background: #eaeaea;
-  padding-top: 20px; }
+  padding-top: 40px; }
   header.pre-home h1 {
     background: url("../img/home.png") 0 -115px no-repeat;
     height: 55px;
     width: 204px; }
   header.pre-home nav.navbar-default.ciudades {
     margin-top: 0;
-    padding-top: 58px; }
+    padding-top: 28px; }
     header.pre-home nav.navbar-default.ciudades .navbar-nav, header.pre-home nav.navbar-default.ciudades .navbar-nav:last-child {
       margin-right: 0; }
     header.pre-home nav.navbar-default.ciudades .navbar-nav li a {
@@ -877,7 +889,6 @@ main.pre-home {
       border-top-left-radius: 10px;
       border-top-right-radius: 10px; }
     main.pre-home nav div.chile {
-      border-top: 2px solid #1E3247;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px; }
     main.pre-home nav div h2,
@@ -4477,7 +4488,8 @@ section.eventos form .btn {
 article.legales h1,
 article.como-funciona h1,
 section.contacto h1,
-section.eventos h1 {
+section.eventos h1,
+section.olvidaste h1 {
   font-size: 30px; }
 
 article.legales p,
@@ -4496,3 +4508,14 @@ article.legales h2 {
   font-weight: 700;
   margin-bottom: 0;
   margin-top: 20px; }
+
+section.olvidaste p {
+  letter-spacing: -0.5px; }
+section.olvidaste form .form-group {
+  vertical-align: bottom; }
+section.olvidaste form .btn {
+  height: 34px;
+  margin-left: 11px; }
+section.olvidaste .mensaje + h1 {
+  font-size: 20px;
+  margin-top: 15px; }

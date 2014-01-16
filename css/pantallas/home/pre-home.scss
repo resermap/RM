@@ -1,6 +1,6 @@
 header.pre-home {
 	background: #eaeaea;
-	padding-top: 20px;
+	padding-top: 40px;
 	h1 {
 		background: url("#{$img-url}home.png") 0 -115px no-repeat;
 		height: 55px;
@@ -8,7 +8,7 @@ header.pre-home {
 	}
 	nav.navbar-default.ciudades {
 		margin-top: 0;
-		padding-top: 58px;
+		padding-top: 28px;
 		.navbar-nav {
 			&,
 			&:last-child {
@@ -128,7 +128,6 @@ main.pre-home {
 					border-top-right-radius: 10px;
 				}
 				&.chile {
-					border-top: 2px solid #1E3247;
 					border-bottom-left-radius: 10px;
 					border-bottom-right-radius: 10px;
 				}

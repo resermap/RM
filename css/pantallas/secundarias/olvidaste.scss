@@ -1,0 +1,18 @@
+section.olvidaste {
+	p {
+		letter-spacing: -0.5px;
+	}
+	form {
+		.form-group {
+			vertical-align: bottom;
+		}
+		.btn {
+			height: 34px;
+			margin-left: 11px;
+		}
+	}
+	.mensaje+h1 {
+		font-size: 20px;
+		margin-top: 15px;
+	}
+}

@@ -13,13 +13,13 @@
 }
 
 .btn-secundario {
-	background: $color-v1;
+	background: #0098db;
 	color: white;
-}
-
-.btn-terciario {
-	background: $color-v1;
-	color: white;
+	&:focus,
+	&:hover {
+		background: #0099ff;
+		color: white;
+	}
 }
 
 
@@ -65,4 +65,26 @@
 	font-size: 14px;
 	font-weight: 700;
 	padding: 8px 45px 12px 45px;
+}
+
+.btn-vr-1 {
+	font-size: 14px;
+	font-weight: 700;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 10px;
+	width: 180px;
+}
+
+.btn-vr-2,
+.btn-vr-3 {
+	font-size: 18px;
+	font-weight: 700;
+	height: 39px;
+	line-height: 39px;
+	padding: 0 10px;
+}
+
+.btn-vr-2 {
+	width: 225px;
 }

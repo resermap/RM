@@ -22,6 +22,14 @@ section.busqueda {
 		}
 	}
 	form {
+		&[data-ie="1"] {
+			.cantidad,
+			.turno {
+				&:after {
+					content: none;
+				}
+			}
+		}
 		.form-group {
 			float: left;
 			position: relative;
@@ -40,12 +48,26 @@ section.busqueda {
 			}
 		}
 		.nombre,
-		.fecha {
+		.fecha,
+		.cantidad,
+		.turno {
 			&:after {
 				color: $color-t4;
 				font-family: "Glyphicons Halflings";
 				position: absolute;
 				z-index: 11;
+			}
+		}
+		.cantidad,
+		.turno {
+			&:after {
+				background: #FFFFFF;
+				border-top-right-radius: 4px;
+				border-bottom-right-radius: 4px;
+				pointer-events: none;
+				height: 100%;
+				right: 0;
+				top: 0;
 			}
 		}
 		.nombre {
@@ -69,13 +91,18 @@ section.busqueda {
 		.cantidad {
 			width: 58px;
 			&:after {
-
+				content: "\e008";
+				line-height: 34px;
+				padding: 0 6px;
 			}
 		}
 		.turno {
 			width: 102px;
 			&:after {
-
+				content: "\e023";
+				font-size: 16px;
+				line-height: 38px;
+				padding: 0 6px;
 			}
 		}
 		.btn {

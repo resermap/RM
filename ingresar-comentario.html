@@ -30,100 +30,132 @@
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Encabezado -->
 				<header>
 					<h1>Ayudanos a calificar a nuestros restaurantes!</h1>
+					<h2>Restaurante Campobravo Palermo</h2>
 				</header>
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Detalles de tu reserva</h2>
-					</div>
-					<div class="col-md-2 col-sm-3 col-xs-3">
-						<div class="imagen">
-							<img src="img/usuario-BORRAR.png">
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Formulario -->
+				<form>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Concurrencia -->
+					<fieldset class="concurrencia">
+						<legend>¿Concurrió a su reserva?</legend>
+						<!-- El FOR y el ID deben de estar relacionados -->
+						<!-- El label necesita la clase activo -->
+						<div>
+							<label class="radio-inline activo" for="CAMBIAR-1">Sí</label>
+							<input type="radio" value="Si" name="concurrencia" id="CAMBIAR-1" />
 						</div>
-					</div>
-					<div class="col-md-10 col-sm-9 col-xs-9">
-						<h3>To Restaurant</h3>
-						<ul>
-							<li class="ubicacion"><address>Costa Rica 6000, Palermo Hollywood, Capital Federal</address></li>
-							<li class="personas">2 Personas</li>
-							<li class="fecha"><time datetime="2013-12-04">Día 04-12-2013</time></li>
-							<li class="hora">07:30 AM</li>
-						</ul>
-					</div>
-					<div class="col-md-12 col-sm-12 col-xs-12">
-						<form action="">
-							<fieldset class="concurrencia">
-								<legend>¿Concurrió a su reserva?</legend>
-								<label class="radio-inline">
-									Sí <input type="radio" value="Si" name="concurrencia" />
-								</label>
-								<label class="radio-inline">
-									No <input type="radio" value="No" name="concurrencia" />
-								</label>
-							</fieldset>
-							<fieldset class="calificaciones">
-								<legend>Calificar</legend>
-								<!-- IE8 nos obliga a ponerle una clase -->
-								<!-- La clase debe ser "calificacion-#-5" -->
-								<div class="calificacion-3-5">
-									<p>Comida:</p>
-									<div>
-										<input type="radio" id="comida-5-5" name="comida" />
-										<input type="radio" id="comida-4-5" name="comida" />
-										<input type="radio" id="comida-3-5" name="comida" />
-										<input type="radio" id="comida-2-5" name="comida" />
-										<input type="radio" id="comida-1-5" name="comida" />
-										<!-- El FOR y el ID deben de estar relacionados -->
-										<label class="c-5-5" for="comida-5-5">5 de 5</label>
-										<label class="c-4-5" for="comida-4-5">4 de 5</label>
-										<label class="c-3-5" for="comida-3-5">3 de 5</label>
-										<label class="c-2-5" for="comida-2-5">2 de 5</label>
-										<label class="c-1-5" for="comida-1-5">1 de 5</label>
-									</div>
-									<small>BUENO</small>
-								</div>
-								<div class="calificacion-1-5">
-									<p>Servicio:</p>
-									<div>
-										<input type="radio" id="servicio-5-5" name="servicio" />
-										<input type="radio" id="servicio-4-5" name="servicio" />
-										<input type="radio" id="servicio-3-5" name="servicio" />
-										<input type="radio" id="servicio-2-5" name="servicio" />
-										<input type="radio" id="servicio-1-5" name="servicio" />
-										<label class="c-5-5" for="servicio-5-5">5 de 5</label>
-										<label class="c-4-5" for="servicio-4-5">4 de 5</label>
-										<label class="c-3-5" for="servicio-3-5">3 de 5</label>
-										<label class="c-2-5" for="servicio-2-5">2 de 5</label>
-										<label class="c-1-5" for="servicio-1-5">1 de 5</label>
-									</div>
-									<small>BUENO</small>
-								</div>
-								<div class="calificacion-4-5">
-									<p>Ambiente:</p>
-									<div>
-										<input type="radio" id="ambiente-5-5" name="ambiente" />
-										<input type="radio" id="ambiente-4-5" name="ambiente" />
-										<input type="radio" id="ambiente-3-5" name="ambiente" />
-										<input type="radio" id="ambiente-2-5" name="ambiente" />
-										<input type="radio" id="ambiente-1-5" name="ambiente" />
-										<label class="c-5-5" for="ambiente-5-5">5 de 5</label>
-										<label class="c-4-5" for="ambiente-4-5">4 de 5</label>
-										<label class="c-3-5" for="ambiente-3-5">3 de 5</label>
-										<label class="c-2-5" for="ambiente-2-5">2 de 5</label>
-										<label class="c-1-5" for="ambiente-1-5">1 de 5</label>
-									</div>
-									<small>BUENO</small>
-								</div>
-							</fieldset>
-							<div class="form-group">
-								<label for="inputEmail3" class="control-label">Comentario</label>
-								<textarea class="form-control" rows="5"></textarea>
+						<div>
+							<label class="radio-inline" for="CAMBIAR-2">No</label>
+							<input type="radio" value="No" name="concurrencia" id="CAMBIAR-2" />
+						</div>
+					</fieldset>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Calificaciones -->
+					<fieldset class="calificaciones">
+						<legend>Calificar</legend>
+						<!-- IE8 nos obliga a ponerle una clase -->
+						<!-- La clase debe ser "calificacion-#-5" -->
+						<div class="calificacion-3-5">
+							<p>Comida:</p>
+							<div>
+								<input type="radio" id="comida-5-5" name="comida" />
+								<input type="radio" id="comida-4-5" name="comida" />
+								<input type="radio" id="comida-3-5" name="comida" />
+								<input type="radio" id="comida-2-5" name="comida" />
+								<input type="radio" id="comida-1-5" name="comida" />
+								<!-- El FOR y el ID deben de estar relacionados -->
+								<label class="c-5-5" for="comida-5-5">5 de 5</label>
+								<label class="c-4-5" for="comida-4-5">4 de 5</label>
+								<label class="c-3-5" for="comida-3-5">3 de 5</label>
+								<label class="c-2-5" for="comida-2-5">2 de 5</label>
+								<label class="c-1-5" for="comida-1-5">1 de 5</label>
 							</div>
-							<!-- Éste <small> solo debe ser visible para el usuario anónimo -->
-							<small>Haciendo click en <span>“Comentar”</span> estás aceptando los <a href="#">Terminos y Condiciones</a> de Resermap y creando tu cuenta.</small>
-							<input type="submit" class="btn btn-secundario btn-lg v3" value="Comentar" />
-						</form>
+							<small>BUENO</small>
+						</div>
+						<div class="calificacion-1-5">
+							<p>Servicio:</p>
+							<div>
+								<input type="radio" id="servicio-5-5" name="servicio" />
+								<input type="radio" id="servicio-4-5" name="servicio" />
+								<input type="radio" id="servicio-3-5" name="servicio" />
+								<input type="radio" id="servicio-2-5" name="servicio" />
+								<input type="radio" id="servicio-1-5" name="servicio" />
+								<label class="c-5-5" for="servicio-5-5">5 de 5</label>
+								<label class="c-4-5" for="servicio-4-5">4 de 5</label>
+								<label class="c-3-5" for="servicio-3-5">3 de 5</label>
+								<label class="c-2-5" for="servicio-2-5">2 de 5</label>
+								<label class="c-1-5" for="servicio-1-5">1 de 5</label>
+							</div>
+							<small>BUENO</small>
+						</div>
+						<div class="calificacion-4-5">
+							<p>Ambiente:</p>
+							<div>
+								<input type="radio" id="ambiente-5-5" name="ambiente" />
+								<input type="radio" id="ambiente-4-5" name="ambiente" />
+								<input type="radio" id="ambiente-3-5" name="ambiente" />
+								<input type="radio" id="ambiente-2-5" name="ambiente" />
+								<input type="radio" id="ambiente-1-5" name="ambiente" />
+								<label class="c-5-5" for="ambiente-5-5">5 de 5</label>
+								<label class="c-4-5" for="ambiente-4-5">4 de 5</label>
+								<label class="c-3-5" for="ambiente-3-5">3 de 5</label>
+								<label class="c-2-5" for="ambiente-2-5">2 de 5</label>
+								<label class="c-1-5" for="ambiente-1-5">1 de 5</label>
+							</div>
+							<small>BUENO</small>
+						</div>
+					</fieldset>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Comentario + Opciones -->
+					<fieldset class="comentario">
+						<legend>Comentario</legend>
+						<div class="form-group">
+							<div class="col-md-6 col-sm-12">
+								<textarea class="form-control"></textarea>
+								<p class="contador">Quedan 290 caracteres</p>
+							</div>
+							<div class="col-md-6 col-sm-12 opciones">
+								<label class="control-label">Ideal para</label>
+								<div>
+									<input type="checkbox" class="form-control" value="Salidas de Grupos / Amigos" id="AXZ" />
+									<!-- El FOR y el ID deben de estar relacionados -->
+									<!-- Clase activo para marcarlo como chequeado -->
+									<label id="AXZ" class="control-label activo">Salidas de Grupos / Amigos</label>
+								</div>
+								<div>
+									<input type="checkbox" class="form-control" value="Salidas familiares" id="AXZ1" />
+									<label id="AXZ1" class="control-label">Salidas familiares</label>
+								</div>
+								<div>
+									<input type="checkbox" class="form-control" value="Reuniones Negocios" id="AXZ2" />
+									<label id="AXZ2" class="control-label">Reuniones Negocios</label>
+								</div>
+								<div>
+									<input type="checkbox" class="form-control" value="Comer a puertas cerradas" id="AXZ3" />
+									<label id="AXZ3" class="control-label">Comer a puertas cerradas</label>
+								</div>
+								<div>
+									<input type="checkbox" class="form-control" value="Cenas en Parejas" id="AXZ4" />
+									<label id="AXZ4" class="control-label">Cenas en Parejas</label>
+								</div>
+								<div>
+									<input type="checkbox" class="form-control" value="Eventos" id="AXZ5" />
+									<label id="AXZ5" class="control-label">Eventos</label>
+								</div>
+								<div>
+									<input type="checkbox" class="form-control" value="Encuentros romanticos" id="AXZ6" />
+									<label id="AXZ6" class="control-label">Encuentros romanticos</label>
+								</div>
+								<div>
+									<div class="ver-mas">Ver más</div>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Terminación -->
+					<div class="form-group terminacion">
+						<div class="col-md-3 col-sm-3"><input class="btn btn-primary btn-vr-1" type="submit" value="Comentar" /></div>
+						<div class="col-md-3 col-sm-3"><p>¡Muchas gracias por su tiempo!</p></div>
+						<div class="col-md-6 col-sm-6"><small>Te recordamos que tus datos personales no se mostrarán en el comentario.</small></div>
 					</div>
-				</div>
+				</form>
 			</section>
 		</div>
 	</main>

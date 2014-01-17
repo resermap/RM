@@ -25,73 +25,29 @@
 		$(function(){
 			$("body>header").load("inc/header.html");
 			$("body>footer.pie").load("inc/footer.html");
+			$("section.busqueda").load("inc/busqueda.html");
 		});
+	</script>
+	<!--
+		Script incompleto para determinar que el navegador es IE 10 o menor.
+	-->
+	<script>
+		var navegador = navigator.userAgent;
+		if (navegador) {
+			navegador-ie = 1;
+		}
+		else {
+			navegador-ie = 0;
+		}
+		var tag = ("section.busqueda form");
+		tag.setAttribute('data-ie', navegador-ie);
 	</script>
 </head>
 <body>
 	<header></header>
 	<main>
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Búsqueda -->
-		<section class="busqueda">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-11 col-sm-12 col-xs-12">
-						<header>
-							<h1>Buscar Restaurante</h1>
-						</header>
-						<form class="form-inline" role="form">
-							<div class="form-group nombre">
-								<label class="sr-only">Nombre de restaurante</label>
-								<input type="text" class="form-control" placeholder="Nombre de restaurante" />
-							</div>
-							<div class="form-group fecha">
-								<label class="sr-only">Fecha</label>
-								<input type="text" class="form-control" placeholder="11/10/2013" />
-							</div>
-							<div class="form-group cantidad">
-								<label class="sr-only">Cantidad de personas</label>
-								<select class="form-control">
-									<option>1</option>
-									<option selected="selected">2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
-							</div>
-							<div class="form-group turno">
-								<label class="sr-only">Turno</label>
-								<select class="form-control">
-									<option selected="selected">Almuerzo</option>
-									<option>Merienda</option>
-									<option>Cena</option>
-								</select>
-							</div>
-							<input type="submit" class="btn btn-terciario btn-sm" value="Buscar Restaurante" />
-						</form>
-						<!--
-							En el CSS la imagen se centra porque sé que es de 1280px de ancho. (Es el máximo)
-							Si ponen de menor tamaño en base a las tablets o resoluciones, avisenme y agregamos unas clases.
-						-->
-						<img src="img/home.jpg" alt="Nombre del restaurante" />
-					</div>
-					<div class="col-md-7 col-md-offset-5 col-sm-10 col-sm-offset-2 col-xs-12">
-						<aside>
-							<h1 class="sr-only-no">Últimos comentarios</h1>
-							<blockquote>
-								<header>
-									<h2>Piegari Ristorante</h2>
-									<cite>Nombre de usuario</cite>
-								</header>
-									<p>To lead the World Wide Web to its full potential by developing protocols and guidelines that ensure long-term growth for the Web</p>
-									<div class="imagen"><img src="img/usuario-BORRAR.png" alt="Nombre de usuario" /></div>
-							</blockquote>
-							<!-- Por la semántica y por no haber flecha de retroceder, refrescaría los campos con un fade y listo. -->
-							<div class="ver-otro"></div>
-						</aside>
-					</div>
-				</div>
-			</div>
-		</section>
+		<section class="busqueda"></section>
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Categorización de restaurantes -->
 		<section class="categorizacion">
 			<div class="container">
@@ -262,7 +218,7 @@
 								<label class="sr-only">Buscar palabras claves</label>
 								<input type="text" class="form-control" placeholder="atención, ambiente, comida, velas">
 							</div>
-							<input class="btn btn-terciario btn-sm" type="submit" value="Buscar">
+							<input class="btn btn-secundario btn-sm" type="submit" value="Buscar">
 						</form>
 						<blockquote>
 							<header>

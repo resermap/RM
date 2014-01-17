@@ -1,5 +1,6 @@
 main.resultados {
 	div.resultados {
+		margin-top: 15px;
 		div.visualizacion {
 			background: #ececec;
 			border: 1px solid $color-t4;
@@ -214,10 +215,6 @@ main.resultados {
 				position: absolute;
 				top: 8px;
 				width: 200px;
-			}
-			.btn {
-				font-weight: 700;
-				padding: 8px 28px;
 			}
 			blockquote {
 				margin: 9px 0 0 0;

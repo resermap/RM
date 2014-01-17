@@ -18,6 +18,7 @@
 		$(function(){
 			$("body>header").load("inc/header-usuario.html");
 			$("body>footer.pie").load("inc/footer-sin-suscripcion.html");
+			$("section.busqueda").load("inc/busqueda.html");
 		});
 	</script>
 </head>
@@ -39,66 +40,7 @@
 			</div>
 		</div>
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Búsqueda -->
-		<section class="busqueda">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-11 col-sm-12 col-xs-12">
-						<header>
-							<h1>Buscar Restaurante</h1>
-						</header>
-						<form class="form-inline" role="form">
-							<div class="form-group nombre">
-								<label class="sr-only">Nombre de restaurante</label>
-								<input type="text" class="form-control" placeholder="Nombre de restaurante" />
-							</div>
-							<div class="form-group fecha">
-								<label class="sr-only">Fecha</label>
-								<input type="text" class="form-control" placeholder="11/10/2013" />
-							</div>
-							<div class="form-group cantidad">
-								<label class="sr-only">Cantidad de personas</label>
-								<select class="form-control">
-									<option>1</option>
-									<option selected="selected">2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
-							</div>
-							<div class="form-group turno">
-								<label class="sr-only">Turno</label>
-								<select class="form-control">
-									<option selected="selected">Almuerzo</option>
-									<option>Merienda</option>
-									<option>Cena</option>
-								</select>
-							</div>
-							<input type="submit" class="btn btn-terciario btn-sm" value="Buscar Restaurante" />
-						</form>
-						<!--
-							En el CSS la imagen se centra porque sé que es de 1280px de ancho. (Es el máximo)
-							Si ponen de menor tamaño en base a las tablets o resoluciones, avisenme y agregamos unas clases.
-						-->
-						<img src="img/home.jpg" alt="Nombre del restaurante" />
-					</div>
-					<div class="col-md-7 col-md-offset-5 col-sm-10 col-sm-offset-2 col-xs-12">
-						<aside>
-							<h1 class="sr-only-no">Últimos comentarios</h1>
-							<blockquote>
-								<header>
-									<h2>Piegari Ristorante</h2>
-									<cite>Nombre de usuario</cite>
-								</header>
-									<p>To lead the World Wide Web to its full potential by developing protocols and guidelines that ensure long-term growth for the Web</p>
-									<div class="imagen"><img src="img/usuario-BORRAR.png" alt="Nombre de usuario" /></div>
-							</blockquote>
-							<!-- Por la semántica y por no haber flecha de retroceder, refrescaría los campos con un fade y listo. -->
-							<div class="ver-otro"></div>
-						</aside>
-					</div>
-				</div>
-			</div>
-		</section>
+		<section class="busqueda"></section>
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Dashboard -->
 		<section class="dashboard">
 			<div class="container">
@@ -275,8 +217,8 @@
 											<p><strong>Tenés <span>700</span></strong> puntos <span>(250$ ARS)</span></p>
 											<small>Si queres sumar más puntos Resermap y ganar cenas gratis, <a href="#">RECOMENDÁ A TUS AMIGOS</a></small>
 										</div>
-										<a class="btn btn-terciario premios" href="#">Mis premios</a>
-										<a class="btn btn-terciario catalogo" href="#">Ver catálogo</a>
+										<a class="btn btn-secundario premios" href="#">Mis premios</a>
+										<a class="btn btn-secundario catalogo" href="#">Ver catálogo</a>
 									</div>
 								</div>
 							</div>
@@ -386,13 +328,17 @@
 										</div>
 										<label class="col-md-2 col-sm-2 col-xs-4 control-label">Sexo</label>
 										<div class="col-md-4 col-sm-4 col-xs-8 sexo">
-											<label for="masculino" class="radio-inline">Masculino</label>
-											<input id="masculino" name="sexo" type="radio" value="Masculino" />
-											<label for="femenino" class="radio-inline">Femenino</label>
-											<input id="femenino" name="sexo" type="radio" value="Femenino" />
+											<div>
+												<label for="masculino" class="radio-inline">Masculino</label>
+												<input id="masculino" name="sexo" type="radio" value="Masculino" />
+											</div>
+											<div>
+												<label for="femenino" class="radio-inline">Femenino</label>
+												<input id="femenino" name="sexo" type="radio" value="Femenino" />
+											</div>
 										</div>
 									</div>
-									<input class="btn btn-terciario v4" type="submit" value="Actualizar">
+									<input class="btn btn-secundario btn-vr-1" type="submit" value="Actualizar">
 								</form>
 							</div>
 						</div>

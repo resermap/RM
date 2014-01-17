@@ -21,8 +21,63 @@ label {
 	}
 }
 
+select.form-control {
+	padding: 0 0 0 6px;
+}
+
+@-moz-document url-prefix() {
+	select.form-control {
+		padding: 7px 6px 8px 6px;
+	}
+}
+
 option {
 	color: $color-t3;
+}
+
+form {
+	input[type="checkbox"] {
+		&+label.activo {
+			&:before {
+				background-image: url("#{$img-constante}");
+				background-position: -177px -277px;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+	input+label {
+		color: $color-t3;
+		cursor: pointer;
+		font-size: 14px;
+		line-height: 14px;
+		margin: 0;
+		span {
+			color: $color-t6;
+		}
+		&:before {
+			background-color: #FFFFFF;
+			border: 1px solid $color-t4;
+			content: "";
+			display: inline-block;
+			height: 15px;
+			margin-right: 10px;
+			position: relative;
+			top: 2px;
+			width: 15px;
+		}
+		&:hover {
+			&:before {
+				border: 2px solid $color-t3;
+			}
+		}
+		&.activo {
+			font-weight: 700;
+			&:before {
+				background-color: $color-t3;
+				border: none;
+			}
+		}
+	}
 }
 
 ::-webkit-input-placeholder {

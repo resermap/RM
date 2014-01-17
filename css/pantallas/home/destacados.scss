@@ -58,110 +58,77 @@ section.destacados {
 			.estrellas {
 				height: 32px;
 				margin: 0 auto;
-				overflow: hidden;
 				position: relative;
 				width: 168px;
 				&:before,
 				&:after {
-					background-image: url("#{$img-constante}");
-					background-repeat: no-repeat;
-					content: "";
-					height: 100%;
+					content: "\e006 \e006 \e006 \e006 \e006";
+					font-family: "Glyphicons Halflings";
+					font-size: 28px;
+					line-height: 32px;
+					left: 3px;
+					letter-spacing: 6px;
+					position: absolute;
+					top: 0;
 				}
 				&:before {
-					background-position: -2px -269px;
-					float: left;
+					color: #ffff3c;
+					overflow: hidden;
+					z-index: 2;
 				}
 				&:after {
-					float: right;
+					text-shadow: -1px 1px 3px #666666;
+					color: #FFFFFF;
+					z-index: 1;
 				}
 				&.e-0-5 {
 					&:before {
-						width: 18px;
-					}
-					&:after {
-						background-position: -20px -307px;
-						width: 150px;
+						width: 7.5%;
 					}
 				}
 				&.e-1 {
 					&:before {
-						width: 32px;
-					}
-					&:after {
-						background-position: -34px -307px;
-						width: 136px;
+						width: 18%;
 					}
 				}
 				&.e-1-5 {
 					&:before {
-						width: 52px;
-					}
-					&:after {
-						background-position: -54px -307px;
-						width: 116px;
+						width: 28%;
 					}
 				}
 				&.e-2 {
 					&:before {
-						width: 66px;
-					}
-					&:after {
-						background-position: -68px -307px;
-						width: 102px;
+						width: 38%;
 					}
 				}
 				&.e-2-5 {
 					&:before {
-						width: 86px;
-					}
-					&:after {
-						background-position: -88px -307px;
-						width: 82px;
+						width: 48%;
 					}
 				}
 				&.e-3 {
 					&:before {
-						width: 101px;
-					}
-					&:after {
-						background-position: -103px -307px;
-						width: 67px;
+						width: 58%;
 					}
 				}
 				&.e-3-5 {
 					&:before {
-						width: 120px;
-					}
-					&:after {
-						background-position: -122px -307px;
-						width: 48px;
+						width: 68%;
 					}
 				}
 				&.e-4 {
 					&:before {
-						width: 134px;
-					}
-					&:after {
-						background-position: -136px -307px;
-						width: 34px;
+						width: 78%;
 					}
 				}
 				&.e-4-5 {
 					&:before {
-						width: 154px;
-					}
-					&:after {
-						background-position: -156px -307px;
-						width: 14px;
+						width: 88.5%;
 					}
 				}
 				&.e-5 {
 					&:before {
-						width: 168px;
-					}
-					&:after {
-						content: none;
+						width: 100%;
 					}
 				}
 			}

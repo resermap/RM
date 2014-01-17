@@ -1,6 +1,9 @@
 article.restaurante {
 	.solapas {
 		margin-top: 12px;
+		&>.tab-content {
+			border-bottom: 1px solid $color-t4;
+		}
 	}
 	.tab-content {
 		padding: 0 15px 0 15px;
@@ -140,6 +143,7 @@ article.restaurante {
 					}
 					.tab-content {
 						padding-left: 0;
+						padding-right: 0;
 						.tab-pane {
 							overflow-x: auto;
 						}
@@ -449,6 +453,98 @@ article.restaurante {
 						background-position: -195px -136px;
 						height: 15px;
 						width: 15px;
+					}
+				}
+				&.icono-af {
+					&:before {
+						background-position: -1px -240px;
+						height: 15px;
+						top: 6px;
+						width: 16px;
+					}
+				}
+				&.icono-cb {
+					&:before {
+						background-position: 0 -256px;
+						height: 13px;
+						top: 8px;
+						width: 12px;
+					}
+				}
+				&.icono-dy {
+					&:before {
+						background-position: -19px -240px;
+						height: 11px;
+						left: -5px;
+						top: 10px;
+						width: 26px;
+					}
+				}
+				&.icono-de {
+					&:before {
+						background-position: -13px -252px;
+						height: 21px;
+						top: 4px;
+						width: 20px;
+					}
+				}
+				&.icono-djv {
+					&:before {
+						background-position: -46px -241px;
+						height: 18px;
+						top: 7px;
+						width: 19px;
+					}
+				}
+				&.icono-jc {
+					&:before {
+						background-position: -54px -260px;
+						height: 20px;
+						left: -2px;
+						top: 6px;
+						width: 20px;
+					}
+				}
+				&.icono-ks {
+					&:before {
+						background-position: -34px -260px;
+						height: 19px;
+						top: 6px;
+						width: 19px;
+					}
+				}
+				&.icono-msal {
+					&:before {
+						background-position: -99px -241px;
+						height: 22px;
+						left: -2px;
+						top: 5px;
+						width: 22px;
+					}
+				}
+				&.icono-rs {
+					&:before {
+						background-position: -76px -262px;
+						height: 14px;
+						top: 9px;
+						width: 21px;
+					}
+				}
+				&.icono-sw {
+					&:before {
+						background-position: -69px -243px;
+						height: 15px;
+						left: -4px;
+						top: 6px;
+						width: 26px;
+					}
+				}
+				&.icono-tl {
+					&:before {
+						background-position: -98px -264px;
+						height: 20px;
+						top: 6px;
+						width: 20px;
 					}
 				}
 			}

@@ -11,6 +11,9 @@
 }
 
 main.resultados {
+	.aside {
+		margin-top: 15px;
+	}
 	aside {
 		h2 {
 			border-bottom: 3px solid $color-t3;
@@ -19,50 +22,6 @@ main.resultados {
 			font-weight: 700;
 			margin-top: 12px;
 			padding-bottom: 10px;
-		}
-		form {
-			input[type="checkbox"] {
-				&+label.activo {
-					&:before {
-						background-image: url("#{$img-constante}");
-						background-position: -177px -277px;
-						background-repeat: no-repeat;
-					}
-				}
-			}
-			label {
-				color: $color-t3;
-				cursor: pointer;
-				font-size: 14px;
-				line-height: 14px;
-				margin: 0;
-				span {
-					color: $color-t6;
-				}
-				&:before {
-					background-color: #FFFFFF;
-					border: 1px solid $color-t4;
-					content: "";
-					display: inline-block;
-					height: 15px;
-					margin-right: 10px;
-					position: relative;
-					top: 2px;
-					width: 15px;
-				}
-				&:hover {
-					&:before {
-						border: 2px solid $color-t3;
-					}
-				}
-				&.activo {
-					font-weight: 700;
-					&:before {
-						background-color: $color-t3;
-						border: none;
-					}
-				}
-			}
 		}
 	}
 	.buscar {
@@ -145,8 +104,6 @@ main.resultados {
 			cursor: pointer;
 		}
 		.btn {
-			height: 36px;
-			font-weight: 700;
 			margin-top: 7px;
 			width: 100%;
 		}
@@ -187,52 +144,51 @@ main.resultados {
 			&+fieldset {
 				margin-top: 25px;
 			}
-			&.abierto {
-				legend {
-					&:after {
-						content: "\e114";
-					}
-					&:hover {
-						&:after {
-							content: "\e113";
-						}
-					}
-				}
-			}
-			&.cerrado {
-				overflow: -moz-hidden-unscrollable;
-				legend {
-					&:after {
-						content: "\e113";
-					}
-					&:hover {
-						&:after {
-							content: "\e114";
-						}
-					}
-				}
-			}
+			// &.abierto {
+			// 	legend {
+			// 		&:after {
+			// 			content: "\e114";
+			// 		}
+			// 		&:hover {
+			// 			&:after {
+			// 				content: "\e113";
+			// 			}
+			// 		}
+			// 	}
+			// }
+			// &.cerrado {
+			// 	overflow: -moz-hidden-unscrollable;
+			// 	legend {
+			// 		&:after {
+			// 			content: "\e113";
+			// 		}
+			// 		&:hover {
+			// 			&:after {
+			// 				content: "\e114";
+			// 			}
+			// 		}
+			// 	}
+			// }
 		}
 		legend {
 			border: none;
 			color: $color-t1;
-			cursor: pointer;
+			// cursor: pointer;
 			font-size: 15px;
 			line-height: 14px;
 			margin-bottom: 0;
-			&:after {
-				font-family: "Glyphicons Halflings";
-				
-				color: $color-t3;
-				float: right;
-				font-size: 12px;
-			}
-			&:hover {
-				color: $color-v1;
-				&:after {
-					color: $color-v1;
-				}
-			}
+			// &:after {
+			// 	font-family: "Glyphicons Halflings";
+			// 	color: $color-t3;
+			// 	float: right;
+			// 	font-size: 12px;
+			// }
+			// &:hover {
+			// 	color: $color-v1;
+			// 	&:after {
+			// 		color: $color-v1;
+			// 	}
+			// }
 		}
 		input[type="radio"]+label {
 			&:before {
@@ -244,21 +200,6 @@ main.resultados {
 			left: 0;
 			position: absolute;
 			top: -100%;
-		}
-		div.ver-mas {
-			color: $color-t3;
-			cursor: pointer;
-			margin-left: 25px;
-			font-weight: 700;
-			&:after {
-				font-family: "Glyphicons Halflings";
-				content: "\e072";
-				font-size: 8px;
-				margin-left: 4px;
-			}
-			&:hover {
-				color: $color-v1;
-			}
 		}
 	}
 	.vistos {

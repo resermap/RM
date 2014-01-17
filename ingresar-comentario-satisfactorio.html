@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es" xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Título</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="css/estilos.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script> 
+		$(function(){
+			$("body>header").load("inc/header.html");
+			$("body>footer.pie").load("inc/footer-sin-suscripcion.html");
+		});
+	</script>
+</head>
+<body>
+	<header></header>
+	<main>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Ingresar comentario -->
+		<div class="container">
+			<section class="comentario-satisfactorio">
+				<h1>¡Muchas gracias por tu comentario!</h1>
+				<h2>Restaurante <strong>Campobravo Palermo</strong></h2>
+				<blockquote>
+					<footer>
+						<cite>Juan Loopear</cite>
+						<time datetime="2014-12-13">Lunes 13 de diciembre de 2014</time>
+						<div class="imagen"><img src="img/home.jpg" alt="Nombre de usuario" /></div>
+					</footer>
+					<p>Me encanto la comida, el lugar impecable! Muchas gracias Resermap.</p>
+				</blockquote>
+				<p>Reservá tu próximo restaurante</p>
+				<a href="#" class="btn btn-secundario btn-vr-1">Buscar Restaurante</a>
+			</section>
+		</div>
+	</main>
+	<footer class="pie"></footer>
+</body>
+</html>

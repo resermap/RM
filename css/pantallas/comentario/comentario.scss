@@ -1,0 +1,306 @@
+section.ingresar-comentario {
+	h1 {
+		color: $color-v1;
+		font-size: 30px;
+		font-weight: 400;
+	}
+	h2 {
+		border-bottom: 1px solid $color-t5;
+		font-weight: 700;
+		font-size: 20px;
+		padding-bottom: 7px;
+	}
+	form {
+		padding-top: 5px;
+		legend {
+			border: none;
+			font-size: 20px;
+			font-weight: 600;
+			line-height: 20px;
+			margin-bottom: 13px;
+		}
+		.concurrencia {
+			div {
+				display: inline-block;
+				overflow: hidden;
+				position: relative;
+				&+div {
+					margin-left: 7px;
+				}
+			}
+			label {
+				background: $color-t3;
+				border-radius: 2px;
+				color: #FFFFFF;
+				display: inline-block;
+				font-size: 14px;
+				font-weight: 700;
+				line-height: 24px;
+				padding-left: 0px;
+				text-align: center;
+				width: 44px;
+				&.activo,
+				&:hover {
+					background: #669933;
+				}
+			}
+			input {
+				position: absolute;
+				top: -120%;
+			}
+		}
+		.calificaciones {
+			&>div {
+				float: left;
+				overflow: hidden;
+				width: 33%;
+				&>div {
+					display: inline-block;
+					position: relative;
+					top: 4px;
+				}
+				p,
+				small {
+					font-size: 15px;
+					letter-spacing: -0.5px;
+				}
+				p {
+					color: $color-t3;
+					display: inline-block;
+					font-weight: 700;
+					padding-right: 2px;
+				}
+				input[type="radio"] {
+					position: absolute;
+					top: -120%;
+				}
+				label {
+					cursor: pointer;
+					height: 23px;
+					float: right;
+					line-height: 100px;
+					position: relative;
+					white-space: nowrap;
+					width: 29px;
+					&:before {
+						background-color: transparent;
+						border: none;
+						color: $color-t4;
+						content: "\e006";
+						font-family: "Glyphicons Halflings";
+						font-size: 24px;
+						height: auto;
+						line-height: 24px;
+						left: 0;
+						position: absolute;
+						top: 0;
+					}
+					&.c-5-5:hover:before,
+					&.c-5-5:hover+label:before,
+					&.c-5-5:hover+label+label:before,
+					&.c-5-5:hover+label+label+label:before,
+					&.c-5-5:hover+label+label+label+label:before,
+					&.c-4-5:hover:before,
+					&.c-4-5:hover+label:before,
+					&.c-4-5:hover+label+label:before,
+					&.c-4-5:hover+label+label+label:before,
+					&.c-3-5:hover:before,
+					&.c-3-5:hover+label:before,
+					&.c-3-5:hover+label+label:before,
+					&.c-2-5:hover:before,
+					&.c-2-5:hover+label:before,
+					&.c-1-5:hover:before {
+						color: $color-v1;
+					}
+				}
+				&.calificacion-1-5 {
+					.c-1-5 {
+						&:before {
+							color: $color-v1;
+						}
+					}
+				}
+				&.calificacion-2-5 {
+					.c-1-5,
+					.c-2-5 {
+						&:before {
+							color: $color-v1;
+						}
+					}
+				}
+				&.calificacion-3-5 {
+					.c-1-5,
+					.c-2-5,
+					.c-3-5 {
+						&:before {
+							color: $color-v1;
+						}
+					}
+				}
+				&.calificacion-4-5 {
+					.c-1-5,
+					.c-2-5,
+					.c-3-5,
+					.c-4-5 {
+						&:before {
+							color: $color-v1;
+						}
+					}
+				}
+				&.calificacion-5-5 {
+					.c-1-5,
+					.c-2-5,
+					.c-3-5,
+					.c-4-5,
+					.c-5-5 {
+						&:before {
+							color: $color-v1;
+						}
+					}
+				}
+				small {
+					color: $color-v1;
+					text-transform: uppercase;
+				}
+			}
+		}
+		.comentario {
+			legend {
+				margin-bottom: 10px;
+			}
+			&>.form-group {
+				&>div {
+					&:first-child {
+						padding-left: 0;
+						&+div {
+							padding-right: 0;
+						}
+					}
+				}
+			}
+			.opciones {
+				&>label {
+					display: block;
+					font-size: 20px;
+					font-weight: 600;
+					line-height: 20px;
+					padding-bottom: 4px;
+				}
+				div {
+					margin-top: 6px;
+					overflow: hidden;
+					position: relative;
+					input {
+						position: absolute;
+						left: -200%;
+					}
+					label {
+						font-size: 14px;
+						font-weight: 400;
+						letter-spacing: -0.5px;
+						line-height: 14px;
+						padding-right: 10px;
+					}
+				}
+			}
+		}
+		textarea {
+			height: 130px;
+		}
+		p.contador {
+			color: $color-t4;
+			font-size: 12px;
+			margin-top: 4px
+		}
+		.terminacion {
+			div {
+				&:first-child {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+			input {
+				margin-top: 8px;
+				width: 100%;
+			}
+			p,
+			small {
+				color: $color-t3;
+				font-size: 15px;
+				line-height: 16px;
+			}
+			p {
+				letter-spacing: -0.5px;
+				margin-top: 19px;
+			}
+			small {
+				border: 1px solid $color-t4;
+				display: block;
+				padding: 8px 10px 10px 10px;
+				text-align: center;
+			}
+		}
+	}
+}
+
+section.comentario-satisfactorio {
+	h1 {
+		font-size: 30px;
+	}
+	h2 {
+		color: $color-t3;
+		font-size: 16px;
+	}
+	p {
+		color: $color-t3;
+		font-size: 15px;
+	}
+	blockquote {
+		color: $color-t3;
+		font-size: 15px;
+		padding-left: 64px;
+		position: relative;
+		p {
+			font-style: normal;
+			margin: 10px 0 0 0;
+		}
+		.imagen {
+			border: 1px solid #FFFFFF;
+			border-radius: 100%;
+			box-shadow: 0 0 4px $color-t5;
+			height: 52px;
+			left: 0;
+			margin-top: -26px;
+			overflow: hidden;
+			position: absolute;
+			top: 50%;
+			width: 52px;
+		}
+	}
+	cite {
+		font-weight: 700;
+	}
+	time {
+		&:before {
+			content: "- ";
+		}
+	}
+	.btn {
+		margin-top: 4px;
+	}
+}
+
+@media (min-width: 992px) {
+	section.ingresar-comentario {
+		form {
+			.comentario {
+				.opciones {
+					div {
+						float: left;
+						width: 50%;
+					}
+				}
+			}
+		}
+	}
+}

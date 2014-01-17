@@ -249,3 +249,19 @@ section.contacto {
 		color: #2b6003;
 	}
 }
+
+div.ver-mas {
+	color: $color-t3;
+	cursor: pointer;
+	margin-left: 25px;
+	font-weight: 700;
+	&:after {
+		font-family: "Glyphicons Halflings";
+		content: "\e072";
+		font-size: 8px;
+		margin-left: 4px;
+	}
+	&:hover {
+		color: $color-v1;
+	}
+}

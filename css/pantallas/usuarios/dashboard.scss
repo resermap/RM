@@ -152,11 +152,14 @@ section.dashboard {
 			}
 		}
 		.sexo {
-			label {
-				padding-left: 15px;
+			div {
+				float: left;
 				&:first-child {
-					padding-left: 0;
+					margin-right: 15px;
 				}
+			}
+			label {
+				padding-left: 0;
 			}
 			input[type="radio"] {
 				margin: 0;
@@ -183,9 +186,6 @@ section.dashboard {
 		}
 		input[type="submit"] {
 			height: 30px;
-			font-weight: 700;
-			padding-left: 44px;
-			padding-right: 44px;
 		}
 	}
 }
@@ -210,10 +210,6 @@ section.dashboard {
 			label,
 			.form-control {
 				display: inline-block;
-			}
-			input[type="submit"] {
-				padding-left: 10px;
-				padding-right: 10px;
 			}
 		}
 	}

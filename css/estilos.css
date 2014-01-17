@@ -208,6 +208,19 @@ section.contacto .sociales a {
     border-color: #bdd57f;
     color: #2b6003; }
 
+div.ver-mas {
+  color: #666666;
+  cursor: pointer;
+  margin-left: 25px;
+  font-weight: 700; }
+  div.ver-mas:after {
+    font-family: "Glyphicons Halflings";
+    content: "\e072";
+    font-size: 8px;
+    margin-left: 4px; }
+  div.ver-mas:hover {
+    color: #0098db; }
+
 blockquote {
   border-left: none; }
   blockquote p {
@@ -232,10 +245,9 @@ blockquote {
 .btn-secundario {
   background: #0098db;
   color: white; }
-
-.btn-terciario {
-  background: #0098db;
-  color: white; }
+  .btn-secundario:focus, .btn-secundario:hover {
+    background: #0099ff;
+    color: white; }
 
 .btn-xs,
 .btn-sm,
@@ -272,6 +284,25 @@ blockquote {
   font-size: 14px;
   font-weight: 700;
   padding: 8px 45px 12px 45px; }
+
+.btn-vr-1 {
+  font-size: 14px;
+  font-weight: 700;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 10px;
+  width: 180px; }
+
+.btn-vr-2,
+.btn-vr-3 {
+  font-size: 18px;
+  font-weight: 700;
+  height: 39px;
+  line-height: 39px;
+  padding: 0 10px; }
+
+.btn-vr-2 {
+  width: 225px; }
 
 .container-breadcrumb {
   background: #cccccc;
@@ -319,8 +350,45 @@ label {
     box-shadow: none;
     border-color: #999999; }
 
+select.form-control {
+  padding: 0 0 0 6px; }
+
+@-moz-document url-prefix() {
+  select.form-control {
+    padding: 7px 6px 8px 6px; } }
+
 option {
   color: #666666; }
+
+form input[type="checkbox"] + label.activo:before {
+  background-image: url("../img/constante.png");
+  background-position: -177px -277px;
+  background-repeat: no-repeat; }
+form input + label {
+  color: #666666;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 0; }
+  form input + label span {
+    color: #ff6600; }
+  form input + label:before {
+    background-color: #FFFFFF;
+    border: 1px solid #999999;
+    content: "";
+    display: inline-block;
+    height: 15px;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+    width: 15px; }
+  form input + label:hover:before {
+    border: 2px solid #666666; }
+  form input + label.activo {
+    font-weight: 700; }
+    form input + label.activo:before {
+      background-color: #666666;
+      border: none; }
 
 ::-webkit-input-placeholder {
   color: #666666; }
@@ -778,7 +846,6 @@ body > footer.pie {
     padding-left: 45px;
     padding-right: 45px; } }
 header.pre-home {
-  background: #eaeaea;
   padding-top: 40px; }
   header.pre-home h1 {
     background: url("../img/home.png") 0 -115px no-repeat;
@@ -793,23 +860,6 @@ header.pre-home {
       font-weight: 700; }
 
 main.pre-home {
-  background: #eaeaea;
-  /* Old browsers */
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VhZWFlYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjYwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-  background: -moz-linear-gradient(top, #eaeaea 0%, white 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eaeaea), color-stop(100%, white));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #eaeaea 0%, white 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #eaeaea 0%, white 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #eaeaea 0%, white 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, #eaeaea 0%, white 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eaeaea', endColorstr='#ffffff',GradientType=0 );
-  /* IE6-8 */
   padding-top: 40px; }
   main.pre-home nav div {
     background-color: #c9d3dd; }
@@ -1103,6 +1153,9 @@ section.busqueda {
     color: #FFFFFF;
     font-size: 36px;
     margin: 46px 0 2px 0; }
+  section.busqueda form[data-ie="1"] .cantidad:after,
+  section.busqueda form[data-ie="1"] .turno:after {
+    content: none; }
   section.busqueda form .form-group {
     float: left;
     position: relative; }
@@ -1118,11 +1171,22 @@ section.busqueda {
     section.busqueda form .form-control:focus {
       color: #333333; }
   section.busqueda form .nombre:after,
-  section.busqueda form .fecha:after {
+  section.busqueda form .fecha:after,
+  section.busqueda form .cantidad:after,
+  section.busqueda form .turno:after {
     color: #999999;
     font-family: "Glyphicons Halflings";
     position: absolute;
     z-index: 11; }
+  section.busqueda form .cantidad:after,
+  section.busqueda form .turno:after {
+    background: #FFFFFF;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    pointer-events: none;
+    height: 100%;
+    right: 0;
+    top: 0; }
   section.busqueda form .nombre input {
     padding-right: 25px; }
   section.busqueda form .nombre:after {
@@ -1137,8 +1201,17 @@ section.busqueda {
       top: 7px; }
   section.busqueda form .cantidad {
     width: 58px; }
+    section.busqueda form .cantidad:after {
+      content: "\e008";
+      line-height: 34px;
+      padding: 0 6px; }
   section.busqueda form .turno {
     width: 102px; }
+    section.busqueda form .turno:after {
+      content: "\e023";
+      font-size: 16px;
+      line-height: 38px;
+      padding: 0 6px; }
   section.busqueda form .btn {
     height: 36px;
     font-size: 14px;
@@ -1500,68 +1573,45 @@ section.destacados .restaurantes {
     section.destacados .restaurantes li .estrellas {
       height: 32px;
       margin: 0 auto;
-      overflow: hidden;
       position: relative;
       width: 168px; }
       section.destacados .restaurantes li .estrellas:before, section.destacados .restaurantes li .estrellas:after {
-        background-image: url("../img/constante.png");
-        background-repeat: no-repeat;
-        content: "";
-        height: 100%; }
+        content: "\e006 \e006 \e006 \e006 \e006";
+        font-family: "Glyphicons Halflings";
+        font-size: 28px;
+        line-height: 32px;
+        left: 3px;
+        letter-spacing: 6px;
+        position: absolute;
+        top: 0; }
       section.destacados .restaurantes li .estrellas:before {
-        background-position: -2px -269px;
-        float: left; }
+        color: #ffff3c;
+        overflow: hidden;
+        z-index: 2; }
       section.destacados .restaurantes li .estrellas:after {
-        float: right; }
+        text-shadow: -1px 1px 3px #666666;
+        color: #FFFFFF;
+        z-index: 1; }
       section.destacados .restaurantes li .estrellas.e-0-5:before {
-        width: 18px; }
-      section.destacados .restaurantes li .estrellas.e-0-5:after {
-        background-position: -20px -307px;
-        width: 150px; }
+        width: 7.5%; }
       section.destacados .restaurantes li .estrellas.e-1:before {
-        width: 32px; }
-      section.destacados .restaurantes li .estrellas.e-1:after {
-        background-position: -34px -307px;
-        width: 136px; }
+        width: 18%; }
       section.destacados .restaurantes li .estrellas.e-1-5:before {
-        width: 52px; }
-      section.destacados .restaurantes li .estrellas.e-1-5:after {
-        background-position: -54px -307px;
-        width: 116px; }
+        width: 28%; }
       section.destacados .restaurantes li .estrellas.e-2:before {
-        width: 66px; }
-      section.destacados .restaurantes li .estrellas.e-2:after {
-        background-position: -68px -307px;
-        width: 102px; }
+        width: 38%; }
       section.destacados .restaurantes li .estrellas.e-2-5:before {
-        width: 86px; }
-      section.destacados .restaurantes li .estrellas.e-2-5:after {
-        background-position: -88px -307px;
-        width: 82px; }
+        width: 48%; }
       section.destacados .restaurantes li .estrellas.e-3:before {
-        width: 101px; }
-      section.destacados .restaurantes li .estrellas.e-3:after {
-        background-position: -103px -307px;
-        width: 67px; }
+        width: 58%; }
       section.destacados .restaurantes li .estrellas.e-3-5:before {
-        width: 120px; }
-      section.destacados .restaurantes li .estrellas.e-3-5:after {
-        background-position: -122px -307px;
-        width: 48px; }
+        width: 68%; }
       section.destacados .restaurantes li .estrellas.e-4:before {
-        width: 134px; }
-      section.destacados .restaurantes li .estrellas.e-4:after {
-        background-position: -136px -307px;
-        width: 34px; }
+        width: 78%; }
       section.destacados .restaurantes li .estrellas.e-4-5:before {
-        width: 154px; }
-      section.destacados .restaurantes li .estrellas.e-4-5:after {
-        background-position: -156px -307px;
-        width: 14px; }
+        width: 88.5%; }
       section.destacados .restaurantes li .estrellas.e-5:before {
-        width: 168px; }
-      section.destacados .restaurantes li .estrellas.e-5:after {
-        content: none; }
+        width: 100%; }
     section.destacados .restaurantes li dl {
       bottom: 0;
       position: absolute;
@@ -1871,7 +1921,7 @@ section.donde-que aside {
     width: 38px;
     z-index: 1; }
     section.donde-que aside a:hover {
-      background: #0098db;
+      background: #ff9933;
       text-decoration: none; }
   section.donde-que aside .imagen {
     height: 164px;
@@ -2128,6 +2178,8 @@ article.restaurante .redes-sociales ul {
     margin-top: 18px; } }
 article.restaurante .solapas {
   margin-top: 12px; }
+  article.restaurante .solapas > .tab-content {
+    border-bottom: 1px solid #999999; }
 article.restaurante .tab-content {
   padding: 0 15px 0 15px; }
   article.restaurante .tab-content > div > div > div {
@@ -2234,7 +2286,8 @@ article.restaurante .tab-content {
               background: transparent;
               border-bottom: 1px solid #FFFFFF; }
         article.restaurante .tab-content div.panel.panel-default .panel-collapse .panel-body .tab-content {
-          padding-left: 0; }
+          padding-left: 0;
+          padding-right: 0; }
           article.restaurante .tab-content div.panel.panel-default .panel-collapse .panel-body .tab-content .tab-pane {
             overflow-x: auto; }
           article.restaurante .tab-content div.panel.panel-default .panel-collapse .panel-body .tab-content table {
@@ -2442,13 +2495,73 @@ article.restaurante .sobre-restaurante ul {
       background-position: -195px -136px;
       height: 15px;
       width: 15px; }
+    article.restaurante .sobre-restaurante ul li.icono-af:before {
+      background-position: -1px -240px;
+      height: 15px;
+      top: 6px;
+      width: 16px; }
+    article.restaurante .sobre-restaurante ul li.icono-cb:before {
+      background-position: 0 -256px;
+      height: 13px;
+      top: 8px;
+      width: 12px; }
+    article.restaurante .sobre-restaurante ul li.icono-dy:before {
+      background-position: -19px -240px;
+      height: 11px;
+      left: -5px;
+      top: 10px;
+      width: 26px; }
+    article.restaurante .sobre-restaurante ul li.icono-de:before {
+      background-position: -13px -252px;
+      height: 21px;
+      top: 4px;
+      width: 20px; }
+    article.restaurante .sobre-restaurante ul li.icono-djv:before {
+      background-position: -46px -241px;
+      height: 18px;
+      top: 7px;
+      width: 19px; }
+    article.restaurante .sobre-restaurante ul li.icono-jc:before {
+      background-position: -54px -260px;
+      height: 20px;
+      left: -2px;
+      top: 6px;
+      width: 20px; }
+    article.restaurante .sobre-restaurante ul li.icono-ks:before {
+      background-position: -34px -260px;
+      height: 19px;
+      top: 6px;
+      width: 19px; }
+    article.restaurante .sobre-restaurante ul li.icono-msal:before {
+      background-position: -99px -241px;
+      height: 22px;
+      left: -2px;
+      top: 5px;
+      width: 22px; }
+    article.restaurante .sobre-restaurante ul li.icono-rs:before {
+      background-position: -76px -262px;
+      height: 14px;
+      top: 9px;
+      width: 21px; }
+    article.restaurante .sobre-restaurante ul li.icono-sw:before {
+      background-position: -69px -243px;
+      height: 15px;
+      left: -4px;
+      top: 6px;
+      width: 26px; }
+    article.restaurante .sobre-restaurante ul li.icono-tl:before {
+      background-position: -98px -264px;
+      height: 20px;
+      top: 6px;
+      width: 20px; }
 
 article.restaurante div.mapa {
+  padding-bottom: 15px;
   text-align: center; }
   article.restaurante div.mapa address {
-    border-top: 1px solid #cccccc;
     color: #333333;
     font-size: 20px;
+    line-height: 28px;
     margin: 0;
     padding: 15px 0; }
     article.restaurante div.mapa address:before {
@@ -2461,6 +2574,11 @@ article.restaurante div.mapa {
     border: 1px solid #999999;
     height: 288px; }
 
+@media (min-width: 992px) {
+  article.restaurante div.mapa {
+    position: relative;
+    left: -15px;
+    width: 960px; } }
 article.restaurante div.calificaciones {
   border-bottom: 1px solid #cccccc;
   border-top: 1px solid #cccccc; }
@@ -2648,7 +2766,7 @@ article.restaurante section.opiniones {
       margin-bottom: 0;
       margin-right: 4px; }
     article.restaurante section.opiniones header form select {
-      background: #cccccc url("../img/constante.png") -112px -242px no-repeat;
+      background: #cccccc;
       border: none;
       border-radius: 4px;
       font-size: 11px;
@@ -2961,7 +3079,9 @@ section.reserva-paso-2 aside {
     section.reserva-paso-2 form.form-inline .form-group .row.select > div.numero {
       padding-top: 10px; }
     section.reserva-paso-2 form.form-inline .form-group .checkbox {
-      padding-left: 0; } }
+      padding-left: 0; }
+  section.reserva-paso-2 form.form-inline input[type="submit"] {
+    width: 100%; } }
 @media (min-width: 768px) {
   section.reserva-paso-2 form.form-inline .form-group {
     width: 49%; }
@@ -2971,12 +3091,16 @@ section.reserva-paso-2 aside {
         padding-left: 15px;
         padding-right: 8px; }
       section.reserva-paso-2 form.form-inline .form-group .row.select > div.numero {
-        width: 44.5%; } }
+        width: 44.5%; }
+  section.reserva-paso-2 form.form-inline input[type="submit"] {
+    width: 228px; } }
 @media (min-width: 992px) {
   section.reserva-paso-2 form.form-inline .form-group {
     width: 49%; }
     section.reserva-paso-2 form.form-inline .form-group .row.select > div.numero {
       width: 53.5%; }
+  section.reserva-paso-2 form.form-inline input[type="submit"] {
+    width: 266px; }
   section.reserva-paso-2 aside.registrado p {
     margin: 0 auto;
     width: 200px; } }
@@ -3138,150 +3262,201 @@ section.reserva-paso-3 .detalles-finales {
     position: absolute;
     right: 15px;
     top: 40%; } }
-section.ingresar-comentario h1,
-section.ingresar-comentario h2,
-section.ingresar-comentario h3 {
-  font-weight: 600; }
-section.ingresar-comentario header h1 {
+section.ingresar-comentario h1 {
   color: #0098db;
-  font-size: 20px; }
+  font-size: 30px;
+  font-weight: 400; }
 section.ingresar-comentario h2 {
-  border-bottom: 1px solid #c2c6ca;
-  font-size: 17px;
-  margin-bottom: 8px;
-  margin-top: 0;
-  padding-bottom: 5px; }
-section.ingresar-comentario .imagen {
-  border: 1px solid #999999;
-  overflow: hidden;
-  height: 115px; }
-section.ingresar-comentario h3 {
-  font-size: 16px;
-  margin: 0; }
-section.ingresar-comentario ul li {
+  border-bottom: 1px solid #cccccc;
+  font-weight: 700;
+  font-size: 20px;
+  padding-bottom: 7px; }
+section.ingresar-comentario form {
+  padding-top: 5px; }
+  section.ingresar-comentario form legend {
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 13px; }
+  section.ingresar-comentario form .concurrencia div {
+    display: inline-block;
+    overflow: hidden;
+    position: relative; }
+    section.ingresar-comentario form .concurrencia div + div {
+      margin-left: 7px; }
+  section.ingresar-comentario form .concurrencia label {
+    background: #666666;
+    border-radius: 2px;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    padding-left: 0px;
+    text-align: center;
+    width: 44px; }
+    section.ingresar-comentario form .concurrencia label.activo, section.ingresar-comentario form .concurrencia label:hover {
+      background: #669933; }
+  section.ingresar-comentario form .concurrencia input {
+    position: absolute;
+    top: -120%; }
+  section.ingresar-comentario form .calificaciones > div {
+    float: left;
+    overflow: hidden;
+    width: 33%; }
+    section.ingresar-comentario form .calificaciones > div > div {
+      display: inline-block;
+      position: relative;
+      top: 4px; }
+    section.ingresar-comentario form .calificaciones > div p,
+    section.ingresar-comentario form .calificaciones > div small {
+      font-size: 15px;
+      letter-spacing: -0.5px; }
+    section.ingresar-comentario form .calificaciones > div p {
+      color: #666666;
+      display: inline-block;
+      font-weight: 700;
+      padding-right: 2px; }
+    section.ingresar-comentario form .calificaciones > div input[type="radio"] {
+      position: absolute;
+      top: -120%; }
+    section.ingresar-comentario form .calificaciones > div label {
+      cursor: pointer;
+      height: 23px;
+      float: right;
+      line-height: 100px;
+      position: relative;
+      white-space: nowrap;
+      width: 29px; }
+      section.ingresar-comentario form .calificaciones > div label:before {
+        background-color: transparent;
+        border: none;
+        color: #999999;
+        content: "\e006";
+        font-family: "Glyphicons Halflings";
+        font-size: 24px;
+        height: auto;
+        line-height: 24px;
+        left: 0;
+        position: absolute;
+        top: 0; }
+      section.ingresar-comentario form .calificaciones > div label.c-5-5:hover:before, section.ingresar-comentario form .calificaciones > div label.c-5-5:hover + label:before, section.ingresar-comentario form .calificaciones > div label.c-5-5:hover + label + label:before, section.ingresar-comentario form .calificaciones > div label.c-5-5:hover + label + label + label:before, section.ingresar-comentario form .calificaciones > div label.c-5-5:hover + label + label + label + label:before, section.ingresar-comentario form .calificaciones > div label.c-4-5:hover:before, section.ingresar-comentario form .calificaciones > div label.c-4-5:hover + label:before, section.ingresar-comentario form .calificaciones > div label.c-4-5:hover + label + label:before, section.ingresar-comentario form .calificaciones > div label.c-4-5:hover + label + label + label:before, section.ingresar-comentario form .calificaciones > div label.c-3-5:hover:before, section.ingresar-comentario form .calificaciones > div label.c-3-5:hover + label:before, section.ingresar-comentario form .calificaciones > div label.c-3-5:hover + label + label:before, section.ingresar-comentario form .calificaciones > div label.c-2-5:hover:before, section.ingresar-comentario form .calificaciones > div label.c-2-5:hover + label:before, section.ingresar-comentario form .calificaciones > div label.c-1-5:hover:before {
+        color: #0098db; }
+    section.ingresar-comentario form .calificaciones > div.calificacion-1-5 .c-1-5:before {
+      color: #0098db; }
+    section.ingresar-comentario form .calificaciones > div.calificacion-2-5 .c-1-5:before,
+    section.ingresar-comentario form .calificaciones > div.calificacion-2-5 .c-2-5:before {
+      color: #0098db; }
+    section.ingresar-comentario form .calificaciones > div.calificacion-3-5 .c-1-5:before,
+    section.ingresar-comentario form .calificaciones > div.calificacion-3-5 .c-2-5:before,
+    section.ingresar-comentario form .calificaciones > div.calificacion-3-5 .c-3-5:before {
+      color: #0098db; }
+    section.ingresar-comentario form .calificaciones > div.calificacion-4-5 .c-1-5:before,
+    section.ingresar-comentario form .calificaciones > div.calificacion-4-5 .c-2-5:before,
+    section.ingresar-comentario form .calificaciones > div.calificacion-4-5 .c-3-5:before,
+    section.ingresar-comentario form .calificaciones > div.calificacion-4-5 .c-4-5:before {
+      color: #0098db; }
+    section.ingresar-comentario form .calificaciones > div.calificacion-5-5 .c-1-5:before,
+    section.ingresar-comentario form .calificaciones > div.calificacion-5-5 .c-2-5:before,
+    section.ingresar-comentario form .calificaciones > div.calificacion-5-5 .c-3-5:before,
+    section.ingresar-comentario form .calificaciones > div.calificacion-5-5 .c-4-5:before,
+    section.ingresar-comentario form .calificaciones > div.calificacion-5-5 .c-5-5:before {
+      color: #0098db; }
+    section.ingresar-comentario form .calificaciones > div small {
+      color: #0098db;
+      text-transform: uppercase; }
+  section.ingresar-comentario form .comentario legend {
+    margin-bottom: 10px; }
+  section.ingresar-comentario form .comentario > .form-group > div:first-child {
+    padding-left: 0; }
+    section.ingresar-comentario form .comentario > .form-group > div:first-child + div {
+      padding-right: 0; }
+  section.ingresar-comentario form .comentario .opciones > label {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+    padding-bottom: 4px; }
+  section.ingresar-comentario form .comentario .opciones div {
+    margin-top: 6px;
+    overflow: hidden;
+    position: relative; }
+    section.ingresar-comentario form .comentario .opciones div input {
+      position: absolute;
+      left: -200%; }
+    section.ingresar-comentario form .comentario .opciones div label {
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      line-height: 14px;
+      padding-right: 10px; }
+  section.ingresar-comentario form textarea {
+    height: 130px; }
+  section.ingresar-comentario form p.contador {
+    color: #999999;
+    font-size: 12px;
+    margin-top: 4px; }
+  section.ingresar-comentario form .terminacion div:first-child {
+    padding-left: 0;
+    padding-right: 0; }
+  section.ingresar-comentario form .terminacion input {
+    margin-top: 8px;
+    width: 100%; }
+  section.ingresar-comentario form .terminacion p,
+  section.ingresar-comentario form .terminacion small {
+    color: #666666;
+    font-size: 15px;
+    line-height: 16px; }
+  section.ingresar-comentario form .terminacion p {
+    letter-spacing: -0.5px;
+    margin-top: 19px; }
+  section.ingresar-comentario form .terminacion small {
+    border: 1px solid #999999;
+    display: block;
+    padding: 8px 10px 10px 10px;
+    text-align: center; }
+
+section.comentario-satisfactorio h1 {
+  font-size: 30px; }
+section.comentario-satisfactorio h2 {
+  color: #666666;
+  font-size: 16px; }
+section.comentario-satisfactorio p {
+  color: #666666;
+  font-size: 15px; }
+section.comentario-satisfactorio blockquote {
   color: #666666;
   font-size: 15px;
-  padding-bottom: 2px; }
-  section.ingresar-comentario ul li:before,
-  section.ingresar-comentario ul li address:before {
-    color: #999999;
-    font-family: "Glyphicons Halflings";
-    padding-right: 6px;
-    position: relative;
-    top: 2px; }
-  section.ingresar-comentario ul li.ubicacion address {
-    margin: 0; }
-  section.ingresar-comentario ul li.personas:before {
-    content: "\e008"; }
-  section.ingresar-comentario ul li.fecha:before {
-    content: "\e109"; }
-  section.ingresar-comentario ul li.hora:before {
-    content: "\e023"; }
-section.ingresar-comentario form {
-  border-top: 1px solid #c2c6ca;
-  margin-top: 6px;
-  padding-top: 15px; }
-  section.ingresar-comentario form fieldset {
-    margin-bottom: 20px; }
-    section.ingresar-comentario form fieldset legend {
-      border: none;
-      font-size: 20px;
-      font-weight: 600;
-      line-height: 20px;
-      margin-bottom: 5px; }
-    section.ingresar-comentario form fieldset label {
-      color: #333333;
-      font-size: 15px; }
-    section.ingresar-comentario form fieldset.concurrencia label {
-      font-weight: 600;
-      padding: 0; }
-    section.ingresar-comentario form fieldset.concurrencia input {
-      float: none;
-      margin: 0; }
-    section.ingresar-comentario form fieldset.calificaciones > div {
-      overflow: hidden; }
-      section.ingresar-comentario form fieldset.calificaciones > div p,
-      section.ingresar-comentario form fieldset.calificaciones > div small {
-        color: #666666;
-        font-size: 15px; }
-      section.ingresar-comentario form fieldset.calificaciones > div p {
-        display: inline-block;
-        width: 80px; }
-      section.ingresar-comentario form fieldset.calificaciones > div > div {
-        display: inline-block;
-        position: relative;
-        top: 2px; }
-      section.ingresar-comentario form fieldset.calificaciones > div input[type="radio"] {
-        position: absolute;
-        top: -100%; }
-      section.ingresar-comentario form fieldset.calificaciones > div label {
-        background: url("../img/constante.png") -184px -26px no-repeat;
-        cursor: pointer;
-        height: 23px;
-        float: right;
-        line-height: 80px;
-        overflow: hidden;
-        white-space: nowrap;
-        width: 31px; }
-        section.ingresar-comentario form fieldset.calificaciones > div label.c-5-5:hover, section.ingresar-comentario form fieldset.calificaciones > div label.c-5-5:hover + label, section.ingresar-comentario form fieldset.calificaciones > div label.c-5-5:hover + label + label, section.ingresar-comentario form fieldset.calificaciones > div label.c-5-5:hover + label + label + label, section.ingresar-comentario form fieldset.calificaciones > div label.c-5-5:hover + label + label + label + label, section.ingresar-comentario form fieldset.calificaciones > div label.c-4-5:hover, section.ingresar-comentario form fieldset.calificaciones > div label.c-4-5:hover + label, section.ingresar-comentario form fieldset.calificaciones > div label.c-4-5:hover + label + label, section.ingresar-comentario form fieldset.calificaciones > div label.c-4-5:hover + label + label + label, section.ingresar-comentario form fieldset.calificaciones > div label.c-3-5:hover, section.ingresar-comentario form fieldset.calificaciones > div label.c-3-5:hover + label, section.ingresar-comentario form fieldset.calificaciones > div label.c-3-5:hover + label + label, section.ingresar-comentario form fieldset.calificaciones > div label.c-2-5:hover, section.ingresar-comentario form fieldset.calificaciones > div label.c-2-5:hover + label, section.ingresar-comentario form fieldset.calificaciones > div label.c-1-5:hover {
-          background-position: -219px -26px; }
-      section.ingresar-comentario form fieldset.calificaciones > div.calificacion-1-5 .c-1-5 {
-        background-position: -219px -26px; }
-      section.ingresar-comentario form fieldset.calificaciones > div.calificacion-2-5 .c-1-5,
-      section.ingresar-comentario form fieldset.calificaciones > div.calificacion-2-5 .c-2-5 {
-        background-position: -219px -26px; }
-      section.ingresar-comentario form fieldset.calificaciones > div.calificacion-3-5 .c-1-5,
-      section.ingresar-comentario form fieldset.calificaciones > div.calificacion-3-5 .c-2-5,
-      section.ingresar-comentario form fieldset.calificaciones > div.calificacion-3-5 .c-3-5 {
-        background-position: -219px -26px; }
-      section.ingresar-comentario form fieldset.calificaciones > div.calificacion-4-5 .c-1-5,
-      section.ingresar-comentario form fieldset.calificaciones > div.calificacion-4-5 .c-2-5,
-      section.ingresar-comentario form fieldset.calificaciones > div.calificacion-4-5 .c-3-5,
-      section.ingresar-comentario form fieldset.calificaciones > div.calificacion-4-5 .c-4-5 {
-        background-position: -219px -26px; }
-      section.ingresar-comentario form fieldset.calificaciones > div.calificacion-5-5 .c-1-5,
-      section.ingresar-comentario form fieldset.calificaciones > div.calificacion-5-5 .c-2-5,
-      section.ingresar-comentario form fieldset.calificaciones > div.calificacion-5-5 .c-3-5,
-      section.ingresar-comentario form fieldset.calificaciones > div.calificacion-5-5 .c-4-5,
-      section.ingresar-comentario form fieldset.calificaciones > div.calificacion-5-5 .c-5-5 {
-        background-position: -219px -26px; }
-        section.ingresar-comentario form fieldset.calificaciones > div.calificacion-5-5 .c-1-5:hover,
-        section.ingresar-comentario form fieldset.calificaciones > div.calificacion-5-5 .c-2-5:hover,
-        section.ingresar-comentario form fieldset.calificaciones > div.calificacion-5-5 .c-3-5:hover,
-        section.ingresar-comentario form fieldset.calificaciones > div.calificacion-5-5 .c-4-5:hover,
-        section.ingresar-comentario form fieldset.calificaciones > div.calificacion-5-5 .c-5-5:hover {
-          background-position: -184px -26px; }
-      section.ingresar-comentario form fieldset.calificaciones > div small {
-        font-weight: 700;
-        text-transform: uppercase; }
-  section.ingresar-comentario form .form-group {
-    margin: 0; }
-    section.ingresar-comentario form .form-group label {
-      color: #333333;
-      font-size: 20px;
-      font-weight: 600;
-      line-height: 20px;
-      margin-bottom: 10px; }
-  section.ingresar-comentario form > small {
-    color: #666666;
-    display: block;
-    font-size: 13px;
-    margin-top: 10px; }
-    section.ingresar-comentario form > small span {
-      font-weight: 700; }
-    section.ingresar-comentario form > small a {
-      text-decoration: underline; }
-  section.ingresar-comentario form input[type="submit"] {
-    margin-top: 15px; }
+  padding-left: 64px;
+  position: relative; }
+  section.comentario-satisfactorio blockquote p {
+    font-style: normal;
+    margin: 10px 0 0 0; }
+  section.comentario-satisfactorio blockquote .imagen {
+    border: 1px solid #FFFFFF;
+    border-radius: 100%;
+    box-shadow: 0 0 4px #cccccc;
+    height: 52px;
+    left: 0;
+    margin-top: -26px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    width: 52px; }
+section.comentario-satisfactorio cite {
+  font-weight: 700; }
+section.comentario-satisfactorio time:before {
+  content: "- "; }
+section.comentario-satisfactorio .btn {
+  margin-top: 4px; }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  section.ingresar-comentario form .form-group textarea {
-    width: 80%; } }
 @media (min-width: 992px) {
-  section.ingresar-comentario form .form-group textarea {
-    width: 55%; } }
+  section.ingresar-comentario form .comentario .opciones div {
+    float: left;
+    width: 50%; } }
 main.resultados .destacado {
-  margin: 15px 0;
+  margin-top: 15px;
   height: 234px; }
   main.resultados .destacado aside {
     height: 100%; }
@@ -3333,7 +3508,7 @@ main.resultados .destacado {
       position: absolute; }
     main.resultados .destacado article a.btn {
       bottom: 15px;
-      margin-left: -106px;
+      margin-left: -90px;
       left: 50%;
       z-index: 11; }
     main.resultados .destacado article img {
@@ -3353,6 +3528,8 @@ main.resultados .destacado {
   main.resultados aside .buscar select {
     padding: 4px 4px 4px 6px; } }
 
+main.resultados .aside {
+  margin-top: 15px; }
 main.resultados aside h2 {
   border-bottom: 3px solid #666666;
   color: #666666;
@@ -3360,35 +3537,6 @@ main.resultados aside h2 {
   font-weight: 700;
   margin-top: 12px;
   padding-bottom: 10px; }
-main.resultados aside form input[type="checkbox"] + label.activo:before {
-  background-image: url("../img/constante.png");
-  background-position: -177px -277px;
-  background-repeat: no-repeat; }
-main.resultados aside form label {
-  color: #666666;
-  cursor: pointer;
-  font-size: 14px;
-  line-height: 14px;
-  margin: 0; }
-  main.resultados aside form label span {
-    color: #ff6600; }
-  main.resultados aside form label:before {
-    background-color: #FFFFFF;
-    border: 1px solid #999999;
-    content: "";
-    display: inline-block;
-    height: 15px;
-    margin-right: 10px;
-    position: relative;
-    top: 2px;
-    width: 15px; }
-  main.resultados aside form label:hover:before {
-    border: 2px solid #666666; }
-  main.resultados aside form label.activo {
-    font-weight: 700; }
-    main.resultados aside form label.activo:before {
-      background-color: #666666;
-      border: none; }
 main.resultados .buscar {
   background: #ececec;
   border: 1px solid #999999;
@@ -3444,8 +3592,6 @@ main.resultados .buscar {
   main.resultados .buscar label {
     cursor: pointer; }
   main.resultados .buscar .btn {
-    height: 36px;
-    font-weight: 700;
     margin-top: 7px;
     width: 100%; }
   main.resultados .buscar ::-webkit-input-placeholder {
@@ -3472,32 +3618,12 @@ main.resultados .filtros fieldset > div {
   position: relative; }
 main.resultados .filtros fieldset + fieldset {
   margin-top: 25px; }
-main.resultados .filtros fieldset.abierto legend:after {
-  content: "\e114"; }
-main.resultados .filtros fieldset.abierto legend:hover:after {
-  content: "\e113"; }
-main.resultados .filtros fieldset.cerrado {
-  overflow: -moz-hidden-unscrollable; }
-  main.resultados .filtros fieldset.cerrado legend:after {
-    content: "\e113"; }
-  main.resultados .filtros fieldset.cerrado legend:hover:after {
-    content: "\e114"; }
 main.resultados .filtros legend {
   border: none;
   color: black;
-  cursor: pointer;
   font-size: 15px;
   line-height: 14px;
   margin-bottom: 0; }
-  main.resultados .filtros legend:after {
-    font-family: "Glyphicons Halflings";
-    color: #666666;
-    float: right;
-    font-size: 12px; }
-  main.resultados .filtros legend:hover {
-    color: #0098db; }
-    main.resultados .filtros legend:hover:after {
-      color: #0098db; }
 main.resultados .filtros input[type="radio"] + label:before {
   border-radius: 100%; }
 main.resultados .filtros input[type="checkbox"],
@@ -3505,18 +3631,6 @@ main.resultados .filtros input[type="radio"] {
   left: 0;
   position: absolute;
   top: -100%; }
-main.resultados .filtros div.ver-mas {
-  color: #666666;
-  cursor: pointer;
-  margin-left: 25px;
-  font-weight: 700; }
-  main.resultados .filtros div.ver-mas:after {
-    font-family: "Glyphicons Halflings";
-    content: "\e072";
-    font-size: 8px;
-    margin-left: 4px; }
-  main.resultados .filtros div.ver-mas:hover {
-    color: #0098db; }
 main.resultados .vistos {
   margin-bottom: 30px;
   margin-top: 30px; }
@@ -3618,205 +3732,204 @@ main.resultados .top-busquedas a {
     margin-left: 6px; }
   main.resultados aside .buscar div + div {
     margin-top: 10px; } }
-main.resultados div.resultados div.visualizacion {
-  background: #ececec;
-  border: 1px solid #999999;
-  padding: 0 10px;
-  overflow: hidden; }
-  main.resultados div.resultados div.visualizacion li {
-    float: left; }
-  main.resultados div.resultados div.visualizacion .orden li {
-    margin-right: 16px; }
-  main.resultados div.resultados div.visualizacion .orden a {
-    color: #333333;
-    font-size: 15px;
-    line-height: 26px; }
-    main.resultados div.resultados div.visualizacion .orden a:hover {
-      color: #0098db;
-      text-decoration: none; }
-    main.resultados div.resultados div.visualizacion .orden a.activo {
-      color: #0098db; }
-  main.resultados div.resultados div.visualizacion .modos {
-    padding-top: 5px; }
-    main.resultados div.resultados div.visualizacion .modos li {
-      margin-left: 6px; }
-      main.resultados div.resultados div.visualizacion .modos li .lista {
-        background-position: -238px -60px;
-        height: 17px;
-        width: 16px; }
-      main.resultados div.resultados div.visualizacion .modos li .x {
-        background-position: -238px -60px;
-        height: 17px;
-        width: 16px; }
-      main.resultados div.resultados div.visualizacion .modos li .mapa {
-        background-position: -238px -60px;
-        height: 17px;
-        width: 16px; }
-    main.resultados div.resultados div.visualizacion .modos a {
-      background-image: url(../img/constante.png);
-      background-repeat: no-repeat;
-      display: block;
-      height: 17px;
-      line-height: 160px;
-      overflow: hidden;
-      width: 16px; }
-main.resultados div.resultados div.filtros-activos {
-  overflow: hidden;
-  width: 100%; }
-  main.resultados div.resultados div.filtros-activos li,
-  main.resultados div.resultados div.filtros-activos div.eliminar-todos {
-    line-height: 24px;
-    float: left;
-    margin-top: 6px; }
-  main.resultados div.resultados div.filtros-activos li {
-    background: #999999;
-    border-radius: 4px;
-    color: black;
-    margin-right: 6px;
-    overflow: hidden;
-    padding: 0 0 0 8px; }
-    main.resultados div.resultados div.filtros-activos li a {
-      color: black;
-      cursor: pointer;
-      display: inline-block;
-      margin-left: 16px;
-      padding-left: 8px;
-      padding-right: 8px; }
-      main.resultados div.resultados div.filtros-activos li a:hover {
-        background: #0098db;
-        color: #FFFFFF;
-        text-decoration: none; }
-  main.resultados div.resultados div.filtros-activos div.eliminar-todos {
-    color: #0098db;
-    cursor: pointer;
-    text-decoration: underline; }
-main.resultados div.resultados article {
-  border: 1px solid #d9d9d9;
-  margin-top: 6px;
-  min-height: 186px;
-  padding: 8px 8px 8px 216px;
-  position: relative; }
-  main.resultados div.resultados article:hover {
-    border-color: #0098db; }
-  main.resultados div.resultados article h2 {
-    line-height: 20px;
-    margin: 0 0 12px 0; }
-    main.resultados div.resultados article h2 a {
-      font-size: 24px;
-      font-weight: 700;
-      letter-spacing: -0.5px; }
-      main.resultados div.resultados article h2 a:hover {
-        text-decoration: none; }
-  main.resultados div.resultados article dl {
-    margin: 0; }
-    main.resultados div.resultados article dl dd.puntaje, main.resultados div.resultados article dl dd.calificacion, main.resultados div.resultados article dl dd.opiniones {
-      display: inline-block; }
-    main.resultados div.resultados article dl dd.puntaje {
-      background: #ececec;
-      border: 1px solid #999999;
-      border-radius: 2px;
-      color: #0098db;
-      line-height: 28px;
-      margin-right: 10px;
-      padding: 0 4px;
-      position: relative; }
-      main.resultados div.resultados article dl dd.puntaje:after {
-        background: url("../img/constante.png") -224px -77px no-repeat;
-        content: "";
-        height: 11px;
-        margin-top: -5px;
-        position: absolute;
-        right: -10px;
-        top: 50%;
-        width: 10px; }
-    main.resultados div.resultados article dl dd.calificacion em {
-      color: black;
-      font-style: normal;
-      font-weight: 700;
-      text-transform: uppercase; }
-    main.resultados div.resultados article dl dd.opiniones {
-      color: #666666; }
-    main.resultados div.resultados article dl dd.direccion {
-      display: block;
-      margin-top: 4px; }
-    main.resultados div.resultados article dl dd.direccion:before, main.resultados div.resultados article dl dd.cocina:before {
-      font-size: 11px;
-      margin-right: 4px; }
-    main.resultados div.resultados article dl dd.cocina, main.resultados div.resultados article dl dd.precio {
-      display: inline; }
-    main.resultados div.resultados article dl dd.precio {
-      color: #ff6600; }
-      main.resultados div.resultados article dl dd.precio:before {
-        color: #333333;
-        content: "|";
-        font-family: "Open Sans";
-        margin-right: 3px;
-        position: relative;
-        top: -1px; }
-    main.resultados div.resultados article dl dd.descuento {
-      box-shadow: 0 0 10px #666666;
-      font-size: 30px;
-      line-height: 48px;
-      text-align: center;
-      width: 153px; }
-      main.resultados div.resultados article dl dd.descuento:before, main.resultados div.resultados article dl dd.descuento:after {
-        background-image: url("../img/constante.png");
-        background-repeat: no-repeat;
-        content: "";
-        height: 48px;
-        position: absolute;
-        top: 0;
-        width: 4px; }
-      main.resultados div.resultados article dl dd.descuento:before {
-        background-position: -181px -293px;
-        left: -4px; }
-      main.resultados div.resultados article dl dd.descuento:after {
-        background-position: -186px -293px;
-        right: -4px; }
-  main.resultados div.resultados article .imagen {
+main.resultados div.resultados {
+  margin-top: 15px; }
+  main.resultados div.resultados div.visualizacion {
+    background: #ececec;
     border: 1px solid #999999;
-    display: block;
-    height: 168px;
-    left: 8px;
+    padding: 0 10px;
+    overflow: hidden; }
+    main.resultados div.resultados div.visualizacion li {
+      float: left; }
+    main.resultados div.resultados div.visualizacion .orden li {
+      margin-right: 16px; }
+    main.resultados div.resultados div.visualizacion .orden a {
+      color: #333333;
+      font-size: 15px;
+      line-height: 26px; }
+      main.resultados div.resultados div.visualizacion .orden a:hover {
+        color: #0098db;
+        text-decoration: none; }
+      main.resultados div.resultados div.visualizacion .orden a.activo {
+        color: #0098db; }
+    main.resultados div.resultados div.visualizacion .modos {
+      padding-top: 5px; }
+      main.resultados div.resultados div.visualizacion .modos li {
+        margin-left: 6px; }
+        main.resultados div.resultados div.visualizacion .modos li .lista {
+          background-position: -238px -60px;
+          height: 17px;
+          width: 16px; }
+        main.resultados div.resultados div.visualizacion .modos li .x {
+          background-position: -238px -60px;
+          height: 17px;
+          width: 16px; }
+        main.resultados div.resultados div.visualizacion .modos li .mapa {
+          background-position: -238px -60px;
+          height: 17px;
+          width: 16px; }
+      main.resultados div.resultados div.visualizacion .modos a {
+        background-image: url(../img/constante.png);
+        background-repeat: no-repeat;
+        display: block;
+        height: 17px;
+        line-height: 160px;
+        overflow: hidden;
+        width: 16px; }
+  main.resultados div.resultados div.filtros-activos {
     overflow: hidden;
-    position: absolute;
-    top: 8px;
-    width: 200px; }
-  main.resultados div.resultados article .btn {
-    font-weight: 700;
-    padding: 8px 28px; }
-  main.resultados div.resultados article blockquote {
-    margin: 9px 0 0 0;
-    padding: 0; }
-    main.resultados div.resultados article blockquote p {
-      font-size: 14px;
-      line-height: 16px;
-      margin: 0; }
-    main.resultados div.resultados article blockquote footer {
-      margin-top: -2px;
-      text-align: right; }
-      main.resultados div.resultados article blockquote footer a {
-        font-size: 13px; }
-        main.resultados div.resultados article blockquote footer a:hover {
+    width: 100%; }
+    main.resultados div.resultados div.filtros-activos li,
+    main.resultados div.resultados div.filtros-activos div.eliminar-todos {
+      line-height: 24px;
+      float: left;
+      margin-top: 6px; }
+    main.resultados div.resultados div.filtros-activos li {
+      background: #999999;
+      border-radius: 4px;
+      color: black;
+      margin-right: 6px;
+      overflow: hidden;
+      padding: 0 0 0 8px; }
+      main.resultados div.resultados div.filtros-activos li a {
+        color: black;
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 16px;
+        padding-left: 8px;
+        padding-right: 8px; }
+        main.resultados div.resultados div.filtros-activos li a:hover {
+          background: #0098db;
+          color: #FFFFFF;
           text-decoration: none; }
-  main.resultados div.resultados article p.nuevo {
-    background: url("../img/constante.png") -191px -271px no-repeat;
-    left: 0;
-    overflow: hidden;
-    line-height: 180px;
-    pointer-events: none;
-    position: absolute;
-    height: 69px;
-    top: 0;
-    width: 69px;
-    z-index: 11; }
-main.resultados div.resultados .paginado {
-  margin-top: 15px;
-  text-align: right; }
-  main.resultados div.resultados .paginado small {
-    float: left;
-    font-size: 12px;
-    padding-top: 9px; }
+    main.resultados div.resultados div.filtros-activos div.eliminar-todos {
+      color: #0098db;
+      cursor: pointer;
+      text-decoration: underline; }
+  main.resultados div.resultados article {
+    border: 1px solid #d9d9d9;
+    margin-top: 6px;
+    min-height: 186px;
+    padding: 8px 8px 8px 216px;
+    position: relative; }
+    main.resultados div.resultados article:hover {
+      border-color: #0098db; }
+    main.resultados div.resultados article h2 {
+      line-height: 20px;
+      margin: 0 0 12px 0; }
+      main.resultados div.resultados article h2 a {
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -0.5px; }
+        main.resultados div.resultados article h2 a:hover {
+          text-decoration: none; }
+    main.resultados div.resultados article dl {
+      margin: 0; }
+      main.resultados div.resultados article dl dd.puntaje, main.resultados div.resultados article dl dd.calificacion, main.resultados div.resultados article dl dd.opiniones {
+        display: inline-block; }
+      main.resultados div.resultados article dl dd.puntaje {
+        background: #ececec;
+        border: 1px solid #999999;
+        border-radius: 2px;
+        color: #0098db;
+        line-height: 28px;
+        margin-right: 10px;
+        padding: 0 4px;
+        position: relative; }
+        main.resultados div.resultados article dl dd.puntaje:after {
+          background: url("../img/constante.png") -224px -77px no-repeat;
+          content: "";
+          height: 11px;
+          margin-top: -5px;
+          position: absolute;
+          right: -10px;
+          top: 50%;
+          width: 10px; }
+      main.resultados div.resultados article dl dd.calificacion em {
+        color: black;
+        font-style: normal;
+        font-weight: 700;
+        text-transform: uppercase; }
+      main.resultados div.resultados article dl dd.opiniones {
+        color: #666666; }
+      main.resultados div.resultados article dl dd.direccion {
+        display: block;
+        margin-top: 4px; }
+      main.resultados div.resultados article dl dd.direccion:before, main.resultados div.resultados article dl dd.cocina:before {
+        font-size: 11px;
+        margin-right: 4px; }
+      main.resultados div.resultados article dl dd.cocina, main.resultados div.resultados article dl dd.precio {
+        display: inline; }
+      main.resultados div.resultados article dl dd.precio {
+        color: #ff6600; }
+        main.resultados div.resultados article dl dd.precio:before {
+          color: #333333;
+          content: "|";
+          font-family: "Open Sans";
+          margin-right: 3px;
+          position: relative;
+          top: -1px; }
+      main.resultados div.resultados article dl dd.descuento {
+        box-shadow: 0 0 10px #666666;
+        font-size: 30px;
+        line-height: 48px;
+        text-align: center;
+        width: 153px; }
+        main.resultados div.resultados article dl dd.descuento:before, main.resultados div.resultados article dl dd.descuento:after {
+          background-image: url("../img/constante.png");
+          background-repeat: no-repeat;
+          content: "";
+          height: 48px;
+          position: absolute;
+          top: 0;
+          width: 4px; }
+        main.resultados div.resultados article dl dd.descuento:before {
+          background-position: -181px -293px;
+          left: -4px; }
+        main.resultados div.resultados article dl dd.descuento:after {
+          background-position: -186px -293px;
+          right: -4px; }
+    main.resultados div.resultados article .imagen {
+      border: 1px solid #999999;
+      display: block;
+      height: 168px;
+      left: 8px;
+      overflow: hidden;
+      position: absolute;
+      top: 8px;
+      width: 200px; }
+    main.resultados div.resultados article blockquote {
+      margin: 9px 0 0 0;
+      padding: 0; }
+      main.resultados div.resultados article blockquote p {
+        font-size: 14px;
+        line-height: 16px;
+        margin: 0; }
+      main.resultados div.resultados article blockquote footer {
+        margin-top: -2px;
+        text-align: right; }
+        main.resultados div.resultados article blockquote footer a {
+          font-size: 13px; }
+          main.resultados div.resultados article blockquote footer a:hover {
+            text-decoration: none; }
+    main.resultados div.resultados article p.nuevo {
+      background: url("../img/constante.png") -191px -271px no-repeat;
+      left: 0;
+      overflow: hidden;
+      line-height: 180px;
+      pointer-events: none;
+      position: absolute;
+      height: 69px;
+      top: 0;
+      width: 69px;
+      z-index: 11; }
+  main.resultados div.resultados .paginado {
+    margin-top: 15px;
+    text-align: right; }
+    main.resultados div.resultados .paginado small {
+      float: left;
+      font-size: 12px;
+      padding-top: 9px; }
 
 @media (max-width: 767px) {
   main.resultados div.resultados article dd.descuento {
@@ -3997,8 +4110,7 @@ div.login-separacion .linea {
     width: 100%; } }
 @media (min-width: 992px) {
   section.registrarse input[type="submit"] {
-    padding-left: 76px;
-    padding-right: 75px; }
+    width: 270px; }
 
   div.login-separacion .linea {
     height: 360px; } }
@@ -4108,10 +4220,12 @@ section.dashboard {
     section.dashboard .datos .telefono > div,
     section.dashboard .datos .nacimiento > div {
       padding: 0 5px; }
+  section.dashboard .datos .sexo div {
+    float: left; }
+    section.dashboard .datos .sexo div:first-child {
+      margin-right: 15px; }
   section.dashboard .datos .sexo label {
-    padding-left: 15px; }
-    section.dashboard .datos .sexo label:first-child {
-      padding-left: 0; }
+    padding-left: 0; }
   section.dashboard .datos .sexo input[type="radio"] {
     margin: 0;
     position: relative;
@@ -4129,10 +4243,7 @@ section.dashboard {
     margin: 0 9px 0 9px;
     width: 90px; }
   section.dashboard form.consulta-fechas input[type="submit"] {
-    height: 30px;
-    font-weight: 700;
-    padding-left: 44px;
-    padding-right: 44px; }
+    height: 30px; }
 
 @media (max-width: 767px) {
   section.dashboard .datos .form-group {
@@ -4145,10 +4256,7 @@ section.dashboard {
   section.dashboard form.consulta-fechas .form-group,
   section.dashboard form.consulta-fechas label,
   section.dashboard form.consulta-fechas .form-control {
-    display: inline-block; }
-  section.dashboard form.consulta-fechas input[type="submit"] {
-    padding-left: 10px;
-    padding-right: 10px; } }
+    display: inline-block; } }
 @media (min-width: 768px) {
   section.dashboard .datos .form-group,
   section.dashboard .datos .btn {
@@ -4375,10 +4483,6 @@ section.eventos label {
 section.contacto textarea,
 section.eventos textarea {
   height: 140px; }
-section.contacto .btn,
-section.eventos .btn {
-  padding-left: 64px;
-  padding-right: 64px; }
 
 section.contacto p.separacion {
   border-bottom: 1px solid #999999;
@@ -4481,10 +4585,7 @@ section.eventos form .btn {
       margin: 27px 0 0 0; }
   section.eventos form .control .form-control {
     height: 36px;
-    margin-left: 6px; }
-  section.eventos .btn {
-    padding-left: 50px;
-    padding-right: 50px; } }
+    margin-left: 6px; } }
 article.legales h1,
 article.como-funciona h1,
 section.contacto h1,

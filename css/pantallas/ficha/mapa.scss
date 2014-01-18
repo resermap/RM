@@ -23,6 +23,16 @@ article.restaurante {
 	}
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+	article.restaurante {
+		div.mapa {
+			position: relative;
+			left: -15px;
+			width: 720px;
+		}
+	}
+}
+
 @media (min-width: 992px) {
 	article.restaurante {
 		div.mapa {

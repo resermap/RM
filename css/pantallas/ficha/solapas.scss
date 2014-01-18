@@ -4,6 +4,23 @@ article.restaurante {
 		&>.tab-content {
 			border-bottom: 1px solid $color-t4;
 		}
+		.nav-tabs.principales {
+			li {
+				&:first-child+li {
+					background: $color-t6;
+					a {
+						color: #FFFFFF;
+					}
+					&.active,
+					&:hover {
+						background: #FFFFFF;
+						a {
+							color: $color-t3;
+						}
+					}
+				}
+			}
+		}
 	}
 	.tab-content {
 		padding: 0 15px 0 15px;
@@ -20,7 +37,50 @@ article.restaurante {
 		p.elegir-fecha {
 			color: $color-t2;
 			span {
-				color: $color-v1;
+				color: $color-t3;
+				font-size: 16px;
+				margin-left: 2px;
+				position: relative;
+				top: 2px;
+			}
+		}
+		div.semana-proxima {
+			cursor: pointer;
+			color: $color-v1;
+			font-size: 14px;
+			font-weight: 700;
+			margin-top: 6px;
+			float: right;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		div.ofertas {
+			margin-top: 72px;
+			&.desc {
+				div {
+					background: #ececec;
+					border-color: $color-v1;
+					box-shadow: 0 0 6px $color-v1;
+				}
+			}
+			div {
+				border: 1px solid $color-t4;
+				padding: 10px;
+			}
+			h3 {
+				font-size: 20px;
+				font-weight: 400;
+				margin: 0 0 20px 0;
+			}
+			li {
+				color: $color-t3;
+				font-size: 14px;
+				letter-spacing: -0.5px;
+				line-height: 18px;
+				&:before {
+					content: "* ";
+				}
 			}
 		}
 		div.panel.panel-default {
@@ -31,21 +91,22 @@ article.restaurante {
 					cursor: auto;
 					&.collapsed {
 						background: $color-t5;
-						time {
-							color: #d9e0e5;
-						}
-						span {
+						time,
+						small {
 							color: $color-t1;
 						}
 						&:hover {
 							background: $color-t5;
 							time {
-								color: #d9e0e5;
+								color: $color-t1;
 								font-weight: 400;
 							}
 							&:after {
 								content: none;
 							}
+						}
+						&:after {
+							content: none;
 						}
 					}
 				}
@@ -117,7 +178,7 @@ article.restaurante {
 				border-top: none;
 				.panel-body {
 					border: none;
-					padding: 0;
+					padding: 0 0 15px 0;
 					.nav-tabs {
 						li {
 							background: #ececec;
@@ -337,36 +398,6 @@ article.restaurante {
 					content: "\e135";
 				}
 			}
-			&.metodos-pago {
-				background-image: url("#{$img-constante}");
-				background-repeat: no-repeat;
-				height: 19px;
-				line-height: 120px;
-				overflow: hidden;
-				position: relative;
-				top: 4px;
-				white-space: nowrap;
-				&.visa-electron {
-					background-position: -178px -157px;
-					width: 28px;
-				}
-				&.visa {
-					background-position: -148px -157px;
-					width: 29px;
-				}
-				&.mastercard {
-					background-position: -118px -157px;
-					width: 28px;
-				}
-				&.maestro {
-					background-position: -88px -157px;
-					width: 28px;
-				}
-				&.american-express {
-					background-position: -59px -157px;
-					width: 28px;
-				}
-			}
 		}
 		ul {
 			margin-top: 11px;
@@ -379,6 +410,35 @@ article.restaurante {
 					content: "";
 					position: absolute;
 					left: 0;
+				}
+				&.metodos-pago {
+					background-image: url("#{$img-constante}");
+					background-repeat: no-repeat;
+					height: 34px;
+					line-height: 120px;
+					float: left;
+					margin-right: 4px;
+					margin-bottom: 4px;
+					overflow: hidden;
+					position: relative;
+					top: 4px;
+					width: 50px;
+					white-space: nowrap;
+					&.visa-electron {
+						background-position: -51px -320px;
+					}
+					&.visa {
+						background-position: 0 -320px;
+					}
+					&.mastercard {
+						background-position: -103px -285px;
+					}
+					&.maestro {
+						background-position: -51px -285px;
+					}
+					&.american-express {
+						background-position: 0 -285px;
+					}
 				}
 				&.icono-apd {
 					&:before {
@@ -547,6 +607,16 @@ article.restaurante {
 						width: 20px;
 					}
 				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	article.restaurante {
+		.tab-content {
+			div.ofertas {
+				padding-left: 0;
 			}
 		}
 	}

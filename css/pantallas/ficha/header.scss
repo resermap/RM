@@ -15,13 +15,13 @@ article.restaurante {
 			margin-top: -4px;
 			span.glyphicon,
 			a {
-				color: $color-v1;
+				color: #3366cc;
 				font-weight: 600;
 			}
 			a {
 				text-decoration: underline;
 				&:hover {
-					color: #3366cc;
+					color: $color-v1;
 				}
 			}
 		}

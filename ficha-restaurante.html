@@ -18,6 +18,7 @@
 		$(function(){
 			$("body>header").load("inc/header.html");
 			$("body>footer.pie").load("inc/footer.html");
+			$("section.busqueda").load("inc/busqueda-apertura.html");
 		});
 	</script>
 </head>
@@ -41,31 +42,17 @@
 			</div>
 		</div>
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Búsqueda -->
-		<div class="ficha-busqueda">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<form role="form" action="">
-							<div class="input-group">
-								<input type="text" class="form-control" placeholder="¿Dónde quieres cenar hoy?">
-								<span class="input-group-btn">
-									<input type="submit" value="Buscar" />
-								</span>
-							</div>
-						</form>
-						<div class="abrir">Nueva Búsqueda</div>
-						<div class="cerrar">X</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<!-- Las clases habilitadas son "abierto" "cerrado" -->
+		<!-- Para animarlo con un .js hay que sacar 2 propiedades en CSS. Avisar. -->
+		<section class="busqueda apertura cerrado"></section>
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Ficha del restaurante -->
 		<article class="restaurante">
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Encabezado -->
 			<div class="container">
 				<header>
 					<h1>Nombre del restaurante</h1>
-					<address><span class="glyphicon glyphicon-map-marker"></span> <a href="#" target="_blank">Ver mapa</a> Dirección</address>
+					<!-- Ver link http://getbootstrap.com/javascript/#tabs-usage para que se active el tab -->
+					<address><span class="glyphicon glyphicon-map-marker"></span> <a href="#mapa">Ver mapa</a> Dirección</address>
 				</header>
 				<div class="row">
 					<div class="col-md-5 col-sm-6 col-xs-12">
@@ -96,8 +83,7 @@
 						<blockquote>
 							<p>To lead the World Wide Web to its full potential by developing protocols and guidelines that ensure long-term growth for the Web</p>
 							<footer>
-								<!-- El link debe llevar al comentario, o sino al usuario -->
-								<cite><a href="link-U1" target="_blank">Nombre de usuario</a></cite>
+								<cite>Nombre de usuario</cite>
 								<!-- YYYY/MM/DD en atributo "datetime" -->
 								<time datetime="2013-12-03">03/12/2013</time>
 							</footer>
@@ -107,10 +93,12 @@
 							<dd class="cocina">Japonesa, Sushi, Internacional</dd>
 							<dt class="sr-only">Precio:</dt>
 							<dd class="precio">Más de $185 ARS</dd>
+							<dt class="sr-only">Descuento:</dt>
+							<dd class="descuento"><strong>-50%</strong> OFF</dd>
 						</dl>
 						<div class="row">
 							<div class="col-md-7 col-sm-12 col-xs-12">
-								<a class="btn btn-primary btn-lg reservar" href="#">Reservar grátis</a>
+								<a class="btn btn-primary btn-vr-2" href="#">Reservar grátis</a>
 							</div>
 							<div class="redes-sociales col-md-5 col-sm-12 col-xs-12">
 								<p class="visible-md visible-lg">Comparte con tus amigos</p>
@@ -173,21 +161,29 @@
 									<div class="col-md-8 col-sm-8 col-xs-7">
 										<h2>Descripción</h2>
 										<p>La movida fashion de Buenos Aires tiene aquí un lugar lo suficientemente sofisticado y caro como para sentirse exclusiva. Pero si Tô Restaurante fuera solamente eso, el glamour se le hubiera agotado en el primer trimestre. El corazón de esta casaque práctica una cocina frapanese, mezcla de francesa y japonesa. Está en el kaitén,una cinta transportadora que recorre el salón y que despacha distintosplatitos con piezas de sushi fusión.</p>
-										<h2>Detalles</h2>
-										<dl>
-											<dt class="sr-only">Días y horarios</dt>
-											<dd class="calendario">Lunes a Sábado de 20:00 al cierre</dd>
-											<dt class="sr-only">Teléfono</dt>
-											<dd class="telefono">(054) 11 5217-6860</dd>
-											<dt class="sr-only">Sitio web</dt>
-											<dd class="sitio-web">http://www.torestaurant.com</dd>
-											<dt class="metodos-pago">Métodos de pago:</dt>
-											<dd class="metodos-pago visa-electron">Visa electron</dd>
-											<dd class="metodos-pago visa">Visa</dd>
-											<dd class="metodos-pago mastercard">Mastercard</dd>
-											<dd class="metodos-pago maestro">Maestro</dd>
-											<dd class="metodos-pago american-express">American Express</dd>
-										</dl>
+										<div class="row">
+											<div class="col-md-6 col-sm-12">
+												<h2>Detalles</h2>
+												<dl>
+													<dt class="sr-only">Días y horarios</dt>
+													<dd class="calendario">Lunes a Sábado de 20:00 al cierre</dd>
+													<dt class="sr-only">Teléfono</dt>
+													<dd class="telefono">(054) 11 5217-6860</dd>
+													<dt class="sr-only">Sitio web</dt>
+													<dd class="sitio-web">http://www.torestaurant.com</dd>
+												</dl>
+											</div>
+											<div class="col-md-6 col-sm-12">
+												<h2>Métodos de pago</h2>
+												<ul>
+													<li class="metodos-pago visa-electron">Visa electron</li>
+													<li class="metodos-pago visa">Visa</li>
+													<li class="metodos-pago mastercard">Mastercard</li>
+													<li class="metodos-pago maestro">Maestro</li>
+													<li class="metodos-pago american-express">American Express</li>
+												</ul>
+											</div>
+										</div>
 									</div>
 									<div class="col-md-4 col-sm-4 col-xs-5">
 										<h2>Características</h2>
@@ -353,6 +349,20 @@
 												</div>
 											</div>
 										</div>
+										<div class="semana-proxima">Semana próxima >></div>
+									</div>
+									<!-- Las clase "desc" es agregada cuando se entra a esta solapa desde la solapa "Descuentos"...... -->
+									<div class="col-md-3 .col-sm-12 ofertas desc">
+										<div>
+											<h3>Ofertas especiales</h3>
+											<ul>
+												<li>Descuentos Validos con Pago en Efectivo.</li>
+												<li>No acumulables con otras Promociones.</li>
+												<li>Cubierto No Incluido.</li>
+												<li>Descuento no aplicable para Menu Ejecutivo o Menu Promocional.</li>
+												<li>Descuento no valido para Feriados y Visperas de Feriado.</li>
+											</ul>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -365,7 +375,7 @@
 							</div>
 							<!-- Solapa "Descuentos" y su ID correspondiente -->
 							<div class="descuentos tab-pane fade" id="descuentos">
-								Falta
+								Al clickear esta solapa, vas a la solapa de "Reservar" y al .ofertas se le agrega la clase "desc" . En conclusión, esta solapa no tiene utilidad y "redirecciona".
 							</div>
 						</div>
 					</div>
@@ -428,7 +438,7 @@
 									<div class="col-md-6 col-sm-6 col-xs-12">
 										<!-- La idea es que al elegir una opción haga auto-submit -->
 										<form>
-											<label>Ordenar por:</label>
+											<label>Filtrar comentarios:</label>
 											<select>
 												<option value="">Todo</option>
 												<option value="">Persona Sola</option>
@@ -439,7 +449,7 @@
 										</form>
 									</div>
 									<div class="col-md-6 col-sm-6 col-xs-12">
-										<a class="btn btn-primary btn-lg reservar" href="#">Comentar</a>
+										<a class="btn btn-primary btn-vr-2" href="#">Comentar</a>
 									</div>
 								</div>
 							</div>
@@ -563,58 +573,67 @@
 						<div class="tab-pane fade in active" id="restaurantes-similares">
 							<div class="row no-margin">
 								<div class="col-md-12">
-									<ul>
-										<li>
+									<ul class="row">
+										<!--
+											Son 4 <li>
+											No rotan, ni se avanzar o retrocede
+											Se refresca el restaurante al hacer click en la "x" de ".borrar"
+										-->
+										<li class="col-md-3 col-sm-6 col-xs-12">
 											<a href="#">
 												<h2>Nombre del restaurante</h2>
 												<div class="imagen"><img src="img/usuario-BORRAR.png" alt="Nombre del restaurante" /></div>
 												<address>Costa Rica 5644, Puerto Hollywood</address>
 												<dl>
 													<dt class="sr-only">Cocina:</dt>
-													<dd class="cocina">Japonesa, Sushi</dd>
-													<dt class="sr-only">Precio</dt>
-													<dd class="precio">$3243</dd>
+													<dd>Japonesa, Sushi</dd>
+													<dt class="sr-only">Calificación:</dt>
+													<dd class="calificacion">4.75 MUY BUENO</dd>
 												</dl>
 											</a>
+											<div class="borrar">x</a>
 										</li>
-										<li>
+										<li class="col-md-3 col-sm-6 col-xs-12">
 											<a href="#">
 												<h2>Nombre del restaurante</h2>
 												<div class="imagen"><img src="img/usuario-BORRAR.png" alt="Nombre del restaurante" /></div>
 												<address>Costa Rica 5644, Puerto Hollywood</address>
 												<dl>
 													<dt class="sr-only">Cocina:</dt>
-													<dd class="cocina">Japonesa, Sushi</dd>
-													<dt class="sr-only">Precio</dt>
-													<dd class="precio">$3243</dd>
+													<dd>Japonesa, Sushi</dd>
+													<dt class="sr-only">Calificación:</dt>
+													<dd class="calificacion">4.75 MUY BUENO</dd>
 												</dl>
 											</a>
+											<div class="borrar">x</a>
 										</li>
-										<li>
+										<li class="col-md-3 col-sm-6 col-xs-12">
 											<a href="#">
 												<h2>Nombre del restaurante</h2>
 												<div class="imagen"><img src="img/usuario-BORRAR.png" alt="Nombre del restaurante" /></div>
 												<address>Costa Rica 5644, Puerto Hollywood</address>
 												<dl>
 													<dt class="sr-only">Cocina:</dt>
-													<dd class="cocina">Japonesa, Sushi</dd>
-													<dt class="sr-only">Precio</dt>
-													<dd class="precio">$3243</dd>
+													<dd>Japonesa, Sushi</dd>
+													<dt class="sr-only">Calificación:</dt>
+													<dd class="calificacion">4.75 MUY BUENO</dd>
 												</dl>
 											</a>
+											<div class="borrar">x</a>
 										</li>
-										<li>
+										<li class="col-md-3 col-sm-6 col-xs-12">
 											<a href="#">
 												<h2>Nombre del restaurante</h2>
 												<div class="imagen"><img src="img/usuario-BORRAR.png" alt="Nombre del restaurante" /></div>
 												<address>Costa Rica 5644, Puerto Hollywood</address>
 												<dl>
 													<dt class="sr-only">Cocina:</dt>
-													<dd class="cocina">Japonesa, Sushi</dd>
-													<dt class="sr-only">Precio</dt>
-													<dd class="precio">$3243</dd>
+													<dd>Japonesa, Sushi</dd>
+													<dt class="sr-only">Calificación:</dt>
+													<dd class="calificacion">4.75 MUY BUENO</dd>
 												</dl>
 											</a>
+											<div class="borrar">x</a>
 										</li>
 									</ul>
 								</div>

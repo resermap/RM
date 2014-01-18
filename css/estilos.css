@@ -233,7 +233,9 @@ blockquote {
       content: "\201d"; }
 
 .btn {
+  box-shadow: none;
   border: none;
+  text-shadow: none;
   text-transform: uppercase; }
 
 .btn-primary {
@@ -306,7 +308,9 @@ blockquote {
 
 .container-breadcrumb {
   background: #cccccc;
-  border-bottom: 1px solid #999999; }
+  border-bottom: 1px solid #999999;
+  position: relative;
+  z-index: 1; }
   .container-breadcrumb .breadcrumb {
     background: transparent;
     margin: 0;
@@ -1300,6 +1304,44 @@ section.busqueda {
       z-index: 11; }
       section.busqueda aside .ver-otro:hover {
         background-position: -212px -169px; }
+  section.busqueda.apertura.cerrado {
+    background: transparent;
+    box-shadow: none;
+    height: auto;
+    overflow: visible; }
+    section.busqueda.apertura.cerrado > div:first-child + div {
+      display: none; }
+  section.busqueda.apertura.abierto > div:first-child {
+    display: none; }
+  section.busqueda .abrir {
+    background: #cccccc;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 0 6px #333333;
+    color: #0098db;
+    cursor: pointer;
+    font-size: 13px;
+    height: 24px;
+    line-height: 20px;
+    height: 24px;
+    text-align: center;
+    width: 196px; }
+    section.busqueda .abrir:hover {
+      background: #0098db;
+      color: #FFFFFF; }
+    section.busqueda .abrir:after {
+      content: "\e003";
+      font-family: "Glyphicons Halflings";
+      font-size: 12px;
+      line-height: 20px;
+      margin-left: 4px; }
+  section.busqueda .volver a {
+    float: right;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px; }
+    section.busqueda .volver a:hover {
+      text-decoration: none; }
 
 @media (max-width: 639px) {
   section.busqueda form .form-group {
@@ -1378,7 +1420,9 @@ section.busqueda {
       background-position: 0 -236px;
       right: -145px; }
     section.busqueda > div:before {
-      left: -145px; } }
+      left: -145px; }
+  section.busqueda.apertura.cerrado > div:after, section.busqueda.apertura.cerrado > div:before {
+    content: none; } }
 section.categorizacion header {
   padding: 17px 0 21px 0; }
 section.categorizacion h1 {
@@ -1938,69 +1982,6 @@ section.donde-que aside {
   section.donde-que .row > div:first-child section h1 {
     letter-spacing: -1px;
     white-space: nowrap; } }
-.ficha-busqueda {
-  border-bottom: 1px solid #cccccc;
-  padding-bottom: 12px;
-  padding-top: 19px; }
-  .ficha-busqueda form {
-    float: left;
-    margin-right: 8px;
-    width: 248px; }
-    .ficha-busqueda form input {
-      background: #FFFFFF;
-      border: 1px solid #0098db;
-      border-radius: 0;
-      height: 23px; }
-    .ficha-busqueda form input[type="text"] {
-      border-right: none;
-      font-size: 11px;
-      padding: 2px 4px;
-      width: 220px; }
-      .ficha-busqueda form input[type="text"]:focus {
-        border-color: #0098db; }
-    .ficha-busqueda form input[type="submit"] {
-      background: url("../img/constante.png") -60px -106px no-repeat;
-      border-left: none;
-      position: relative;
-      text-indent: -200px;
-      width: 28px; }
-    .ficha-busqueda form ::-webkit-input-placeholder {
-      color: #999999;
-      font-style: italic; }
-    .ficha-busqueda form :-moz-placeholder {
-      color: #999999;
-      font-style: italic;
-      opacity: 1; }
-    .ficha-busqueda form ::-moz-placeholder {
-      color: #999999;
-      font-style: italic;
-      opacity: 1; }
-    .ficha-busqueda form :-ms-input-placeholder {
-      color: #999999;
-      font-style: italic; }
-  .ficha-busqueda .abrir,
-  .ficha-busqueda .cerrar {
-    border-radius: 2px;
-    color: white;
-    cursor: pointer;
-    float: left;
-    font-size: 12px;
-    font-weight: 700;
-    height: 23px;
-    line-height: 23px;
-    padding: 0 9px;
-    text-transform: uppercase; }
-  .ficha-busqueda .abrir {
-    background: #0098db;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0; }
-  .ficha-busqueda .cerrar {
-    background: #666666;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 2px;
-    border-top-right-radius: 2px; }
-
 article.restaurante {
   overflow: hidden; }
   article.restaurante header h1 {
@@ -2016,12 +1997,12 @@ article.restaurante {
     margin-top: -4px; }
     article.restaurante header address span.glyphicon,
     article.restaurante header address a {
-      color: #0098db;
+      color: #3366cc;
       font-weight: 600; }
     article.restaurante header address a {
       text-decoration: underline; }
       article.restaurante header address a:hover {
-        color: #3366cc; }
+        color: #0098db; }
 
 article.restaurante div.slideshow .imagen-principal {
   border: 1px solid #cccccc;
@@ -2078,25 +2059,41 @@ article.restaurante dl.calificacion.resumen {
     margin-top: -4px; }
     article.restaurante dl.calificacion.resumen dd.opiniones a {
       text-decoration: underline; }
-article.restaurante dl.tipo-precio {
-  margin-bottom: 9px; }
-  article.restaurante dl.tipo-precio dd.cocina, article.restaurante dl.tipo-precio dd.precio {
-    font-size: 14px; }
-    article.restaurante dl.tipo-precio dd.cocina:before, article.restaurante dl.tipo-precio dd.precio:before {
-      color: #777777;
-      font-size: 14px;
-      padding-right: 6px;
-      position: relative; }
-  article.restaurante dl.tipo-precio dd.cocina {
-    color: #333333;
-    font-weight: 600; }
-    article.restaurante dl.tipo-precio dd.cocina:before {
-      top: 1px; }
-  article.restaurante dl.tipo-precio dd.precio {
-    color: #666666;
-    margin-top: 4px; }
-    article.restaurante dl.tipo-precio dd.precio:before {
-      top: 2px; }
+article.restaurante dl.tipo-precio dd.cocina, article.restaurante dl.tipo-precio dd.precio {
+  font-size: 14px; }
+  article.restaurante dl.tipo-precio dd.cocina:before, article.restaurante dl.tipo-precio dd.precio:before {
+    color: #777777;
+    font-size: 14px;
+    padding-right: 6px;
+    position: relative; }
+article.restaurante dl.tipo-precio dd.cocina {
+  color: #333333;
+  font-weight: 600; }
+  article.restaurante dl.tipo-precio dd.cocina:before {
+    top: 1px; }
+article.restaurante dl.tipo-precio dd.precio {
+  color: #666666;
+  margin-top: 4px; }
+  article.restaurante dl.tipo-precio dd.precio:before {
+    top: 2px; }
+article.restaurante dl.tipo-precio dd.descuento {
+  background: #FFFFFF;
+  box-shadow: 0 0 6px #333333;
+  font-size: 36px;
+  padding: 0 15px; }
+  article.restaurante dl.tipo-precio dd.descuento:after, article.restaurante dl.tipo-precio dd.descuento:before {
+    background-image: url("../img/constante.png");
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 5px; }
+  article.restaurante dl.tipo-precio dd.descuento:after {
+    background-position: -175px -263px;
+    right: -5px; }
+  article.restaurante dl.tipo-precio dd.descuento:before {
+    background-position: -169px -263px;
+    left: -5px; }
 article.restaurante blockquote {
   border-bottom: 1px solid #cccccc;
   margin: 0 0 14px 0;
@@ -2110,32 +2107,16 @@ article.restaurante blockquote {
     text-align: right; }
   article.restaurante blockquote cite,
   article.restaurante blockquote time {
+    color: #666666;
     display: inline-block;
     font-size: 14px;
     font-weight: 400; }
-  article.restaurante blockquote cite a:hover {
-    text-decoration: underline; }
-  article.restaurante blockquote time {
-    color: #666666; }
-    article.restaurante blockquote time:before {
-      content: "|";
-      padding: 0 3px 0 0; }
-article.restaurante .btn.descuento, article.restaurante .btn.reservar {
-  width: 214px; }
-article.restaurante .btn.descuento {
-  background: #990000;
-  color: white;
-  display: block;
-  font-size: 16px;
-  line-height: 22px;
-  margin-bottom: 10px;
-  margin-top: -5px;
-  padding-bottom: 0;
-  padding-top: 0; }
-  article.restaurante .btn.descuento:hover {
-    background: #FF6600; }
-article.restaurante .btn.reservar:hover {
-  background: #ff9000; }
+  article.restaurante blockquote time:before {
+    content: "|";
+    padding: 0 3px 0 0; }
+article.restaurante .redes-sociales p {
+  color: #666666;
+  font-size: 15px; }
 article.restaurante .redes-sociales ul {
   display: inline-block; }
   article.restaurante .redes-sociales ul li {
@@ -2167,19 +2148,45 @@ article.restaurante .redes-sociales ul {
         background-color: #8a9fa0; }
 
 @media (max-width: 991px) {
+  article.restaurante dl.tipo-precio {
+    margin-bottom: 0; }
+  article.restaurante dd.descuento {
+    display: inline-block;
+    line-height: 63px;
+    margin-top: 10px;
+    position: relative; }
+    article.restaurante dd.descuento:after, article.restaurante dd.descuento:before {
+      height: 63px; }
   article.restaurante .redes-sociales {
     margin-top: 7px; }
-  article.restaurante .btn.reservar {
+  article.restaurante .btn-primary {
     margin-top: 10px; } }
 @media (min-width: 992px) {
+  article.restaurante dl.tipo-precio {
+    margin-bottom: 9px; }
+  article.restaurante dd.descuento {
+    line-height: 86px;
+    position: absolute;
+    right: 15px;
+    top: -49px; }
+    article.restaurante dd.descuento:after, article.restaurante dd.descuento:before {
+      height: 86px; }
   article.restaurante .redes-sociales {
     text-align: center; }
-  article.restaurante .btn.reservar {
-    margin-top: 18px; } }
+  article.restaurante .btn-primary {
+    margin-top: 23px; } }
 article.restaurante .solapas {
   margin-top: 12px; }
   article.restaurante .solapas > .tab-content {
     border-bottom: 1px solid #999999; }
+  article.restaurante .solapas .nav-tabs.principales li:first-child + li {
+    background: #ff6600; }
+    article.restaurante .solapas .nav-tabs.principales li:first-child + li a {
+      color: #FFFFFF; }
+    article.restaurante .solapas .nav-tabs.principales li:first-child + li.active, article.restaurante .solapas .nav-tabs.principales li:first-child + li:hover {
+      background: #FFFFFF; }
+      article.restaurante .solapas .nav-tabs.principales li:first-child + li.active a, article.restaurante .solapas .nav-tabs.principales li:first-child + li:hover a {
+        color: #666666; }
 article.restaurante .tab-content {
   padding: 0 15px 0 15px; }
   article.restaurante .tab-content > div > div > div {
@@ -2193,7 +2200,40 @@ article.restaurante .tab-content {
   article.restaurante .tab-content p.elegir-fecha {
     color: #333333; }
     article.restaurante .tab-content p.elegir-fecha span {
-      color: #0098db; }
+      color: #666666;
+      font-size: 16px;
+      margin-left: 2px;
+      position: relative;
+      top: 2px; }
+  article.restaurante .tab-content div.semana-proxima {
+    cursor: pointer;
+    color: #0098db;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 6px;
+    float: right; }
+    article.restaurante .tab-content div.semana-proxima:hover {
+      text-decoration: underline; }
+  article.restaurante .tab-content div.ofertas {
+    margin-top: 72px; }
+    article.restaurante .tab-content div.ofertas.desc div {
+      background: #ececec;
+      border-color: #0098db;
+      box-shadow: 0 0 6px #0098db; }
+    article.restaurante .tab-content div.ofertas div {
+      border: 1px solid #999999;
+      padding: 10px; }
+    article.restaurante .tab-content div.ofertas h3 {
+      font-size: 20px;
+      font-weight: 400;
+      margin: 0 0 20px 0; }
+    article.restaurante .tab-content div.ofertas li {
+      color: #666666;
+      font-size: 14px;
+      letter-spacing: -0.5px;
+      line-height: 18px; }
+      article.restaurante .tab-content div.ofertas li:before {
+        content: "* "; }
   article.restaurante .tab-content div.panel.panel-default {
     border: none;
     border-radius: 0; }
@@ -2201,17 +2241,18 @@ article.restaurante .tab-content {
       cursor: auto; }
       article.restaurante .tab-content div.panel.panel-default.deshabilitado .panel-heading.collapsed {
         background: #cccccc; }
-        article.restaurante .tab-content div.panel.panel-default.deshabilitado .panel-heading.collapsed time {
-          color: #d9e0e5; }
-        article.restaurante .tab-content div.panel.panel-default.deshabilitado .panel-heading.collapsed span {
+        article.restaurante .tab-content div.panel.panel-default.deshabilitado .panel-heading.collapsed time,
+        article.restaurante .tab-content div.panel.panel-default.deshabilitado .panel-heading.collapsed small {
           color: black; }
         article.restaurante .tab-content div.panel.panel-default.deshabilitado .panel-heading.collapsed:hover {
           background: #cccccc; }
           article.restaurante .tab-content div.panel.panel-default.deshabilitado .panel-heading.collapsed:hover time {
-            color: #d9e0e5;
+            color: black;
             font-weight: 400; }
           article.restaurante .tab-content div.panel.panel-default.deshabilitado .panel-heading.collapsed:hover:after {
             content: none; }
+        article.restaurante .tab-content div.panel.panel-default.deshabilitado .panel-heading.collapsed:after {
+          content: none; }
     article.restaurante .tab-content div.panel.panel-default .panel-heading {
       background: black;
       border-radius: 0;
@@ -2268,7 +2309,7 @@ article.restaurante .tab-content {
       border-top: none; }
       article.restaurante .tab-content div.panel.panel-default .panel-collapse .panel-body {
         border: none;
-        padding: 0; }
+        padding: 0 0 15px 0; }
         article.restaurante .tab-content div.panel.panel-default .panel-collapse .panel-body .nav-tabs li {
           background: #ececec; }
           article.restaurante .tab-content div.panel.panel-default .panel-collapse .panel-body .nav-tabs li a {
@@ -2415,30 +2456,6 @@ article.restaurante .sobre-restaurante dd.telefono:before {
   content: "\e182"; }
 article.restaurante .sobre-restaurante dd.sitio-web:before {
   content: "\e135"; }
-article.restaurante .sobre-restaurante dd.metodos-pago {
-  background-image: url("../img/constante.png");
-  background-repeat: no-repeat;
-  height: 19px;
-  line-height: 120px;
-  overflow: hidden;
-  position: relative;
-  top: 4px;
-  white-space: nowrap; }
-  article.restaurante .sobre-restaurante dd.metodos-pago.visa-electron {
-    background-position: -178px -157px;
-    width: 28px; }
-  article.restaurante .sobre-restaurante dd.metodos-pago.visa {
-    background-position: -148px -157px;
-    width: 29px; }
-  article.restaurante .sobre-restaurante dd.metodos-pago.mastercard {
-    background-position: -118px -157px;
-    width: 28px; }
-  article.restaurante .sobre-restaurante dd.metodos-pago.maestro {
-    background-position: -88px -157px;
-    width: 28px; }
-  article.restaurante .sobre-restaurante dd.metodos-pago.american-express {
-    background-position: -59px -157px;
-    width: 28px; }
 article.restaurante .sobre-restaurante ul {
   margin-top: 11px; }
   article.restaurante .sobre-restaurante ul li {
@@ -2450,6 +2467,29 @@ article.restaurante .sobre-restaurante ul {
       content: "";
       position: absolute;
       left: 0; }
+    article.restaurante .sobre-restaurante ul li.metodos-pago {
+      background-image: url("../img/constante.png");
+      background-repeat: no-repeat;
+      height: 34px;
+      line-height: 120px;
+      float: left;
+      margin-right: 4px;
+      margin-bottom: 4px;
+      overflow: hidden;
+      position: relative;
+      top: 4px;
+      width: 50px;
+      white-space: nowrap; }
+      article.restaurante .sobre-restaurante ul li.metodos-pago.visa-electron {
+        background-position: -51px -320px; }
+      article.restaurante .sobre-restaurante ul li.metodos-pago.visa {
+        background-position: 0 -320px; }
+      article.restaurante .sobre-restaurante ul li.metodos-pago.mastercard {
+        background-position: -103px -285px; }
+      article.restaurante .sobre-restaurante ul li.metodos-pago.maestro {
+        background-position: -51px -285px; }
+      article.restaurante .sobre-restaurante ul li.metodos-pago.american-express {
+        background-position: 0 -285px; }
     article.restaurante .sobre-restaurante ul li.icono-apd:before {
       background-position: -66px -136px;
       height: 19px;
@@ -2555,6 +2595,9 @@ article.restaurante .sobre-restaurante ul {
       top: 6px;
       width: 20px; }
 
+@media (min-width: 992px) {
+  article.restaurante .tab-content div.ofertas {
+    padding-left: 0; } }
 article.restaurante div.mapa {
   padding-bottom: 15px;
   text-align: center; }
@@ -2574,28 +2617,32 @@ article.restaurante div.mapa {
     border: 1px solid #999999;
     height: 288px; }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  article.restaurante div.mapa {
+    position: relative;
+    left: -15px;
+    width: 720px; } }
 @media (min-width: 992px) {
   article.restaurante div.mapa {
     position: relative;
     left: -15px;
     width: 960px; } }
-article.restaurante div.calificaciones {
-  border-bottom: 1px solid #cccccc;
-  border-top: 1px solid #cccccc; }
-  article.restaurante div.calificaciones dl {
-    text-align: center; }
-  article.restaurante div.calificaciones dt,
-  article.restaurante div.calificaciones dd {
-    display: inline-block; }
-  article.restaurante div.calificaciones dt,
-  article.restaurante div.calificaciones dd:before {
-    color: #666666;
-    font-size: 18px;
-    font-weight: 600; }
-  article.restaurante div.calificaciones dd.puntaje .estrellas-img {
-    line-height: 160px;
-    overflow: hidden;
-    white-space: nowrap; }
+article.restaurante div.calificaciones dl {
+  text-align: center; }
+article.restaurante div.calificaciones dt,
+article.restaurante div.calificaciones dd {
+  display: inline-block; }
+article.restaurante div.calificaciones dt,
+article.restaurante div.calificaciones dd:before {
+  color: #666666;
+  font-size: 18px;
+  font-weight: 600; }
+article.restaurante div.calificaciones dt {
+  line-height: 26px; }
+article.restaurante div.calificaciones dd.puntaje .estrellas-img {
+  line-height: 160px;
+  overflow: hidden;
+  white-space: nowrap; }
 article.restaurante div.calificaciones dl,
 article.restaurante div.calificacion.principal dl {
   margin-bottom: 0; }
@@ -2622,9 +2669,14 @@ article.restaurante div.calificacion.principal dl {
   article.restaurante div.calificacion.principal dl dd.puntaje {
     padding-top: 4px; }
     article.restaurante div.calificaciones dl dd.puntaje .estrellas,
+    article.restaurante div.calificaciones dl dd.puntaje strong,
+    article.restaurante div.calificacion.principal dl dd.puntaje .estrellas,
+    article.restaurante div.calificacion.principal dl dd.puntaje strong {
+      display: inline-block; }
+    article.restaurante div.calificaciones dl dd.puntaje .estrellas,
     article.restaurante div.calificacion.principal dl dd.puntaje .estrellas {
-      display: inline-block;
       height: 23px;
+      top: 2px;
       width: 144px; }
       article.restaurante div.calificaciones dl dd.puntaje .estrellas .estrellas-img,
       article.restaurante div.calificacion.principal dl dd.puntaje .estrellas .estrellas-img {
@@ -2632,13 +2684,10 @@ article.restaurante div.calificacion.principal dl {
     article.restaurante div.calificaciones dl dd.puntaje strong,
     article.restaurante div.calificacion.principal dl dd.puntaje strong {
       color: #0098db;
-      display: inline-block;
-      padding-left: 6px;
-      position: relative;
-      top: -3px; }
+      padding-left: 6px; }
 article.restaurante div.calificacion.principal > div > div {
   padding-bottom: 15px;
-  padding-top: 15px; }
+  padding-top: 8px; }
   article.restaurante div.calificacion.principal > div > div + div {
     text-align: center; }
 article.restaurante div.calificacion.principal dl.resumen dd {
@@ -2647,22 +2696,20 @@ article.restaurante div.calificacion.principal dl.resumen dd {
     color: black;
     font-size: 18px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase; }
   article.restaurante div.calificacion.principal dl.resumen dd.puntaje strong {
     font-size: 18px; }
   article.restaurante div.calificacion.principal dl.resumen dd.opiniones {
     color: #666666;
-    font-size: 12px; }
+    font-size: 14px; }
 article.restaurante div.calificacion.principal dl.detalle dt,
 article.restaurante div.calificacion.principal dl.detalle dd {
   display: inline-block; }
 article.restaurante div.calificacion.principal dl.detalle dt {
   color: #666666;
-  font-size: 16px;
-  font-weight: 400;
-  position: relative;
-  top: -4px; }
+  font-size: 14px;
+  font-weight: 400; }
   article.restaurante div.calificacion.principal dl.detalle dt:first-child {
     padding-left: 0; }
 article.restaurante div.calificacion.principal dl.detalle dd .estrellas {
@@ -2675,10 +2722,10 @@ article.restaurante div.calificacion.principal dl.detalle dd .estrellas {
     overflow: hidden; }
 article.restaurante div.calificacion.principal p.garantia {
   color: #666666;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   margin-bottom: 0;
-  margin-top: 10px;
+  margin-top: 22px;
   padding-right: 10px; }
   article.restaurante div.calificacion.principal p.garantia .glyphicon {
     color: #06b31b;
@@ -2741,6 +2788,10 @@ article.restaurante div.calificacion.principal p.garantia {
 @media (min-width: 768px) and (max-width: 991px) {
   article.restaurante div.calificaciones {
     margin-top: 10px; }
+  article.restaurante div.calificacion.principal > div > div {
+    padding-bottom: 12px; }
+    article.restaurante div.calificacion.principal > div > div:first-child {
+      padding-bottom: 8px; }
   article.restaurante div.calificacion.principal dl.detalle {
     border-top: 1px solid #999999;
     padding-top: 8px; } }
@@ -2757,7 +2808,6 @@ article.restaurante div.calificacion.principal p.garantia {
 article.restaurante section.opiniones {
   border-top: 1px solid #999999; }
   article.restaurante section.opiniones header {
-    margin-bottom: 5px;
     padding-top: 4px; }
     article.restaurante section.opiniones header form label {
       color: #666666;
@@ -2801,7 +2851,8 @@ article.restaurante section.opiniones {
     line-height: 20px; }
   article.restaurante section.opiniones article div.opinion time {
     color: #666666;
-    font-size: 15px; }
+    font-size: 15px;
+    font-style: italic; }
   article.restaurante section.opiniones article div.opinion dl {
     margin: 0; }
   article.restaurante section.opiniones article div.opinion dt,
@@ -2836,9 +2887,11 @@ article.restaurante section.opiniones {
 @media (min-width: 768px) {
   article.restaurante section.opiniones {
     padding-bottom: 15px; }
-    article.restaurante section.opiniones header a.reservar {
-      float: right;
-      margin-top: 2px; }
+    article.restaurante section.opiniones header {
+      margin-bottom: 10px; }
+      article.restaurante section.opiniones header a.btn {
+        float: right;
+        margin-top: 2px; }
     article.restaurante section.opiniones article .opinion p {
       display: table-cell;
       height: 83px;
@@ -2846,6 +2899,8 @@ article.restaurante section.opiniones {
 @media (min-width: 992px) {
   article.restaurante section.opiniones {
     padding-bottom: 25px; }
+    article.restaurante section.opiniones form {
+      padding-left: 15px; }
     article.restaurante section.opiniones article div.opinion dl {
       text-align: right; } }
 article.restaurante aside {
@@ -2862,84 +2917,67 @@ article.restaurante aside {
     padding-top: 0; }
   article.restaurante aside .tab-content {
     padding-top: 20px; }
+    article.restaurante aside .tab-content > div > div > div {
+      padding-bottom: 0; }
+    article.restaurante aside .tab-content ul.row {
+      margin-left: -19px;
+      margin-right: -19px; }
     article.restaurante aside .tab-content li {
-      float: left; }
+      padding: 3px 4px;
+      position: relative; }
       article.restaurante aside .tab-content li a {
+        background: #ececec;
         display: block;
-        height: 100%; }
+        height: 100%;
+        min-height: 94px;
+        padding: 3px; }
         article.restaurante aside .tab-content li a:hover {
           text-decoration: none; }
-          article.restaurante aside .tab-content li a:hover h2,
-          article.restaurante aside .tab-content li a:hover address,
-          article.restaurante aside .tab-content li a:hover dt,
-          article.restaurante aside .tab-content li a:hover dd.cocina {
+          article.restaurante aside .tab-content li a:hover h2 {
             color: #ff6600; }
+      article.restaurante aside .tab-content li h2,
       article.restaurante aside .tab-content li address,
       article.restaurante aside .tab-content li dl {
-        margin-left: 100px; }
+        margin-left: 100px;
+        margin-bottom: 0; }
       article.restaurante aside .tab-content li address,
       article.restaurante aside .tab-content li dt,
       article.restaurante aside .tab-content li dd {
         color: #666666;
         font-size: 12px;
-        font-weight: 600;
-        line-height: 13px; }
+        font-weight: 400;
+        line-height: 14px; }
       article.restaurante aside .tab-content li h2 {
+        color: #0098db;
         font-size: 15px;
         font-weight: 600;
-        line-height: 15px;
-        margin-bottom: 10px;
-        margin-top: 0; }
-      article.restaurante aside .tab-content li address,
-      article.restaurante aside .tab-content li dd {
-        position: relative;
-        padding-left: 20px; }
-        article.restaurante aside .tab-content li address:before,
-        article.restaurante aside .tab-content li dd:before {
-          color: #666666;
-          font-family: "Glyphicons Halflings";
-          left: 0;
-          position: absolute;
-          top: 0; }
-      article.restaurante aside .tab-content li address {
-        margin-bottom: 10px; }
-        article.restaurante aside .tab-content li address:before {
-          content: "\e062"; }
-      article.restaurante aside .tab-content li dl {
-        margin-bottom: 0; }
+        line-height: 16px;
+        margin-top: 0;
+        padding-right: 12px; }
       article.restaurante aside .tab-content li dd {
         display: block; }
-        article.restaurante aside .tab-content li dd.cocina {
-          margin-bottom: 9px; }
-        article.restaurante aside .tab-content li dd.precio {
-          color: #ff0000; }
+        article.restaurante aside .tab-content li dd.calificacion {
+          font-weight: 700; }
       article.restaurante aside .tab-content li .imagen {
-        float: left;
-        height: 68px;
+        height: 88px;
+        left: 7px;
         overflow: hidden;
+        position: absolute;
+        top: 6px;
         width: 94px; }
+      article.restaurante aside .tab-content li .borrar {
+        color: #999999;
+        cursor: pointer;
+        font-size: 15px;
+        line-height: 15px;
+        position: absolute;
+        text-align: center;
+        right: 4px;
+        top: 3px;
+        width: 15px; }
+        article.restaurante aside .tab-content li .borrar:hover {
+          color: #0098db; }
 
-@media (max-width: 599px) {
-  article.restaurante aside .tab-content li {
-    float: none;
-    width: 100%; } }
-@media (min-width: 600px) and (max-width: 991px) {
-  article.restaurante aside .tab-content ul {
-    margin-left: -3%; }
-  article.restaurante aside .tab-content li {
-    padding-left: 3%;
-    width: 50%; } }
-@media (max-width: 991px) {
-  article.restaurante aside .tab-content ul {
-    margin-top: -20px; }
-  article.restaurante aside .tab-content li {
-    margin-top: 20px; } }
-@media (min-width: 992px) {
-  article.restaurante aside .tab-content ul {
-    margin-left: -2%; }
-  article.restaurante aside .tab-content li {
-    width: 25%;
-    padding-left: 2%; } }
 section.reserva-paso-2 header {
   border-bottom: 1px solid #cccccc; }
   section.reserva-paso-2 header h1,

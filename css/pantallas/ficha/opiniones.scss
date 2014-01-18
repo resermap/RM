@@ -2,7 +2,6 @@ article.restaurante {
 	section.opiniones {
 		border-top: 1px solid $color-t4;
 		header {
-			margin-bottom: 5px;
 			padding-top: 4px;
 			form {
 				label {
@@ -61,6 +60,7 @@ article.restaurante {
 				time {
 					color: $color-t3;
 					font-size: 15px;
+					font-style: italic;
 				}
 				dl {
 					margin: 0;
@@ -120,7 +120,8 @@ article.restaurante {
 		section.opiniones {
 			padding-bottom: 15px;
 			header {
-				a.reservar {
+				margin-bottom: 10px;
+				a.btn {
 					float: right;
 					margin-top: 2px;
 				}
@@ -142,6 +143,9 @@ article.restaurante {
 	article.restaurante {
 		section.opiniones {
 			padding-bottom: 25px;
+			form {
+				padding-left: 15px;
+			}
 			article {
 				div.opinion {
 					dl {

@@ -1,6 +1,8 @@
 .container-breadcrumb {
 	background: $color-t5;
 	border-bottom: 1px solid $color-t4;
+	position: relative;
+	z-index: 1;
 	.breadcrumb {
 		background: transparent;
 		margin: 0;

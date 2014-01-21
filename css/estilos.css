@@ -335,6 +335,13 @@ blockquote {
         color: #0098db;
         text-decoration: none; }
 
+.dropdown-menu {
+  padding: 5px 0; }
+  .dropdown-menu li {
+    padding: 2px 10px; }
+    .dropdown-menu li a:hover {
+      background: transparent; }
+
 input[type="submit"] {
   border: none; }
 
@@ -541,16 +548,19 @@ body > header {
         border-top-width: 10px;
         position: relative;
         top: -1px; }
-      body > header nav.navbar-default.ciudades .navbar-nav li {
+      body > header nav.navbar-default.ciudades .navbar-nav li.dropdown {
         padding: 0 0 0 15px; }
-        body > header nav.navbar-default.ciudades .navbar-nav li.open a {
+        body > header nav.navbar-default.ciudades .navbar-nav li.dropdown a[data-toggle="dropdown"]:after {
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+          border-top: 10px solid;
+          content: "";
+          display: inline-block;
+          height: 0;
+          margin-left: 4px;
+          width: 0; }
+        body > header nav.navbar-default.ciudades .navbar-nav li.dropdown.open a {
           background: transparent; }
-        body > header nav.navbar-default.ciudades .navbar-nav li .dropdown-menu {
-          padding: 5px 0; }
-          body > header nav.navbar-default.ciudades .navbar-nav li .dropdown-menu li {
-            padding: 2px 10px; }
-            body > header nav.navbar-default.ciudades .navbar-nav li .dropdown-menu li a {
-              background: transparent; }
     body > header nav.navbar-default.ciudades .navbar-nav > li > a,
     body > header nav.navbar-default.ciudades a {
       color: black;
@@ -573,11 +583,24 @@ body > header {
     padding-left: 55px;
     position: relative;
     vertical-align: top; }
+    body > header .usuario a[data-toggle="dropdown"]:hover {
+      text-decoration: none; }
     body > header .usuario p {
       margin-bottom: 0; }
     body > header .usuario .nombre {
       font-weight: 700;
       line-height: 16px; }
+      body > header .usuario .nombre:after {
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 6px solid;
+        content: "";
+        display: inline-block;
+        height: 0;
+        margin-left: 4px;
+        position: relative;
+        top: -2px;
+        width: 0; }
     body > header .usuario .imagen {
       border: 2px solid #FFFFFF;
       border-radius: 100%;
@@ -588,6 +611,14 @@ body > header {
       position: absolute;
       top: -10px;
       width: 46px; }
+      body > header .usuario .imagen img {
+        min-height: 100%;
+        height: auto;
+        width: 100%; }
+    body > header .usuario ul a {
+      color: #000000;
+      font-size: 14px;
+      padding: 0; }
   body > header .logo + div > div, body > header .logo + div > nav {
     display: inline-block; }
 
@@ -1149,6 +1180,11 @@ section.busqueda {
   position: relative; }
   section.busqueda > div > div > div {
     position: relative; }
+    section.busqueda > div > div > div > img {
+      left: -145px;
+      position: absolute;
+      top: 0;
+      z-index: 1; }
   section.busqueda header,
   section.busqueda form {
     position: relative;
@@ -1220,11 +1256,6 @@ section.busqueda {
     height: 36px;
     font-size: 14px;
     font-weight: 700; }
-  section.busqueda img {
-    left: -145px;
-    position: absolute;
-    top: 0;
-    z-index: 1; }
   section.busqueda aside {
     color: #dddddd;
     height: 66px;
@@ -1292,6 +1323,10 @@ section.busqueda {
         right: -56px;
         top: 50%;
         width: 49px; }
+        section.busqueda aside blockquote .imagen img {
+          min-height: 100%;
+          height: auto;
+          width: 100%; }
     section.busqueda aside .ver-otro {
       background: url("../img/constante.png") -212px -135px no-repeat;
       cursor: pointer;
@@ -2078,7 +2113,7 @@ article.restaurante dl.tipo-precio dd.precio {
     top: 2px; }
 article.restaurante dl.tipo-precio dd.descuento {
   background: #FFFFFF;
-  box-shadow: 0 0 6px #333333;
+  box-shadow: 0 0 8px #333333;
   font-size: 36px;
   padding: 0 15px; }
   article.restaurante dl.tipo-precio dd.descuento:after, article.restaurante dl.tipo-precio dd.descuento:before {
@@ -2089,10 +2124,10 @@ article.restaurante dl.tipo-precio dd.descuento {
     top: 0;
     width: 5px; }
   article.restaurante dl.tipo-precio dd.descuento:after {
-    background-position: -175px -263px;
+    background-position: -165px -263px;
     right: -5px; }
   article.restaurante dl.tipo-precio dd.descuento:before {
-    background-position: -169px -263px;
+    background-position: -159px -263px;
     left: -5px; }
 article.restaurante blockquote {
   border-bottom: 1px solid #cccccc;
@@ -2398,7 +2433,8 @@ article.restaurante .tab-content {
                   background: #FFFFFF;
                   cursor: auto;
                   font-size: 17px;
-                  font-weight: 600; }
+                  font-weight: 600;
+                  width: 32px; }
                   article.restaurante .tab-content div.panel.panel-default .panel-collapse .panel-body .tab-content table td.personas .cantidad-personas .btn.numero:hover {
                     background: #FFFFFF;
                     border-color: #999999;
@@ -2838,6 +2874,10 @@ article.restaurante section.opiniones {
     margin: 0 auto;
     overflow: hidden;
     width: 70px; }
+    article.restaurante section.opiniones article footer .usuario-imagen img {
+      min-height: 100%;
+      height: auto;
+      width: 100%; }
   article.restaurante section.opiniones article footer .usuario-nombre {
     display: block;
     line-height: 14px;
@@ -3482,6 +3522,10 @@ section.comentario-satisfactorio blockquote {
     position: absolute;
     top: 50%;
     width: 52px; }
+    section.comentario-satisfactorio blockquote .imagen img {
+      min-height: 100%;
+      height: auto;
+      width: 100%; }
 section.comentario-satisfactorio cite {
   font-weight: 700; }
 section.comentario-satisfactorio time:before {

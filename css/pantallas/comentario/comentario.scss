@@ -275,6 +275,11 @@ section.comentario-satisfactorio {
 			position: absolute;
 			top: 50%;
 			width: 52px;
+			img {
+				min-height: 100%;
+				height: auto;
+				width: 100%;
+			}
 		}
 	}
 	cite {

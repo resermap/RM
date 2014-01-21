@@ -1,0 +1,11 @@
+.dropdown-menu {
+	padding: 5px 0;
+	li {
+		padding: 2px 10px;
+		a {
+			&:hover {
+				background: transparent;
+			}
+		}
+	}
+}

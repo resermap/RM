@@ -83,7 +83,7 @@ article.restaurante {
 				}
 				&.descuento {
 					background: #FFFFFF;
-					box-shadow: 0 0 6px $color-t2;
+					box-shadow: 0 0 8px $color-t2;
 					font-size: 36px;
 					padding: 0 15px;
 					&:after,
@@ -96,11 +96,11 @@ article.restaurante {
 						width: 5px;
 					}
 					&:after {
-						background-position: -175px -263px;
+						background-position: -165px -263px;
 						right: -5px;
 					}
 					&:before {
-						background-position: -169px -263px;
+						background-position: -159px -263px;
 						left: -5px;
 					}
 				}

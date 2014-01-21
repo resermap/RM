@@ -3191,10 +3191,11 @@ section.reserva-paso-3 header {
   section.reserva-paso-3 header p {
     color: #2b6003; }
   section.reserva-paso-3 header h1 {
-    font-size: 17px;
-    font-weight: 700; }
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 15px; }
   section.reserva-paso-3 header p {
-    font-size: 14px; }
+    font-size: 15px; }
     section.reserva-paso-3 header p strong {
       color: black;
       display: block;
@@ -3203,14 +3204,21 @@ section.reserva-paso-3 header {
         font-size: 17px;
         font-weight: 700; }
 section.reserva-paso-3 h2 {
-  color: black;
-  font-size: 18px;
-  font-weight: 700; }
+  color: #666666;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 10px; }
 section.reserva-paso-3 h3 {
   color: black;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
   margin-top: 0; }
+  section.reserva-paso-3 h3.nombre {
+    font-weight: 700; }
+section.reserva-paso-3 .reserva-detalle .descuento p {
+  font-weight: 700; }
+section.reserva-paso-3 .reserva-detalle .descuento strong {
+  font-size: 17px; }
 section.reserva-paso-3 .reserva-detalle .puntos h3 {
   margin-bottom: 5px; }
 section.reserva-paso-3 .reserva-detalle div.imagen {
@@ -3218,10 +3226,24 @@ section.reserva-paso-3 .reserva-detalle div.imagen {
   overflow: hidden;
   height: 106px;
   width: 133px; }
+section.reserva-paso-3 .reserva-detalle ul.usuario {
+  padding-left: 36px;
+  position: relative; }
+  section.reserva-paso-3 .reserva-detalle ul.usuario:before {
+    color: #999999;
+    content: "\e008";
+    font-size: 28px;
+    font-family: "Glyphicons Halflings";
+    margin-top: -24px;
+    left: 0;
+    position: absolute;
+    top: 50%; }
+  section.reserva-paso-3 .reserva-detalle ul.usuario li {
+    letter-spacing: -0.5px; }
 section.reserva-paso-3 .reserva-detalle ul li {
   color: #666666;
   font-size: 15px;
-  padding-bottom: 4px; }
+  padding-bottom: 2px; }
   section.reserva-paso-3 .reserva-detalle ul li:before {
     color: #999999;
     font-family: "Glyphicons Halflings";
@@ -3236,8 +3258,10 @@ section.reserva-paso-3 .reserva-detalle ul li {
     content: "\e023"; }
 section.reserva-paso-3 .reserva-detalle p {
   color: #666666; }
-section.reserva-paso-3 .reserva-detalle strong span {
-  font-size: 17px; }
+section.reserva-paso-3 .reserva-detalle strong {
+  font-size: 15px; }
+  section.reserva-paso-3 .reserva-detalle strong span {
+    font-size: 17px; }
 section.reserva-paso-3 .otros-detalles {
   border-top: 1px solid #c2c6ca;
   margin-top: 19px;
@@ -3245,12 +3269,12 @@ section.reserva-paso-3 .otros-detalles {
   padding-top: 19px; }
   section.reserva-paso-3 .otros-detalles .mapa {
     border: 1px solid #999999;
-    height: 155px;
+    height: 174px;
     overflow: hidden; }
   section.reserva-paso-3 .otros-detalles address {
     color: #666666;
-    font-size: 12px;
-    padding-left: 16px;
+    font-size: 15px;
+    padding-left: 18px;
     position: relative; }
     section.reserva-paso-3 .otros-detalles address:before {
       color: #999999;
@@ -3258,34 +3282,41 @@ section.reserva-paso-3 .otros-detalles {
       font-family: "Glyphicons Halflings";
       left: 0;
       position: absolute; }
-  section.reserva-paso-3 .otros-detalles .puntos > div {
-    border: 1px solid #cccccc;
-    background: #f1f0f0;
-    padding: 10px 15px 4px 15px; }
-  section.reserva-paso-3 .otros-detalles .puntos p {
-    color: #666666; }
-    section.reserva-paso-3 .otros-detalles .puntos p strong span {
-      font-size: 18px; }
-    section.reserva-paso-3 .otros-detalles .puntos p.small {
-      color: black;
-      font-size: 10px;
-      line-height: 10px;
-      margin-bottom: 15px; }
-    section.reserva-paso-3 .otros-detalles .puntos p.participar,
-    section.reserva-paso-3 .otros-detalles .puntos p.participar a {
-      font-size: 12px;
-      line-height: 16px; }
-    section.reserva-paso-3 .otros-detalles .puntos p.participar a {
-      font-weight: 700; }
+  section.reserva-paso-3 .otros-detalles div.puntos {
+    text-align: center; }
+    section.reserva-paso-3 .otros-detalles div.puntos > div {
+      border: 1px solid #cccccc;
+      background: #f1f0f0;
+      padding: 10px 15px 4px 15px; }
+    section.reserva-paso-3 .otros-detalles div.puntos p {
+      color: #666666; }
+      section.reserva-paso-3 .otros-detalles div.puntos p strong span {
+        font-size: 18px; }
+      section.reserva-paso-3 .otros-detalles div.puntos p.puntos {
+        font-size: 17px;
+        line-height: 20px; }
+      section.reserva-paso-3 .otros-detalles div.puntos p.small {
+        color: black;
+        font-size: 13px;
+        letter-spacing: -0.5px;
+        line-height: 16px;
+        margin-bottom: 10px; }
+      section.reserva-paso-3 .otros-detalles div.puntos p.participar {
+        font-size: 15px;
+        letter-spacing: -0.5px;
+        line-height: 20px; }
+        section.reserva-paso-3 .otros-detalles div.puntos p.participar a {
+          font-weight: 700; }
 section.reserva-paso-3 .detalles-finales {
   padding-top: 10px;
   text-align: center; }
   section.reserva-paso-3 .detalles-finales p {
     color: #666666;
-    font-size: 12px;
+    font-size: 15px;
+    line-height: 18px;
     margin-bottom: 0; }
     section.reserva-paso-3 .detalles-finales p.sociales {
-      font-weight: 700;
+      color: black;
       margin-top: 10px; }
       section.reserva-paso-3 .detalles-finales p.sociales a {
         line-height: 100px;
@@ -3315,31 +3346,31 @@ section.reserva-paso-3 .detalles-finales {
     margin-top: 20px; }
     section.reserva-paso-3 .reserva-detalle > div div.imagen {
       display: none; }
-  section.reserva-paso-3 .otros-detalles .puntos {
+  section.reserva-paso-3 .otros-detalles div.puntos {
     margin-top: 20px; }
   section.reserva-paso-3 .otros-detalles .info {
     margin-top: 10px; }
-  section.reserva-paso-3 a.volver {
+  section.reserva-paso-3 .btn-secundario {
     margin-top: 20px; } }
 @media (min-width: 768px) and (max-width: 991px) {
   section.reserva-paso-3 .btn {
-    margin-top: 45px; }
-  section.reserva-paso-3 .otros-detalles .puntos {
+    margin-top: 50px; }
+  section.reserva-paso-3 .otros-detalles div.puntos {
     margin-top: 20px;
-    text-align: center; }
-  section.reserva-paso-3 a.volver {
-    margin-top: 20px; } }
+    text-align: center; } }
 @media (min-width: 992px) {
   section.reserva-paso-3 .otros-detalles address {
     text-align: left; }
+  section.reserva-paso-3 .otros-detalles .puntos {
+    padding-left: 0; }
   section.reserva-paso-3 .otros-detalles .btn {
-    margin-top: 30px; }
+    margin-top: 50px; }
   section.reserva-paso-3 .otros-detalles .info {
     text-align: center; }
-  section.reserva-paso-3 a.volver {
+  section.reserva-paso-3 .btn-secundario {
     position: absolute;
     right: 15px;
-    top: 40%; } }
+    top: 20px; } }
 section.ingresar-comentario h1 {
   color: #0098db;
   font-size: 30px;

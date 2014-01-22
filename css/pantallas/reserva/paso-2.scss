@@ -4,40 +4,49 @@ section.reserva-paso-2 {
 		h1,
 		h2 {
 			color: $color-t1;
-			font-weight: 600;
-			margin: 0;
+			font-weight: 400;
 		}
 		h1 {
-			font-size: 19px;
-			margin-bottom: 2px;
+			font-size: 30px;
+			margin: 0 0 2px 0;
 		}
-		h2,
+		h2 {
+			font-size: 18px;
+			margin: 15px 0 0 0;
+		}
 		p {
 			font-size: 15px;
 		}
 		p {
 			color: $color-t3;
-			margin: 4px 0 12px 0;
+			line-height: 22px;
+			margin: 0 0 12px 0;
 			span {
 				font-weight: 700;
 			}
 			a {
-				color: $color-v1;
-				font-weight: 600;
+				&:hover {
+					text-decoration: none;
+				}
 			}
 		}
 	}
 	form.form-inline {
 		margin-left: -4px;
+		label {
+			font-size: 14px;
+		}
 		.form-group {
-			padding-top: 20px;
+			padding-top: 25px;
 			padding-left: 4px;
 			vertical-align: top;
+			&:first-child,
+			&:first-child+div {
+				padding-top: 20px;
+			}
 			.checkbox {
 				label {
 					color: $color-v1;
-					font-size: 13px;
-					font-weight: 700;
 				}
 				&.inactivo {
 					display: none;
@@ -91,16 +100,16 @@ section.reserva-paso-2 {
 		}
 		.extras {
 			color: $color-t3;
-			font-size: 12px;
+			display: block;
+			font-size: 14px;
+			letter-spacing: -1px;
 			margin-bottom: 14px;
 			padding-top: 40px;
 			a {
-				font-size: 12px;
-				font-weight: 400;
 				text-decoration: underline;
 			}
 			span {
-				font-weight: 700;
+				color: $color-t1;
 			}
 		}
 		.extras,
@@ -111,8 +120,8 @@ section.reserva-paso-2 {
 	aside {
 		background: #f0f0f0;
 		border: 1px solid $color-t5;
-		margin-top: 20px;
-		padding: 14px 0 20px 0;
+		margin-top: 40px;
+		padding: 14px 20px 20px 20px;
 		text-align: center;
 		p {
 			font-size: 12px
@@ -120,64 +129,73 @@ section.reserva-paso-2 {
 		&.registrado {
 			p {
 				color: $color-t3;
-				font-size: 12px;
-				font-weight: 600;
+				font-size: 15px;
+				line-height: 20px;
 				margin: 0;
+				text-align: center;
 				strong {
 					display: block;
 					font-size: 17px;
-					font-weight: 600;
 					&.chico {
-						font-size: 13px;
-						font-weight: 700;
+						font-size: 15px;
 					}
 				}
 				&+p {
-					margin-top: 20px;
+					margin-top: 18px;
 				}
 			}
 		}
 		&.anonimo {
+			padding-top: 4px;
 			p {
-				color: #42586f;
-				margin-bottom: 6px;
+				color: $color-t3;
+				font-size: 15px;
+				letter-spacing: -0.5px;
+				line-height: 20px;
+				margin-bottom: 8px;
+				&:first-child {
+					margin-bottom: 12px;
+				}
 				a {
-					color: #42586f;
+					color: $color-t3;
+					font-weight: 700;
 					&.fb,
 					&.gp {
-						border-radius: 3px;
 						display: inline-block;
-						height: 25px;
+						height: 32px;
 						line-height: 100px;
 						overflow: hidden;
 						position: relative;
 						top: 7px;
-						width: 25px;
+						vertical-align: bottom;
+						width: 32px;
 					}
 					&.fb {
-						background: #335890 url(#{$img-constante}) -149px 5px no-repeat;
+						background: #5d82d1 url(#{$img-constante}) -216px -100px no-repeat;
 						margin-left: 2px;
+						&:hover {
+							background-color: #32558B;
+						}
 					}
 					&.gp {
-						background: #db4b39 url(#{$img-constante}) -180px 7px no-repeat;
+						background: #eb5e4c url(#{$img-constante}) -139px -97px no-repeat;
 						margin-left: 6px;
+						&:hover {
+							background-color: #DA4B38;
+						}
 					}
 				}
 			}
 			div {
 				border: 1px solid $color-t5;
 				background: #FFFFFF;
-				margin: 0 20px;
-				padding: 5px 0 12px 0;
+				padding: 10px 10px 12px 10px;
 				p {
-					color: $color-t3;
-					font-size: 12px;
-					font-weight: 600;
 					margin: 0;
 					strong {
 						display: block;
 						font-size: 17px;
-						font-weight: 600;
+						font-weight: 700;
 					}
 					&+p {
 						margin-top: 20px;
@@ -257,14 +275,6 @@ section.reserva-paso-2 {
 			}
 			input[type="submit"] {
 				width: 266px;
-			}
-		}
-		aside {
-			&.registrado {
-				p {
-					margin: 0 auto;
-					width: 200px;
-				}
 			}
 		}
 	}

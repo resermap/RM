@@ -3023,32 +3023,35 @@ section.reserva-paso-2 header {
   section.reserva-paso-2 header h1,
   section.reserva-paso-2 header h2 {
     color: black;
-    font-weight: 600;
-    margin: 0; }
+    font-weight: 400; }
   section.reserva-paso-2 header h1 {
-    font-size: 19px;
-    margin-bottom: 2px; }
-  section.reserva-paso-2 header h2,
+    font-size: 30px;
+    margin: 0 0 2px 0; }
+  section.reserva-paso-2 header h2 {
+    font-size: 18px;
+    margin: 15px 0 0 0; }
   section.reserva-paso-2 header p {
     font-size: 15px; }
   section.reserva-paso-2 header p {
     color: #666666;
-    margin: 4px 0 12px 0; }
+    line-height: 22px;
+    margin: 0 0 12px 0; }
     section.reserva-paso-2 header p span {
       font-weight: 700; }
-    section.reserva-paso-2 header p a {
-      color: #0098db;
-      font-weight: 600; }
+    section.reserva-paso-2 header p a:hover {
+      text-decoration: none; }
 section.reserva-paso-2 form.form-inline {
   margin-left: -4px; }
+  section.reserva-paso-2 form.form-inline label {
+    font-size: 14px; }
   section.reserva-paso-2 form.form-inline .form-group {
-    padding-top: 20px;
+    padding-top: 25px;
     padding-left: 4px;
     vertical-align: top; }
+    section.reserva-paso-2 form.form-inline .form-group:first-child, section.reserva-paso-2 form.form-inline .form-group:first-child + div {
+      padding-top: 20px; }
     section.reserva-paso-2 form.form-inline .form-group .checkbox label {
-      color: #0098db;
-      font-size: 13px;
-      font-weight: 700; }
+      color: #0098db; }
     section.reserva-paso-2 form.form-inline .form-group .checkbox.inactivo {
       display: none; }
     section.reserva-paso-2 form.form-inline .form-group .form-group {
@@ -3080,76 +3083,83 @@ section.reserva-paso-2 form.form-inline {
     width: 100%; }
   section.reserva-paso-2 form.form-inline .extras {
     color: #666666;
-    font-size: 12px;
+    display: block;
+    font-size: 14px;
+    letter-spacing: -1px;
     margin-bottom: 14px;
     padding-top: 40px; }
     section.reserva-paso-2 form.form-inline .extras a {
-      font-size: 12px;
-      font-weight: 400;
       text-decoration: underline; }
     section.reserva-paso-2 form.form-inline .extras span {
-      font-weight: 700; }
+      color: black; }
   section.reserva-paso-2 form.form-inline .extras,
   section.reserva-paso-2 form.form-inline input[type="submit"] {
     margin-left: 4px; }
 section.reserva-paso-2 aside {
   background: #f0f0f0;
   border: 1px solid #cccccc;
-  margin-top: 20px;
-  padding: 14px 0 20px 0;
+  margin-top: 40px;
+  padding: 14px 20px 20px 20px;
   text-align: center; }
   section.reserva-paso-2 aside p {
     font-size: 12px; }
   section.reserva-paso-2 aside.registrado p {
     color: #666666;
-    font-size: 12px;
-    font-weight: 600;
-    margin: 0; }
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    text-align: center; }
     section.reserva-paso-2 aside.registrado p strong {
       display: block;
-      font-size: 17px;
-      font-weight: 600; }
+      font-size: 17px; }
       section.reserva-paso-2 aside.registrado p strong.chico {
-        font-size: 13px;
-        font-weight: 700; }
+        font-size: 15px; }
     section.reserva-paso-2 aside.registrado p + p {
-      margin-top: 20px; }
-  section.reserva-paso-2 aside.anonimo p {
-    color: #42586f;
-    margin-bottom: 6px; }
-    section.reserva-paso-2 aside.anonimo p a {
-      color: #42586f; }
-      section.reserva-paso-2 aside.anonimo p a.fb, section.reserva-paso-2 aside.anonimo p a.gp {
-        border-radius: 3px;
-        display: inline-block;
-        height: 25px;
-        line-height: 100px;
-        overflow: hidden;
-        position: relative;
-        top: 7px;
-        width: 25px; }
-      section.reserva-paso-2 aside.anonimo p a.fb {
-        background: #335890 url(../img/constante.png) -149px 5px no-repeat;
-        margin-left: 2px; }
-      section.reserva-paso-2 aside.anonimo p a.gp {
-        background: #db4b39 url(../img/constante.png) -180px 7px no-repeat;
-        margin-left: 6px; }
-  section.reserva-paso-2 aside.anonimo div {
-    border: 1px solid #cccccc;
-    background: #FFFFFF;
-    margin: 0 20px;
-    padding: 5px 0 12px 0; }
-    section.reserva-paso-2 aside.anonimo div p {
+      margin-top: 18px; }
+  section.reserva-paso-2 aside.anonimo {
+    padding-top: 4px; }
+    section.reserva-paso-2 aside.anonimo p {
       color: #666666;
-      font-size: 12px;
-      font-weight: 600;
-      margin: 0; }
-      section.reserva-paso-2 aside.anonimo div p strong {
-        display: block;
-        font-size: 17px;
-        font-weight: 600; }
-      section.reserva-paso-2 aside.anonimo div p + p {
-        margin-top: 20px; }
+      font-size: 15px;
+      letter-spacing: -0.5px;
+      line-height: 20px;
+      margin-bottom: 8px; }
+      section.reserva-paso-2 aside.anonimo p:first-child {
+        margin-bottom: 12px; }
+      section.reserva-paso-2 aside.anonimo p a {
+        color: #666666;
+        font-weight: 700; }
+        section.reserva-paso-2 aside.anonimo p a.fb, section.reserva-paso-2 aside.anonimo p a.gp {
+          display: inline-block;
+          height: 32px;
+          line-height: 100px;
+          overflow: hidden;
+          position: relative;
+          top: 7px;
+          vertical-align: bottom;
+          width: 32px; }
+        section.reserva-paso-2 aside.anonimo p a.fb {
+          background: #5d82d1 url(../img/constante.png) -216px -100px no-repeat;
+          margin-left: 2px; }
+          section.reserva-paso-2 aside.anonimo p a.fb:hover {
+            background-color: #32558B; }
+        section.reserva-paso-2 aside.anonimo p a.gp {
+          background: #eb5e4c url(../img/constante.png) -139px -97px no-repeat;
+          margin-left: 6px; }
+          section.reserva-paso-2 aside.anonimo p a.gp:hover {
+            background-color: #DA4B38; }
+    section.reserva-paso-2 aside.anonimo div {
+      border: 1px solid #cccccc;
+      background: #FFFFFF;
+      padding: 10px 10px 12px 10px; }
+      section.reserva-paso-2 aside.anonimo div p {
+        margin: 0; }
+        section.reserva-paso-2 aside.anonimo div p strong {
+          display: block;
+          font-size: 17px;
+          font-weight: 700; }
+        section.reserva-paso-2 aside.anonimo div p + p {
+          margin-top: 20px; }
 
 @media (max-width: 767px) {
   section.reserva-paso-2 form.form-inline .form-group {
@@ -3178,10 +3188,7 @@ section.reserva-paso-2 aside {
     section.reserva-paso-2 form.form-inline .form-group .row.select > div.numero {
       width: 53.5%; }
   section.reserva-paso-2 form.form-inline input[type="submit"] {
-    width: 266px; }
-  section.reserva-paso-2 aside.registrado p {
-    margin: 0 auto;
-    width: 200px; } }
+    width: 266px; } }
 section.reserva-paso-3 header {
   background: #edfbcb;
   border: 1px solid #bdd57f;

@@ -2,21 +2,32 @@ main.resultados {
 	div.resultados {
 		margin-top: 15px;
 		div.visualizacion {
-			background: #ececec;
-			border: 1px solid $color-t4;
-			padding: 0 10px;
-			overflow: hidden;
+			position: relative;
 			li {
 				float: left;
 			}
 			.orden {
-				li {
-					margin-right: 16px;
+				margin-bottom: 0;
+				padding-right: 72px;
+				text-align: center;
+				dt,
+				dd {
+					background: #ececec;
+					display: inline-block;
+					font-size: 15px;
+					line-height: 32px;
+					margin-right: 2px;
+					padding: 0 10px;
+				}
+				dt {
+					color: $color-t1;
+					font-weight: 600;
 				}
 				a {
 					color: $color-t2;
+					display: block;
 					font-size: 15px;
-					line-height: 26px;
+					line-height: 32px;
 					&:hover {
 						color: $color-v1;
 						text-decoration: none;
@@ -27,7 +38,9 @@ main.resultados {
 				}
 			}
 			.modos {
-				padding-top: 5px;
+				position: absolute;
+				right: 0;
+				top: 8px;
 				li {
 					margin-left: 6px;
 					.lista {
@@ -35,15 +48,16 @@ main.resultados {
 						height: 17px;
 						width: 16px;
 					}
-					.x {
-						background-position: -238px -60px;
-						height: 17px;
+					.lista-2 {
+						background-position: -225px -40px;
+						height: 16px;
 						width: 16px;
 					}
 					.mapa {
-						background-position: -238px -60px;
-						height: 17px;
-						width: 16px;
+						background-position: -243px -40px;
+						height: 18px;
+						margin-top: -1px;
+						width: 17px;
 					}
 				}
 				a {
@@ -57,59 +71,26 @@ main.resultados {
 				}
 			}
 		}
-		div.filtros-activos {
-			overflow: hidden;
-			width: 100%;
-			li,
-			div.eliminar-todos {
-				line-height: 24px;
-				float: left;
-				margin-top: 6px;
-			}
-			li {
-				background: $color-t4;
-				border-radius: 4px;
-				color: $color-t1;
-				margin-right: 6px;
-				overflow: hidden;
-				padding: 0 0 0 8px;
-				a {
-					color: $color-t1;
-					cursor: pointer;
-					display: inline-block;
-					margin-left: 16px;
-					padding-left: 8px;
-					padding-right: 8px;
-					&:hover {
-						background: $color-v1;
-						color: #FFFFFF;
-						text-decoration: none;
-					}
-				}
-			}
-			div.eliminar-todos {
-				color: $color-v1;
-				cursor: pointer;
-				text-decoration: underline;
-			}
-		}
 		article {
-			border: 1px solid #d9d9d9;
+			border: 1px solid #FFFFFF;;
 			margin-top: 6px;
 			min-height: 168px + 8 + 8 + 2;
 			padding: 8px 8px 8px 216px;
 			position: relative;
 			&:hover {
-				border-color: $color-v1;
+				border-color: #d9d9d9;
 			}
 			h2 {
-				line-height: 20px;
-				margin: 0 0 12px 0;
+				line-height: 24px;
+				margin: 0 0 5px 0;
 				a {
+					color: $color-t1;
 					font-size: 24px;
-					font-weight: 700;
+					line-height: 24px;
+					font-weight: 600;
 					letter-spacing: -0.5px;
 					&:hover {
+						color: $color-v1;
 						text-decoration: none;
 					}
 				}
@@ -145,23 +126,35 @@ main.resultados {
 					&.calificacion {
 						em {
 							color: $color-t1;
+							font-size: 15px;
 							font-style: normal;
 							font-weight: 700;
+							line-height: 20px;
 							text-transform: uppercase;
 						}
 					}
 					&.opiniones {
 						color: $color-t3;
+						font-style: italic;
 					}
 					&.direccion {
 						display: block;
 						margin-top: 4px;
 					}
 					&.direccion,
+					&.cocina,
+					&.precio {
+						line-height: 20px;
+					}
+					&.direccion,
 					&.cocina {
+						color: $color-t3;
+						font-size: 15px;
 						&:before {
-							font-size: 11px;
+							color: $color-t2;
 							margin-right: 4px;
+							position: relative;
+							top: 2px;
 						}
 					}
 					&.cocina,
@@ -169,40 +162,27 @@ main.resultados {
 						display: inline;
 					}
 					&.precio {
-						color: $color-t6;
+						color: $color-v1;
+						font-size: 16px;
+						font-weight: 700;
 						&:before {
-							color: $color-t2;
+							color: $color-t3;
 							content: "|";
 							font-family: "Open Sans";
+							font-size: 15px;
+							font-weight: 400;
 							margin-right: 3px;
 							position: relative;
 							top: -1px;
 						}
 					}
 					&.descuento {
-						box-shadow: 0 0 10px $color-t3;
-						font-size: 30px;
-						line-height: 48px;
+						color: $color-t3;
+						font-size: 36px;
+						font-weight: 700;
+						line-height: 36px;
 						text-align: center;
-						width: 153px;
-						&:before,
-						&:after {
-							background-image: url("#{$img-constante}");
-							background-repeat: no-repeat;
-							content: "";
-							height: 48px;
-							position: absolute;
-							top: 0;
-							width: 4px;
-						}
-						&:before {
-							background-position: -181px -293px;
-							left: -4px;
-						}
-						&:after {
-							background-position: -186px -293px;
-							right: -4px;
-						}
+						position: absolute;
 					}
 				}
 			}
@@ -217,22 +197,22 @@ main.resultados {
 				width: 200px;
 			}
 			blockquote {
-				margin: 9px 0 0 0;
+				margin: 5px 0 0 0;
 				padding: 0;
-				p {
-					font-size: 14px;
+				p,
+				cite {
+					font-size: 13px;
 					line-height: 16px;
+				}
+				p {
 					margin: 0;
 				}
 				footer {
 					margin-top: -2px;
 					text-align: right;
-					a {
-						font-size: 13px;
-						&:hover {
-							text-decoration: none;
-						}
-					}
+				}
+				cite {
+					color: $color-t3;
 				}
 			}
 			p.nuevo {
@@ -250,12 +230,7 @@ main.resultados {
 		}
 		.paginado {
 			margin-top: 15px;
-			text-align: right;
-			small {
-				float: left;
-				font-size: 12px;
-				padding-top: 9px;
-			}
+			text-align: center;
 		}
 	}
 }
@@ -264,11 +239,15 @@ main.resultados {
 	main.resultados {
 		div.resultados {
 			article {
-				dd {
-					&.descuento {
-						position: relative;
-						margin: 8px 0 4px 0;
-					}
+				header{
+					max-width: 78%;
+				}
+				dd.descuento {
+					right: 5px;
+					top: 8px;
+				}
+				.btn {
+					margin-top: 20px;
 				}
 			}
 		}
@@ -279,10 +258,12 @@ main.resultados {
 	main.resultados {
 		div.resultados {
 			article {
-				h2,
-				dl {
-					max-width: 308px;
+				header {
+					max-width: 354px;
 				}
+			}
+			dl.tipo-precio {
+				width: 309px;
 			}
 		}
 	}
@@ -295,17 +276,15 @@ main.resultados {
 				float: right;
 			}
 			article {
-				dd {
-					&.descuento {
-						position: absolute;
-						right: 18px;
-						top: 18px;
-					}
+				dd.descuento {
+					right: 33px;
+					top: 8px;
+					width: 130px;
 				}
 				.btn {
+					bottom: 12px;
 					position: absolute;
 					right: 8px;
-					top: 81px;
 				}
 			}
 		}
@@ -317,10 +296,12 @@ main.resultados {
 		div.resultados {
 			padding-left: 3px;
 			article {
-				h2,
-				dl {
-					max-width: 313px;
+				header{
+					max-width: 350px;
 				}
+			}
+			dl.tipo-precio {
+				width: 315px;
 			}
 		}
 	}

@@ -74,28 +74,19 @@
 					<h1 class="sr-only">Resultados de búsqueda</h1>
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Visualización -->
 					<div class="visualizacion">
-						<ul class="orden">
+						<dl class="orden">
+							<dt>Ordenar por:</dt>
 							<!-- Clase activo para el orden elegido -->
-							<li><a class="activo" href="#">Popularidad</a></li>
-							<li><a href="#">Nombre</a></li>
-							<li><a href="#">Precio</a></li>
-							<li><a href="#">Descuento</a></li>
-							<li><a href="#">Comentarios</a></li>
-						</ul>
+							<dd><a class="activo" href="#">Popularidad</a></dd>
+							<dd><a href="#">Precio</a></dd>
+							<dd><a href="#">Descuento</a></dd>
+							<dd><a href="#">Comentarios</a></dd>
+						</dl>
 						<ul class="modos">
 							<li><a class="lista" href="#">Lista</a></li>
-							<li><a class="x" href="#">X</a></li>
+							<li><a class="lista-2" href="#">X</a></li>
 							<li><a class="mapa" href="#">Mapa</a></li>
 						</ul>
-					</div>
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Filtros activos -->
-					<div class="filtros-activos">
-						<ul>
-							<li>Palermo <a href="#">x</a></li>
-							<li>Japonesa <a href="#">x</a></li>
-							<li>Mayor a $185 ARS <a href="#">x</a></li>
-						</ul>
-						<div class="eliminar-todos">Eliminar todos</div>
 					</div>
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Resultados -->
 					<article>
@@ -110,6 +101,12 @@
 								<dd class="opiniones">Basado en 57 Opiniones</dd>
 							</dl>
 						</header>
+						<blockquote>
+							<p>To lead the World Wide Web to its full potential by developing protocols. To lead the World Wide Web to its full potential by developing protocols.</p>
+							<footer>
+								<cite>Nombre de usuario</cite>
+							</footer>
+						</blockquote>
 						<dl class="tipo-precio">
 							<dt class="sr-only">Dirección:</dt>
 							<dd class="direccion">Maure 1643, Las Cañitas, Maure 1643, Las</dd>
@@ -119,13 +116,6 @@
 							<dd class="precio">$$$$</dd>
 						</dl>
 						<a class="imagen" href="#"><img src="img/usuario-BORRAR.png" alt="Título del restaurante" /></a>
-						<blockquote>
-							<p>To lead the World Wide Web to its full potential by developing protocols.</p>
-							<footer>
-								<!-- El link debe llevar al comentario, o sino al usuario -->
-								<cite><a target="_blank" href="link-U1">Nombre de usuario</a></cite>
-							</footer>
-						</blockquote>
 						<a class="btn btn-primary btn-vr-1" href="#">Reservas gratis</a>
 					</article>
 					<article>
@@ -142,6 +132,12 @@
 								<dd class="opiniones">Basado en 57 Opiniones</dd>
 							</dl>
 						</header>
+						<blockquote>
+							<p>To lead the World Wide Web to its full potential by developing protocols. To lead the World Wide Web to its full potential by developing protocols.</p>
+							<footer>
+								<cite>Nombre de usuario</cite>
+							</footer>
+						</blockquote>
 						<dl class="tipo-precio">
 							<dt class="sr-only">Dirección:</dt>
 							<dd class="direccion">Maure 1643, Las Cañitas, Maure 1643, Las</dd>
@@ -150,21 +146,13 @@
 							<dt class="sr-only">Precio:</dt>
 							<dd class="precio">$$$$</dd>
 							<dt class="sr-only">Descuento:</dt>
-							<dd class="descuento"><strong>-50%</strong> OFF</dd>
+							<dd class="descuento">-50%</dd>
 						</dl>
 						<a class="imagen" href="#"><img src="img/usuario-BORRAR.png" alt="Título del restaurante" /></a>
-						<blockquote>
-							<p>To lead the World Wide Web to its full potential by developing protocols and guidelines that ensure long-term growth for the Web</p>
-							<footer>
-								<!-- El link debe llevar al comentario, o sino al usuario -->
-								<cite><a target="_blank" href="link-U1">Nombre de usuario</a></cite>
-							</footer>
-						</blockquote>
 						<a class="btn btn-primary btn-vr-1" href="#">Reservas gratis</a>
 					</article>
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Paginado -->
 					<div class="paginado">
-						<small>1 - 10 de 57 Restaurantes</small>
 						<ul class="pagination">
 							<li><a href="#">&larr;</a></li>
 							<li><a href="#">1..</a></li>
@@ -216,6 +204,15 @@
 								</div>
 								<input class="btn btn-secundario btn-vr-1" type="submit" value="Buscar Restaurante" />
 							</form>
+						</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Filtros activos -->
+						<div class="filtros-activos">
+							<div class="eliminar-todos">Eliminar todos los filtros</div>
+							<ul>
+								<li>Palermo <a href="#">x</a></li>
+								<li>Japonesa <a href="#">x</a></li>
+								<li>Mayor a $185 ARS <a href="#">x</a></li>
+							</ul>
 						</div>
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Filtros -->
 						<div class="filtros">
@@ -297,7 +294,7 @@
 						</div>
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Vistos -->
 						<div class="vistos">
-							<h2>Vistos</h2>
+							<h2>Vistos recientemente</h2>
 							<article>
 								<h3><a href="#">Nombre del restaurante</a></h3>
 								<dl>

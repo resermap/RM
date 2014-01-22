@@ -372,9 +372,9 @@ option {
   color: #666666; }
 
 form input[type="checkbox"] + label.activo:before {
-  background-image: url("../img/constante.png");
-  background-position: -177px -277px;
-  background-repeat: no-repeat; }
+  background-position: -179px -261px; }
+form input[type="radio"] + label.activo:before {
+  background-position: -178px -246px; }
 form input + label {
   color: #666666;
   cursor: pointer;
@@ -398,8 +398,10 @@ form input + label {
   form input + label.activo {
     font-weight: 700; }
     form input + label.activo:before {
-      background-color: #666666;
-      border: none; }
+      background-color: transparent;
+      background-image: url("../img/constante.png");
+      background-repeat: no-repeat;
+      border: 2px solid #666666; }
 
 ::-webkit-input-placeholder {
   color: #666666; }
@@ -3651,21 +3653,22 @@ main.resultados .destacado {
 main.resultados .aside {
   margin-top: 15px; }
 main.resultados aside h2 {
-  border-bottom: 3px solid #666666;
+  border-bottom: 2px solid #666666;
   color: #666666;
   font-size: 18px;
   font-weight: 700;
-  margin-top: 12px;
-  padding-bottom: 10px; }
+  margin-top: 0;
+  padding-bottom: 8px; }
 main.resultados .buscar {
-  background: #ececec;
   border: 1px solid #999999;
-  padding: 8px 15px 10px 15px; }
+  padding: 10px 15px 10px 15px; }
   main.resultados .buscar h2 {
-    border-bottom: 1px solid #b9b9b9;
+    border-bottom: none;
+    color: black;
     font-weight: 400;
-    margin: 0 0 18px 0;
-    padding-bottom: 11px; }
+    margin: 0;
+    padding-bottom: 10px;
+    text-align: center; }
   main.resultados .buscar div {
     overflow: hidden;
     position: relative; }
@@ -3674,9 +3677,7 @@ main.resultados .buscar {
       position: absolute;
       top: -200%; }
     main.resultados .buscar div label {
-      letter-spacing: -1px; }
-    main.resultados .buscar div.fecha input {
-      width: 76px; }
+      font-size: 12px; }
     main.resultados .buscar div.fecha span {
       top: 4px; }
     main.resultados .buscar div.horario, main.resultados .buscar div.cantidad {
@@ -3728,29 +3729,60 @@ main.resultados .buscar {
   main.resultados .buscar :-ms-input-placeholder {
     color: #999999;
     font-style: italic; }
-main.resultados .filtros h2 {
-  border-bottom-color: black;
-  margin-top: 12px; }
-main.resultados .filtros fieldset > div {
-  -webkit-margin-collapse: separate;
-  margin-top: 6px;
-  overflow: hidden;
-  position: relative; }
-main.resultados .filtros fieldset + fieldset {
-  margin-top: 25px; }
-main.resultados .filtros legend {
-  border: none;
-  color: black;
-  font-size: 15px;
-  line-height: 14px;
-  margin-bottom: 0; }
-main.resultados .filtros input[type="radio"] + label:before {
-  border-radius: 100%; }
-main.resultados .filtros input[type="checkbox"],
-main.resultados .filtros input[type="radio"] {
-  left: 0;
-  position: absolute;
-  top: -100%; }
+main.resultados div.filtros-activos {
+  margin-top: 15px; }
+  main.resultados div.filtros-activos div,
+  main.resultados div.filtros-activos li {
+    border: 1px solid #999999;
+    color: black;
+    font-size: 12px;
+    padding: 1px 20px 2px 5px;
+    position: relative; }
+  main.resultados div.filtros-activos div:hover {
+    background: #0098db;
+    border-color: #0098db;
+    color: #FFFFFF;
+    cursor: pointer; }
+  main.resultados div.filtros-activos li {
+    margin-top: 5px; }
+  main.resultados div.filtros-activos a {
+    line-height: 20px;
+    padding: 0 5px;
+    position: absolute;
+    right: 0;
+    top: 0; }
+    main.resultados div.filtros-activos a:hover {
+      text-decoration: none; }
+main.resultados .filtros {
+  margin-top: 20px; }
+  main.resultados .filtros h2 {
+    border-bottom-color: black;
+    color: black; }
+  main.resultados .filtros fieldset > div {
+    -webkit-margin-collapse: separate;
+    margin-top: 6px;
+    overflow: hidden;
+    position: relative; }
+  main.resultados .filtros fieldset + fieldset {
+    margin-top: 25px; }
+  main.resultados .filtros legend {
+    border: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 14px;
+    margin-bottom: 0;
+    padding-bottom: 2px; }
+  main.resultados .filtros input[type="radio"] + label:before {
+    border-radius: 100%; }
+  main.resultados .filtros input[type="checkbox"],
+  main.resultados .filtros input[type="radio"] {
+    left: 0;
+    position: absolute;
+    top: -100%; }
+  main.resultados .filtros span {
+    color: #0098db;
+    font-weight: 700; }
 main.resultados .vistos {
   margin-bottom: 30px;
   margin-top: 30px; }
@@ -3834,60 +3866,78 @@ main.resultados .top-busquedas a {
     main.resultados aside form .cantidad {
       margin-left: 15px; }
     main.resultados aside form .fecha {
-      width: 100px; }
+      width: 170px; }
+      main.resultados aside form .fecha input {
+        width: 146px; }
     main.resultados aside form .horario {
       width: 114px; }
     main.resultados aside form .cantidad {
       width: 76px; } }
 @media (min-width: 640px) and (max-width: 767px) {
   main.resultados aside form .restaurante {
-    width: 243px; } }
+    width: 173px; } }
 @media (min-width: 768px) and (max-width: 991px) {
   main.resultados aside form .restaurante {
-    width: 353px; } }
+    width: 283px; } }
 @media (min-width: 992px) {
   main.resultados div.aside {
     padding-right: 3px; }
   main.resultados aside form .cantidad {
     margin-left: 6px; }
   main.resultados aside .buscar div + div {
-    margin-top: 10px; } }
+    margin-top: 10px; }
+  main.resultados aside .buscar div.fecha input {
+    width: 173px; } }
 main.resultados div.resultados {
   margin-top: 15px; }
   main.resultados div.resultados div.visualizacion {
-    background: #ececec;
-    border: 1px solid #999999;
-    padding: 0 10px;
-    overflow: hidden; }
+    position: relative; }
     main.resultados div.resultados div.visualizacion li {
       float: left; }
-    main.resultados div.resultados div.visualizacion .orden li {
-      margin-right: 16px; }
-    main.resultados div.resultados div.visualizacion .orden a {
-      color: #333333;
-      font-size: 15px;
-      line-height: 26px; }
-      main.resultados div.resultados div.visualizacion .orden a:hover {
-        color: #0098db;
-        text-decoration: none; }
-      main.resultados div.resultados div.visualizacion .orden a.activo {
-        color: #0098db; }
+    main.resultados div.resultados div.visualizacion .orden {
+      margin-bottom: 0;
+      padding-right: 72px;
+      text-align: center; }
+      main.resultados div.resultados div.visualizacion .orden dt,
+      main.resultados div.resultados div.visualizacion .orden dd {
+        background: #ececec;
+        display: inline-block;
+        font-size: 15px;
+        line-height: 32px;
+        margin-right: 2px;
+        padding: 0 10px; }
+      main.resultados div.resultados div.visualizacion .orden dt {
+        color: black;
+        font-weight: 600; }
+      main.resultados div.resultados div.visualizacion .orden a {
+        color: #333333;
+        display: block;
+        font-size: 15px;
+        line-height: 32px; }
+        main.resultados div.resultados div.visualizacion .orden a:hover {
+          color: #0098db;
+          text-decoration: none; }
+        main.resultados div.resultados div.visualizacion .orden a.activo {
+          color: #0098db; }
     main.resultados div.resultados div.visualizacion .modos {
-      padding-top: 5px; }
+      position: absolute;
+      right: 0;
+      top: 8px; }
       main.resultados div.resultados div.visualizacion .modos li {
         margin-left: 6px; }
         main.resultados div.resultados div.visualizacion .modos li .lista {
           background-position: -238px -60px;
           height: 17px;
           width: 16px; }
-        main.resultados div.resultados div.visualizacion .modos li .x {
-          background-position: -238px -60px;
-          height: 17px;
+        main.resultados div.resultados div.visualizacion .modos li .lista-2 {
+          background-position: -225px -40px;
+          height: 16px;
           width: 16px; }
         main.resultados div.resultados div.visualizacion .modos li .mapa {
-          background-position: -238px -60px;
-          height: 17px;
-          width: 16px; }
+          background-position: -243px -40px;
+          height: 18px;
+          margin-top: -1px;
+          width: 17px; }
       main.resultados div.resultados div.visualizacion .modos a {
         background-image: url(../img/constante.png);
         background-repeat: no-repeat;
@@ -3896,52 +3946,25 @@ main.resultados div.resultados {
         line-height: 160px;
         overflow: hidden;
         width: 16px; }
-  main.resultados div.resultados div.filtros-activos {
-    overflow: hidden;
-    width: 100%; }
-    main.resultados div.resultados div.filtros-activos li,
-    main.resultados div.resultados div.filtros-activos div.eliminar-todos {
-      line-height: 24px;
-      float: left;
-      margin-top: 6px; }
-    main.resultados div.resultados div.filtros-activos li {
-      background: #999999;
-      border-radius: 4px;
-      color: black;
-      margin-right: 6px;
-      overflow: hidden;
-      padding: 0 0 0 8px; }
-      main.resultados div.resultados div.filtros-activos li a {
-        color: black;
-        cursor: pointer;
-        display: inline-block;
-        margin-left: 16px;
-        padding-left: 8px;
-        padding-right: 8px; }
-        main.resultados div.resultados div.filtros-activos li a:hover {
-          background: #0098db;
-          color: #FFFFFF;
-          text-decoration: none; }
-    main.resultados div.resultados div.filtros-activos div.eliminar-todos {
-      color: #0098db;
-      cursor: pointer;
-      text-decoration: underline; }
   main.resultados div.resultados article {
-    border: 1px solid #d9d9d9;
+    border: 1px solid #FFFFFF;
     margin-top: 6px;
     min-height: 186px;
     padding: 8px 8px 8px 216px;
     position: relative; }
     main.resultados div.resultados article:hover {
-      border-color: #0098db; }
+      border-color: #d9d9d9; }
     main.resultados div.resultados article h2 {
-      line-height: 20px;
-      margin: 0 0 12px 0; }
+      line-height: 24px;
+      margin: 0 0 5px 0; }
       main.resultados div.resultados article h2 a {
+        color: black;
         font-size: 24px;
-        font-weight: 700;
+        line-height: 24px;
+        font-weight: 600;
         letter-spacing: -0.5px; }
         main.resultados div.resultados article h2 a:hover {
+          color: #0098db;
           text-decoration: none; }
     main.resultados div.resultados article dl {
       margin: 0; }
@@ -3967,48 +3990,49 @@ main.resultados div.resultados {
           width: 10px; }
       main.resultados div.resultados article dl dd.calificacion em {
         color: black;
+        font-size: 15px;
         font-style: normal;
         font-weight: 700;
+        line-height: 20px;
         text-transform: uppercase; }
       main.resultados div.resultados article dl dd.opiniones {
-        color: #666666; }
+        color: #666666;
+        font-style: italic; }
       main.resultados div.resultados article dl dd.direccion {
         display: block;
         margin-top: 4px; }
-      main.resultados div.resultados article dl dd.direccion:before, main.resultados div.resultados article dl dd.cocina:before {
-        font-size: 11px;
-        margin-right: 4px; }
+      main.resultados div.resultados article dl dd.direccion, main.resultados div.resultados article dl dd.cocina, main.resultados div.resultados article dl dd.precio {
+        line-height: 20px; }
+      main.resultados div.resultados article dl dd.direccion, main.resultados div.resultados article dl dd.cocina {
+        color: #666666;
+        font-size: 15px; }
+        main.resultados div.resultados article dl dd.direccion:before, main.resultados div.resultados article dl dd.cocina:before {
+          color: #333333;
+          margin-right: 4px;
+          position: relative;
+          top: 2px; }
       main.resultados div.resultados article dl dd.cocina, main.resultados div.resultados article dl dd.precio {
         display: inline; }
       main.resultados div.resultados article dl dd.precio {
-        color: #ff6600; }
+        color: #0098db;
+        font-size: 16px;
+        font-weight: 700; }
         main.resultados div.resultados article dl dd.precio:before {
-          color: #333333;
+          color: #666666;
           content: "|";
           font-family: "Open Sans";
+          font-size: 15px;
+          font-weight: 400;
           margin-right: 3px;
           position: relative;
           top: -1px; }
       main.resultados div.resultados article dl dd.descuento {
-        box-shadow: 0 0 10px #666666;
-        font-size: 30px;
-        line-height: 48px;
+        color: #666666;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 36px;
         text-align: center;
-        width: 153px; }
-        main.resultados div.resultados article dl dd.descuento:before, main.resultados div.resultados article dl dd.descuento:after {
-          background-image: url("../img/constante.png");
-          background-repeat: no-repeat;
-          content: "";
-          height: 48px;
-          position: absolute;
-          top: 0;
-          width: 4px; }
-        main.resultados div.resultados article dl dd.descuento:before {
-          background-position: -181px -293px;
-          left: -4px; }
-        main.resultados div.resultados article dl dd.descuento:after {
-          background-position: -186px -293px;
-          right: -4px; }
+        position: absolute; }
     main.resultados div.resultados article .imagen {
       border: 1px solid #999999;
       display: block;
@@ -4019,19 +4043,19 @@ main.resultados div.resultados {
       top: 8px;
       width: 200px; }
     main.resultados div.resultados article blockquote {
-      margin: 9px 0 0 0;
+      margin: 5px 0 0 0;
       padding: 0; }
+      main.resultados div.resultados article blockquote p,
+      main.resultados div.resultados article blockquote cite {
+        font-size: 13px;
+        line-height: 16px; }
       main.resultados div.resultados article blockquote p {
-        font-size: 14px;
-        line-height: 16px;
         margin: 0; }
       main.resultados div.resultados article blockquote footer {
         margin-top: -2px;
         text-align: right; }
-        main.resultados div.resultados article blockquote footer a {
-          font-size: 13px; }
-          main.resultados div.resultados article blockquote footer a:hover {
-            text-decoration: none; }
+      main.resultados div.resultados article blockquote cite {
+        color: #666666; }
     main.resultados div.resultados article p.nuevo {
       background: url("../img/constante.png") -191px -271px no-repeat;
       left: 0;
@@ -4045,37 +4069,39 @@ main.resultados div.resultados {
       z-index: 11; }
   main.resultados div.resultados .paginado {
     margin-top: 15px;
-    text-align: right; }
-    main.resultados div.resultados .paginado small {
-      float: left;
-      font-size: 12px;
-      padding-top: 9px; }
+    text-align: center; }
 
 @media (max-width: 767px) {
+  main.resultados div.resultados article header {
+    max-width: 78%; }
   main.resultados div.resultados article dd.descuento {
-    position: relative;
-    margin: 8px 0 4px 0; } }
+    right: 5px;
+    top: 8px; }
+  main.resultados div.resultados article .btn {
+    margin-top: 20px; } }
 @media (min-width: 768px) and (max-width: 991px) {
-  main.resultados div.resultados article h2,
-  main.resultados div.resultados article dl {
-    max-width: 308px; } }
+  main.resultados div.resultados article header {
+    max-width: 354px; }
+  main.resultados div.resultados dl.tipo-precio {
+    width: 309px; } }
 @media (min-width: 768px) {
   main.resultados div.resultados .modos {
     float: right; }
   main.resultados div.resultados article dd.descuento {
-    position: absolute;
-    right: 18px;
-    top: 18px; }
+    right: 33px;
+    top: 8px;
+    width: 130px; }
   main.resultados div.resultados article .btn {
+    bottom: 12px;
     position: absolute;
-    right: 8px;
-    top: 81px; } }
+    right: 8px; } }
 @media (min-width: 992px) {
   main.resultados div.resultados {
     padding-left: 3px; }
-    main.resultados div.resultados article h2,
-    main.resultados div.resultados article dl {
-      max-width: 313px; } }
+    main.resultados div.resultados article header {
+      max-width: 350px; }
+    main.resultados div.resultados dl.tipo-precio {
+      width: 315px; } }
 section.login,
 section.registrarse {
   padding-top: 38px; }

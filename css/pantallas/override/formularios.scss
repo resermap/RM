@@ -39,9 +39,14 @@ form {
 	input[type="checkbox"] {
 		&+label.activo {
 			&:before {
-				background-image: url("#{$img-constante}");
-				background-position: -177px -277px;
-				background-repeat: no-repeat;
+				background-position: -179px -261px;
+			}
+		}
+	}
+	input[type="radio"] {
+		&+label.activo {
+			&:before {
+				background-position: -178px -246px;
 			}
 		}
 	}
@@ -73,8 +78,10 @@ form {
 		&.activo {
 			font-weight: 700;
 			&:before {
-				background-color: $color-t3;
-				border: none;
+				background-color: transparent;
+				background-image: url("#{$img-constante}");
+				background-repeat: no-repeat;
+				border: 2px solid $color-t3;
 			}
 		}
 	}

@@ -57,16 +57,14 @@
 				<div class="row">
 					<div class="col-md-5 col-sm-6 col-xs-12">
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Slideshow -->
-			<!-- Una vez definido el plugin a utilizar, se define exactamente la maqueta. La estructura planteada es la tradicional -->
-			<!-- En el diseño creo que se dejó un espacio para siguiente y atras, no lo sé ya que esta vacio. Por ahora los thumbs van centrados -->
-						<div class="slideshow">
+						<div class="slideshow cycle-slideshow" data-cycle-slides="ul.imagen-principal li" data-cycle-speed="640" data-cycle-manual-speed="320" data-cycle-fx="fadeout" data-cycle-pause-on-hover="true" data-cycle-pager="ul.paginado" data-cycle-pager-template="">
 							<ul class="imagen-principal">
-								<li></li>
-								<li></li>
+								<li><img src="http://jquery.malsup.com/cycle2/images/p1.jpg"></li>
+								<li><img src="http://jquery.malsup.com/cycle2/images/p2.jpg"></li>
 							</ul>
 							<ul class="paginado">
-								<li class="activo"></li>
-								<li></li>
+								<li class="activo"><img src="http://jquery.malsup.com/cycle2/images/p1.jpg"></li>
+								<li><img src="http://jquery.malsup.com/cycle2/images/p2.jpg"></li>
 							</ul>
 						</div>
 					</div>

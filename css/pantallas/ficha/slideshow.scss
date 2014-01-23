@@ -5,14 +5,20 @@ article.restaurante {
 			height: 264px;
 			margin-bottom: 12px;
 			max-width: 381px;
+			overflow: hidden;
 		}
 		.paginado {
 			li {
+				border: 1px solid $color-t5;
+				cursor: pointer;
+				height: 44px;
+				float: left;
 				margin-right: 8px;
+				overflow: hidden;
+				width: 44px;
+				&:hover,
 				&.activo {
-					border: 1px solid $color-v1;
-					height: 44px;
-					width: 44px;
+					border-color: $color-v1;
 				}
 			}
 		}

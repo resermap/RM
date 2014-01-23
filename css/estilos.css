@@ -2045,13 +2045,18 @@ article.restaurante div.slideshow .imagen-principal {
   border: 1px solid #cccccc;
   height: 264px;
   margin-bottom: 12px;
-  max-width: 381px; }
+  max-width: 381px;
+  overflow: hidden; }
 article.restaurante div.slideshow .paginado li {
-  margin-right: 8px; }
-  article.restaurante div.slideshow .paginado li.activo {
-    border: 1px solid #0098db;
-    height: 44px;
-    width: 44px; }
+  border: 1px solid #cccccc;
+  cursor: pointer;
+  height: 44px;
+  float: left;
+  margin-right: 8px;
+  overflow: hidden;
+  width: 44px; }
+  article.restaurante div.slideshow .paginado li:hover, article.restaurante div.slideshow .paginado li.activo {
+    border-color: #0098db; }
 
 article.restaurante dl.calificacion.resumen {
   padding-left: 66px;

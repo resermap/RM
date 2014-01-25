@@ -228,11 +228,13 @@ section.busqueda {
 		}
 		&.abierto {
 			&>div:first-child {
-				display: none;
+				position: absolute;
+				top: 0;
+				z-index: 2;
 			}
 		}
 	}
-	.abrir {
+	.solapa {
 		background: $color-t5;
 		border-bottom-left-radius: 4px;
 		border-bottom-right-radius: 4px;
@@ -255,6 +257,8 @@ section.busqueda {
 			font-size: 12px;
 			line-height: 20px;
 			margin-left: 4px;
+			position: relative;
+			top: 1px;
 		}
 	}
 	.volver {
@@ -305,7 +309,7 @@ section.busqueda {
 				}
 			}
 			.nombre {
-				width: 199px;
+				width: 198px;
 			}
 			.fecha {
 				width: 94px;
@@ -315,6 +319,11 @@ section.busqueda {
 			}
 			.turno {
 				width: 84px;
+			}
+		}
+		&.apertura.abierto {
+			&>div:first-child {
+				width: 100%;
 			}
 		}
 	}
@@ -328,6 +337,11 @@ section.busqueda {
 			}
 			.nombre {
 				width: 222px;
+			}
+		}
+		&.apertura.abierto {
+			&>div:first-child {
+				margin-left: -375px;
 			}
 		}
 	}
@@ -361,6 +375,11 @@ section.busqueda {
 				z-index: 11;
 			}
 		}
+		&.apertura.abierto {
+			&>div:first-child {
+				left: 50%;
+			}
+		}
 	}
 }
 
@@ -378,12 +397,17 @@ section.busqueda {
 		aside {
 			width: 100%;
 		}
+		&.apertura.abierto {
+			&>div:first-child {
+				margin-left: -495px;
+			}
+		}
 	}
 }
 
 @media (min-width: 1281px) {
 	section.busqueda {
-		&>div {
+		&>div+div {
 			position: relative;
 			&:after,
 			&:before {
@@ -401,14 +425,6 @@ section.busqueda {
 			}
 			&:before {
 				left: -145px;
-			}
-		}
-		&.apertura.cerrado {
-			&>div {
-				&:after,
-				&:before {
-					content: none;
-				}
 			}
 		}
 	}

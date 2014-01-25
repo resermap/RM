@@ -183,6 +183,19 @@ article.restaurante {
 	}
 }
 
+@media (max-width: 767px) {
+	article.restaurante {
+		dl {
+			&.calificacion.resumen {
+				margin-top: 10px;
+			}
+		}
+		aside {
+			margin-top: 15px;
+		}
+	}
+}
+
 @media (max-width: 991px) {
 	article.restaurante {
 		dl {

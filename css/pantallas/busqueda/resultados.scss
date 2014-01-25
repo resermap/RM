@@ -80,6 +80,9 @@ main.resultados {
 			&:hover {
 				border-color: #d9d9d9;
 			}
+			header {
+				margin-bottom: 5px;
+			}
 			h2 {
 				line-height: 24px;
 				margin: 0 0 5px 0;
@@ -123,19 +126,21 @@ main.resultados {
 							width: 10px;
 						}
 					}
-					&.calificacion {
-						em {
-							color: $color-t1;
-							font-size: 15px;
-							font-style: normal;
-							font-weight: 700;
-							line-height: 20px;
-							text-transform: uppercase;
-						}
+					&.opiniones.ninguna,
+					&.calificacion em {
+						color: $color-t1;
+						font-size: 15px;
+						font-style: normal;
+						font-weight: 700;
+						line-height: 20px;
+						text-transform: uppercase;
 					}
 					&.opiniones {
 						color: $color-t3;
 						font-style: italic;
+						&.ninguna {
+							color: $color-t3;
+						}
 					}
 					&.direccion {
 						display: block;
@@ -197,7 +202,7 @@ main.resultados {
 				width: 200px;
 			}
 			blockquote {
-				margin: 5px 0 0 0;
+				margin: 0;
 				padding: 0;
 				p,
 				cite {

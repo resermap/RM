@@ -1349,8 +1349,10 @@ section.busqueda {
     section.busqueda.apertura.cerrado > div:first-child + div {
       display: none; }
   section.busqueda.apertura.abierto > div:first-child {
-    display: none; }
-  section.busqueda .abrir {
+    position: absolute;
+    top: 0;
+    z-index: 2; }
+  section.busqueda .solapa {
     background: #cccccc;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
@@ -1363,15 +1365,17 @@ section.busqueda {
     height: 24px;
     text-align: center;
     width: 196px; }
-    section.busqueda .abrir:hover {
+    section.busqueda .solapa:hover {
       background: #0098db;
       color: #FFFFFF; }
-    section.busqueda .abrir:after {
+    section.busqueda .solapa:after {
       content: "\e003";
       font-family: "Glyphicons Halflings";
       font-size: 12px;
       line-height: 20px;
-      margin-left: 4px; }
+      margin-left: 4px;
+      position: relative;
+      top: 1px; }
   section.busqueda .volver a {
     float: right;
     font-size: 14px;
@@ -1399,18 +1403,22 @@ section.busqueda {
     section.busqueda form .form-group:after {
       content: none; }
   section.busqueda form .nombre {
-    width: 199px; }
+    width: 198px; }
   section.busqueda form .fecha {
     width: 94px; }
   section.busqueda form .cantidad {
     width: 34px; }
   section.busqueda form .turno {
-    width: 84px; } }
+    width: 84px; }
+  section.busqueda.apertura.abierto > div:first-child {
+    width: 100%; } }
 @media (min-width: 768px) and (max-width: 991px) {
   section.busqueda form .form-group {
     margin-right: 9px; }
   section.busqueda form .nombre {
-    width: 222px; } }
+    width: 222px; }
+  section.busqueda.apertura.abierto > div:first-child {
+    margin-left: -375px; } }
 @media (min-width: 768px) {
   section.busqueda form {
     position: relative; }
@@ -1432,7 +1440,9 @@ section.busqueda {
     section.busqueda form .form-control,
     section.busqueda form input[type="submit"] {
       position: relative;
-      z-index: 11; } }
+      z-index: 11; }
+  section.busqueda.apertura.abierto > div:first-child {
+    left: 50%; } }
 @media (min-width: 992px) {
   section.busqueda form {
     padding-left: 20px; }
@@ -1441,11 +1451,13 @@ section.busqueda {
     section.busqueda form .nombre {
       width: 344px; }
   section.busqueda aside {
-    width: 100%; } }
+    width: 100%; }
+  section.busqueda.apertura.abierto > div:first-child {
+    margin-left: -495px; } }
 @media (min-width: 1281px) {
-  section.busqueda > div {
+  section.busqueda > div + div {
     position: relative; }
-    section.busqueda > div:after, section.busqueda > div:before {
+    section.busqueda > div + div:after, section.busqueda > div + div:before {
       background: url("../img/home-degrade-1280.png") 0 0 no-repeat;
       content: "";
       height: 236px;
@@ -1453,13 +1465,11 @@ section.busqueda {
       top: 0;
       width: 100px;
       z-index: 2; }
-    section.busqueda > div:after {
+    section.busqueda > div + div:after {
       background-position: 0 -236px;
       right: -145px; }
-    section.busqueda > div:before {
-      left: -145px; }
-  section.busqueda.apertura.cerrado > div:after, section.busqueda.apertura.cerrado > div:before {
-    content: none; } }
+    section.busqueda > div + div:before {
+      left: -145px; } }
 section.categorizacion header {
   padding: 17px 0 21px 0; }
 section.categorizacion h1 {
@@ -2019,6 +2029,9 @@ section.donde-que aside {
   section.donde-que .row > div:first-child section h1 {
     letter-spacing: -1px;
     white-space: nowrap; } }
+section.busqueda.abierto + article.restaurante {
+  padding-top: 10px; }
+
 article.restaurante {
   overflow: hidden; }
   article.restaurante header h1 {
@@ -2189,6 +2202,11 @@ article.restaurante .redes-sociales ul {
       article.restaurante .redes-sociales ul a.email:hover {
         background-color: #8a9fa0; }
 
+@media (max-width: 767px) {
+  article.restaurante dl.calificacion.resumen {
+    margin-top: 10px; }
+  article.restaurante aside {
+    margin-top: 15px; } }
 @media (max-width: 991px) {
   article.restaurante dl.tipo-precio {
     margin-bottom: 0; }
@@ -3959,6 +3977,8 @@ main.resultados div.resultados {
     position: relative; }
     main.resultados div.resultados article:hover {
       border-color: #d9d9d9; }
+    main.resultados div.resultados article header {
+      margin-bottom: 5px; }
     main.resultados div.resultados article h2 {
       line-height: 24px;
       margin: 0 0 5px 0; }
@@ -3993,7 +4013,7 @@ main.resultados div.resultados {
           right: -10px;
           top: 50%;
           width: 10px; }
-      main.resultados div.resultados article dl dd.calificacion em {
+      main.resultados div.resultados article dl dd.opiniones.ninguna, main.resultados div.resultados article dl dd.calificacion em {
         color: black;
         font-size: 15px;
         font-style: normal;
@@ -4003,6 +4023,8 @@ main.resultados div.resultados {
       main.resultados div.resultados article dl dd.opiniones {
         color: #666666;
         font-style: italic; }
+        main.resultados div.resultados article dl dd.opiniones.ninguna {
+          color: #666666; }
       main.resultados div.resultados article dl dd.direccion {
         display: block;
         margin-top: 4px; }
@@ -4048,7 +4070,7 @@ main.resultados div.resultados {
       top: 8px;
       width: 200px; }
     main.resultados div.resultados article blockquote {
-      margin: 5px 0 0 0;
+      margin: 0;
       padding: 0; }
       main.resultados div.resultados article blockquote p,
       main.resultados div.resultados article blockquote cite {

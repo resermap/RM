@@ -1175,14 +1175,16 @@ main.pre-home {
       main.pre-home ol li span {
         display: block; } }
 section.busqueda {
-  background: #000000;
-  box-shadow: 0 3px 6px #777777;
-  height: 236px;
-  overflow: hidden;
   position: relative; }
-  section.busqueda > div > div > div {
+  section.busqueda .contenedor {
+    background: #000000;
+    box-shadow: 0 3px 6px #777777;
+    height: 236px;
+    overflow: hidden;
     position: relative; }
-    section.busqueda > div > div > div > img {
+  section.busqueda .contenedor .row > div {
+    position: relative; }
+    section.busqueda .contenedor .row > div:first-child img {
       left: -145px;
       position: absolute;
       top: 0;
@@ -1346,12 +1348,12 @@ section.busqueda {
     box-shadow: none;
     height: auto;
     overflow: visible; }
-    section.busqueda.apertura.cerrado > div:first-child + div {
+    section.busqueda.apertura.cerrado .contenedor {
       display: none; }
   section.busqueda.apertura.abierto > div:first-child {
     position: absolute;
-    top: 0;
-    z-index: 2; }
+    bottom: -24px;
+    z-index: 1; }
   section.busqueda .solapa {
     background: #cccccc;
     border-bottom-left-radius: 4px;
@@ -1455,9 +1457,9 @@ section.busqueda {
   section.busqueda.apertura.abierto > div:first-child {
     margin-left: -495px; } }
 @media (min-width: 1281px) {
-  section.busqueda > div + div {
+  section.busqueda .contenedor > div {
     position: relative; }
-    section.busqueda > div + div:after, section.busqueda > div + div:before {
+    section.busqueda .contenedor > div:after, section.busqueda .contenedor > div:before {
       background: url("../img/home-degrade-1280.png") 0 0 no-repeat;
       content: "";
       height: 236px;
@@ -1465,10 +1467,10 @@ section.busqueda {
       top: 0;
       width: 100px;
       z-index: 2; }
-    section.busqueda > div + div:after {
+    section.busqueda .contenedor > div:after {
       background-position: 0 -236px;
       right: -145px; }
-    section.busqueda > div + div:before {
+    section.busqueda .contenedor > div:before {
       left: -145px; } }
 section.categorizacion header {
   padding: 17px 0 21px 0; }
@@ -2030,7 +2032,7 @@ section.donde-que aside {
     letter-spacing: -1px;
     white-space: nowrap; } }
 section.busqueda.abierto + article.restaurante {
-  padding-top: 10px; }
+  padding-top: 30px; }
 
 article.restaurante {
   overflow: hidden; }

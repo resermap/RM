@@ -1,13 +1,16 @@
 section.busqueda {
-	background: #000000;
-	box-shadow: 0 3px 6px #777777;
-	height: 236px;
-	overflow: hidden;
 	position: relative;
-	&>div>div {
+	.contenedor {
+		background: #000000;
+		box-shadow: 0 3px 6px #777777;
+		height: 236px;
+		overflow: hidden;
+		position: relative;
+	}
+	.contenedor .row {
 		&>div {
 			position: relative;
-			&>img {
+			&:first-child img {
 				left: -145px;
 				position: absolute;
 				top: 0;
@@ -222,15 +225,15 @@ section.busqueda {
 			box-shadow: none;
 			height: auto;
 			overflow: visible;
-			&>div:first-child+div {
+			.contenedor {
 				display: none;
 			}
 		}
 		&.abierto {
 			&>div:first-child {
 				position: absolute;
-				top: 0;
-				z-index: 2;
+				bottom: -24px;
+				z-index: 1;
 			}
 		}
 	}
@@ -407,7 +410,7 @@ section.busqueda {
 
 @media (min-width: 1281px) {
 	section.busqueda {
-		&>div+div {
+		.contenedor>div {
 			position: relative;
 			&:after,
 			&:before {

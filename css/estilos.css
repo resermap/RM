@@ -3442,6 +3442,7 @@ section.ingresar-comentario form {
     section.ingresar-comentario form .concurrencia label.activo, section.ingresar-comentario form .concurrencia label:hover {
       background: #669933; }
   section.ingresar-comentario form .concurrencia input {
+    left: -100%;
     position: absolute;
     top: -120%; }
   section.ingresar-comentario form .calificaciones > div {

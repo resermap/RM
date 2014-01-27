@@ -126,21 +126,25 @@ main.resultados {
 							width: 10px;
 						}
 					}
-					&.opiniones.ninguna,
-					&.calificacion em {
-						color: $color-t1;
-						font-size: 15px;
-						font-style: normal;
-						font-weight: 700;
-						line-height: 20px;
-						text-transform: uppercase;
+					&.calificacion {
+						&.ninguna,
+						em {
+							font-size: 15px;
+							font-style: normal;
+							font-weight: 700;
+							line-height: 20px;
+							text-transform: uppercase;
+						}
+						&.ninguna {
+							color: $color-t3;
+						}
+						em {
+							color: $color-t1;
+						}
 					}
 					&.opiniones {
 						color: $color-t3;
 						font-style: italic;
-						&.ninguna {
-							color: $color-t3;
-						}
 					}
 					&.direccion {
 						display: block;
@@ -219,6 +223,11 @@ main.resultados {
 				cite {
 					color: $color-t3;
 				}
+			}
+			p.descripcion {
+				color: $color-t2;
+				font-size: 13px;
+				line-height: 16px;
 			}
 			p.nuevo {
 				background: url("#{$img-constante}") -191px -271px no-repeat;

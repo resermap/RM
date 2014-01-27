@@ -4013,18 +4013,20 @@ main.resultados div.resultados {
           right: -10px;
           top: 50%;
           width: 10px; }
-      main.resultados div.resultados article dl dd.opiniones.ninguna, main.resultados div.resultados article dl dd.calificacion em {
-        color: black;
+      main.resultados div.resultados article dl dd.calificacion.ninguna,
+      main.resultados div.resultados article dl dd.calificacion em {
         font-size: 15px;
         font-style: normal;
         font-weight: 700;
         line-height: 20px;
         text-transform: uppercase; }
+      main.resultados div.resultados article dl dd.calificacion.ninguna {
+        color: #666666; }
+      main.resultados div.resultados article dl dd.calificacion em {
+        color: black; }
       main.resultados div.resultados article dl dd.opiniones {
         color: #666666;
         font-style: italic; }
-        main.resultados div.resultados article dl dd.opiniones.ninguna {
-          color: #666666; }
       main.resultados div.resultados article dl dd.direccion {
         display: block;
         margin-top: 4px; }
@@ -4083,6 +4085,10 @@ main.resultados div.resultados {
         text-align: right; }
       main.resultados div.resultados article blockquote cite {
         color: #666666; }
+    main.resultados div.resultados article p.descripcion {
+      color: #333333;
+      font-size: 13px;
+      line-height: 16px; }
     main.resultados div.resultados article p.nuevo {
       background: url("../img/constante.png") -191px -271px no-repeat;
       left: 0;

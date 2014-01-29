@@ -4775,11 +4775,13 @@ section.eventos h1,
 section.olvidaste h1 {
   font-size: 30px; }
 
+article.resermap-box p,
 article.legales p,
 article.como-funciona p,
 section.contacto p {
   color: #666666;
   font-size: 15px; }
+  article.resermap-box p + p,
   article.legales p + p,
   article.como-funciona p + p,
   section.contacto p + p {
@@ -4802,3 +4804,173 @@ section.olvidaste form .btn {
 section.olvidaste .mensaje + h1 {
   font-size: 20px;
   margin-top: 15px; }
+
+article.resermap-box {
+  overflow: hidden; }
+  article.resermap-box h1,
+  article.resermap-box h2 {
+    font-size: 30px; }
+  article.resermap-box .img-responsive {
+    display: block;
+    left: -20px;
+    margin: 30px auto 0 auto;
+    position: relative; }
+  article.resermap-box ol {
+    overflow: hidden;
+    position: relative; }
+    article.resermap-box ol:before {
+      background: #cad9f0;
+      content: "";
+      height: 20px;
+      position: absolute;
+      left: 50%;
+      top: 36px;
+      z-index: 1; }
+    article.resermap-box ol li {
+      color: #666666;
+      counter-increment: pasos;
+      float: left;
+      font-size: 20px;
+      letter-spacing: -0.5px;
+      line-height: 24px;
+      padding-bottom: 5px;
+      position: relative;
+      text-align: center;
+      z-index: 11; }
+      article.resermap-box ol li:before {
+        background-color: #00afc4;
+        border: 10px solid #a7d2d8;
+        border-radius: 100%;
+        color: #FFFFFF;
+        content: counter(pasos);
+        display: block;
+        font-size: 47px;
+        font-weight: 700;
+        height: 92px;
+        line-height: 70px;
+        margin: 0 auto 10px auto;
+        text-align: center;
+        width: 92px;
+        z-index: 11; }
+  article.resermap-box h3.solapa {
+    border: 1px solid #999999;
+    border-bottom: none;
+    color: #666666;
+    display: inline-block;
+    font-size: 18px;
+    height: 38px;
+    line-height: 38px;
+    margin-bottom: 25px;
+    padding: 0 10px;
+    position: relative; }
+    article.resermap-box h3.solapa:before {
+      background: #999999;
+      bottom: 0;
+      content: "";
+      height: 1px;
+      position: absolute;
+      left: -2875px;
+      width: 6000px; }
+    article.resermap-box h3.solapa:after {
+      background: #FFFFFF;
+      bottom: 0;
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 1; }
+  article.resermap-box .row + h3 {
+    margin-top: 30px; }
+  article.resermap-box .imagen {
+    background-image: url("../img/resermap-box.png");
+    background-repeat: no-repeat;
+    line-height: 300px;
+    overflow: hidden;
+    white-space: nowrap; }
+  article.resermap-box .gourmet .imagen {
+    background-position: 0 0;
+    height: 130px;
+    width: 160px; }
+  article.resermap-box .gastronomica .imagen {
+    background-position: -162px 0;
+    height: 129px;
+    width: 160px; }
+  article.resermap-box .royale .imagen {
+    background-position: -324px 0;
+    height: 129px;
+    width: 160px; }
+  article.resermap-box .descripcion {
+    padding-left: 30px;
+    padding-top: 15px; }
+    article.resermap-box .descripcion + div {
+      text-align: right; }
+  article.resermap-box .detalle {
+    border-top: 1px solid #999999;
+    margin-top: 30px;
+    padding-top: 25px;
+    text-align: center; }
+    article.resermap-box .detalle p {
+      letter-spacing: -0.5px;
+      line-height: 20px;
+      margin: 0 auto;
+      padding-bottom: 15px;
+      width: 490px; }
+    article.resermap-box .detalle li {
+      background-color: #666666;
+      background-image: url("../img/resermap-box.png");
+      background-repeat: no-repeat;
+      border-radius: 100%;
+      display: inline-block;
+      height: 60px;
+      line-height: 160px;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 60px; }
+      article.resermap-box .detalle li + li {
+        margin-left: 15px; }
+      article.resermap-box .detalle li.entrada {
+        background-position: 1px -130px; }
+      article.resermap-box .detalle li.plato-principal {
+        background-position: -59px -130px; }
+      article.resermap-box .detalle li.postre {
+        background-position: -119px -130px; }
+      article.resermap-box .detalle li.vino {
+        background-position: -180px -130px; }
+      article.resermap-box .detalle li.cafe-te {
+        background-position: -240px -130px; }
+    article.resermap-box .detalle .visita {
+      font-weight: 700;
+      padding-top: 5px; }
+    article.resermap-box .detalle a {
+      text-transform: uppercase; }
+
+@media (min-width: 640px) and (max-width: 767px) {
+  article.resermap-box ol:before {
+    margin-left: -160px;
+    width: 320px; }
+  article.resermap-box ol li {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 203px; }
+  article.resermap-box .gourmet .descripcion,
+  article.resermap-box .gastronomica .descripcion {
+    padding-top: 3px; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  article.resermap-box ol:before {
+    margin-left: -200px;
+    width: 400px; }
+  article.resermap-box ol li {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 240px; } }
+@media (min-width: 992px) {
+  article.resermap-box ol:before {
+    margin-left: -280px;
+    width: 560px; }
+  article.resermap-box ol li {
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 320px; }
+  article.resermap-box .descripcion + div {
+    padding-top: 45px; } }

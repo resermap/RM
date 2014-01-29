@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es" xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Título</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="css/estilos.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script> 
+		$(function(){
+			$("body>header").load("inc/header-usuario.html");
+			$("body>footer.pie").load("inc/footer.html");
+			$("section.busqueda").load("inc/busqueda.html");
+		});
+	</script>
+</head>
+<body>
+	<header></header>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Dashboard de usuario -->
+	<main>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Breadcrumb -->
+		<div class="container-breadcrumb">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<ol class="breadcrumb">
+							<li><a href="/"><span class="sr-only">Home</span></a></li>
+							<li><a href="#">Reservas</a></li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Búsqueda -->
+		<section class="busqueda"></section>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Política de privacidad -->
+		<article class="resermap-box">
+			<div class="container">
+				<h1>¿Por qué Resermap Box?</h1>
+				<p>Elegimos los mejores restaurantes y te los presentamos a través de las cajas de regalo Resermap Box! Que lo disfrutes!</p>
+				<h2>¿Cómo Funciona?</h2>
+				<img class="img-responsive" src="img/resermap-box-pasos.jpg" alt="Pasos Resermap Box" />
+				<ol>
+					<li>Elegí la Resermap Box que querés regalar</li>
+					<li>Tu agasajado elige el restaurante que más le gusta</li>
+					<li>Y disfruta entregando la tarjeta de regalo</li>
+				</ol>
+				<h2>Descubrí nuestros productos</h2>
+				<h3 class="solapa">Experiencia Gourmet</h3>
+				<div class="row gourmet">
+					<div class="col-md-2 col-sm-3 col-xs-3">
+						<div class="imagen">Caja de Experiencia Gourmet</div>
+					</div>
+					<div class="col-md-7 col-sm-9 col-xs-9 descripcion">
+						<p>Cena completa para 2 personas en restaurantes como: Siga la vaca, Il Gatto, Janio, Bodega 52, Klimt, Haru Sushi, Al Shark, Koh Lanta, Cheff Iusef, Arnoldo Ristorante, Bar BQ, Turandot, Forneria... y muchos más.</p>
+						<a href="#">Ver restaurantes que contiene la guía</a>
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-12">
+						<a href="#" class="btn btn-primary btn-vr-1">Ver regalo</a>
+					</div>
+				</div>
+				<h3 class="solapa">Experiencia Gastronómica</h3>
+				<div class="row gastronomica">
+					<div class="col-md-2 col-sm-3 col-xs-3">
+						<div class="imagen">Caja de Experiencia Gastronómica</div>
+					</div>
+					<div class="col-md-7 col-sm-9 col-xs-9 descripcion">
+						<p>Cena completa para 2 personas en restaurantes como: La Stampa, Campobravo, Itamae, Royal China, Xristo, Bahía Madero, Taj Mahal, Parrilla el 22, La robla, Mott, El Histórico... y muchos más.</p>
+						<a href="#">Ver restaurantes que contiene la guía</a>
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-12">
+						<a href="#" class="btn btn-primary btn-vr-1">Ver regalo</a>
+					</div>
+				</div>
+				<h3 class="solapa">Experiencia Royale</h3>
+				<div class="row royale">
+					<div class="col-md-2 col-sm-3 col-xs-3">
+						<div class="imagen">Caja de Experiencia Royale</div>
+					</div>
+					<div class="col-md-7 col-sm-9 col-xs-9 descripcion">
+						<p>Cena completa para dos personas en restaurantes como: Sottovoce, Fervor, Bice, Piegari, El Mirasol, Tö restaurante, Aldo's, Sorrento, Rond Point... y muchos más.</p>
+						<a href="#">Ver restaurantes que contiene la guía</a>
+					</div>
+					<div class="col-md-3 col-sm-12 col-xs-12">
+						<a href="#" class="btn btn-primary btn-vr-1">Ver regalo</a>
+					</div>
+				</div>
+			</div>
+			<div class="detalle">
+				<p>Válido para dos personas con opciones a elegir entre las especialidades de la casa, incluye entrada, plato principal, postre, vino y café o té por persona.</p>
+				<ul>
+					<li class="entrada">Entrada</li>
+					<li class="plato-principal">Plato principal</li>
+					<li class="postre">Postre</li>
+					<li class="vino">Vino</li>
+					<li class="cafe-te">Café o té</li>
+				</ul>
+				<p class="visita">Visitá: <a href="http://www.resermapbox.com/" target="_blank">www.resermapbox.com</a></p>
+			</div>
+			</div>
+		</article>
+	</main>
+	<footer class="pie"></footer>
+</body>
+</html>

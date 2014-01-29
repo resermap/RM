@@ -1,0 +1,232 @@
+article.resermap-box {
+	overflow: hidden;
+	h1,
+	h2 {
+		font-size: 30px;
+	}
+	.img-responsive {
+		display: block;
+		left: -20px;
+		margin: 30px auto 0 auto;
+		position: relative;
+	}
+	ol {
+		overflow: hidden;
+		position: relative;
+		&:before {
+			background: #cad9f0;
+			content: "";
+			height: 20px;
+			position: absolute;
+			left: 50%;
+			top: 36px;
+			z-index: 1;
+		}
+		li {
+			color: $color-t3;
+			counter-increment: pasos;
+			float: left;
+			font-size: 20px;
+			letter-spacing: -0.5px;
+			line-height: 24px;
+			padding-bottom: 5px;
+			position: relative;
+			text-align: center;
+			z-index: 11;
+			&:before {
+				background-color: #00afc4;
+				border: 10px solid #a7d2d8;
+				border-radius: 100%;
+				color: #FFFFFF;
+				content: counter(pasos);
+				display: block;
+				font-size: 47px;
+				font-weight: 700;
+				height: 92px;
+				line-height: 70px;
+				margin: 0 auto 10px auto;
+				text-align: center;
+				width: 92px;
+				z-index: 11;
+			}
+		}
+	}
+	h3.solapa {
+		border: 1px solid $color-t4;
+		border-bottom: none;
+		color: $color-t3;
+		display: inline-block;
+		font-size: 18px;
+		height: 38px;
+		line-height: 38px;
+		margin-bottom: 25px;
+		padding: 0 10px;
+		position: relative;
+		&:before {
+			background: $color-t4;
+			bottom: 0;
+			content: "";
+			height: 1px;
+			position: absolute;
+			left: -2875px;
+			width: 6000px;
+		}
+		&:after {
+			background: #FFFFFF;
+			bottom: 0;
+			content: "";
+			height: 1px;
+			left: 0;
+			position: absolute;
+			width: 100%;
+			z-index: 1;
+		}
+	}
+	.row+h3 {
+		margin-top: 30px;
+	}
+	.imagen {
+		background-image: url("../img/resermap-box.png");
+		background-repeat: no-repeat;
+		line-height: 300px;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	.gourmet {
+		.imagen {
+			background-position: 0 0;
+			height: 130px;
+			width: 160px;
+		}
+	}
+	.gastronomica {
+		.imagen {
+			background-position: -162px 0;
+			height: 129px;
+			width: 160px;
+		}
+	}
+	.royale {
+		.imagen {
+			background-position: -324px 0;
+			height: 129px;
+			width: 160px;
+		}
+	}
+	.descripcion {
+		padding-left: 30px;
+		padding-top: 15px;
+		&+div {
+			text-align: right;
+		}
+	}
+	.detalle {
+		border-top: 1px solid $color-t4;
+		margin-top: 30px;
+		padding-top: 25px;
+		text-align: center;
+		p {
+			letter-spacing: -0.5px;
+			line-height: 20px;
+			margin: 0 auto;
+			padding-bottom: 15px;
+			width: 490px;
+		}
+		li {
+			background-color: $color-t3;
+			background-image: url("../img/resermap-box.png");
+			background-repeat: no-repeat;
+			border-radius: 100%;
+			display: inline-block;
+			height: 60px;
+			line-height: 160px;
+			overflow: hidden;
+			white-space: nowrap;
+			width: 60px;
+			&+li {
+				margin-left: 15px;
+			}
+			&.entrada {
+				background-position: 1px -130px;
+			}
+			&.plato-principal {
+				background-position: -59px -130px;
+			}
+			&.postre {
+				background-position: -119px -130px;
+			}
+			&.vino {
+				background-position: -180px -130px;
+			}
+			&.cafe-te {
+				background-position: -240px -130px;
+			}
+		}
+		.visita {
+			font-weight: 700;
+			padding-top: 5px;
+		}
+		a {
+			text-transform: uppercase;
+		}
+	}
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+	article.resermap-box {
+		ol {
+			&:before {
+				margin-left: 0px - (320 / 2);
+				width: 320px;
+			}
+			li {
+				padding-left: 20px;
+				padding-right: 20px;
+				width: 203px;
+			}
+		}
+		.gourmet,
+		.gastronomica {
+			.descripcion {
+				padding-top: 3px;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	article.resermap-box {
+		ol {
+			&:before {
+				margin-left: 0px - (400 / 2);
+				width: 400px;
+			}
+			li {
+				padding-left: 20px;
+				padding-right: 20px;
+				width: 240px;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	article.resermap-box {
+		ol {
+			&:before {
+				margin-left: 0px - (560 / 2);
+				width: 560px;
+			}
+			li {
+				padding-left: 60px;
+				padding-right: 60px;
+				width: 320px;
+			}
+		}
+		.descripcion {
+			&+div {
+				padding-top: 45px;
+			}
+		}
+	}
+}

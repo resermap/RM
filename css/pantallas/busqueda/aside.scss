@@ -56,7 +56,6 @@ main.resultados {
 			}
 			&.horario,
 			&.cantidad {
-				display: inline-block;
 				span {
 					top: 5px;
 				}
@@ -367,8 +366,16 @@ main.resultados {
 		}
 		aside {
 			form {
+				.horario,
 				.cantidad {
-					margin-left: 6px;
+					float: left;
+					margin-bottom: 10px;
+				}
+				.check {
+					width: 100%;
+				}
+				.cantidad {
+					margin-left: 8px;
 				}
 			}
 			.buscar {

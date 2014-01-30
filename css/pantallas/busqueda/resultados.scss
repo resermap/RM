@@ -101,6 +101,7 @@ main.resultados {
 			dl {
 				margin: 0;
 				dd {
+					line-height: 20px;
 					&.puntaje,
 					&.calificacion,
 					&.opiniones {
@@ -159,6 +160,9 @@ main.resultados {
 					&.cocina {
 						color: $color-t3;
 						font-size: 15px;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
 						&:before {
 							color: $color-t2;
 							margin-right: 4px;
@@ -168,12 +172,14 @@ main.resultados {
 					}
 					&.cocina,
 					&.precio {
-						display: inline;
+						display: inline-block;
 					}
 					&.precio {
 						color: $color-v1;
 						font-size: 16px;
 						font-weight: 700;
+						position: relative;
+						top: -3px;
 						&:before {
 							color: $color-t3;
 							content: "|";
@@ -264,6 +270,11 @@ main.resultados {
 					margin-top: 20px;
 				}
 			}
+			dl {
+				.cocina {
+					max-width: 310px;
+				}
+			}
 		}
 	}
 }
@@ -301,6 +312,11 @@ main.resultados {
 					right: 8px;
 				}
 			}
+			dl {
+				.cocina {
+					max-width: 240px;
+				}
+			}
 		}
 	}
 }
@@ -315,7 +331,7 @@ main.resultados {
 				}
 			}
 			dl.tipo-precio {
-				width: 315px;
+				width: 309px;
 			}
 		}
 	}

@@ -33,6 +33,16 @@ main.pre-home {
 					display: block;
 				}
 			}
+			&.argentina {
+				ul {
+					background: url("#{$img-url}resermap-banner-arg-660x300.jpg") 0 0 no-repeat;
+				}
+			}
+			&.chile {
+				ul {
+					background: url("#{$img-url}resermap-banner-arg-660x300.jpg") 0 0 no-repeat;
+				}
+			}
 			h2 {
 				font-weight: 700;
 				margin: 0;
@@ -268,16 +278,16 @@ main.pre-home {
 	main.pre-home {
 		nav {
 			div {
-				&.argentina {
-					ul {
-						background: url("#{$img-url}pre-home-argentina-768px.jpg") 0 0 no-repeat;
-					}
-				}
-				&.chile {
-					ul {
-						background: url("#{$img-url}pre-home-chile-768px.jpg") 0 0 no-repeat;
-					}
-				}
+				// &.argentina {
+				// 	ul {
+				// 		background: url("#{$img-url}pre-home-argentina-768px.jpg") 0 0 no-repeat;
+				// 	}
+				// }
+				// &.chile {
+				// 	ul {
+				// 		background: url("#{$img-url}pre-home-chile-768px.jpg") 0 0 no-repeat;
+				// 	}
+				// }
 				ul {
 					width: 420px;
 					li {
@@ -359,16 +369,16 @@ main.pre-home {
 	main.pre-home {
 		nav {
 			div {
-				&.argentina {
-					ul {
-						background: url("#{$img-url}pre-home-argentina-992px.jpg") 0 0 no-repeat;
-					}
-				}
-				&.chile {
-					ul {
-						background: url("#{$img-url}pre-home-chile-992px.jpg") 0 0 no-repeat;
-					}
-				}
+				// &.argentina {
+				// 	ul {
+				// 		background: url("#{$img-url}pre-home-argentina-992px.jpg") 0 0 no-repeat;
+				// 	}
+				// }
+				// &.chile {
+				// 	ul {
+				// 		background: url("#{$img-url}pre-home-chile-992px.jpg") 0 0 no-repeat;
+				// 	}
+				// }
 				ul {
 					width: 660px;
 					li {

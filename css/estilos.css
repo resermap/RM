@@ -902,6 +902,10 @@ main.pre-home {
     background-color: #c9d3dd; }
     main.pre-home nav div.activo ul, main.pre-home nav div:hover ul {
       display: block; }
+    main.pre-home nav div.argentina ul {
+      background: url("../img/resermap-banner-arg-660x300.jpg") 0 0 no-repeat; }
+    main.pre-home nav div.chile ul {
+      background: url("../img/resermap-banner-cl-660x300.jpg") 0 0 no-repeat; }
     main.pre-home nav div h2 {
       font-weight: 700;
       margin: 0; }
@@ -1075,10 +1079,6 @@ main.pre-home {
         padding: 33px 40px 0 40px;
         position: absolute; } }
 @media (min-width: 768px) and (max-width: 991px) {
-  main.pre-home nav div.argentina ul {
-    background: url("../img/pre-home-argentina-768px.jpg") 0 0 no-repeat; }
-  main.pre-home nav div.chile ul {
-    background: url("../img/pre-home-chile-768px.jpg") 0 0 no-repeat; }
   main.pre-home nav div ul {
     width: 420px; }
     main.pre-home nav div ul li a {
@@ -1125,10 +1125,6 @@ main.pre-home {
       top: 8px;
       width: 41px; } }
 @media (min-width: 992px) {
-  main.pre-home nav div.argentina ul {
-    background: url("../img/pre-home-argentina-992px.jpg") 0 0 no-repeat; }
-  main.pre-home nav div.chile ul {
-    background: url("../img/pre-home-chile-992px.jpg") 0 0 no-repeat; }
   main.pre-home nav div ul {
     width: 660px; }
     main.pre-home nav div ul li a {

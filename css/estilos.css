@@ -630,10 +630,15 @@ body > header {
     white-space: nowrap; }
   body > header .navegacion {
     border-top: 1px solid #666666; }
-  body > header .login nav.navbar-default.ciudades {
-    margin-top: 28px; }
   body > header nav.navbar-default.ciudades {
-    margin: 18px 0 5px -15px; }
+    margin: 28px 0 5px 0; }
+    body > header nav.navbar-default.ciudades:first-child {
+      width: 100%; }
+    body > header nav.navbar-default.ciudades .navbar-nav > li.dropdown {
+      float: none;
+      padding-left: 0; }
+    body > header nav.navbar-default.ciudades .navbar-nav > li {
+      float: right; }
     body > header nav.navbar-default.ciudades .navbar-nav li {
       display: inline-block;
       padding-top: 0;

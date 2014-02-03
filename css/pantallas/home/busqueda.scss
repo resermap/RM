@@ -1,20 +1,25 @@
 section.busqueda {
 	position: relative;
 	.contenedor {
-		background: #000000;
-		box-shadow: 0 3px 6px #777777;
 		height: 236px;
-		overflow: hidden;
-		position: relative;
-	}
-	.contenedor .row {
-		&>div {
-			position: relative;
-			&:first-child img {
-				left: -145px;
+		&.imagen {
+			background: #000000;
+			box-shadow: 0 3px 6px #777777;
+			left: 0;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 1;
+			&+div {
+				position: relative;
+				z-index: 2;
+			}
+			img {
+				left: 50%;
+				margin-left: -640px;
 				position: absolute;
 				top: 0;
-				z-index: 1;
 			}
 		}
 	}
@@ -272,6 +277,92 @@ section.busqueda {
 			line-height: 24px;
 			&:hover {
 				text-decoration: none;
+			}
+		}
+	}
+	.selectize-dropdown {
+		background: #FFFFFF;
+		width: 100%;
+	}
+	.selectize-dropdown-content {
+		max-height: 240px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		&>div {
+			height: 80px;
+			padding: 10px 10px 10px 80px;
+			position: relative;
+			&:hover {
+				cursor: pointer;
+				background: #F0F0F0;
+			}
+			&.selected {
+				background: $color-v1;
+				h2,
+				.descripcion,
+				dd {
+					color: #FFFFFF;
+				}
+				.precio {
+					border-left-color: #FFFFFF;
+				}
+			}
+			&+div {
+				border-top: 1px solid $color-t4;
+			}
+			h2,
+			.descripcion,
+			dd {
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+			h2,
+			.descripcion,
+			dl {
+				margin: 0;
+			}
+			.descripcion,
+			dd {
+				color: $color-t2;
+				font-size: 12px;
+				line-height: 15px;
+			}
+			h2 {		
+				font-size: 14px;
+				font-weight: 700;
+			}
+			.imagen {
+				height: 60px;
+				left: 10px;
+				top: 10px;
+				overflow: hidden;
+				position: absolute;
+				width: 60px;
+			}
+			dd {
+				&:before {
+					font-size: 11px;
+					margin-right: 4px;
+					position: relative;
+					top: 1px;
+				}
+				&.direccion {
+					display: block;
+				}
+				&.cocina,
+				&.precio {
+					float: left;
+				}
+				&.cocina {
+					margin-right: 2.5%;
+					max-width: 70%;
+				}
+				&.precio {
+					border-left: 1px solid $color-t4;
+					padding-left: 2.5%;
+					max-width: 25%;
+				}
 			}
 		}
 	}

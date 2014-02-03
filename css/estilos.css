@@ -1178,18 +1178,24 @@ main.pre-home {
 section.busqueda {
   position: relative; }
   section.busqueda .contenedor {
-    background: #000000;
-    box-shadow: 0 3px 6px #777777;
-    height: 236px;
-    overflow: hidden;
-    position: relative; }
-  section.busqueda .contenedor .row > div {
-    position: relative; }
-    section.busqueda .contenedor .row > div:first-child img {
-      left: -145px;
+    height: 236px; }
+    section.busqueda .contenedor.imagen {
+      background: #000000;
+      box-shadow: 0 3px 6px #777777;
+      left: 0;
+      overflow: hidden;
       position: absolute;
       top: 0;
+      width: 100%;
       z-index: 1; }
+      section.busqueda .contenedor.imagen + div {
+        position: relative;
+        z-index: 2; }
+      section.busqueda .contenedor.imagen img {
+        left: 50%;
+        margin-left: -640px;
+        position: absolute;
+        top: 0; }
   section.busqueda header,
   section.busqueda form {
     position: relative;
@@ -1386,6 +1392,71 @@ section.busqueda {
     line-height: 24px; }
     section.busqueda .volver a:hover {
       text-decoration: none; }
+  section.busqueda .selectize-dropdown {
+    background: #FFFFFF;
+    width: 100%; }
+  section.busqueda .selectize-dropdown-content {
+    max-height: 240px;
+    overflow-x: hidden;
+    overflow-y: auto; }
+    section.busqueda .selectize-dropdown-content > div {
+      height: 80px;
+      padding: 10px 10px 10px 80px;
+      position: relative; }
+      section.busqueda .selectize-dropdown-content > div:hover {
+        cursor: pointer;
+        background: #F0F0F0; }
+      section.busqueda .selectize-dropdown-content > div.selected {
+        background: #0098db; }
+        section.busqueda .selectize-dropdown-content > div.selected h2,
+        section.busqueda .selectize-dropdown-content > div.selected .descripcion,
+        section.busqueda .selectize-dropdown-content > div.selected dd {
+          color: #FFFFFF; }
+        section.busqueda .selectize-dropdown-content > div.selected .precio {
+          border-left-color: #FFFFFF; }
+      section.busqueda .selectize-dropdown-content > div + div {
+        border-top: 1px solid #999999; }
+      section.busqueda .selectize-dropdown-content > div h2,
+      section.busqueda .selectize-dropdown-content > div .descripcion,
+      section.busqueda .selectize-dropdown-content > div dd {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap; }
+      section.busqueda .selectize-dropdown-content > div h2,
+      section.busqueda .selectize-dropdown-content > div .descripcion,
+      section.busqueda .selectize-dropdown-content > div dl {
+        margin: 0; }
+      section.busqueda .selectize-dropdown-content > div .descripcion,
+      section.busqueda .selectize-dropdown-content > div dd {
+        color: #333333;
+        font-size: 12px;
+        line-height: 15px; }
+      section.busqueda .selectize-dropdown-content > div h2 {
+        font-size: 14px;
+        font-weight: 700; }
+      section.busqueda .selectize-dropdown-content > div .imagen {
+        height: 60px;
+        left: 10px;
+        top: 10px;
+        overflow: hidden;
+        position: absolute;
+        width: 60px; }
+      section.busqueda .selectize-dropdown-content > div dd:before {
+        font-size: 11px;
+        margin-right: 4px;
+        position: relative;
+        top: 1px; }
+      section.busqueda .selectize-dropdown-content > div dd.direccion {
+        display: block; }
+      section.busqueda .selectize-dropdown-content > div dd.cocina, section.busqueda .selectize-dropdown-content > div dd.precio {
+        float: left; }
+      section.busqueda .selectize-dropdown-content > div dd.cocina {
+        margin-right: 2.5%;
+        max-width: 70%; }
+      section.busqueda .selectize-dropdown-content > div dd.precio {
+        border-left: 1px solid #999999;
+        padding-left: 2.5%;
+        max-width: 25%; }
 
 @media (max-width: 639px) {
   section.busqueda form .form-group {

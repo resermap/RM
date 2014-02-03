@@ -15,7 +15,7 @@
 				<form class="form-inline" role="form">
 					<div class="form-group nombre">
 						<label class="sr-only">Nombre de restaurante</label>
-						<input type="text" name="filter" class="form-control" placeholder="Nombre de restaurante" value="awesome,neat"/>
+						<input type="text" class="form-control" placeholder="Nombre del restaurante" />
 					</div>
 					<div class="form-group fecha">
 						<label class="sr-only">Fecha</label>
@@ -62,8 +62,7 @@
 </div>
 <script type="text/javascript">
 	$(function() {
-
-		$('section.busqueda input[name=filter]').selectize({
+		$('section.busqueda .nombre input').selectize({
 			theme: 'movies',
 			valueField: 'title',
 			labelField: 'title',
@@ -77,13 +76,18 @@
 						actors.push('<span>' + escape(item.abridged_cast[i].name) + '</span>');
 					}
 
-					return '<div>' +
-						'<img src="' + escape(item.posters.thumbnail) + '" alt="">' +
-						'<span class="title">' +
-							'<span class="name">' + escape(item.title) + '</span>' +
-						'</span>' +
-						'<span class="description">' + escape(item.synopsis || 'No synopsis available at this time.') + '</span>' +
-						'<span class="actors">' + (actors.length ? 'Starring ' + actors.join(', ') : 'Actors unavailable') + '</span>' +
+			return '<div>' +
+						'<div class="imagen"><img src="img/usuario-BORRAR.png" alt="' + escape(item.title) + '"></div>' +
+						'<h2>' + escape(item.title) + '</h2>' +
+						'<p class="descripcion">' + escape(item.synopsis || 'No synopsis available at this time.') + '</p>' +
+						'<dl>' +
+							'<dt class="sr-only">Ubicación:</dt>' +
+							'<dd class="ubicacion">Buenos Aires, Argentina</dd>' +
+							'<dt class="sr-only">Cocina:</dt>' +
+							'<dd class="cocina">Internacional, Italiana</dd>' +
+							'<dt class="sr-only">Precio:</dt>' +
+							'<dd class="precio">56000</dd>' +
+						'</dl>' +
 					'</div>';
 				}
 			},

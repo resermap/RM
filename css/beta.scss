@@ -5,6 +5,7 @@ $color-t4: #999999;
 $color-t5: #CCCCCC;
 $color-t6: #ff6600;
 $color-v1: #0098db;
+$color-v1-h: #425479;
 $color-v2: #990000;
 $color-v3: #ffdf1c;
 $color-v4: #339933;
@@ -33,7 +34,7 @@ body {
 a {
 	color: $color-v1;
 	&:hover {
-		color: #425479;
+		color: $color-v1-h;
 	}
 }
 

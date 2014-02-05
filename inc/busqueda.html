@@ -12,10 +12,16 @@
 				<header>
 					<h1>Buscar Restaurante</h1>
 				</header>
-				<form class="form-inline" role="form">
+				<!-- La clase "fecha-incierta" se agrega cuando tildan el checkbox -->
+				<form class="form-inline fecha-incierta" role="form">
 					<div class="form-group nombre">
 						<label class="sr-only">Nombre de restaurante</label>
 						<input type="text" class="form-control" placeholder="Nombre del restaurante" />
+					</div>
+					<div class="form-group fecha-incierta">
+						<input type="checkbox" />
+						<!-- La clase activo tilda el checkbox hecho a mano -->
+						<label class="activo">Aún no he decidido la fecha</label>
 					</div>
 					<div class="form-group fecha">
 						<label class="sr-only">Fecha</label>

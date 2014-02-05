@@ -32,16 +32,24 @@ section.busqueda {
 		h1 {
 			color: #FFFFFF;
 			font-size: 36px;
-			margin: 46px 0 2px 0;
+			margin: 36px 0 2px 0;
 		}
 	}
 	form {
+		margin-bottom: 10px;
 		&[data-ie="1"] {
 			.cantidad,
 			.turno {
 				&:after {
 					content: none;
 				}
+			}
+		}
+		&.fecha-incierta {
+			.fecha,
+			.cantidad,
+			.turno {
+				display: none;
 			}
 		}
 		.form-group {
@@ -85,13 +93,13 @@ section.busqueda {
 			}
 		}
 		.nombre {
-			input {
-				padding-right: 25px;
-			}
 			&:after {
 				content: "\e003";
 				right: 6px;
 				top: 8px;
+			}
+			input {
+				padding-right: 25px;
 			}
 			.selectize-control {
 				background-color: transparent;
@@ -107,16 +115,22 @@ section.busqueda {
 				white-space: nowrap;
 				width: 100%;
 				&.input-active {
-					border-bottom-left-radius: 0;
-					border-bottom-right-radius: 0;
-					&+.selectize-dropdown.form-control {
-						border-top-left-radius: 0;
-						border-top-right-radius: 0;
+					box-shadow: 0 0 8px $color-v1;
+					&.dropdown-active {
+						border-bottom-left-radius: 0;
+						border-bottom-right-radius: 0;
+						&+.selectize-dropdown.form-control {
+							border-top-left-radius: 0;
+							border-top-right-radius: 0;
+							box-shadow: 0 0 8px $color-v1;
+						}
 					}
 				}
 				input {
 					border: none;
+					box-shadow: none;
 					height: 100%;
+					outline: none;
 					padding: 0;
 					width: 100%;
 					&::-webkit-input-placeholder {
@@ -241,6 +255,19 @@ section.busqueda {
 						}
 					}
 				}
+			}
+		}
+		.fecha-incierta {
+			bottom: -23px;
+			overflow: hidden;
+			position: absolute;
+			label {
+				color: #FFFFFF;
+				white-space: nowrap;
+			}
+			input {
+				position: absolute;
+				top: -120%;
 			}
 		}
 		.fecha {
@@ -384,10 +411,10 @@ section.busqueda {
 			}
 		}
 		&.abierto {
-			&>div:first-child {
+			&>div.container {
 				position: absolute;
 				bottom: -24px;
-				z-index: 1;
+				z-index: 0;
 			}
 		}
 	}
@@ -459,6 +486,11 @@ section.busqueda {
 @media (min-width: 640px) and (max-width: 767px) {
 	section.busqueda {
 		form {
+			&.fecha-incierta {
+				.nombre {
+					width: 425px;
+				}
+			}
 			.form-group {
 				margin-right: 5px;
 				&:after {
@@ -479,7 +511,7 @@ section.busqueda {
 			}
 		}
 		&.apertura.abierto {
-			&>div:first-child {
+			&>div.container {
 				width: 100%;
 			}
 		}
@@ -489,6 +521,11 @@ section.busqueda {
 @media (min-width: 768px) and (max-width: 991px) {
 	section.busqueda {
 		form {
+			&.fecha-incierta {
+				.nombre {
+					width: 513px;
+				}
+			}
 			.form-group {
 				margin-right: 9px;
 			}
@@ -497,7 +534,7 @@ section.busqueda {
 			}
 		}
 		&.apertura.abierto {
-			&>div:first-child {
+			&>div.container {
 				margin-left: -375px;
 			}
 		}
@@ -533,7 +570,7 @@ section.busqueda {
 			}
 		}
 		&.apertura.abierto {
-			&>div:first-child {
+			&>div.container {
 				left: 50%;
 			}
 		}
@@ -543,6 +580,11 @@ section.busqueda {
 @media (min-width: 992px) {
 	section.busqueda {
 		form {
+			&.fecha-incierta {
+				.nombre {
+					width: 646px;
+				}
+			}
 			padding-left: 20px;
 			.form-group {
 				margin-right: 12px;
@@ -550,12 +592,15 @@ section.busqueda {
 			.nombre {
 				width: 344px;
 			}
+			.fecha-incierta {
+				left: 376px;
+			}
 		}
 		aside {
 			width: 100%;
 		}
 		&.apertura.abierto {
-			&>div:first-child {
+			&>div.container {
 				margin-left: -495px;
 			}
 		}

@@ -47,6 +47,7 @@ section.login {
 			background: -ms-linear-gradient(-45deg,  #d6d6d6 0%,#ffffff 100%); /* IE10+ */
 			background: linear-gradient(135deg,  #d6d6d6 0%,#ffffff 100%); /* W3C */
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#ffffff',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+			border-radius: 3px;
 			box-shadow: 0 1px 2px $color-t4;
 			display: inline-block;
 			height: 25px;
@@ -75,6 +76,10 @@ section.login {
 				span {
 					background: #32558b url("#{$img-constante}") -150px 5px no-repeat;
 				}
+				&:hover {
+					background: #32558b;
+					color: #FFFFFF;
+				}
 			}
 			&.gp {
 				color: #da4b38;
@@ -85,6 +90,10 @@ section.login {
 				sup {
 					font-size: 100%;
 					top: -5px;
+				}
+				&:hover {
+					background: #da4b38;
+					color: #FFFFFF;
 				}
 			}
 		}

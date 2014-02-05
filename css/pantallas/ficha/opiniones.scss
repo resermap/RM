@@ -120,6 +120,21 @@ article.restaurante {
 	}
 }
 
+@media (min-width: 768px) and (max-width: 992px){
+	article.restaurante {
+		section.opiniones {
+			article {
+				dl {
+					white-space: nowrap;
+				}
+				div.opinion dt {
+					padding-left: 2px;
+				}
+			}
+		}
+	}
+}
+
 @media (min-width: 768px) {
 	article.restaurante {
 		section.opiniones {

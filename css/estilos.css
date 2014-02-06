@@ -1197,14 +1197,16 @@ section.busqueda {
         top: 0; }
   section.busqueda header,
   section.busqueda form {
-    position: relative;
+    position: relative; }
+  section.busqueda header {
     z-index: 2; }
-  section.busqueda header h1 {
-    color: #FFFFFF;
-    font-size: 36px;
-    margin: 36px 0 2px 0; }
+    section.busqueda header h1 {
+      color: #FFFFFF;
+      font-size: 36px;
+      margin: 36px 0 2px 0; }
   section.busqueda form {
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    z-index: 22; }
     section.busqueda form[data-ie="1"] .cantidad:after,
     section.busqueda form[data-ie="1"] .turno:after {
       content: none; }
@@ -1262,14 +1264,14 @@ section.busqueda {
       white-space: nowrap;
       width: 100%; }
       section.busqueda form .nombre .selectize-input.input-active {
-        box-shadow: 0 0 8px #0098db; }
+        box-shadow: 0 0 0 2px #0098db; }
         section.busqueda form .nombre .selectize-input.input-active.dropdown-active {
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0; }
           section.busqueda form .nombre .selectize-input.input-active.dropdown-active + .selectize-dropdown.form-control {
             border-top-left-radius: 0;
             border-top-right-radius: 0;
-            box-shadow: 0 0 8px #0098db; }
+            box-shadow: -2px -2px 0 4px #0098db; }
       section.busqueda form .nombre .selectize-input input {
         border: none;
         box-shadow: none;
@@ -1304,8 +1306,7 @@ section.busqueda {
       padding: 0;
       position: absolute;
       top: 100%;
-      width: 100%;
-      z-index: 11; }
+      width: 100%; }
     section.busqueda form .nombre .selectize-dropdown-content > div {
       height: 80px;
       padding: 10px 10px 10px 80px;
@@ -1367,13 +1368,40 @@ section.busqueda {
         max-width: 26%; }
         section.busqueda form .nombre .selectize-dropdown-content > div dd.precio:before {
           margin-right: 1px; }
+    section.busqueda form.fecha-incierta .fecha-incierta {
+      left: 0; }
+      section.busqueda form.fecha-incierta .fecha-incierta label {
+        font-size: 14px; }
+        section.busqueda form.fecha-incierta .fecha-incierta label:after, section.busqueda form.fecha-incierta .fecha-incierta label:before, section.busqueda form.fecha-incierta .fecha-incierta label:hover:before {
+          content: none; }
     section.busqueda form .fecha-incierta {
-      bottom: -23px;
+      bottom: -22px;
       overflow: hidden;
       position: absolute; }
       section.busqueda form .fecha-incierta label {
         color: #FFFFFF;
+        font-size: 12px;
+        font-weight: 400;
+        text-shadow: 0 0 4px #333333;
         white-space: nowrap; }
+        section.busqueda form .fecha-incierta label:before {
+          background-color: transparent;
+          border: none;
+          z-index: 11; }
+        section.busqueda form .fecha-incierta label:after {
+          background-color: #000000;
+          content: "";
+          height: 15px;
+          left: 0;
+          opacity: 0.5;
+          filter: alpha(opacity=50);
+          position: absolute;
+          top: 2px;
+          width: 15px;
+          z-index: 1; }
+        section.busqueda form .fecha-incierta label:hover:before {
+          background: url("../img/constante.png") no-repeat -173px -297px;
+          content: ""; }
       section.busqueda form .fecha-incierta input {
         position: absolute;
         top: -120%; }
@@ -1548,6 +1576,9 @@ section.busqueda {
       content: none; }
   section.busqueda form .nombre {
     width: 198px; }
+  section.busqueda form .fecha-incierta {
+    bottom: -39px;
+    left: 203px; }
   section.busqueda form .fecha {
     width: 94px; }
   section.busqueda form .cantidad {
@@ -1563,13 +1594,17 @@ section.busqueda {
     margin-right: 9px; }
   section.busqueda form .nombre {
     width: 222px; }
+  section.busqueda form .fecha-incierta {
+    left: 240px; }
   section.busqueda.apertura.abierto > div.container {
     margin-left: -375px; } }
 @media (min-width: 768px) {
   section.busqueda form {
+    padding: 9px 0px 9px 9px;
     position: relative; }
     section.busqueda form:after {
       background: #000000;
+      border-radius: 10px;
       content: "";
       height: 100%;
       left: 0;
@@ -1579,10 +1614,6 @@ section.busqueda {
       top: 0;
       width: 100%;
       z-index: 1; }
-  section.busqueda form {
-    padding: 9px 0px 9px 9px; }
-    section.busqueda form:after {
-      border-radius: 10px; }
     section.busqueda form .form-control,
     section.busqueda form input[type="submit"] {
       position: relative;
@@ -2468,52 +2499,71 @@ article.restaurante .tab-content {
       border-radius: 0;
       border: none;
       cursor: pointer;
+      overflow: hidden;
       padding-bottom: 8px;
-      padding-top: 5px; }
+      padding-top: 5px;
+      position: relative; }
       article.restaurante .tab-content div.panel.panel-default .panel-heading:after {
         content: "\e114";
-        color: white;
+        color: #FFFFFF;
         font-family: 'Glyphicons Halflings';
-        float: right;
         font-size: 11px;
-        margin-top: -14px; }
+        position: absolute;
+        right: 10px;
+        top: 11px; }
       article.restaurante .tab-content div.panel.panel-default .panel-heading.collapsed {
         background: #ececee; }
+        article.restaurante .tab-content div.panel.panel-default .panel-heading.collapsed time,
+        article.restaurante .tab-content div.panel.panel-default .panel-heading.collapsed p.descuento {
+          color: black; }
         article.restaurante .tab-content div.panel.panel-default .panel-heading.collapsed time {
           color: black;
           font-weight: 400; }
-        article.restaurante .tab-content div.panel.panel-default .panel-heading.collapsed:hover {
-          background: black; }
-          article.restaurante .tab-content div.panel.panel-default .panel-heading.collapsed:hover time {
-            color: white;
-            font-weight: 700; }
-          article.restaurante .tab-content div.panel.panel-default .panel-heading.collapsed:hover:after {
-            content: "\e114";
-            color: white;
-            font-family: 'Glyphicons Halflings';
-            float: right;
-            font-size: 11px;
-            margin-top: -14px; }
+        article.restaurante .tab-content div.panel.panel-default .panel-heading.collapsed p.descuento {
+          font-size: 13px; }
+          article.restaurante .tab-content div.panel.panel-default .panel-heading.collapsed p.descuento strong {
+            font-weight: 400; }
         article.restaurante .tab-content div.panel.panel-default .panel-heading.collapsed:after {
           content: "\e080";
           color: #cccccc;
           font-family: 'Glyphicons Halflings';
-          float: right;
           font-size: 11px;
-          margin-top: -14px; }
+          position: absolute;
+          right: 10px;
+          top: 9px; }
+        article.restaurante .tab-content div.panel.panel-default .panel-heading.collapsed:hover {
+          background: black; }
+          article.restaurante .tab-content div.panel.panel-default .panel-heading.collapsed:hover time,
+          article.restaurante .tab-content div.panel.panel-default .panel-heading.collapsed:hover p.descuento {
+            color: #FFFFFF; }
+          article.restaurante .tab-content div.panel.panel-default .panel-heading.collapsed:hover time,
+          article.restaurante .tab-content div.panel.panel-default .panel-heading.collapsed:hover p.descuento strong {
+            font-weight: 700; }
+          article.restaurante .tab-content div.panel.panel-default .panel-heading.collapsed:hover:after {
+            content: "\e114";
+            color: #FFFFFF;
+            top: 11px; }
+      article.restaurante .tab-content div.panel.panel-default .panel-heading h3,
+      article.restaurante .tab-content div.panel.panel-default .panel-heading p.descuento,
+      article.restaurante .tab-content div.panel.panel-default .panel-heading small {
+        float: left; }
+      article.restaurante .tab-content div.panel.panel-default .panel-heading h3 {
+        width: 59%; }
       article.restaurante .tab-content div.panel.panel-default .panel-heading time {
-        color: white;
+        color: #FFFFFF;
         font-size: 13px;
         font-weight: 700; }
         article.restaurante .tab-content div.panel.panel-default .panel-heading time span {
           display: inline-block;
-          min-width: 30%; }
+          min-width: 53%; }
       article.restaurante .tab-content div.panel.panel-default .panel-heading small {
-        display: inline-block;
         color: #d9e0e5;
         font-size: 13px;
-        font-weight: 700;
-        padding-left: 10%; }
+        font-weight: 700; }
+      article.restaurante .tab-content div.panel.panel-default .panel-heading p.descuento {
+        color: #FFFFFF;
+        font-size: 14px;
+        margin: 0; }
     article.restaurante .tab-content div.panel.panel-default .panel-collapse {
       border: 1px solid #999999;
       border-top: none; }

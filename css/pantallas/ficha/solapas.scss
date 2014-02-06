@@ -116,61 +116,87 @@ article.restaurante {
 				border-radius: 0;
 				border: none;
 				cursor: pointer;
+				overflow: hidden;
 				padding-bottom: 8px;
 				padding-top: 5px;
+				position: relative;
 				&:after {
 					content: "\e114";
-					color: white;
+					color: #FFFFFF;
 					font-family: 'Glyphicons Halflings';
-					float: right;
 					font-size: 11px;
-					margin-top: -14px;
+					position: absolute;
+					right: 10px;
+					top: 11px;
 				}
 				&.collapsed {
 					background: #ececee;
+					time,
+					p.descuento {
+						color: $color-t1;
+					}
 					time {
 						color: $color-t1;
 						font-weight: 400;
 					}
-					&:hover {
-						background: $color-t1;
-						time {
-							color: white;
-							font-weight: 700;
-						}
-						&:after {
-							content: "\e114";
-							color: white;
-							font-family: 'Glyphicons Halflings';
-							float: right;
-							font-size: 11px;
-							margin-top: -14px;
+					p.descuento {
+						font-size: 13px;
+						strong {
+							font-weight: 400;
 						}
 					}
 					&:after {
 						content: "\e080";
 						color: $color-t5;
 						font-family: 'Glyphicons Halflings';
-						float: right;
 						font-size: 11px;
-						margin-top: -14px;
+						position: absolute;
+						right: 10px;
+						top: 9px;
+					}
+					&:hover {
+						background: $color-t1;
+						time,
+						p.descuento {
+							color: #FFFFFF;
+						}
+						time,
+						p.descuento strong {
+							font-weight: 700;
+						}
+						&:after {
+							content: "\e114";
+							color: #FFFFFF;
+							top: 11px;
+						}
 					}
 				}
+				h3,
+				p.descuento,
+				small {
+					float: left;
+				}
+				h3 {
+					width: 59%;
+				}
 				time {
-					color: white;
+					color: #FFFFFF;
 					font-size: 13px;
 					font-weight: 700;
 					span {
 						display: inline-block;
-						min-width: 30%;
+						min-width: 53%;
 					}
 				}
 				small {
-					display: inline-block;
 					color: #d9e0e5;
 					font-size: 13px;
 					font-weight: 700;
-					padding-left: 10%;
+				}
+				p.descuento {
+					color: #FFFFFF;
+					font-size: 14px;
+					margin: 0;
 				}
 			}
 			.panel-collapse {
